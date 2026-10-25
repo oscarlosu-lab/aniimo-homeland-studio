@@ -1,0 +1,9 @@
+name, facility, raw_materials, required_amount, seed_cost, sell_value, points, production_time, workload, yield, facility_level
+moondew_radish, Farmland, , , 4, 74, 1, 2400, , 8, 1
+waxing_moon_pepper, Farmland, , , 4, 74, 1, 2400, , 8, 1
+roasted_waxing_moon_pepper, Claw Game Cooker, waxing_moon_pepper;sea_salt, 8;23, , 1520, 4, , 162, 1, 1
+moondew_radish_slices, Blazing Stove, moondew_radish;rock_candy, 8;1, , 2370, 4, , 203, 1, 1
+umbral_hot_pot, Blazing Stove, moondew_radish;waxing_moon_pepper;fresh_water, 8;8;8, , 2150, 8, , 203, 1, 1
+umbral_sweet_and_spicy_sauce, Simmering Pot, moondew_radish;waxing_moon_pepper;sea_salt, 8;8;23, , 2390, 8, , 243, 1, 1
+umbral_pickle, Pickling Jar, moondew_radish;waxing_moon_pepper;cider_vinegar, 8;8;1, , 2290, 8, , 203, 1, 1
+harvest_platter, Crafting Table, roasted_waxing_moon_pepper;moondew_radish_slices, 1;1, , 5290, 8, , 405, 1, 1

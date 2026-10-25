@@ -1,0 +1,3512 @@
+{
+  "chispa de ensueño": {
+    "id": "4040075",
+    "name": "chispa de ensueño",
+    "icon": "ui_item_4040075.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040075.webp"
+  },
+  "polvo de gemas avanzado": {
+    "id": "4020077",
+    "name": "polvo de gemas avanzado",
+    "icon": "ui_item_4020077.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020077.webp"
+  },
+  "incienso avanzado de limón": {
+    "id": "4020075",
+    "name": "incienso avanzado de limón",
+    "icon": "ui_item_4020075.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020075.webp"
+  },
+  "campanilla de viento avanzada": {
+    "id": "4020052",
+    "name": "campanilla de viento avanzada",
+    "icon": "ui_item_4020052.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020052.webp"
+  },
+  "bebida de agave": {
+    "id": "4010015",
+    "name": "bebida de agave",
+    "icon": "ui_item_4010015.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010015.webp"
+  },
+  "jarabe de agave": {
+    "id": "4010156",
+    "name": "jarabe de agave",
+    "icon": "ui_item_4010007.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010007.webp"
+  },
+  "pudín de coco con chocolate y frutos rojos": {
+    "id": "4010144",
+    "name": "pudín de coco con chocolate y frutos rojos",
+    "icon": "ui_item_4010144.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010144.webp"
+  },
+  "flor de azahar confitada": {
+    "id": "4010189",
+    "name": "flor de azahar confitada",
+    "icon": "ui_item_4010189.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010189.webp"
+  },
+  "mena cromática": {
+    "id": "4010132",
+    "name": "mena cromática",
+    "icon": "ui_item_4010132.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010132.webp"
+  },
+  "peonía cromallama": {
+    "id": "4010124",
+    "name": "peonía cromallama",
+    "icon": "ui_item_4010124.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010124.webp"
+  },
+  "cacao en polvo": {
+    "id": "4010036",
+    "name": "cacao en polvo",
+    "icon": "ui_item_4010036.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010036.webp"
+  },
+  "crema de cacao": {
+    "id": "4010142",
+    "name": "crema de cacao",
+    "icon": "ui_item_4010142.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010142.webp"
+  },
+  "cacao con coco": {
+    "id": "4010186",
+    "name": "cacao con coco",
+    "icon": "ui_item_4010186.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010186.webp"
+  },
+  "leche de coco": {
+    "id": "4010164",
+    "name": "leche de coco",
+    "icon": "ui_item_4010164.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010164.webp"
+  },
+  "agave colorido": {
+    "id": "4030056",
+    "name": "agave colorido",
+    "icon": "ui_item_4030056.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030056.webp"
+  },
+  "capitán papa colorido": {
+    "id": "4030106",
+    "name": "capitán papa colorido",
+    "icon": "ui_item_4030106.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030106.webp"
+  },
+  "algodón colorido": {
+    "id": "4030028",
+    "name": "algodón colorido",
+    "icon": "ui_item_4030028.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030028.webp"
+  },
+  "arándano rojo colorido": {
+    "id": "4030121",
+    "name": "arándano rojo colorido",
+    "icon": "ui_item_4030121.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030121.webp"
+  },
+  "ginseng colorido": {
+    "id": "4030077",
+    "name": "ginseng colorido",
+    "icon": "ui_item_4030077.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030077.webp"
+  },
+  "uvas coloridas": {
+    "id": "4030070",
+    "name": "uvas coloridas",
+    "icon": "ui_item_4030070.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030070.webp"
+  },
+  "lavanda colorida": {
+    "id": "4030049",
+    "name": "lavanda colorida",
+    "icon": "ui_item_4030049.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030049.webp"
+  },
+  "rábano rocío de luna colorido": {
+    "id": "4030092",
+    "name": "rábano rocío de luna colorido",
+    "icon": "ui_item_4030092.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030092.webp"
+  },
+  "patata colorida": {
+    "id": "4030007",
+    "name": "patata colorida",
+    "icon": "ui_item_4030007.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030007.webp"
+  },
+  "calabaza colorida": {
+    "id": "4030087",
+    "name": "calabaza colorida",
+    "icon": "ui_item_4030087.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030087.webp"
+  },
+  "rosa colorida": {
+    "id": "4030063",
+    "name": "rosa colorida",
+    "icon": "ui_item_4030063.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030063.webp"
+  },
+  "agave colorido y brillante": {
+    "id": "4030058",
+    "name": "agave colorido y brillante",
+    "icon": "ui_item_4030058.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030058.webp"
+  },
+  "capitán papa colorido y brillante": {
+    "id": "4030108",
+    "name": "capitán papa colorido y brillante",
+    "icon": "ui_item_4030108.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030108.webp"
+  },
+  "algodón colorido y brillante": {
+    "id": "4030030",
+    "name": "algodón colorido y brillante",
+    "icon": "ui_item_4030030.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030030.webp"
+  },
+  "arándano rojo colorido y brillante": {
+    "id": "4030123",
+    "name": "arándano rojo colorido y brillante",
+    "icon": "ui_item_4030123.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030123.webp"
+  },
+  "ginseng colorido brillante": {
+    "id": "4030079",
+    "name": "ginseng colorido brillante",
+    "icon": "ui_item_4030079.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030079.webp"
+  },
+  "lavanda colorida brillante": {
+    "id": "4030051",
+    "name": "lavanda colorida brillante",
+    "icon": "ui_item_4030051.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030051.webp"
+  },
+  "rábano rocío de luna colorido y brillante": {
+    "id": "4030094",
+    "name": "rábano rocío de luna colorido y brillante",
+    "icon": "ui_item_4030094.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030094.webp"
+  },
+  "patata colorida brillante": {
+    "id": "4030009",
+    "name": "patata colorida brillante",
+    "icon": "ui_item_4030009.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030009.webp"
+  },
+  "calabaza colorida brillante": {
+    "id": "4030085",
+    "name": "calabaza colorida brillante",
+    "icon": "ui_item_4030085.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030085.webp"
+  },
+  "arroz colorido brillante": {
+    "id": "4030023",
+    "name": "arroz colorido brillante",
+    "icon": "ui_item_4030023.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030023.webp"
+  },
+  "rosa colorida brillante": {
+    "id": "4030065",
+    "name": "rosa colorida brillante",
+    "icon": "ui_item_4030065.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030065.webp"
+  },
+  "sorgo colorido y brillante": {
+    "id": "4030115",
+    "name": "sorgo colorido y brillante",
+    "icon": "ui_item_1010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_1010.webp"
+  },
+  "soja colorida brillante": {
+    "id": "4030044",
+    "name": "soja colorida brillante",
+    "icon": "ui_item_4030044.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030044.webp"
+  },
+  "fresa colorida brillante": {
+    "id": "4030037",
+    "name": "fresa colorida brillante",
+    "icon": "ui_item_4030037.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030037.webp"
+  },
+  "caña de azúcar colorida brillante": {
+    "id": "4030016",
+    "name": "caña de azúcar colorida brillante",
+    "icon": "ui_item_4030016.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030016.webp"
+  },
+  "pimiento de luna creciente colorido y brillante": {
+    "id": "4030101",
+    "name": "pimiento de luna creciente colorido y brillante",
+    "icon": "ui_item_4030101.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030101.webp"
+  },
+  "trigo colorido y brillante": {
+    "id": "4030002",
+    "name": "trigo colorido y brillante",
+    "icon": "ui_item_4030002.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030002.webp"
+  },
+  "sorgo colorido": {
+    "id": "4030113",
+    "name": "sorgo colorido",
+    "icon": "ui_item_1010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_1010.webp"
+  },
+  "soja colorida": {
+    "id": "4030042",
+    "name": "soja colorida",
+    "icon": "ui_item_4030042.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030042.webp"
+  },
+  "uvas coloridas brillantes": {
+    "id": "4030072",
+    "name": "uvas coloridas brillantes",
+    "icon": "ui_item_4030072.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030072.webp"
+  },
+  "fresa colorida": {
+    "id": "4030035",
+    "name": "fresa colorida",
+    "icon": "ui_item_4030035.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030035.webp"
+  },
+  "caña de azúcar colorida": {
+    "id": "4030014",
+    "name": "caña de azúcar colorida",
+    "icon": "ui_item_4030014.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030014.webp"
+  },
+  "pimiento de luna creciente colorido": {
+    "id": "4030099",
+    "name": "pimiento de luna creciente colorido",
+    "icon": "ui_item_4030099.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030099.webp"
+  },
+  "trigo colorido": {
+    "id": "4030000",
+    "name": "trigo colorido",
+    "icon": "ui_item_4030000.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030000.webp"
+  },
+  "chocolate de arándano rojo": {
+    "id": "4010143",
+    "name": "chocolate de arándano rojo",
+    "icon": "ui_item_4010143.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010143.webp"
+  },
+  "mermelada de arándano rojo": {
+    "id": "4010099",
+    "name": "mermelada de arándano rojo",
+    "icon": "ui_item_4010099.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010099.webp"
+  },
+  "componente de madera densificada": {
+    "id": "4010172",
+    "name": "componente de madera densificada",
+    "icon": "ui_item_4010172.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010172.webp"
+  },
+  "muñeco": {
+    "id": "4010088",
+    "name": "muñeco",
+    "icon": "ui_item_4010088.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010088.webp"
+  },
+  "arándanos rojos deshidratados": {
+    "id": "4010070",
+    "name": "arándanos rojos deshidratados",
+    "icon": "ui_item_4010070.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010070.webp"
+  },
+  "flores secas": {
+    "id": "4010075",
+    "name": "flores secas",
+    "icon": "ui_item_4010075.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010075.webp"
+  },
+  "tinte": {
+    "id": "4010087",
+    "name": "tinte",
+    "icon": "ui_item_4010087.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010087.webp"
+  },
+  "tela de algodón teñida": {
+    "id": "4010193",
+    "name": "tela de algodón teñida",
+    "icon": "ui_item_4010193.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010193.webp"
+  },
+  "pan de flor": {
+    "id": "4010113",
+    "name": "pan de flor",
+    "icon": "ui_item_4010113.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010113.webp"
+  },
+  "flores en una botella": {
+    "id": "4010093",
+    "name": "flores en una botella",
+    "icon": "ui_item_4010093.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010093.webp"
+  },
+  "pimiento de luna llena": {
+    "id": "4030142",
+    "name": "pimiento de luna llena",
+    "icon": "ui_item_4030142.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030142.webp"
+  },
+  "plano de mueble: verano frío - piscina": {
+    "id": "4040080",
+    "name": "plano de mueble: verano frío - piscina",
+    "icon": "ui_item_4040080.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040080.webp"
+  },
+  "plano de mueble: verano frío - máquina expendedora": {
+    "id": "4040081",
+    "name": "plano de mueble: verano frío - máquina expendedora",
+    "icon": "ui_item_4040081.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040081.webp"
+  },
+  "plano de mueble: leyenda dorada - trono": {
+    "id": "4040123",
+    "name": "plano de mueble: leyenda dorada - trono",
+    "icon": "ui_item_4040105.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040105.webp"
+  },
+  "plano de muebles: luna de cosecha: fuegos artificiales": {
+    "id": "4040063",
+    "name": "plano de muebles: luna de cosecha: fuegos artificiales",
+    "icon": "ui_item_4040063.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040063.webp"
+  },
+  "plano de muebles: luna de cosecha: laurel": {
+    "id": "4040050",
+    "name": "plano de muebles: luna de cosecha: laurel",
+    "icon": "ui_item_4040050.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040050.webp"
+  },
+  "plano de muebles: luna de cosecha: puesto de mercado": {
+    "id": "4040060",
+    "name": "plano de muebles: luna de cosecha: puesto de mercado",
+    "icon": "ui_item_4040060.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040060.webp"
+  },
+  "plano de muebles: luna de cosecha: lluvia de osmanto": {
+    "id": "4040064",
+    "name": "plano de muebles: luna de cosecha: lluvia de osmanto",
+    "icon": "ui_item_4040064.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040064.webp"
+  },
+  "plano de muebles: luna de cosecha: luna radiante": {
+    "id": "4040048",
+    "name": "plano de muebles: luna de cosecha: luna radiante",
+    "icon": "ui_item_4040048.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040048.webp"
+  },
+  "plano de muebles: luna de cosecha: lluvia de estrellas": {
+    "id": "4040051",
+    "name": "plano de muebles: luna de cosecha: lluvia de estrellas",
+    "icon": "ui_item_4040051.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040051.webp"
+  },
+  "papa de juego": {
+    "id": "4030143",
+    "name": "papa de juego",
+    "icon": "ui_item_4030143.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030143.webp"
+  },
+  "polvo de gemas": {
+    "id": "4010083",
+    "name": "polvo de gemas",
+    "icon": "ui_item_4010083.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010083.webp"
+  },
+  "gachas de ginseng": {
+    "id": "4010140",
+    "name": "gachas de ginseng",
+    "icon": "ui_item_4010140.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010140.webp"
+  },
+  "fórmula de alta velocidad: escamas": {
+    "id": "4020065",
+    "name": "fórmula de alta velocidad: escamas",
+    "icon": "ui_item_4020065.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020065.webp"
+  },
+  "cacao caliente": {
+    "id": "4010058",
+    "name": "cacao caliente",
+    "icon": "ui_item_4010058.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010058.webp"
+  },
+  "agave gigante": {
+    "id": "4030059",
+    "name": "agave gigante",
+    "icon": "ui_item_4030059.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030059.webp"
+  },
+  "capitán papa enorme": {
+    "id": "4030109",
+    "name": "capitán papa enorme",
+    "icon": "ui_item_4030109.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030109.webp"
+  },
+  "agave colorido gigante": {
+    "id": "4030060",
+    "name": "agave colorido gigante",
+    "icon": "ui_item_4030060.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030060.webp"
+  },
+  "capitán papa colorido y enorme": {
+    "id": "4030110",
+    "name": "capitán papa colorido y enorme",
+    "icon": "ui_item_4030110.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030110.webp"
+  },
+  "algodón colorido gigante": {
+    "id": "4030032",
+    "name": "algodón colorido gigante",
+    "icon": "ui_item_4030032.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030032.webp"
+  },
+  "arándano rojo colorido y enorme": {
+    "id": "4030125",
+    "name": "arándano rojo colorido y enorme",
+    "icon": "ui_item_4030125.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030125.webp"
+  },
+  "ginseng colorido gigante": {
+    "id": "4030081",
+    "name": "ginseng colorido gigante",
+    "icon": "ui_item_4030081.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030081.webp"
+  },
+  "uvas coloridas gigantes": {
+    "id": "4030074",
+    "name": "uvas coloridas gigantes",
+    "icon": "ui_item_4030074.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030074.webp"
+  },
+  "lavanda colorida gigante": {
+    "id": "4030053",
+    "name": "lavanda colorida gigante",
+    "icon": "ui_item_4030053.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030053.webp"
+  },
+  "rábano rocío de luna colorido y enorme": {
+    "id": "4030096",
+    "name": "rábano rocío de luna colorido y enorme",
+    "icon": "ui_item_4030096.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030096.webp"
+  },
+  "patata colorida gigante": {
+    "id": "4030011",
+    "name": "patata colorida gigante",
+    "icon": "ui_item_4030011.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030011.webp"
+  },
+  "arroz colorido gigante": {
+    "id": "4030025",
+    "name": "arroz colorido gigante",
+    "icon": "ui_item_4030025.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030025.webp"
+  },
+  "rosa colorida gigante": {
+    "id": "4030067",
+    "name": "rosa colorida gigante",
+    "icon": "ui_item_4030067.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030067.webp"
+  },
+  "agave colorido brillante gigante": {
+    "id": "4030062",
+    "name": "agave colorido brillante gigante",
+    "icon": "ui_item_4030062.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030062.webp"
+  },
+  "capitán papa colorido, brillante y enorme": {
+    "id": "4030112",
+    "name": "capitán papa colorido, brillante y enorme",
+    "icon": "ui_item_4030112.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030112.webp"
+  },
+  "algodón colorido brillante gigante": {
+    "id": "4030034",
+    "name": "algodón colorido brillante gigante",
+    "icon": "ui_item_4030034.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030034.webp"
+  },
+  "arándano rojo colorido, brillante y enorme": {
+    "id": "4030127",
+    "name": "arándano rojo colorido, brillante y enorme",
+    "icon": "ui_item_4030127.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030127.webp"
+  },
+  "agave cristalino colorido, brillante y enorme": {
+    "id": "4030137",
+    "name": "agave cristalino colorido, brillante y enorme",
+    "icon": "ui_item_4030137.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030137.webp"
+  },
+  "algodón cristalino colorido, brillante y enorme": {
+    "id": "4030133",
+    "name": "algodón cristalino colorido, brillante y enorme",
+    "icon": "ui_item_4030133.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030133.webp"
+  },
+  "arándano rojo cristalino colorido, brillante y enorme": {
+    "id": "4030128",
+    "name": "arándano rojo cristalino colorido, brillante y enorme",
+    "icon": "ui_item_4030128.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030128.webp"
+  },
+  "ginseng cristalino colorido, brillante y enorme": {
+    "id": "4030140",
+    "name": "ginseng cristalino colorido, brillante y enorme",
+    "icon": "ui_item_4030140.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030140.webp"
+  },
+  "uvas cristalinas coloridas, brillantes y enormes": {
+    "id": "4030139",
+    "name": "uvas cristalinas coloridas, brillantes y enormes",
+    "icon": "ui_item_4030139.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030139.webp"
+  },
+  "lavanda cristalina colorida, brillante y enorme": {
+    "id": "4030136",
+    "name": "lavanda cristalina colorida, brillante y enorme",
+    "icon": "ui_item_4030136.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030136.webp"
+  },
+  "rábano de rocío de luna cristalino colorido, brillante y enorme": {
+    "id": "4030141",
+    "name": "rábano de rocío de luna cristalino colorido, brillante y enorme",
+    "icon": "ui_item_4030141.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030141.webp"
+  },
+  "patata enorme cristalina colorida, brillante y enorme": {
+    "id": "4030130",
+    "name": "patata enorme cristalina colorida, brillante y enorme",
+    "icon": "ui_item_4030130.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030130.webp"
+  },
+  "calabaza cristalina colorida, brillante y enorme": {
+    "id": "4030091",
+    "name": "calabaza cristalina colorida, brillante y enorme",
+    "icon": "ui_item_4030091.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030091.webp"
+  },
+  "arroz cristalino colorido, brillante y enorme": {
+    "id": "4030132",
+    "name": "arroz cristalino colorido, brillante y enorme",
+    "icon": "ui_item_4030132.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030132.webp"
+  },
+  "rosa cristalina colorida, brillante y enorme": {
+    "id": "4030138",
+    "name": "rosa cristalina colorida, brillante y enorme",
+    "icon": "ui_item_4030138.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030138.webp"
+  },
+  "sorgo cristalino colorido, brillante y enorme": {
+    "id": "4030120",
+    "name": "sorgo cristalino colorido, brillante y enorme",
+    "icon": "ui_item_1010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_1010.webp"
+  },
+  "soja cristalina colorida, brillante y enorme": {
+    "id": "4030135",
+    "name": "soja cristalina colorida, brillante y enorme",
+    "icon": "ui_item_4030135.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030135.webp"
+  },
+  "fresa cristalina colorida, brillante y enorme": {
+    "id": "4030134",
+    "name": "fresa cristalina colorida, brillante y enorme",
+    "icon": "ui_item_4030134.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030134.webp"
+  },
+  "caña de azúcar cristalina colorida, brillante y enorme": {
+    "id": "4030131",
+    "name": "caña de azúcar cristalina colorida, brillante y enorme",
+    "icon": "ui_item_4030131.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030131.webp"
+  },
+  "trigo enorme cristalino colorido, brillante y enorme": {
+    "id": "4030129",
+    "name": "trigo enorme cristalino colorido, brillante y enorme",
+    "icon": "ui_item_4030129.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030129.webp"
+  },
+  "ginseng colorido brillante gigante": {
+    "id": "4030083",
+    "name": "ginseng colorido brillante gigante",
+    "icon": "ui_item_4030083.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030083.webp"
+  },
+  "lavanda colorida brillante gigante": {
+    "id": "4030055",
+    "name": "lavanda colorida brillante gigante",
+    "icon": "ui_item_4030055.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030055.webp"
+  },
+  "rábano rocío de luna colorido, brillante y enorme": {
+    "id": "4030098",
+    "name": "rábano rocío de luna colorido, brillante y enorme",
+    "icon": "ui_item_4030098.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030098.webp"
+  },
+  "patata colorida brillante gigante": {
+    "id": "4030013",
+    "name": "patata colorida brillante gigante",
+    "icon": "ui_item_4030013.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030013.webp"
+  },
+  "arroz colorido, brillante y enorme": {
+    "id": "4030027",
+    "name": "arroz colorido, brillante y enorme",
+    "icon": "ui_item_4030027.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030027.webp"
+  },
+  "rosa colorida brillante gigante": {
+    "id": "4030069",
+    "name": "rosa colorida brillante gigante",
+    "icon": "ui_item_4030069.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030069.webp"
+  },
+  "sorgo colorido, brillante y enorme": {
+    "id": "4030119",
+    "name": "sorgo colorido, brillante y enorme",
+    "icon": "ui_item_1010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_1010.webp"
+  },
+  "soja colorida, brillante y enorme": {
+    "id": "4030048",
+    "name": "soja colorida, brillante y enorme",
+    "icon": "ui_item_4030048.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030048.webp"
+  },
+  "fresa colorida brillante gigante": {
+    "id": "4030041",
+    "name": "fresa colorida brillante gigante",
+    "icon": "ui_item_4030041.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030041.webp"
+  },
+  "caña de azúcar colorida brillante gigante": {
+    "id": "4030020",
+    "name": "caña de azúcar colorida brillante gigante",
+    "icon": "ui_item_4030020.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030020.webp"
+  },
+  "pimiento de luna creciente colorido, brillante y enorme": {
+    "id": "4030105",
+    "name": "pimiento de luna creciente colorido, brillante y enorme",
+    "icon": "ui_item_4030105.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030105.webp"
+  },
+  "trigo colorido brillante enorme": {
+    "id": "4030006",
+    "name": "trigo colorido brillante enorme",
+    "icon": "ui_item_4030006.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030006.webp"
+  },
+  "sorgo colorido y enorme": {
+    "id": "4030117",
+    "name": "sorgo colorido y enorme",
+    "icon": "ui_item_1010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_1010.webp"
+  },
+  "soja colorida gigante": {
+    "id": "4030046",
+    "name": "soja colorida gigante",
+    "icon": "ui_item_4030046.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030046.webp"
+  },
+  "uvas gigantes, coloridas y brillantes": {
+    "id": "4030076",
+    "name": "uvas gigantes, coloridas y brillantes",
+    "icon": "ui_item_4030076.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030076.webp"
+  },
+  "calabaza enorme colorida y brillante": {
+    "id": "4030090",
+    "name": "calabaza enorme colorida y brillante",
+    "icon": "ui_item_4030090.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030090.webp"
+  },
+  "fresa colorida gigante": {
+    "id": "4030039",
+    "name": "fresa colorida gigante",
+    "icon": "ui_item_4030039.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030039.webp"
+  },
+  "caña de azúcar colorida gigante": {
+    "id": "4030018",
+    "name": "caña de azúcar colorida gigante",
+    "icon": "ui_item_4030018.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030018.webp"
+  },
+  "pimiento de luna creciente colorido y enorme": {
+    "id": "4030103",
+    "name": "pimiento de luna creciente colorido y enorme",
+    "icon": "ui_item_4030103.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030103.webp"
+  },
+  "trigo colorido enorme": {
+    "id": "4030004",
+    "name": "trigo colorido enorme",
+    "icon": "ui_item_4030004.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030004.webp"
+  },
+  "algodón gigante": {
+    "id": "4030031",
+    "name": "algodón gigante",
+    "icon": "ui_item_4030031.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030031.webp"
+  },
+  "arándano rojo enorme": {
+    "id": "4030124",
+    "name": "arándano rojo enorme",
+    "icon": "ui_item_4030124.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030124.webp"
+  },
+  "ginseng gigante": {
+    "id": "4030080",
+    "name": "ginseng gigante",
+    "icon": "ui_item_4030080.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030080.webp"
+  },
+  "uvas gigantes": {
+    "id": "4030073",
+    "name": "uvas gigantes",
+    "icon": "ui_item_4030073.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030073.webp"
+  },
+  "lavanda gigante": {
+    "id": "4030052",
+    "name": "lavanda gigante",
+    "icon": "ui_item_4030052.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030052.webp"
+  },
+  "rábano rocío de luna enorme": {
+    "id": "4030095",
+    "name": "rábano rocío de luna enorme",
+    "icon": "ui_item_4030095.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030095.webp"
+  },
+  "patata gigante": {
+    "id": "4030010",
+    "name": "patata gigante",
+    "icon": "ui_item_4030010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030010.webp"
+  },
+  "calabaza gigante": {
+    "id": "4030088",
+    "name": "calabaza gigante",
+    "icon": "ui_item_4030088.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030088.webp"
+  },
+  "arroz gigante": {
+    "id": "4030024",
+    "name": "arroz gigante",
+    "icon": "ui_item_4030024.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030024.webp"
+  },
+  "rosa gigante": {
+    "id": "4030066",
+    "name": "rosa gigante",
+    "icon": "ui_item_4030066.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030066.webp"
+  },
+  "agave brillante gigante": {
+    "id": "4030061",
+    "name": "agave brillante gigante",
+    "icon": "ui_item_4030061.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030061.webp"
+  },
+  "capitán papa brillante y enorme": {
+    "id": "4030111",
+    "name": "capitán papa brillante y enorme",
+    "icon": "ui_item_4030111.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030111.webp"
+  },
+  "algodón brillante y enorme": {
+    "id": "4030033",
+    "name": "algodón brillante y enorme",
+    "icon": "ui_item_4030033.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030033.webp"
+  },
+  "arándano rojo brillante y enorme": {
+    "id": "4030126",
+    "name": "arándano rojo brillante y enorme",
+    "icon": "ui_item_4030126.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030126.webp"
+  },
+  "ginseng brillante gigante": {
+    "id": "4030082",
+    "name": "ginseng brillante gigante",
+    "icon": "ui_item_4030082.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030082.webp"
+  },
+  "lavanda brillante y enorme": {
+    "id": "4030054",
+    "name": "lavanda brillante y enorme",
+    "icon": "ui_item_4030054.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030054.webp"
+  },
+  "rábano rocío de luna brillante y enorme": {
+    "id": "4030097",
+    "name": "rábano rocío de luna brillante y enorme",
+    "icon": "ui_item_4030097.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030097.webp"
+  },
+  "patata brillante y enorme": {
+    "id": "4030012",
+    "name": "patata brillante y enorme",
+    "icon": "ui_item_4030012.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030012.webp"
+  },
+  "calabaza brillante y enorme": {
+    "id": "4030089",
+    "name": "calabaza brillante y enorme",
+    "icon": "ui_item_4030089.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030089.webp"
+  },
+  "arroz brillante gigante": {
+    "id": "4030026",
+    "name": "arroz brillante gigante",
+    "icon": "ui_item_4030026.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030026.webp"
+  },
+  "rosa brillante gigante": {
+    "id": "4030068",
+    "name": "rosa brillante gigante",
+    "icon": "ui_item_4030068.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030068.webp"
+  },
+  "sorgo brillante y enorme": {
+    "id": "4030118",
+    "name": "sorgo brillante y enorme",
+    "icon": "ui_item_1010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_1010.webp"
+  },
+  "soja brillante gigante": {
+    "id": "4030047",
+    "name": "soja brillante gigante",
+    "icon": "ui_item_4030047.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030047.webp"
+  },
+  "fresa brillante y enorme": {
+    "id": "4030040",
+    "name": "fresa brillante y enorme",
+    "icon": "ui_item_4030040.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030040.webp"
+  },
+  "caña de azúcar brillante y enorme": {
+    "id": "4030019",
+    "name": "caña de azúcar brillante y enorme",
+    "icon": "ui_item_4030019.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030019.webp"
+  },
+  "pimiento de luna creciente brillante y enorme": {
+    "id": "4030104",
+    "name": "pimiento de luna creciente brillante y enorme",
+    "icon": "ui_item_4030104.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030104.webp"
+  },
+  "trigo brillante gigante": {
+    "id": "4030005",
+    "name": "trigo brillante gigante",
+    "icon": "ui_item_4030005.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030005.webp"
+  },
+  "sorgo enorme": {
+    "id": "4030116",
+    "name": "sorgo enorme",
+    "icon": "ui_item_1010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_1010.webp"
+  },
+  "soja gigante": {
+    "id": "4030045",
+    "name": "soja gigante",
+    "icon": "ui_item_4030045.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030045.webp"
+  },
+  "uvas brillantes gigantes": {
+    "id": "4030075",
+    "name": "uvas brillantes gigantes",
+    "icon": "ui_item_4030075.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030075.webp"
+  },
+  "fresa gigante": {
+    "id": "4030038",
+    "name": "fresa gigante",
+    "icon": "ui_item_4030038.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030038.webp"
+  },
+  "caña de azúcar gigante": {
+    "id": "4030017",
+    "name": "caña de azúcar gigante",
+    "icon": "ui_item_4030017.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030017.webp"
+  },
+  "pimiento de luna creciente enorme": {
+    "id": "4030102",
+    "name": "pimiento de luna creciente enorme",
+    "icon": "ui_item_4030102.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030102.webp"
+  },
+  "trigo gigante": {
+    "id": "4030003",
+    "name": "trigo gigante",
+    "icon": "ui_item_4030003.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030003.webp"
+  },
+  "loción": {
+    "id": "4010030",
+    "name": "loción",
+    "icon": "ui_item_4010030.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010030.webp"
+  },
+  "placa de mineral microcristalino": {
+    "id": "4010177",
+    "name": "placa de mineral microcristalino",
+    "icon": "ui_item_4010177.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010177.webp"
+  },
+  "perfume mezclado": {
+    "id": "4010023",
+    "name": "perfume mezclado",
+    "icon": "ui_item_4010023.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010023.webp"
+  },
+  "kit de modificación": {
+    "id": "4040074",
+    "name": "kit de modificación",
+    "icon": "ui_item_4040074.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040074.webp"
+  },
+  "rocío de flor de azahar": {
+    "id": "4010187",
+    "name": "rocío de flor de azahar",
+    "icon": "ui_item_4010187.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010187.webp"
+  },
+  "incienso de azahar": {
+    "id": "4010019",
+    "name": "incienso de azahar",
+    "icon": "ui_item_4010019.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010019.webp"
+  },
+  "pudín de coco con chocolate y frutos rojos prémium": {
+    "id": "4020072",
+    "name": "pudín de coco con chocolate y frutos rojos prémium",
+    "icon": "ui_item_4020072.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020072.webp"
+  },
+  "polvo de gemas prémium": {
+    "id": "4020032",
+    "name": "polvo de gemas prémium",
+    "icon": "ui_item_4010083.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010083.webp"
+  },
+  "gelatina prémium": {
+    "id": "4020071",
+    "name": "gelatina prémium",
+    "icon": "ui_item_4020071.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020071.webp"
+  },
+  "perfume mezclado prémium": {
+    "id": "4020078",
+    "name": "perfume mezclado prémium",
+    "icon": "ui_item_4020078.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020078.webp"
+  },
+  "limón salado prémium": {
+    "id": "4020070",
+    "name": "limón salado prémium",
+    "icon": "ui_item_4020070.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020070.webp"
+  },
+  "jabón prémium": {
+    "id": "4020076",
+    "name": "jabón prémium",
+    "icon": "ui_item_4020076.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020076.webp"
+  },
+  "vino de arroz dulce prémium": {
+    "id": "4020069",
+    "name": "vino de arroz dulce prémium",
+    "icon": "ui_item_4020069.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020069.webp"
+  },
+  "gema elemental pura": {
+    "id": "4040030",
+    "name": "gema elemental pura",
+    "icon": "ui_item_4040019.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040019.webp"
+  },
+  "fórmula rápida: coco": {
+    "id": "4020044",
+    "name": "fórmula rápida: coco",
+    "icon": "ui_item_4020044.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020044.webp"
+  },
+  "fórmula rápida: escamas": {
+    "id": "4020047",
+    "name": "fórmula rápida: escamas",
+    "icon": "ui_item_4020047.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020047.webp"
+  },
+  "receta rápida: agua de manantial de piedra profunda": {
+    "id": "4020063",
+    "name": "receta rápida: agua de manantial de piedra profunda",
+    "icon": "ui_item_4020063.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020063.webp"
+  },
+  "receta rápida: agua mineral natural": {
+    "id": "4020064",
+    "name": "receta rápida: agua mineral natural",
+    "icon": "ui_item_4020064.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020064.webp"
+  },
+  "receta rápida: lana": {
+    "id": "4020062",
+    "name": "receta rápida: lana",
+    "icon": "ui_item_4020062.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020062.webp"
+  },
+  "objeto transportado aleatorio": {
+    "id": "4040077",
+    "name": "objeto transportado aleatorio",
+    "icon": "ui_item_999999.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_999999.webp"
+  },
+  "nota de receta: flores en botella": {
+    "id": "4040118",
+    "name": "nota de receta: flores en botella",
+    "icon": "ui_item_4040118.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040118.webp"
+  },
+  "nota de receta: gachas de ginseng": {
+    "id": "4040116",
+    "name": "nota de receta: gachas de ginseng",
+    "icon": "ui_item_4040116.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040116.webp"
+  },
+  "nota de receta: loción": {
+    "id": "4040119",
+    "name": "nota de receta: loción",
+    "icon": "ui_item_4040119.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040119.webp"
+  },
+  "nota de receta: caramelo de fresa": {
+    "id": "4040117",
+    "name": "nota de receta: caramelo de fresa",
+    "icon": "ui_item_4040117.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040117.webp"
+  },
+  "agave brillante": {
+    "id": "4030057",
+    "name": "agave brillante",
+    "icon": "ui_item_4030057.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030057.webp"
+  },
+  "capitán papa brillante": {
+    "id": "4030107",
+    "name": "capitán papa brillante",
+    "icon": "ui_item_4030107.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030107.webp"
+  },
+  "algodón brillante": {
+    "id": "4030029",
+    "name": "algodón brillante",
+    "icon": "ui_item_4030029.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030029.webp"
+  },
+  "arándano rojo brillante": {
+    "id": "4030122",
+    "name": "arándano rojo brillante",
+    "icon": "ui_item_4030122.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030122.webp"
+  },
+  "ginseng brillante": {
+    "id": "4030078",
+    "name": "ginseng brillante",
+    "icon": "ui_item_4030078.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030078.webp"
+  },
+  "lavanda brillante": {
+    "id": "4030050",
+    "name": "lavanda brillante",
+    "icon": "ui_item_4030050.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030050.webp"
+  },
+  "rábano rocío de luna brillante": {
+    "id": "4030093",
+    "name": "rábano rocío de luna brillante",
+    "icon": "ui_item_4030093.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030093.webp"
+  },
+  "patata brillante": {
+    "id": "4030008",
+    "name": "patata brillante",
+    "icon": "ui_item_4030008.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030008.webp"
+  },
+  "arroz brillante": {
+    "id": "4030021",
+    "name": "arroz brillante",
+    "icon": "ui_item_4030021.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030021.webp"
+  },
+  "rosa brillante": {
+    "id": "4030064",
+    "name": "rosa brillante",
+    "icon": "ui_item_4030064.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030064.webp"
+  },
+  "sorgo brillante": {
+    "id": "4030114",
+    "name": "sorgo brillante",
+    "icon": "ui_item_1010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_1010.webp"
+  },
+  "soja brillante": {
+    "id": "4030043",
+    "name": "soja brillante",
+    "icon": "ui_item_4030043.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030043.webp"
+  },
+  "fresa brillante": {
+    "id": "4030036",
+    "name": "fresa brillante",
+    "icon": "ui_item_4030036.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030036.webp"
+  },
+  "caña de azúcar brillante": {
+    "id": "4030015",
+    "name": "caña de azúcar brillante",
+    "icon": "ui_item_4030015.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030015.webp"
+  },
+  "pimiento de luna creciente brillante": {
+    "id": "4030100",
+    "name": "pimiento de luna creciente brillante",
+    "icon": "ui_item_4030100.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030100.webp"
+  },
+  "trigo brillante": {
+    "id": "4030001",
+    "name": "trigo brillante",
+    "icon": "ui_item_4030001.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030001.webp"
+  },
+  "uvas brillantes": {
+    "id": "4030071",
+    "name": "uvas brillantes",
+    "icon": "ui_item_4030071.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030071.webp"
+  },
+  "calabaza brillante": {
+    "id": "4030084",
+    "name": "calabaza brillante",
+    "icon": "ui_item_4030084.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4030084.webp"
+  },
+  "ágata de polvo estelar": {
+    "id": "4010122",
+    "name": "ágata de polvo estelar",
+    "icon": "ui_item_4010122.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010122.webp"
+  },
+  "caramelo de fresa": {
+    "id": "4010102",
+    "name": "caramelo de fresa",
+    "icon": "ui_item_4010102.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010102.webp"
+  },
+  "bollo de crema de fresa": {
+    "id": "4010054",
+    "name": "bollo de crema de fresa",
+    "icon": "ui_item_4010054.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010054.webp"
+  },
+  "nuez de helecho dulce": {
+    "id": "4010127",
+    "name": "nuez de helecho dulce",
+    "icon": "ui_item_4010127.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010127.webp"
+  },
+  "incienso de madera de agar avanzado": {
+    "id": "4010110",
+    "name": "incienso de madera de agar avanzado",
+    "icon": "ui_item_4010021.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010021.webp"
+  },
+  "incienso de cerezo avanzado": {
+    "id": "4010109",
+    "name": "incienso de cerezo avanzado",
+    "icon": "ui_item_4010020.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010020.webp"
+  },
+  "atrapasueños avanzado": {
+    "id": "4020053",
+    "name": "atrapasueños avanzado",
+    "icon": "ui_item_4020053.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020053.webp"
+  },
+  "pan de flor avanzado": {
+    "id": "4020049",
+    "name": "pan de flor avanzado",
+    "icon": "ui_item_4020049.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020049.webp"
+  },
+  "incienso de azahar avanzado": {
+    "id": "4010108",
+    "name": "incienso de azahar avanzado",
+    "icon": "ui_item_4010019.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010019.webp"
+  },
+  "kvass de patata avanzado": {
+    "id": "4020051",
+    "name": "kvass de patata avanzado",
+    "icon": "ui_item_4020051.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020051.webp"
+  },
+  "escamas avanzadas": {
+    "id": "4001043",
+    "name": "escamas avanzadas",
+    "icon": "ui_item_4001043.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001043.webp"
+  },
+  "tofu con salsa de soja avanzado": {
+    "id": "4020050",
+    "name": "tofu con salsa de soja avanzado",
+    "icon": "ui_item_4020050.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020050.webp"
+  },
+  "agave": {
+    "id": "4001013",
+    "name": "agave",
+    "icon": "ui_item_4001013.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001013.webp"
+  },
+  "semilla de agave": {
+    "id": "4000013",
+    "name": "semilla de agave",
+    "icon": "ui_item_4000013.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000013.webp"
+  },
+  "madera de agar": {
+    "id": "4001027",
+    "name": "madera de agar",
+    "icon": "ui_item_4001027.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001027.webp"
+  },
+  "madera de manzano": {
+    "id": "4001023",
+    "name": "madera de manzano",
+    "icon": "ui_item_4001023.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001023.webp"
+  },
+  "brotes de bambú": {
+    "id": "4001058",
+    "name": "brotes de bambú",
+    "icon": "ui_item_4001058.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001058.webp"
+  },
+  "semilla de naranjo amargo": {
+    "id": "4000025",
+    "name": "semilla de naranjo amargo",
+    "icon": "ui_item_4000025.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000025.webp"
+  },
+  "madera de naranjo amargo": {
+    "id": "4001025",
+    "name": "madera de naranjo amargo",
+    "icon": "ui_item_4001025.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001025.webp"
+  },
+  "brazalete": {
+    "id": "4010086",
+    "name": "brazalete",
+    "icon": "ui_item_4010086.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010086.webp"
+  },
+  "brazalete de burbuja": {
+    "id": "4010115",
+    "name": "brazalete de burbuja",
+    "icon": "ui_item_4010115.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010115.webp"
+  },
+  "fresas confitadas": {
+    "id": "4010188",
+    "name": "fresas confitadas",
+    "icon": "ui_item_4010188.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010188.webp"
+  },
+  "chips de frutos secos caramelizados": {
+    "id": "4010077",
+    "name": "chips de frutos secos caramelizados",
+    "icon": "ui_item_4010077.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010077.webp"
+  },
+  "incienso de cedro": {
+    "id": "4010016",
+    "name": "incienso de cedro",
+    "icon": "ui_item_4010016.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010016.webp"
+  },
+  "componente ceramoclástico": {
+    "id": "4010178",
+    "name": "componente ceramoclástico",
+    "icon": "ui_item_4010178.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010178.webp"
+  },
+  "rocío de flor de cerezo": {
+    "id": "4010010",
+    "name": "rocío de flor de cerezo",
+    "icon": "ui_item_4010010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010010.webp"
+  },
+  "madera de cerezo": {
+    "id": "4001024",
+    "name": "madera de cerezo",
+    "icon": "ui_item_4001024.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001024.webp"
+  },
+  "castaña": {
+    "id": "4001041",
+    "name": "castaña",
+    "icon": "ui_item_4001041.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001041.webp"
+  },
+  "puré de castaña": {
+    "id": "4010157",
+    "name": "puré de castaña",
+    "icon": "ui_item_4010157.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010157.webp"
+  },
+  "semilla de castaño": {
+    "id": "4000031",
+    "name": "semilla de castaño",
+    "icon": "ui_item_4000031.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000031.webp"
+  },
+  "madera de castaño": {
+    "id": "4001061",
+    "name": "madera de castaño",
+    "icon": "ui_item_4001061.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001061.webp"
+  },
+  "chocolate": {
+    "id": "4010050",
+    "name": "chocolate",
+    "icon": "ui_item_4010050.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010050.webp"
+  },
+  "vinagre de sidra": {
+    "id": "4010009",
+    "name": "vinagre de sidra",
+    "icon": "ui_item_4010009.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010009.webp"
+  },
+  "jabón limpiador": {
+    "id": "4010026",
+    "name": "jabón limpiador",
+    "icon": "ui_item_4010026.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010026.webp"
+  },
+  "cacao": {
+    "id": "4001012",
+    "name": "cacao",
+    "icon": "ui_item_4001012.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001012.webp"
+  },
+  "semilla de cacao": {
+    "id": "4000012",
+    "name": "semilla de cacao",
+    "icon": "ui_item_4000012.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000012.webp"
+  },
+  "coco": {
+    "id": "4001039",
+    "name": "coco",
+    "icon": "ui_item_4001039.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001039.webp"
+  },
+  "galleta de coco": {
+    "id": "4010056",
+    "name": "galleta de coco",
+    "icon": "ui_item_4010056.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010056.webp"
+  },
+  "refresco de coco": {
+    "id": "4010194",
+    "name": "refresco de coco",
+    "icon": "ui_item_4010194.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010194.webp"
+  },
+  "aceite de coco": {
+    "id": "4010024",
+    "name": "aceite de coco",
+    "icon": "ui_item_4010024.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010024.webp"
+  },
+  "semilla de cocotero": {
+    "id": "4000029",
+    "name": "semilla de cocotero",
+    "icon": "ui_item_4000029.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000029.webp"
+  },
+  "madera de cocotero": {
+    "id": "4001059",
+    "name": "madera de cocotero",
+    "icon": "ui_item_4001059.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001059.webp"
+  },
+  "vela de coco": {
+    "id": "4010031",
+    "name": "vela de coco",
+    "icon": "ui_item_4010031.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010031.webp"
+  },
+  "armazón de soporte compuesto": {
+    "id": "4010181",
+    "name": "armazón de soporte compuesto",
+    "icon": "ui_item_4010181.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010181.webp"
+  },
+  "mena de cobre": {
+    "id": "4001054",
+    "name": "mena de cobre",
+    "icon": "ui_item_4001054.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001054.webp"
+  },
+  "tela de algodón": {
+    "id": "4010042",
+    "name": "tela de algodón",
+    "icon": "ui_item_4010042.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010042.webp"
+  },
+  "arándano rojo": {
+    "id": "4001015",
+    "name": "arándano rojo",
+    "icon": "ui_item_4001015.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001015.webp"
+  },
+  "caramelo de arándano rojo": {
+    "id": "4010103",
+    "name": "caramelo de arándano rojo",
+    "icon": "ui_item_4010103.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010103.webp"
+  },
+  "jugo de arándano": {
+    "id": "4010095",
+    "name": "jugo de arándano",
+    "icon": "ui_item_4010095.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010095.webp"
+  },
+  "semilla de arándano rojo": {
+    "id": "4000015",
+    "name": "semilla de arándano rojo",
+    "icon": "ui_item_4000015.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000015.webp"
+  },
+  "agua de manantial de roca profunda": {
+    "id": "4001072",
+    "name": "agua de manantial de roca profunda",
+    "icon": "ui_item_4001072.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001072.webp"
+  },
+  "incienso de cedro de lujo": {
+    "id": "4010105",
+    "name": "incienso de cedro de lujo",
+    "icon": "ui_item_4010016.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010016.webp"
+  },
+  "incienso de lavanda avanzado": {
+    "id": "4010106",
+    "name": "incienso de lavanda avanzado",
+    "icon": "ui_item_4010017.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010017.webp"
+  },
+  "registro: camino de lun plateado": {
+    "id": "4040113",
+    "name": "registro: camino de lun plateado",
+    "icon": "ui_item_4040112.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040112.webp"
+  },
+  "atrapasueños": {
+    "id": "4010091",
+    "name": "atrapasueños",
+    "icon": "ui_item_4010091.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010091.webp"
+  },
+  "flor mareamisteriosa": {
+    "id": "4010128",
+    "name": "flor mareamisteriosa",
+    "icon": "ui_item_4010128.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010128.webp"
+  },
+  "rodajas de manzana deshidratada": {
+    "id": "4010071",
+    "name": "rodajas de manzana deshidratada",
+    "icon": "ui_item_4010071.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010071.webp"
+  },
+  "ginseng seco": {
+    "id": "4010138",
+    "name": "ginseng seco",
+    "icon": "ui_item_4010067.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010067.webp"
+  },
+  "uvas deshidratadas": {
+    "id": "4010069",
+    "name": "uvas deshidratadas",
+    "icon": "ui_item_4010069.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010069.webp"
+  },
+  "fresas deshidratadas": {
+    "id": "4010068",
+    "name": "fresas deshidratadas",
+    "icon": "ui_item_4010068.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010068.webp"
+  },
+  "gema elemental": {
+    "id": "4040019",
+    "name": "gema elemental",
+    "icon": "ui_item_4040019.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040019.webp"
+  },
+  "comida de trabajo energizante": {
+    "id": "4040036",
+    "name": "comida de trabajo energizante",
+    "icon": "ui_item_4040036.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040036.webp"
+  },
+  "objeto de energía 10": {
+    "id": "4020020",
+    "name": "objeto de energía 10",
+    "icon": "ui_item_4010173.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010173.webp"
+  },
+  "bebida de arroz fermentada": {
+    "id": "4010005",
+    "name": "bebida de arroz fermentada",
+    "icon": "ui_item_4010005.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010005.webp"
+  },
+  "fertilizante": {
+    "id": "4001048",
+    "name": "fertilizante",
+    "icon": "ui_item_4001048.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001048.webp"
+  },
+  "batido de frutas": {
+    "id": "4010004",
+    "name": "batido de frutas",
+    "icon": "ui_item_4010004.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010004.webp"
+  },
+  "caramelos de frutas": {
+    "id": "4010048",
+    "name": "caramelos de frutas",
+    "icon": "ui_item_4010048.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010048.webp"
+  },
+  "plano de mueble: verano frío - reposera de playa": {
+    "id": "4040092",
+    "name": "plano de mueble: verano frío - reposera de playa",
+    "icon": "ui_item_4040092.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040092.webp"
+  },
+  "plano de mueble: verano frío - flotador de patito": {
+    "id": "4040084",
+    "name": "plano de mueble: verano frío - flotador de patito",
+    "icon": "ui_item_4040084.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040084.webp"
+  },
+  "plano de mueble: verano frío - sombrilla": {
+    "id": "4040082",
+    "name": "plano de mueble: verano frío - sombrilla",
+    "icon": "ui_item_4040082.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040082.webp"
+  },
+  "plano de mueble: verano frío - estante para flotadores": {
+    "id": "4040083",
+    "name": "plano de mueble: verano frío - estante para flotadores",
+    "icon": "ui_item_4040083.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040083.webp"
+  },
+  "plano de muebles: luna de cosecha: crujiente y dulce": {
+    "id": "4040069",
+    "name": "plano de muebles: luna de cosecha: crujiente y dulce",
+    "icon": "ui_item_4040069.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040069.webp"
+  },
+  "plano de muebles: luna de cosecha: delicias hojaldradas": {
+    "id": "4040071",
+    "name": "plano de muebles: luna de cosecha: delicias hojaldradas",
+    "icon": "ui_item_4040071.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040071.webp"
+  },
+  "plano de muebles: luna de cosecha: mezcla de frutas": {
+    "id": "4040052",
+    "name": "plano de muebles: luna de cosecha: mezcla de frutas",
+    "icon": "ui_item_4040052.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040052.webp"
+  },
+  "plano de muebles: luna de cosecha: trigo dorado": {
+    "id": "4040056",
+    "name": "plano de muebles: luna de cosecha: trigo dorado",
+    "icon": "ui_item_4040056.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040056.webp"
+  },
+  "plano de muebles: luna de cosecha: banquito bajo": {
+    "id": "4040054",
+    "name": "plano de muebles: luna de cosecha: banquito bajo",
+    "icon": "ui_item_4040054.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040054.webp"
+  },
+  "plano de muebles: luna de cosecha: conejo lunar": {
+    "id": "4040057",
+    "name": "plano de muebles: luna de cosecha: conejo lunar",
+    "icon": "ui_item_4040057.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040057.webp"
+  },
+  "plano de muebles: luna de cosecha: encanto de osmanto": {
+    "id": "4040058",
+    "name": "plano de muebles: luna de cosecha: encanto de osmanto",
+    "icon": "ui_item_4040058.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040058.webp"
+  },
+  "plano de muebles: luna de cosecha: mesa redonda": {
+    "id": "4040053",
+    "name": "plano de muebles: luna de cosecha: mesa redonda",
+    "icon": "ui_item_4040053.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040053.webp"
+  },
+  "plano de muebles: luna de cosecha: luz estelar": {
+    "id": "4040049",
+    "name": "plano de muebles: luna de cosecha: luz estelar",
+    "icon": "ui_item_4040049.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040049.webp"
+  },
+  "plano de muebles: luna de cosecha: olla para estofado": {
+    "id": "4040068",
+    "name": "plano de muebles: luna de cosecha: olla para estofado",
+    "icon": "ui_item_4040068.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040068.webp"
+  },
+  "plano de muebles: luna de cosecha: banquito alto": {
+    "id": "4040055",
+    "name": "plano de muebles: luna de cosecha: banquito alto",
+    "icon": "ui_item_4040055.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040055.webp"
+  },
+  "plano de muebles: luna de cosecha: aroma a trigo": {
+    "id": "4040070",
+    "name": "plano de muebles: luna de cosecha: aroma a trigo",
+    "icon": "ui_item_4040070.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040070.webp"
+  },
+  "gema": {
+    "id": "4001052",
+    "name": "gema",
+    "icon": "ui_item_4001052.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001052.webp"
+  },
+  "ginseng": {
+    "id": "4001016",
+    "name": "ginseng",
+    "icon": "ui_item_4001016.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001016.webp"
+  },
+  "pastel de castaña y ginseng": {
+    "id": "4010141",
+    "name": "pastel de castaña y ginseng",
+    "icon": "ui_item_4010141.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010141.webp"
+  },
+  "polvo de ginseng": {
+    "id": "4010137",
+    "name": "polvo de ginseng",
+    "icon": "ui_item_4010137.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010137.webp"
+  },
+  "semilla de ginseng": {
+    "id": "4000016",
+    "name": "semilla de ginseng",
+    "icon": "ui_item_4000016.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000016.webp"
+  },
+  "agua de ginseng": {
+    "id": "4010008",
+    "name": "agua de ginseng",
+    "icon": "ui_item_4010008.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010008.webp"
+  },
+  "bolita de arroz glutinoso": {
+    "id": "4010059",
+    "name": "bolita de arroz glutinoso",
+    "icon": "ui_item_4010059.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010059.webp"
+  },
+  "armazón de mineral y madera en gradiente": {
+    "id": "4010183",
+    "name": "armazón de mineral y madera en gradiente",
+    "icon": "ui_item_4010183.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010183.webp"
+  },
+  "caramelo de uva": {
+    "id": "4010101",
+    "name": "caramelo de uva",
+    "icon": "ui_item_4010101.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010101.webp"
+  },
+  "mermelada de uva": {
+    "id": "4010097",
+    "name": "mermelada de uva",
+    "icon": "ui_item_4010097.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010097.webp"
+  },
+  "jugo de uva": {
+    "id": "4010003",
+    "name": "jugo de uva",
+    "icon": "ui_item_4010003.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010003.webp"
+  },
+  "bebida de uva y limón": {
+    "id": "4010159",
+    "name": "bebida de uva y limón",
+    "icon": "ui_item_4010159.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010159.webp"
+  },
+  "semilla de uva": {
+    "id": "4000010",
+    "name": "semilla de uva",
+    "icon": "ui_item_4000010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000010.webp"
+  },
+  "uvas": {
+    "id": "4001010",
+    "name": "uvas",
+    "icon": "ui_item_4001010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001010.webp"
+  },
+  "bandeja de cosecha": {
+    "id": "4010148",
+    "name": "bandeja de cosecha",
+    "icon": "ui_item_4010148.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010148.webp"
+  },
+  "aroma herbal de ginseng": {
+    "id": "4010139",
+    "name": "aroma herbal de ginseng",
+    "icon": "ui_item_4010139.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010139.webp"
+  },
+  "hierbas": {
+    "id": "4010067",
+    "name": "hierbas",
+    "icon": "ui_item_4010067.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010067.webp"
+  },
+  "mena de hierro": {
+    "id": "4001055",
+    "name": "mena de hierro",
+    "icon": "ui_item_4001055.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001055.webp"
+  },
+  "mermelada": {
+    "id": "4010014",
+    "name": "mermelada",
+    "icon": "ui_item_4010014.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010014.webp"
+  },
+  "gelatina": {
+    "id": "4010060",
+    "name": "gelatina",
+    "icon": "ui_item_4010060.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010060.webp"
+  },
+  "vigas laminadas": {
+    "id": "4010171",
+    "name": "vigas laminadas",
+    "icon": "ui_item_4010171.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010171.webp"
+  },
+  "incienso de lavanda": {
+    "id": "4010017",
+    "name": "incienso de lavanda",
+    "icon": "ui_item_4010017.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010017.webp"
+  },
+  "incienso de limón": {
+    "id": "4010022",
+    "name": "incienso de limón",
+    "icon": "ui_item_4010022.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010022.webp"
+  },
+  "madera de limonero": {
+    "id": "4001028",
+    "name": "madera de limonero",
+    "icon": "ui_item_4001028.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001028.webp"
+  },
+  "raíz de loto": {
+    "id": "4001006",
+    "name": "raíz de loto",
+    "icon": "ui_item_4001006.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001006.webp"
+  },
+  "almidón de raíz de loto": {
+    "id": "4010033",
+    "name": "almidón de raíz de loto",
+    "icon": "ui_item_4010033.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010033.webp"
+  },
+  "burbuja de amor": {
+    "id": "4001050",
+    "name": "burbuja de amor",
+    "icon": "ui_item_4001050.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001050.webp"
+  },
+  "azúcar de malta": {
+    "id": "4010045",
+    "name": "azúcar de malta",
+    "icon": "ui_item_4010045.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010045.webp"
+  },
+  "estrella de dulce de arce": {
+    "id": "4010051",
+    "name": "estrella de dulce de arce",
+    "icon": "ui_item_4010051.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010051.webp"
+  },
+  "trozos de azúcar de arce": {
+    "id": "4010047",
+    "name": "trozos de azúcar de arce",
+    "icon": "ui_item_4010047.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010047.webp"
+  },
+  "madera de arce": {
+    "id": "4001020",
+    "name": "madera de arce",
+    "icon": "ui_item_4001020.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001020.webp"
+  },
+  "puré de patata": {
+    "id": "4010153",
+    "name": "puré de patata",
+    "icon": "ui_item_4010153.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010153.webp"
+  },
+  "té con leche": {
+    "id": "4010052",
+    "name": "té con leche",
+    "icon": "ui_item_4010052.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010052.webp"
+  },
+  "rábano de rocío de luna": {
+    "id": "4001066",
+    "name": "rábano de rocío de luna",
+    "icon": "ui_item_4001066.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001066.webp"
+  },
+  "semillas de rábano de rocío de luna": {
+    "id": "4000043",
+    "name": "semillas de rábano de rocío de luna",
+    "icon": "ui_item_4000043.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000043.webp"
+  },
+  "rodajas de rábano de rocío de luna": {
+    "id": "4010150",
+    "name": "rodajas de rábano de rocío de luna",
+    "icon": "ui_item_4010150.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010150.webp"
+  },
+  "trigo de rayo de luna": {
+    "id": "4040033",
+    "name": "trigo de rayo de luna",
+    "icon": "ui_item_4040033.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040033.webp"
+  },
+  "flor de estrella matutina": {
+    "id": "4010123",
+    "name": "flor de estrella matutina",
+    "icon": "ui_item_4010123.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010123.webp"
+  },
+  "manantial mineral natural": {
+    "id": "4001073",
+    "name": "manantial mineral natural",
+    "icon": "ui_item_4001073.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001073.webp"
+  },
+  "caucho natural": {
+    "id": "4001029",
+    "name": "caucho natural",
+    "icon": "ui_item_4001029.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001029.webp"
+  },
+  "frutos secos": {
+    "id": "4010066",
+    "name": "frutos secos",
+    "icon": "ui_item_4010066.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010066.webp"
+  },
+  "flor de azahar": {
+    "id": "4001035",
+    "name": "flor de azahar",
+    "icon": "ui_item_4001035.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001035.webp"
+  },
+  "pieza de madera claveteada con mineral": {
+    "id": "4010179",
+    "name": "pieza de madera claveteada con mineral",
+    "icon": "ui_item_4010179.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010179.webp"
+  },
+  "viga de soporte de mineral y madera": {
+    "id": "4010182",
+    "name": "viga de soporte de mineral y madera",
+    "icon": "ui_item_4010182.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010182.webp"
+  },
+  "corteza de palmera": {
+    "id": "4001031",
+    "name": "corteza de palmera",
+    "icon": "ui_item_4001031.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001031.webp"
+  },
+  "tela de palma": {
+    "id": "4010044",
+    "name": "tela de palma",
+    "icon": "ui_item_4010044.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010044.webp"
+  },
+  "cuerda de palma": {
+    "id": "4010041",
+    "name": "cuerda de palma",
+    "icon": "ui_item_4010041.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010041.webp"
+  },
+  "semilla de palmera": {
+    "id": "4000021",
+    "name": "semilla de palmera",
+    "icon": "ui_item_4000021.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000021.webp"
+  },
+  "madera de palmera": {
+    "id": "4001021",
+    "name": "madera de palmera",
+    "icon": "ui_item_4001021.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001021.webp"
+  },
+  "perla": {
+    "id": "4001049",
+    "name": "perla",
+    "icon": "ui_item_4001049.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001049.webp"
+  },
+  "collar de perlas": {
+    "id": "4010082",
+    "name": "collar de perlas",
+    "icon": "ui_item_4010082.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010082.webp"
+  },
+  "pétalos": {
+    "id": "4001045",
+    "name": "pétalos",
+    "icon": "ui_item_4001045.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001045.webp"
+  },
+  "brotes de bambú encurtidos": {
+    "id": "4010013",
+    "name": "brotes de bambú encurtidos",
+    "icon": "ui_item_4010013.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010013.webp"
+  },
+  "duramen de pino": {
+    "id": "4001032",
+    "name": "duramen de pino",
+    "icon": "ui_item_4001032.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001032.webp"
+  },
+  "madera de pino": {
+    "id": "4001022",
+    "name": "madera de pino",
+    "icon": "ui_item_4001022.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001022.webp"
+  },
+  "tónico de crecimiento de plantas": {
+    "id": "4040035",
+    "name": "tónico de crecimiento de plantas",
+    "icon": "ui_item_4040035.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040035.webp"
+  },
+  "porcelana": {
+    "id": "4010079",
+    "name": "porcelana",
+    "icon": "ui_item_4010079.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010079.webp"
+  },
+  "kvass de patata": {
+    "id": "4010006",
+    "name": "kvass de patata",
+    "icon": "ui_item_4010006.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010006.webp"
+  },
+  "pan prémium": {
+    "id": "4020067",
+    "name": "pan prémium",
+    "icon": "ui_item_4020067.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020067.webp"
+  },
+  "aceite de coco prémium": {
+    "id": "4020026",
+    "name": "aceite de coco prémium",
+    "icon": "ui_item_4010024.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010024.webp"
+  },
+  "hilo de algodón prémium": {
+    "id": "4020029",
+    "name": "hilo de algodón prémium",
+    "icon": "ui_item_4010039.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010039.webp"
+  },
+  "fresas deshidratadas prémium": {
+    "id": "4020025",
+    "name": "fresas deshidratadas prémium",
+    "icon": "ui_item_4010068.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010068.webp"
+  },
+  "hierbas prémium": {
+    "id": "4020027",
+    "name": "hierbas prémium",
+    "icon": "ui_item_4010067.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010067.webp"
+  },
+  "incienso de limón prémium": {
+    "id": "4010111",
+    "name": "incienso de limón prémium",
+    "icon": "ui_item_4010022.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010022.webp"
+  },
+  "collar de perlas prémium": {
+    "id": "4020030",
+    "name": "collar de perlas prémium",
+    "icon": "ui_item_4010082.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010082.webp"
+  },
+  "sopa de patata prémium": {
+    "id": "4020068",
+    "name": "sopa de patata prémium",
+    "icon": "ui_item_4020068.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020068.webp"
+  },
+  "piedras desgastadas por el río prémium": {
+    "id": "4020073",
+    "name": "piedras desgastadas por el río prémium",
+    "icon": "ui_item_4020073.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020073.webp"
+  },
+  "ambientador de rosa prémium": {
+    "id": "4020074",
+    "name": "ambientador de rosa prémium",
+    "icon": "ui_item_4020074.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020074.webp"
+  },
+  "incienso de rosa prémium": {
+    "id": "4010107",
+    "name": "incienso de rosa prémium",
+    "icon": "ui_item_4010018.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010018.webp"
+  },
+  "trigo prémium": {
+    "id": "4020079",
+    "name": "trigo prémium",
+    "icon": "ui_item_4020079.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020079.webp"
+  },
+  "harina de trigo prémium": {
+    "id": "4020023",
+    "name": "harina de trigo prémium",
+    "icon": "ui_item_4010032.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010032.webp"
+  },
+  "talla de madera prémium": {
+    "id": "4020028",
+    "name": "talla de madera prémium",
+    "icon": "ui_item_4020028.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020028.webp"
+  },
+  "juguete tejido prémium": {
+    "id": "4020031",
+    "name": "juguete tejido prémium",
+    "icon": "ui_item_4020031.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020031.webp"
+  },
+  "calabaza": {
+    "id": "4001062",
+    "name": "calabaza",
+    "icon": "ui_item_4001062.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001062.webp"
+  },
+  "pastel de arroz de calabaza": {
+    "id": "4010114",
+    "name": "pastel de arroz de calabaza",
+    "icon": "ui_item_4010114.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010114.webp"
+  },
+  "semilla de calabaza": {
+    "id": "4000042",
+    "name": "semilla de calabaza",
+    "icon": "ui_item_4000042.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000042.webp"
+  },
+  "mena de cuarzo": {
+    "id": "4001056",
+    "name": "mena de cuarzo",
+    "icon": "ui_item_4001056.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001056.webp"
+  },
+  "fórmula rápida: bambú": {
+    "id": "4020035",
+    "name": "fórmula rápida: bambú",
+    "icon": "ui_item_4020035.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020035.webp"
+  },
+  "fórmula rápida: mineral de cobre": {
+    "id": "4020039",
+    "name": "fórmula rápida: mineral de cobre",
+    "icon": "ui_item_4001054.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001054.webp"
+  },
+  "fórmula rápida: gema": {
+    "id": "4020042",
+    "name": "fórmula rápida: gema",
+    "icon": "ui_item_4001052.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001052.webp"
+  },
+  "fórmula rápida: mineral de hierro": {
+    "id": "4020040",
+    "name": "fórmula rápida: mineral de hierro",
+    "icon": "ui_item_4001055.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001055.webp"
+  },
+  "fórmula rápida: limón": {
+    "id": "4020043",
+    "name": "fórmula rápida: limón",
+    "icon": "ui_item_4020043.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020043.webp"
+  },
+  "fórmula rápida: caucho natural": {
+    "id": "4020036",
+    "name": "fórmula rápida: caucho natural",
+    "icon": "ui_item_4001029.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001029.webp"
+  },
+  "fórmula rápida: perla": {
+    "id": "4020048",
+    "name": "fórmula rápida: perla",
+    "icon": "ui_item_4020048.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020048.webp"
+  },
+  "fórmula rápida: duramen de pino": {
+    "id": "4020037",
+    "name": "fórmula rápida: duramen de pino",
+    "icon": "ui_item_4001032.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001032.webp"
+  },
+  "fórmula rápida: mineral de cuarzo": {
+    "id": "4020041",
+    "name": "fórmula rápida: mineral de cuarzo",
+    "icon": "ui_item_4020041.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020041.webp"
+  },
+  "fórmula rápida: piedra": {
+    "id": "4020038",
+    "name": "fórmula rápida: piedra",
+    "icon": "ui_item_4001053.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001053.webp"
+  },
+  "fórmula rápida: rosa": {
+    "id": "4020045",
+    "name": "fórmula rápida: rosa",
+    "icon": "ui_item_4020045.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020045.webp"
+  },
+  "fórmula rápida: caracola": {
+    "id": "4020046",
+    "name": "fórmula rápida: caracola",
+    "icon": "ui_item_4020046.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020046.webp"
+  },
+  "fórmula rápida: trigo": {
+    "id": "4020033",
+    "name": "fórmula rápida: trigo",
+    "icon": "ui_item_4020033.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020033.webp"
+  },
+  "fórmula rápida: madera de sauce": {
+    "id": "4020034",
+    "name": "fórmula rápida: madera de sauce",
+    "icon": "ui_item_4001018.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001018.webp"
+  },
+  "receta rápida: aromatista": {
+    "id": "4020066",
+    "name": "receta rápida: aromatista",
+    "icon": "ui_item_4020066.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020066.webp"
+  },
+  "receta rápida: agua fresca": {
+    "id": "4020061",
+    "name": "receta rápida: agua fresca",
+    "icon": "ui_item_4020061.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020061.webp"
+  },
+  "receta rápida: jarabe de arce": {
+    "id": "4020056",
+    "name": "receta rápida: jarabe de arce",
+    "icon": "ui_item_4020056.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020056.webp"
+  },
+  "receta rápida: patata": {
+    "id": "4020054",
+    "name": "receta rápida: patata",
+    "icon": "ui_item_4020054.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020054.webp"
+  },
+  "receta rápida: arroz": {
+    "id": "4020055",
+    "name": "receta rápida: arroz",
+    "icon": "ui_item_4020055.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020055.webp"
+  },
+  "receta rápida: sal marina": {
+    "id": "4020060",
+    "name": "receta rápida: sal marina",
+    "icon": "ui_item_4020060.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020060.webp"
+  },
+  "receta rápida: fresa": {
+    "id": "4020057",
+    "name": "receta rápida: fresa",
+    "icon": "ui_item_4020057.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020057.webp"
+  },
+  "receta rápida: agua de pozo": {
+    "id": "4020059",
+    "name": "receta rápida: agua de pozo",
+    "icon": "ui_item_4020059.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020059.webp"
+  },
+  "receta rápida: trigo": {
+    "id": "4020058",
+    "name": "receta rápida: trigo",
+    "icon": "ui_item_4020058.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020058.webp"
+  },
+  "apunte de receta: bandeja de la cosecha": {
+    "id": "4040044",
+    "name": "apunte de receta: bandeja de la cosecha",
+    "icon": "ui_item_4040044.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040044.webp"
+  },
+  "apunte de receta: rábano de rocío de luna": {
+    "id": "4040039",
+    "name": "apunte de receta: rábano de rocío de luna",
+    "icon": "ui_item_4040039.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040039.webp"
+  },
+  "apunte de receta: rodajas de rábano de rocío de luna": {
+    "id": "4040046",
+    "name": "apunte de receta: rodajas de rábano de rocío de luna",
+    "icon": "ui_item_4040046.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040046.webp"
+  },
+  "nota de receta: kvass de patata": {
+    "id": "4040115",
+    "name": "nota de receta: kvass de patata",
+    "icon": "ui_item_4040115.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040115.webp"
+  },
+  "apunte de receta: pimiento de luna creciente asado": {
+    "id": "4040045",
+    "name": "apunte de receta: pimiento de luna creciente asado",
+    "icon": "ui_item_4040045.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040045.webp"
+  },
+  "nota de receta: pastelitos de rosa": {
+    "id": "4040114",
+    "name": "nota de receta: pastelitos de rosa",
+    "icon": "ui_item_4040114.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040114.webp"
+  },
+  "apunte de receta: olla caliente sombría": {
+    "id": "4040043",
+    "name": "apunte de receta: olla caliente sombría",
+    "icon": "ui_item_4040043.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040043.webp"
+  },
+  "apunte de receta: encurtido sombrío": {
+    "id": "4040042",
+    "name": "apunte de receta: encurtido sombrío",
+    "icon": "ui_item_4040042.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040042.webp"
+  },
+  "apunte de receta: salsa dulce picante sombría": {
+    "id": "4040047",
+    "name": "apunte de receta: salsa dulce picante sombría",
+    "icon": "ui_item_4040047.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040047.webp"
+  },
+  "apunte de receta: pimiento de luna creciente": {
+    "id": "4040040",
+    "name": "apunte de receta: pimiento de luna creciente",
+    "icon": "ui_item_4040040.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040040.webp"
+  },
+  "grabación: partitura “libertad”": {
+    "id": "4040121",
+    "name": "grabación: partitura “libertad”",
+    "icon": "ui_item_4040112.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040112.webp"
+  },
+  "harina refinada": {
+    "id": "4010163",
+    "name": "harina refinada",
+    "icon": "ui_item_4010163.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010163.webp"
+  },
+  "mineral refinado": {
+    "id": "4010176",
+    "name": "mineral refinado",
+    "icon": "ui_item_4010176.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010176.webp"
+  },
+  "pieza de madera reforzada": {
+    "id": "4010180",
+    "name": "pieza de madera reforzada",
+    "icon": "ui_item_4010180.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010180.webp"
+  },
+  "bebida de arroz": {
+    "id": "4010152",
+    "name": "bebida de arroz",
+    "icon": "ui_item_4010152.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010152.webp"
+  },
+  "harina de arroz": {
+    "id": "4010037",
+    "name": "harina de arroz",
+    "icon": "ui_item_4010037.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010037.webp"
+  },
+  "vinagre de arroz": {
+    "id": "4010011",
+    "name": "vinagre de arroz",
+    "icon": "ui_item_4010011.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010011.webp"
+  },
+  "compota de uva intensa": {
+    "id": "4010158",
+    "name": "compota de uva intensa",
+    "icon": "ui_item_4010065.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010065.webp"
+  },
+  "pimiento de luna creciente asado": {
+    "id": "4010149",
+    "name": "pimiento de luna creciente asado",
+    "icon": "ui_item_4010149.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010149.webp"
+  },
+  "galletita de rosa": {
+    "id": "4010166",
+    "name": "galletita de rosa",
+    "icon": "ui_item_4010166.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010166.webp"
+  },
+  "patito de goma": {
+    "id": "4010190",
+    "name": "patito de goma",
+    "icon": "ui_item_4010190.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010190.webp"
+  },
+  "semilla de árbol de caucho": {
+    "id": "4000019",
+    "name": "semilla de árbol de caucho",
+    "icon": "ui_item_4000019.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000019.webp"
+  },
+  "madera de árbol de caucho": {
+    "id": "4001019",
+    "name": "madera de árbol de caucho",
+    "icon": "ui_item_4001019.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001019.webp"
+  },
+  "bolsita": {
+    "id": "4010029",
+    "name": "bolsita",
+    "icon": "ui_item_4010029.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010029.webp"
+  },
+  "limón salado": {
+    "id": "4010192",
+    "name": "limón salado",
+    "icon": "ui_item_4010192.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010192.webp"
+  },
+  "escamas": {
+    "id": "4001042",
+    "name": "escamas",
+    "icon": "ui_item_4001042.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001042.webp"
+  },
+  "aniicubo semiacabado": {
+    "id": "4020000",
+    "name": "aniicubo semiacabado",
+    "icon": "ui_item_4020000.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020000.webp"
+  },
+  "aniicubo mega semiacabado": {
+    "id": "4020002",
+    "name": "aniicubo mega semiacabado",
+    "icon": "ui_item_4020006.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020006.webp"
+  },
+  "aniicubo pro semiacabado": {
+    "id": "4020001",
+    "name": "aniicubo pro semiacabado",
+    "icon": "ui_item_4020001.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020001.webp"
+  },
+  "capullo de crecimiento semiterminado": {
+    "id": "4020008",
+    "name": "capullo de crecimiento semiterminado",
+    "icon": "ui_item_4020008.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020008.webp"
+  },
+  "flor de crecimiento semiterminada": {
+    "id": "4020009",
+    "name": "flor de crecimiento semiterminada",
+    "icon": "ui_item_4020009.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020009.webp"
+  },
+  "fruta de crecimiento semiterminada": {
+    "id": "4020010",
+    "name": "fruta de crecimiento semiterminada",
+    "icon": "ui_item_4020010.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4020010.webp"
+  },
+  "coco rallado": {
+    "id": "4010076",
+    "name": "coco rallado",
+    "icon": "ui_item_4010076.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010076.webp"
+  },
+  "ladrillo de mineral sinterizado": {
+    "id": "4010175",
+    "name": "ladrillo de mineral sinterizado",
+    "icon": "ui_item_4010175.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010175.webp"
+  },
+  "jabón": {
+    "id": "4010025",
+    "name": "jabón",
+    "icon": "ui_item_4010025.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010025.webp"
+  },
+  "sorgo": {
+    "id": "4001008",
+    "name": "sorgo",
+    "icon": "ui_item_4001008.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001008.webp"
+  },
+  "tofu en salsa de soja": {
+    "id": "4010061",
+    "name": "tofu en salsa de soja",
+    "icon": "ui_item_4010061.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010061.webp"
+  },
+  "tablones estándar": {
+    "id": "4010170",
+    "name": "tablones estándar",
+    "icon": "ui_item_4010170.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010170.webp"
+  },
+  "estrella": {
+    "id": "4001047",
+    "name": "estrella",
+    "icon": "ui_item_4001047.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001047.webp"
+  },
+  "farol de deseos estelares": {
+    "id": "4010090",
+    "name": "farol de deseos estelares",
+    "icon": "ui_item_4010090.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010090.webp"
+  },
+  "almidón": {
+    "id": "4010038",
+    "name": "almidón",
+    "icon": "ui_item_4010038.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010038.webp"
+  },
+  "rollito de arroz al vapor": {
+    "id": "4010055",
+    "name": "rollito de arroz al vapor",
+    "icon": "ui_item_4010055.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010055.webp"
+  },
+  "castañas tostadas con azúcar": {
+    "id": "4010112",
+    "name": "castañas tostadas con azúcar",
+    "icon": "ui_item_4010112.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010112.webp"
+  },
+  "harina de trigo súper": {
+    "id": "4020024",
+    "name": "harina de trigo súper",
+    "icon": "ui_item_4010032.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010032.webp"
+  },
+  "raíz de loto agridulce": {
+    "id": "4010063",
+    "name": "raíz de loto agridulce",
+    "icon": "ui_item_4010063.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010063.webp"
+  },
+  "bebida de arroz dulce": {
+    "id": "4010002",
+    "name": "bebida de arroz dulce",
+    "icon": "ui_item_4010002.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010002.webp"
+  },
+  "tanghulu": {
+    "id": "4010049",
+    "name": "tanghulu",
+    "icon": "ui_item_4010049.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010049.webp"
+  },
+  "taro": {
+    "id": "4001011",
+    "name": "taro",
+    "icon": "ui_item_4001011.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001011.webp"
+  },
+  "pasta de taro": {
+    "id": "4010034",
+    "name": "pasta de taro",
+    "icon": "ui_item_4010034.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010034.webp"
+  },
+  "bola de tarta": {
+    "id": "4010130",
+    "name": "bola de tarta",
+    "icon": "ui_item_4010130.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010130.webp"
+  },
+  "highball de tequila": {
+    "id": "4010007",
+    "name": "highball de tequila",
+    "icon": "ui_item_4010007.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010007.webp"
+  },
+  "planta hiloestelar": {
+    "id": "4010131",
+    "name": "planta hiloestelar",
+    "icon": "ui_item_4010131.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010131.webp"
+  },
+  "pastel de tofu": {
+    "id": "4010057",
+    "name": "pastel de tofu",
+    "icon": "ui_item_4010057.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010057.webp"
+  },
+  "olla caliente sombría": {
+    "id": "4010147",
+    "name": "olla caliente sombría",
+    "icon": "ui_item_4010147.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010147.webp"
+  },
+  "encurtido umbral": {
+    "id": "4010146",
+    "name": "encurtido umbral",
+    "icon": "ui_item_4010146.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010146.webp"
+  },
+  "salsa dulce picante sombría": {
+    "id": "4010151",
+    "name": "salsa dulce picante sombría",
+    "icon": "ui_item_4010151.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010151.webp"
+  },
+  "récord": {
+    "id": "4040112",
+    "name": "récord",
+    "icon": "ui_item_4040112.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040112.webp"
+  },
+  "frijol volcánico": {
+    "id": "4001036",
+    "name": "frijol volcánico",
+    "icon": "ui_item_4001036.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001036.webp"
+  },
+  "madera de frijol volcánico": {
+    "id": "4001026",
+    "name": "madera de frijol volcánico",
+    "icon": "ui_item_4001026.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001026.webp"
+  },
+  "nuez": {
+    "id": "4001040",
+    "name": "nuez",
+    "icon": "ui_item_4001040.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001040.webp"
+  },
+  "pastel de nuez": {
+    "id": "4010184",
+    "name": "pastel de nuez",
+    "icon": "ui_item_4010184.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010184.webp"
+  },
+  "leche de nuez": {
+    "id": "4010185",
+    "name": "leche de nuez",
+    "icon": "ui_item_4010185.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010185.webp"
+  },
+  "semilla de nogal": {
+    "id": "4000030",
+    "name": "semilla de nogal",
+    "icon": "ui_item_4000030.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000030.webp"
+  },
+  "madera de nogal": {
+    "id": "4001060",
+    "name": "madera de nogal",
+    "icon": "ui_item_4001060.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001060.webp"
+  },
+  "pimiento de luna creciente": {
+    "id": "4001067",
+    "name": "pimiento de luna creciente",
+    "icon": "ui_item_4001067.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001067.webp"
+  },
+  "semillas de pimiento de luna creciente": {
+    "id": "4000044",
+    "name": "semillas de pimiento de luna creciente",
+    "icon": "ui_item_4000044.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000044.webp"
+  },
+  "rocío de luna creciente": {
+    "id": "4040034",
+    "name": "rocío de luna creciente",
+    "icon": "ui_item_4040034.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040034.webp"
+  },
+  "campanilla de viento": {
+    "id": "4010085",
+    "name": "campanilla de viento",
+    "icon": "ui_item_4010085.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010085.webp"
+  },
+  "frutas secas estofadas en vino": {
+    "id": "4010065",
+    "name": "frutas secas estofadas en vino",
+    "icon": "ui_item_4010065.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010065.webp"
+  },
+  "lana": {
+    "id": "4001044",
+    "name": "lana",
+    "icon": "ui_item_4001044.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001044.webp"
+  },
+  "tela de lana": {
+    "id": "4010043",
+    "name": "tela de lana",
+    "icon": "ui_item_4010043.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010043.webp"
+  },
+  "hilo de lana": {
+    "id": "4010040",
+    "name": "hilo de lana",
+    "icon": "ui_item_4010040.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010040.webp"
+  },
+  "juguete tejido": {
+    "id": "4010089",
+    "name": "juguete tejido",
+    "icon": "ui_item_4010089.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010089.webp"
+  },
+  "semilla de madera de agar": {
+    "id": "4000027",
+    "name": "semilla de madera de agar",
+    "icon": "ui_item_4000027.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000027.webp"
+  },
+  "manzana": {
+    "id": "4001033",
+    "name": "manzana",
+    "icon": "ui_item_4001033.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001033.webp"
+  },
+  "caramelo de manzana": {
+    "id": "4010104",
+    "name": "caramelo de manzana",
+    "icon": "ui_item_4010104.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010104.webp"
+  },
+  "jugo de manzana": {
+    "id": "4010096",
+    "name": "jugo de manzana",
+    "icon": "ui_item_4010096.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010096.webp"
+  },
+  "tarta de manzana": {
+    "id": "4010162",
+    "name": "tarta de manzana",
+    "icon": "ui_item_4010162.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010162.webp"
+  },
+  "semilla de manzano": {
+    "id": "4000023",
+    "name": "semilla de manzano",
+    "icon": "ui_item_4000023.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000023.webp"
+  },
+  "aromatista": {
+    "id": "4001046",
+    "name": "aromatista",
+    "icon": "ui_item_4001046.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001046.webp"
+  },
+  "bambú": {
+    "id": "4001017",
+    "name": "bambú",
+    "icon": "ui_item_4001017.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001017.webp"
+  },
+  "varilla de incienso de bambú": {
+    "id": "4010027",
+    "name": "varilla de incienso de bambú",
+    "icon": "ui_item_4010027.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010027.webp"
+  },
+  "artículo de bambú": {
+    "id": "4010080",
+    "name": "artículo de bambú",
+    "icon": "ui_item_4010080.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010080.webp"
+  },
+  "ramo de flores": {
+    "id": "4010092",
+    "name": "ramo de flores",
+    "icon": "ui_item_4010092.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010092.webp"
+  },
+  "pan": {
+    "id": "4010053",
+    "name": "pan",
+    "icon": "ui_item_4010053.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010053.webp"
+  },
+  "capitán papa": {
+    "id": "4001068",
+    "name": "capitán papa",
+    "icon": "ui_item_4001068.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001068.webp"
+  },
+  "flor de cerezo": {
+    "id": "4001034",
+    "name": "flor de cerezo",
+    "icon": "ui_item_4001034.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001034.webp"
+  },
+  "bola de arroz con flor de cerezo": {
+    "id": "4010134",
+    "name": "bola de arroz con flor de cerezo",
+    "icon": "ui_item_4010134.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010134.webp"
+  },
+  "incienso de cerezo": {
+    "id": "4010020",
+    "name": "incienso de cerezo",
+    "icon": "ui_item_4010020.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010020.webp"
+  },
+  "semilla de cerezo": {
+    "id": "4000024",
+    "name": "semilla de cerezo",
+    "icon": "ui_item_4000024.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000024.webp"
+  },
+  "arcilla": {
+    "id": "4001057",
+    "name": "arcilla",
+    "icon": "ui_item_4001057.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001057.webp"
+  },
+  "mineral tamizado grueso": {
+    "id": "4010174",
+    "name": "mineral tamizado grueso",
+    "icon": "ui_item_4010174.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010174.webp"
+  },
+  "algodón": {
+    "id": "4001004",
+    "name": "algodón",
+    "icon": "ui_item_4001004.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001004.webp"
+  },
+  "semilla de algodón": {
+    "id": "4000004",
+    "name": "semilla de algodón",
+    "icon": "ui_item_4000004.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000004.webp"
+  },
+  "hilo de algodón": {
+    "id": "4010039",
+    "name": "hilo de algodón",
+    "icon": "ui_item_4010039.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010039.webp"
+  },
+  "sopa cremosa de patata": {
+    "id": "4010064",
+    "name": "sopa cremosa de patata",
+    "icon": "ui_item_4010064.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010064.webp"
+  },
+  "tofu seco": {
+    "id": "4010074",
+    "name": "tofu seco",
+    "icon": "ui_item_4010074.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010074.webp"
+  },
+  "flor de cerezo seca": {
+    "id": "4010133",
+    "name": "flor de cerezo seca",
+    "icon": "ui_item_4010133.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010133.webp"
+  },
+  "rodajas de limón deshidratadas": {
+    "id": "4010072",
+    "name": "rodajas de limón deshidratadas",
+    "icon": "ui_item_4010072.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010072.webp"
+  },
+  "semilla de bambú esmeralda": {
+    "id": "4000017",
+    "name": "semilla de bambú esmeralda",
+    "icon": "ui_item_4000017.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000017.webp"
+  },
+  "bocaditos energéticos": {
+    "id": "4020011",
+    "name": "bocaditos energéticos",
+    "icon": "ui_item_4010059.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010059.webp"
+  },
+  "hierba colapelusa": {
+    "id": "4010125",
+    "name": "hierba colapelusa",
+    "icon": "ui_item_4010125.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010125.webp"
+  },
+  "plano de muebles": {
+    "id": "4040038",
+    "name": "plano de muebles",
+    "icon": "ui_item_4040038.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040038.webp"
+  },
+  "plano de mueble: verano frío - taburete redondo": {
+    "id": "4040093",
+    "name": "plano de mueble: verano frío - taburete redondo",
+    "icon": "ui_item_4040093.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040093.webp"
+  },
+  "plano de mueble: verano frío - ladrillo de sal marina": {
+    "id": "4040078",
+    "name": "plano de mueble: verano frío - ladrillo de sal marina",
+    "icon": "ui_item_4040078.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040078.webp"
+  },
+  "plano de mueble: verano frío - cubo de basura": {
+    "id": "4040085",
+    "name": "plano de mueble: verano frío - cubo de basura",
+    "icon": "ui_item_4040085.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040085.webp"
+  },
+  "plano de mueble: verano frío - ladrillo con vetas de madera": {
+    "id": "4040079",
+    "name": "plano de mueble: verano frío - ladrillo con vetas de madera",
+    "icon": "ui_item_4040079.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040079.webp"
+  },
+  "plano de muebles: luna de cosecha: alegría abundante": {
+    "id": "4040062",
+    "name": "plano de muebles: luna de cosecha: alegría abundante",
+    "icon": "ui_item_4040062.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040062.webp"
+  },
+  "plano de muebles: luna de cosecha: manzanas": {
+    "id": "4040073",
+    "name": "plano de muebles: luna de cosecha: manzanas",
+    "icon": "ui_item_4040073.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040073.webp"
+  },
+  "plano de muebles: luna de cosecha: hojas carmesí": {
+    "id": "4040061",
+    "name": "plano de muebles: luna de cosecha: hojas carmesí",
+    "icon": "ui_item_4040061.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040061.webp"
+  },
+  "plano de muebles: luna de cosecha: verduras del huerto": {
+    "id": "4040066",
+    "name": "plano de muebles: luna de cosecha: verduras del huerto",
+    "icon": "ui_item_4040066.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040066.webp"
+  },
+  "plano de muebles: luna de cosecha: naranjas": {
+    "id": "4040072",
+    "name": "plano de muebles: luna de cosecha: naranjas",
+    "icon": "ui_item_4040072.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040072.webp"
+  },
+  "plano de muebles: luna de cosecha: ola de arroz": {
+    "id": "4040059",
+    "name": "plano de muebles: luna de cosecha: ola de arroz",
+    "icon": "ui_item_4040059.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040059.webp"
+  },
+  "plano de muebles: luna de cosecha: naranjas dulces": {
+    "id": "4040067",
+    "name": "plano de muebles: luna de cosecha: naranjas dulces",
+    "icon": "ui_item_4040067.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040067.webp"
+  },
+  "plano de muebles: luna de cosecha: bayas ácidas": {
+    "id": "4040065",
+    "name": "plano de muebles: luna de cosecha: bayas ácidas",
+    "icon": "ui_item_4040065.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040065.webp"
+  },
+  "lavanda": {
+    "id": "4001007",
+    "name": "lavanda",
+    "icon": "ui_item_4001007.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001007.webp"
+  },
+  "galletas de lavanda": {
+    "id": "4010160",
+    "name": "galletas de lavanda",
+    "icon": "ui_item_4010160.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010160.webp"
+  },
+  "polvo de lavanda": {
+    "id": "4010145",
+    "name": "polvo de lavanda",
+    "icon": "ui_item_4010145.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010145.webp"
+  },
+  "bolsita de lavanda": {
+    "id": "4010136",
+    "name": "bolsita de lavanda",
+    "icon": "ui_item_4010029.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010029.webp"
+  },
+  "semilla de lavanda": {
+    "id": "4000007",
+    "name": "semilla de lavanda",
+    "icon": "ui_item_4000007.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000007.webp"
+  },
+  "lemon": {
+    "id": "4001038",
+    "name": "lemon",
+    "icon": "ui_item_4001038.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001038.webp"
+  },
+  "semilla de limonero": {
+    "id": "4000028",
+    "name": "semilla de limonero",
+    "icon": "ui_item_4000028.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000028.webp"
+  },
+  "semilla de loto": {
+    "id": "4000006",
+    "name": "semilla de loto",
+    "icon": "ui_item_4000006.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000006.webp"
+  },
+  "mermelada de manzana con dulce de arce": {
+    "id": "4010100",
+    "name": "mermelada de manzana con dulce de arce",
+    "icon": "ui_item_4010100.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010100.webp"
+  },
+  "patatas asadas con dulce de arce": {
+    "id": "4010154",
+    "name": "patatas asadas con dulce de arce",
+    "icon": "ui_item_4010154.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010154.webp"
+  },
+  "jarabe de arce": {
+    "id": "4001030",
+    "name": "jarabe de arce",
+    "icon": "ui_item_4001030.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001030.webp"
+  },
+  "semilla de árbol de arce": {
+    "id": "4000020",
+    "name": "semilla de árbol de arce",
+    "icon": "ui_item_4000020.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000020.webp"
+  },
+  "arroz molido": {
+    "id": "4001063",
+    "name": "arroz molido",
+    "icon": "ui_item_4001063.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001063.webp"
+  },
+  "arena mineral": {
+    "id": "4001065",
+    "name": "arena mineral",
+    "icon": "ui_item_4001065.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001065.webp"
+  },
+  "flor adornada con perlas": {
+    "id": "4010121",
+    "name": "flor adornada con perlas",
+    "icon": "ui_item_4010121.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010121.webp"
+  },
+  "semilla de pino": {
+    "id": "4000022",
+    "name": "semilla de pino",
+    "icon": "ui_item_4000022.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000022.webp"
+  },
+  "agua fresca sin tratar": {
+    "id": "4001071",
+    "name": "agua fresca sin tratar",
+    "icon": "ui_item_4001071.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001071.webp"
+  },
+  "gachas de arroz simples": {
+    "id": "4010155",
+    "name": "gachas de arroz simples",
+    "icon": "ui_item_4010155.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010155.webp"
+  },
+  "patata": {
+    "id": "4001002",
+    "name": "patata",
+    "icon": "ui_item_4001002.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001002.webp"
+  },
+  "patatas fritas": {
+    "id": "4010073",
+    "name": "patatas fritas",
+    "icon": "ui_item_4010073.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010073.webp"
+  },
+  "semilla de patata": {
+    "id": "4000002",
+    "name": "semilla de patata",
+    "icon": "ui_item_4000002.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000002.webp"
+  },
+  "alfarería": {
+    "id": "4010078",
+    "name": "alfarería",
+    "icon": "ui_item_4010078.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010078.webp"
+  },
+  "apunte de receta: batata": {
+    "id": "4040041",
+    "name": "apunte de receta: batata",
+    "icon": "ui_item_4040041.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040041.webp"
+  },
+  "notas de la receta": {
+    "id": "4040037",
+    "name": "notas de la receta",
+    "icon": "ui_item_4040037.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040037.webp"
+  },
+  "arroz": {
+    "id": "4001003",
+    "name": "arroz",
+    "icon": "ui_item_4001003.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001003.webp"
+  },
+  "semilla de arroz": {
+    "id": "4000003",
+    "name": "semilla de arroz",
+    "icon": "ui_item_4000003.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000003.webp"
+  },
+  "piedras desgastadas por el río": {
+    "id": "4010168",
+    "name": "piedras desgastadas por el río",
+    "icon": "ui_item_4010168.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010168.webp"
+  },
+  "soja tostada": {
+    "id": "4010191",
+    "name": "soja tostada",
+    "icon": "ui_item_4010191.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010191.webp"
+  },
+  "piedra": {
+    "id": "4001053",
+    "name": "piedra",
+    "icon": "ui_item_4001053.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001053.webp"
+  },
+  "caramelo de piedra": {
+    "id": "4010046",
+    "name": "caramelo de piedra",
+    "icon": "ui_item_4010046.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010046.webp"
+  },
+  "rosa": {
+    "id": "4001014",
+    "name": "rosa",
+    "icon": "ui_item_4001014.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001014.webp"
+  },
+  "concentrado de rosa": {
+    "id": "4010165",
+    "name": "concentrado de rosa",
+    "icon": "ui_item_4010165.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010165.webp"
+  },
+  "ambientador de rosa": {
+    "id": "4010028",
+    "name": "ambientador de rosa",
+    "icon": "ui_item_4010028.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010028.webp"
+  },
+  "incienso de rosa": {
+    "id": "4010018",
+    "name": "incienso de rosa",
+    "icon": "ui_item_4010018.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010018.webp"
+  },
+  "semilla de rosa": {
+    "id": "4000014",
+    "name": "semilla de rosa",
+    "icon": "ui_item_4000014.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000014.webp"
+  },
+  "madera en bruto": {
+    "id": "4010169",
+    "name": "madera en bruto",
+    "icon": "ui_item_4010169.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010169.webp"
+  },
+  "flor de cerezo salada": {
+    "id": "4010135",
+    "name": "flor de cerezo salada",
+    "icon": "ui_item_4010135.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010135.webp"
+  },
+  "sal marina": {
+    "id": "4001069",
+    "name": "sal marina",
+    "icon": "ui_item_4001069.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001069.webp"
+  },
+  "concha de mar": {
+    "id": "4001051",
+    "name": "concha de mar",
+    "icon": "ui_item_4001051.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001051.webp"
+  },
+  "ornamento de caracola": {
+    "id": "4010084",
+    "name": "ornamento de caracola",
+    "icon": "ui_item_4010084.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010084.webp"
+  },
+  "semilla de sorgo": {
+    "id": "4000008",
+    "name": "semilla de sorgo",
+    "icon": "ui_item_4000008.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000008.webp"
+  },
+  "salsa de soja": {
+    "id": "4010012",
+    "name": "salsa de soja",
+    "icon": "ui_item_4010012.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010012.webp"
+  },
+  "arroz frito con salsa de soja": {
+    "id": "4010062",
+    "name": "arroz frito con salsa de soja",
+    "icon": "ui_item_4010062.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010062.webp"
+  },
+  "soja": {
+    "id": "4001009",
+    "name": "soja",
+    "icon": "ui_item_4001009.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001009.webp"
+  },
+  "semilla de soja": {
+    "id": "4000009",
+    "name": "semilla de soja",
+    "icon": "ui_item_4000009.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000009.webp"
+  },
+  "hierba espigada": {
+    "id": "4010129",
+    "name": "hierba espigada",
+    "icon": "ui_item_4010129.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010129.webp"
+  },
+  "fresa": {
+    "id": "4001005",
+    "name": "fresa",
+    "icon": "ui_item_4001005.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001005.webp"
+  },
+  "mermelada de fresa": {
+    "id": "4010098",
+    "name": "mermelada de fresa",
+    "icon": "ui_item_4010098.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010098.webp"
+  },
+  "jugo de fresa": {
+    "id": "4010094",
+    "name": "jugo de fresa",
+    "icon": "ui_item_4010094.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010094.webp"
+  },
+  "semilla de fresa": {
+    "id": "4000005",
+    "name": "semilla de fresa",
+    "icon": "ui_item_4000005.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000005.webp"
+  },
+  "caña de azúcar": {
+    "id": "4001001",
+    "name": "caña de azúcar",
+    "icon": "ui_item_4001001.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001001.webp"
+  },
+  "jugo de caña de azúcar": {
+    "id": "4010161",
+    "name": "jugo de caña de azúcar",
+    "icon": "ui_item_4010161.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010161.webp"
+  },
+  "semilla de caña de azúcar": {
+    "id": "4000001",
+    "name": "semilla de caña de azúcar",
+    "icon": "ui_item_4000001.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000001.webp"
+  },
+  "semillas de batata": {
+    "id": "4000045",
+    "name": "semillas de batata",
+    "icon": "ui_item_4000045.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000045.webp"
+  },
+  "semilla de taro": {
+    "id": "4000011",
+    "name": "semilla de taro",
+    "icon": "ui_item_4000011.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000011.webp"
+  },
+  "té verde de arroz tostado": {
+    "id": "4010001",
+    "name": "té verde de arroz tostado",
+    "icon": "ui_item_4010001.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010001.webp"
+  },
+  "tofu": {
+    "id": "4010035",
+    "name": "tofu",
+    "icon": "ui_item_4010035.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010035.webp"
+  },
+  "mena de caparazón de tortuga": {
+    "id": "4010126",
+    "name": "mena de caparazón de tortuga",
+    "icon": "ui_item_4010126.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010126.webp"
+  },
+  "semilla de frijol volcánico": {
+    "id": "4000026",
+    "name": "semilla de frijol volcánico",
+    "icon": "ui_item_4000026.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000026.webp"
+  },
+  "agua de pozo": {
+    "id": "4001070",
+    "name": "agua de pozo",
+    "icon": "ui_item_4001070.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001070.webp"
+  },
+  "trigo": {
+    "id": "4001000",
+    "name": "trigo",
+    "icon": "ui_item_4001000.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001000.webp"
+  },
+  "semilla de trigo": {
+    "id": "4000000",
+    "name": "semilla de trigo",
+    "icon": "ui_item_4000000.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000000.webp"
+  },
+  "té de trigo": {
+    "id": "4010000",
+    "name": "té de trigo",
+    "icon": "ui_item_4010000.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010000.webp"
+  },
+  "harina de trigo": {
+    "id": "4010032",
+    "name": "harina de trigo",
+    "icon": "ui_item_4010032.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010032.webp"
+  },
+  "semilla de sauce": {
+    "id": "4000018",
+    "name": "semilla de sauce",
+    "icon": "ui_item_4000018.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000018.webp"
+  },
+  "madera de sauce": {
+    "id": "4001018",
+    "name": "madera de sauce",
+    "icon": "ui_item_4001018.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001018.webp"
+  },
+  "bloque de madera": {
+    "id": "4001064",
+    "name": "bloque de madera",
+    "icon": "ui_item_4001064.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001064.webp"
+  },
+  "talla de madera": {
+    "id": "4010081",
+    "name": "talla de madera",
+    "icon": "ui_item_4010081.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4010081.webp"
+  },
+  "plano de mueble: verano frío - refresco de coco": {
+    "id": "4040087",
+    "name": "plano de mueble: verano frío - refresco de coco",
+    "icon": "ui_item_4040087.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040087.webp"
+  },
+  "plano de mueble: verano frío - conjunto de bebidas": {
+    "id": "4040088",
+    "name": "plano de mueble: verano frío - conjunto de bebidas",
+    "icon": "ui_item_4040088.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040088.webp"
+  },
+  "plano de mueble: verano frío - atardecer fundido": {
+    "id": "4040090",
+    "name": "plano de mueble: verano frío - atardecer fundido",
+    "icon": "ui_item_4040090.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040090.webp"
+  },
+  "plano de mueble: verano frío - trapeador": {
+    "id": "4040086",
+    "name": "plano de mueble: verano frío - trapeador",
+    "icon": "ui_item_4040086.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040086.webp"
+  },
+  "plano de mueble: verano frío - latte con huellita": {
+    "id": "4040091",
+    "name": "plano de mueble: verano frío - latte con huellita",
+    "icon": "ui_item_4040091.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040091.webp"
+  },
+  "plano de mueble: verano frío - sangría": {
+    "id": "4040089",
+    "name": "plano de mueble: verano frío - sangría",
+    "icon": "ui_item_4040089.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4040089.webp"
+  },
+  "semilla de algodón avanzada": {
+    "id": "4000036",
+    "name": "semilla de algodón avanzada",
+    "icon": "ui_item_4000004.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000004.webp"
+  },
+  "semilla de caña de azúcar avanzada": {
+    "id": "4000035",
+    "name": "semilla de caña de azúcar avanzada",
+    "icon": "ui_item_4000001.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000001.webp"
+  },
+  "semilla de trigo avanzada": {
+    "id": "4000033",
+    "name": "semilla de trigo avanzada",
+    "icon": "ui_item_4000000.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000000.webp"
+  },
+  "algodón de rápido crecimiento": {
+    "id": "4000040",
+    "name": "algodón de rápido crecimiento",
+    "icon": "ui_item_4001004.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001004.webp"
+  },
+  "caña de azúcar de rápido crecimiento": {
+    "id": "4000039",
+    "name": "caña de azúcar de rápido crecimiento",
+    "icon": "ui_item_4001001.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001001.webp"
+  },
+  "trigo de rápido crecimiento": {
+    "id": "4000037",
+    "name": "trigo de rápido crecimiento",
+    "icon": "ui_item_4001000.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001000.webp"
+  },
+  "aromatista de alto rendimiento": {
+    "id": "4000041",
+    "name": "aromatista de alto rendimiento",
+    "icon": "ui_item_4001046.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001046.webp"
+  },
+  "trigo instantáneo": {
+    "id": "4000038",
+    "name": "trigo instantáneo",
+    "icon": "ui_item_4001000.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4001000.webp"
+  },
+  "semilla de trigo prémium": {
+    "id": "4000034",
+    "name": "semilla de trigo prémium",
+    "icon": "ui_item_4000000.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000000.webp"
+  },
+  "bolsa de semillas": {
+    "id": "4000032",
+    "name": "bolsa de semillas",
+    "icon": "ui_item_4000032.webp",
+    "url": "https://aniimotools.dev/assets/items/ui_item_4000032.webp"
+  }
+}

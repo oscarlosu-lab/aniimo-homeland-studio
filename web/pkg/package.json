@@ -1,0 +1,21 @@
+{
+  "name": "aniimax",
+  "type": "module",
+  "description": "Production path optimizer for Aniimo Homeland",
+  "version": "0.17.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ae-bii/aniimax"
+  },
+  "files": [
+    "aniimax_bg.wasm",
+    "aniimax.js",
+    "aniimax.d.ts"
+  ],
+  "main": "aniimax.js",
+  "types": "aniimax.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

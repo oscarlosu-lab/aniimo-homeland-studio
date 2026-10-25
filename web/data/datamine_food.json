@@ -1,0 +1,154 @@
+[
+  {
+    "name": "Arroz frito con salsa de soja",
+    "energy": 45650,
+    "bowl_days_est": 39.2,
+    "units_7d": 53,
+    "facility": "Cocina abrasadora",
+    "shop_price": 450
+  },
+  {
+    "name": "Bola de arroz con flor de cerezo",
+    "energy": 45650,
+    "bowl_days_est": 39.2,
+    "units_7d": 53,
+    "facility": "Cocina abrasadora",
+    "shop_price": 450
+  },
+  {
+    "name": "Chips de frutos secos caramelizados",
+    "energy": 45570,
+    "bowl_days_est": 39.2,
+    "units_7d": 54,
+    "facility": "Cocina de garra",
+    "shop_price": 440
+  },
+  {
+    "name": "Caramelo de uva",
+    "energy": 45570,
+    "bowl_days_est": 39.2,
+    "units_7d": 54,
+    "facility": "Cocina de garra",
+    "shop_price": 440
+  },
+  {
+    "name": "Caramelo de manzana",
+    "energy": 45360,
+    "bowl_days_est": 39.0,
+    "units_7d": 54,
+    "facility": "Cocina de garra",
+    "shop_price": 435
+  },
+  {
+    "name": "Tanghulu",
+    "energy": 45280,
+    "bowl_days_est": 38.9,
+    "units_7d": 54,
+    "facility": "Cocina abrasadora",
+    "shop_price": 430
+  },
+  {
+    "name": "Tofu en salsa de soja",
+    "energy": 45280,
+    "bowl_days_est": 38.9,
+    "units_7d": 54,
+    "facility": "Cocina abrasadora",
+    "shop_price": 430
+  },
+  {
+    "name": "Castañas tostadas con azúcar",
+    "energy": 45280,
+    "bowl_days_est": 38.9,
+    "units_7d": 54,
+    "facility": "Cocina abrasadora",
+    "shop_price": 430
+  },
+  {
+    "name": "Patatas asadas con dulce de arce",
+    "energy": 39600,
+    "bowl_days_est": 34.0,
+    "units_7d": 62,
+    "facility": "Cocina de garra",
+    "shop_price": 380
+  },
+  {
+    "name": "Tarta de manzana",
+    "energy": 30800,
+    "bowl_days_est": 26.5,
+    "units_7d": 79,
+    "facility": "Cocina de garra",
+    "shop_price": 310
+  },
+  {
+    "name": "Galletas de lavanda",
+    "energy": 30240,
+    "bowl_days_est": 26.0,
+    "units_7d": 80,
+    "facility": "Cocina de garra",
+    "shop_price": 300
+  },
+  {
+    "name": "Pan",
+    "energy": 26740,
+    "bowl_days_est": 23.0,
+    "units_7d": 91,
+    "facility": "Cocina de garra",
+    "shop_price": 260
+  },
+  {
+    "name": "Pan prémium",
+    "energy": 26740,
+    "bowl_days_est": 23.0,
+    "units_7d": 91,
+    "facility": "Cocina de garra",
+    "shop_price": 260
+  },
+  {
+    "name": "Soja tostada",
+    "energy": 26230,
+    "bowl_days_est": 22.5,
+    "units_7d": 93,
+    "facility": "Cocina de garra",
+    "shop_price": 250
+  },
+  {
+    "name": "Sopa cremosa de patata",
+    "energy": 23470,
+    "bowl_days_est": 20.2,
+    "units_7d": 104,
+    "facility": "Cocina abrasadora",
+    "shop_price": 225
+  },
+  {
+    "name": "Mermelada de fresa",
+    "energy": 19800,
+    "bowl_days_est": 17.0,
+    "units_7d": 123,
+    "facility": "Olla a fuego lento",
+    "shop_price": 190
+  },
+  {
+    "name": "Encurtido agridulce",
+    "energy": 15400,
+    "bowl_days_est": 13.2,
+    "units_7d": 158,
+    "facility": "Frasco de encurtidos",
+    "shop_price": 150
+  },
+  {
+    "name": "Baya silvestre cocida",
+    "energy": 9800,
+    "bowl_days_est": 8.4,
+    "units_7d": 248,
+    "facility": "Cocina de garra",
+    "shop_price": 95
+  },
+  {
+    "name": "Gachas de trigo sencillas",
+    "energy": 6200,
+    "bowl_days_est": 5.3,
+    "units_7d": 392,
+    "facility": "Cocina de garra",
+    "shop_price": 60
+  }
+]

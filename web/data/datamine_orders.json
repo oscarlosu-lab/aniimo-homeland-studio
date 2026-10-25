@@ -1,0 +1,161 @@
+[
+  {
+    "id": "ord_01",
+    "name": "Harina de trigo de calidad",
+    "category": "Molino",
+    "quantity": 18,
+    "coins": 4500,
+    "icon": "ui_item_4030002.webp",
+    "materials": {
+      "Trigo": 36
+    },
+    "local_icon": "assets/items/ui_item_4030002.webp",
+    "name_en": "Quality Wheatmeal"
+  },
+  {
+    "id": "ord_02",
+    "name": "Aceite de coco prensado",
+    "category": "Molino",
+    "quantity": 8,
+    "coins": 9800,
+    "icon": "ui_item_4010144.webp",
+    "materials": {
+      "Coco": 24
+    },
+    "local_icon": "assets/items/ui_item_4010144.webp",
+    "name_en": "Pressed Coconut Oil"
+  },
+  {
+    "id": "ord_03",
+    "name": "Hilo de algodón fino",
+    "category": "Telar",
+    "quantity": 14,
+    "coins": 8600,
+    "icon": "ui_item_4030028.webp",
+    "materials": {
+      "Algodón": 28
+    },
+    "local_icon": "assets/items/ui_item_4030028.webp",
+    "name_en": "Fine Cotton Thread"
+  },
+  {
+    "id": "ord_04",
+    "name": "Cacao en polvo aromático",
+    "category": "Molino",
+    "quantity": 12,
+    "coins": 18500,
+    "icon": "ui_item_4020077.webp",
+    "materials": {
+      "Cacao": 36
+    },
+    "local_icon": "assets/items/ui_item_4020077.webp",
+    "name_en": "Aromatic Cocoa Powder"
+  },
+  {
+    "id": "ord_05",
+    "name": "Jugo de uva natural",
+    "category": "Barril",
+    "quantity": 10,
+    "coins": 12400,
+    "icon": "ui_item_4020064.webp",
+    "materials": {
+      "Uvas": 30
+    },
+    "local_icon": "assets/items/ui_item_4020064.webp",
+    "name_en": "Natural Grape Juice"
+  },
+  {
+    "id": "ord_06",
+    "name": "Pan rústico recién horneado",
+    "category": "Cocina",
+    "quantity": 15,
+    "coins": 11200,
+    "icon": "ui_item_4020067.webp",
+    "materials": {
+      "Harina de trigo": 15,
+      "Agua": 15
+    },
+    "local_icon": "assets/items/ui_item_4020067.webp",
+    "name_en": "Fresh Rustic Bread"
+  },
+  {
+    "id": "ord_07",
+    "name": "Mermelada de arándano rojo",
+    "category": "Olla",
+    "quantity": 8,
+    "coins": 14600,
+    "icon": "ui_item_4010099.webp",
+    "materials": {
+      "Arándano rojo": 24,
+      "Azúcar": 8
+    },
+    "local_icon": "assets/items/ui_item_4010099.webp",
+    "name_en": "Cranberry Jam"
+  },
+  {
+    "id": "ord_08",
+    "name": "Jarabe de agave dulce",
+    "category": "Olla",
+    "quantity": 9,
+    "coins": 16200,
+    "icon": "ui_item_4010015.webp",
+    "materials": {
+      "Agave": 27
+    },
+    "local_icon": "assets/items/ui_item_4010015.webp",
+    "name_en": "Sweet Agave Syrup"
+  },
+  {
+    "id": "ord_09",
+    "name": "Bloques de madera pulida",
+    "category": "Taller",
+    "quantity": 25,
+    "coins": 6500,
+    "icon": "ui_item_4010172.webp",
+    "materials": {
+      "Madera de sauce": 50
+    },
+    "local_icon": "assets/items/ui_item_4010172.webp",
+    "name_en": "Polished Wood Blocks"
+  },
+  {
+    "id": "ord_10",
+    "name": "Arena mineral purificada",
+    "category": "Mina",
+    "quantity": 20,
+    "coins": 7800,
+    "icon": "ui_item_4010177.webp",
+    "materials": {
+      "Roca": 40
+    },
+    "local_icon": "assets/items/ui_item_4010177.webp",
+    "name_en": "Purified Mineral Sand"
+  },
+  {
+    "id": "ord_11",
+    "name": "Tanghulu de fresa crujiente",
+    "category": "Cocina",
+    "quantity": 12,
+    "coins": 15800,
+    "icon": "ui_item_4030037.webp",
+    "materials": {
+      "Fresa": 36,
+      "Azúcar": 12
+    },
+    "local_icon": "assets/items/ui_item_4030037.webp",
+    "name_en": "Crisp Strawberry Tanghulu"
+  },
+  {
+    "id": "ord_12",
+    "name": "Rocío de flor de azahar",
+    "category": "Barril",
+    "quantity": 6,
+    "coins": 17200,
+    "icon": "ui_item_4010187.webp",
+    "materials": {
+      "Flor de azahar": 24
+    },
+    "local_icon": "assets/items/ui_item_4010187.webp",
+    "name_en": "Orange Blossom Dew"
+  }
+]

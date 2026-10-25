@@ -1,0 +1,4617 @@
+[
+  {
+    "id": 1,
+    "dex": "#001",
+    "name": "Emberpup",
+    "base_name": "Emberpup",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Emberpup en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Meseta de ramafulgor y Desembarco de Echoback ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 1,
+      "Fire": 1,
+      "Remolque": 1,
+      "Hauling": 1
+    },
+    "abilities_display": [
+      "Fuego Lv.1",
+      "Remolque Lv.1"
+    ],
+    "icon": "assets/aniimo/1005100.webp"
+  },
+  {
+    "id": 1,
+    "dex": "#001",
+    "name": "Emberpup (Forma de sierra)",
+    "base_name": "Emberpup",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Emberpup en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Meseta de ramafulgor y Desembarco de Echoback ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Tierra": 1,
+      "Earth": 1,
+      "Fuego": 1,
+      "Fire": 1,
+      "Remolque": 1,
+      "Hauling": 1
+    },
+    "abilities_display": [
+      "Tierra Lv.1",
+      "Fuego Lv.1",
+      "Remolque Lv.1"
+    ],
+    "icon": "assets/aniimo/1005101.webp"
+  },
+  {
+    "id": 1,
+    "dex": "#001",
+    "name": "Emberpup (Forma de bosque montañoso)",
+    "base_name": "Emberpup",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Emberpup en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Meseta de ramafulgor y Desembarco de Echoback ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 1,
+      "Fire": 1,
+      "Remolque": 1,
+      "Hauling": 1
+    },
+    "abilities_display": [
+      "Fuego Lv.1",
+      "Remolque Lv.1"
+    ],
+    "icon": "assets/aniimo/1005104.webp"
+  },
+  {
+    "id": 2,
+    "dex": "#002",
+    "name": "Flameruff",
+    "base_name": "Flameruff",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Flameruff en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Desembarco de Echoback y Campos Nubosos . También puedes conseguirlo haciendo evolucionar a Emberpup ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 2,
+      "Fire": 2,
+      "Remolque": 2,
+      "Hauling": 2
+    },
+    "abilities_display": [
+      "Fuego Lv.2",
+      "Remolque Lv.2"
+    ],
+    "icon": "assets/aniimo/1005200.webp"
+  },
+  {
+    "id": 2,
+    "dex": "#002",
+    "name": "Flameruff (Forma de sierra)",
+    "base_name": "Flameruff",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Flameruff en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Desembarco de Echoback y Campos Nubosos . También puedes conseguirlo haciendo evolucionar a Emberpup ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Tierra": 1,
+      "Earth": 1,
+      "Fuego": 2,
+      "Fire": 2,
+      "Remolque": 2,
+      "Hauling": 2
+    },
+    "abilities_display": [
+      "Tierra Lv.1",
+      "Fuego Lv.2",
+      "Remolque Lv.2"
+    ],
+    "icon": "assets/aniimo/1005201.webp"
+  },
+  {
+    "id": 2,
+    "dex": "#002",
+    "name": "Flameruff (Forma de bosque montañoso)",
+    "base_name": "Flameruff",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Flameruff en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Desembarco de Echoback y Campos Nubosos . También puedes conseguirlo haciendo evolucionar a Emberpup ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 2,
+      "Fire": 2,
+      "Remolque": 2,
+      "Hauling": 2
+    },
+    "abilities_display": [
+      "Fuego Lv.2",
+      "Remolque Lv.2"
+    ],
+    "icon": "assets/aniimo/1005204.webp"
+  },
+  {
+    "id": 3,
+    "dex": "#003",
+    "name": "Scorchhowl",
+    "base_name": "Scorchhowl",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Scorchhowl en la naturaleza en esta zona: Cresta de Bestiacolmillo . También puedes conseguirlo haciendo evolucionar a Flameruff ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 3,
+      "Fire": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Fuego Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1005300.webp"
+  },
+  {
+    "id": 3,
+    "dex": "#003",
+    "name": "Scorchhowl (Forma de sierra)",
+    "base_name": "Scorchhowl",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Scorchhowl en la naturaleza en esta zona: Cresta de Bestiacolmillo . También puedes conseguirlo haciendo evolucionar a Flameruff ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Tierra": 2,
+      "Earth": 2,
+      "Fuego": 3,
+      "Fire": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Tierra Lv.2",
+      "Fuego Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1005301.webp"
+  },
+  {
+    "id": 3,
+    "dex": "#003",
+    "name": "Scorchhowl (Forma de tormenta)",
+    "base_name": "Scorchhowl",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Scorchhowl en la naturaleza en esta zona: Cresta de Bestiacolmillo . También puedes conseguirlo haciendo evolucionar a Flameruff ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 2,
+      "Lightning": 2,
+      "Fuego": 3,
+      "Fire": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.2",
+      "Fuego Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1005302.webp"
+  },
+  {
+    "id": 3,
+    "dex": "#003",
+    "name": "Scorchhowl (Forma de prismana)",
+    "base_name": "Scorchhowl",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Scorchhowl en la naturaleza en esta zona: Cresta de Bestiacolmillo . También puedes conseguirlo haciendo evolucionar a Flameruff ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Fuego": 4,
+      "Fire": 4,
+      "Remolque": 4,
+      "Hauling": 4
+    },
+    "abilities_display": [
+      "Fuego Lv.4",
+      "Remolque Lv.4"
+    ],
+    "icon": "assets/aniimo/1005303.webp"
+  },
+  {
+    "id": 3,
+    "dex": "#003",
+    "name": "Scorchhowl (Forma de bosque montañoso)",
+    "base_name": "Scorchhowl",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Scorchhowl en la naturaleza en esta zona: Cresta de Bestiacolmillo . También puedes conseguirlo haciendo evolucionar a Flameruff ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 3,
+      "Fire": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Fuego Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1005304.webp"
+  },
+  {
+    "id": 4,
+    "dex": "#004",
+    "name": "Inferlupa",
+    "base_name": "Inferlupa",
+    "element": "Fuego",
+    "role": "Breaker",
+    "habitat": "Inferlupa no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Flameruff .",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Fuego": 2,
+      "Fire": 2,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Fuego Lv.2",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1005500.webp"
+  },
+  {
+    "id": 4,
+    "dex": "#004",
+    "name": "Inferlupa (Forma de prismana)",
+    "base_name": "Inferlupa",
+    "element": "Fuego",
+    "role": "Breaker",
+    "habitat": "Inferlupa no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Flameruff .",
+    "is_prismana": true,
+    "abilities": {
+      "Remolque": 4,
+      "Hauling": 4,
+      "Fuego": 3,
+      "Fire": 3,
+      "Oscuro": 4,
+      "Dark": 4
+    },
+    "abilities_display": [
+      "Remolque Lv.4",
+      "Fuego Lv.3",
+      "Oscuro Lv.4"
+    ],
+    "icon": "assets/aniimo/1005503.webp"
+  },
+  {
+    "id": 5,
+    "dex": "#005",
+    "name": "Celestis",
+    "base_name": "Celestis",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Celestis en la naturaleza en estas zonas: Estrecho de Plata , Meseta de ramafulgor , Desembarco de Echoback y Bosque de Estrellas Fugaces ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 1,
+      "Leisure": 1,
+      "Oscuro": 1,
+      "Dark": 1
+    },
+    "abilities_display": [
+      "Ocio Lv.1",
+      "Oscuro Lv.1"
+    ],
+    "icon": "assets/aniimo/1001100.webp"
+  },
+  {
+    "id": 6,
+    "dex": "#006",
+    "name": "Stellarys",
+    "base_name": "Stellarys",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Stellarys en la naturaleza en esta zona: Bosque de Estrellas Fugaces . También puedes conseguirlo haciendo evolucionar a Celestis ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 3,
+      "Leisure": 3,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Ocio Lv.3",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1001200.webp"
+  },
+  {
+    "id": 6,
+    "dex": "#006",
+    "name": "Stellarys (Forma de lluvia)",
+    "base_name": "Stellarys",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Stellarys en la naturaleza en esta zona: Bosque de Estrellas Fugaces . También puedes conseguirlo haciendo evolucionar a Celestis ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Agua": 2,
+      "Water": 2,
+      "Ocio": 3,
+      "Leisure": 3,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Agua Lv.2",
+      "Ocio Lv.3",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1001201.webp"
+  },
+  {
+    "id": 6,
+    "dex": "#006",
+    "name": "Stellarys (Forma de prismana)",
+    "base_name": "Stellarys",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Stellarys en la naturaleza en esta zona: Bosque de Estrellas Fugaces . También puedes conseguirlo haciendo evolucionar a Celestis ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Hielo": 3,
+      "Ice": 3,
+      "Ocio": 4,
+      "Leisure": 4,
+      "Oscuro": 4,
+      "Dark": 4
+    },
+    "abilities_display": [
+      "Hielo Lv.3",
+      "Ocio Lv.4",
+      "Oscuro Lv.4"
+    ],
+    "icon": "assets/aniimo/1001202.webp"
+  },
+  {
+    "id": 7,
+    "dex": "#007",
+    "name": "Chirpi",
+    "base_name": "Chirpi",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Chirpi en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Bosque Electrizante y Meseta de ramafulgor ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Viento": 1,
+      "Wind": 1
+    },
+    "abilities_display": [
+      "Viento Lv.1"
+    ],
+    "icon": "assets/aniimo/1018100.webp"
+  },
+  {
+    "id": 7,
+    "dex": "#007",
+    "name": "Chirpi (Forma de playa)",
+    "base_name": "Chirpi",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Chirpi en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Bosque Electrizante y Meseta de ramafulgor ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Viento": 1,
+      "Wind": 1,
+      "Agua": 1,
+      "Water": 1
+    },
+    "abilities_display": [
+      "Viento Lv.1",
+      "Agua Lv.1"
+    ],
+    "icon": "assets/aniimo/1018101.webp"
+  },
+  {
+    "id": 7,
+    "dex": "#007",
+    "name": "Chirpi (Forma de sierra)",
+    "base_name": "Chirpi",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Chirpi en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Bosque Electrizante y Meseta de ramafulgor ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Viento": 1,
+      "Wind": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Viento Lv.1"
+    ],
+    "icon": "assets/aniimo/1018103.webp"
+  },
+  {
+    "id": 8,
+    "dex": "#008",
+    "name": "Tromber",
+    "base_name": "Tromber",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Tromber en la naturaleza en estas zonas: Estrecho de Plata , Bosque de Estrellas Fugaces y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Chirpi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1018400.webp"
+  },
+  {
+    "id": 8,
+    "dex": "#008",
+    "name": "Tromber (Forma de playa)",
+    "base_name": "Tromber",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Tromber en la naturaleza en estas zonas: Estrecho de Plata , Bosque de Estrellas Fugaces y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Chirpi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Viento": 3,
+      "Wind": 3,
+      "Agua": 2,
+      "Water": 2
+    },
+    "abilities_display": [
+      "Viento Lv.3",
+      "Agua Lv.2"
+    ],
+    "icon": "assets/aniimo/1018401.webp"
+  },
+  {
+    "id": 8,
+    "dex": "#008",
+    "name": "Tromber (Forma de sierra)",
+    "base_name": "Tromber",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Tromber en la naturaleza en estas zonas: Estrecho de Plata , Bosque de Estrellas Fugaces y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Chirpi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 2,
+      "Grass": 2,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.2",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1018403.webp"
+  },
+  {
+    "id": 9,
+    "dex": "#009",
+    "name": "Cornet",
+    "base_name": "Cornet",
+    "element": "Viento",
+    "role": "DPS",
+    "habitat": "Captura a Cornet en la naturaleza en estas zonas: Estrecho de Plata , Desembarco de Echoback , Bosque de Estrellas Fugaces y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Chirpi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1018500.webp"
+  },
+  {
+    "id": 9,
+    "dex": "#009",
+    "name": "Cornet (Forma de playa)",
+    "base_name": "Cornet",
+    "element": "Viento",
+    "role": "DPS",
+    "habitat": "Captura a Cornet en la naturaleza en estas zonas: Estrecho de Plata , Desembarco de Echoback , Bosque de Estrellas Fugaces y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Chirpi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Viento": 3,
+      "Wind": 3,
+      "Agua": 2,
+      "Water": 2
+    },
+    "abilities_display": [
+      "Viento Lv.3",
+      "Agua Lv.2"
+    ],
+    "icon": "assets/aniimo/1018501.webp"
+  },
+  {
+    "id": 9,
+    "dex": "#009",
+    "name": "Cornet (Forma de prismana)",
+    "base_name": "Cornet",
+    "element": "Viento",
+    "role": "DPS",
+    "habitat": "Captura a Cornet en la naturaleza en estas zonas: Estrecho de Plata , Desembarco de Echoback , Bosque de Estrellas Fugaces y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Chirpi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Relámpago": 3,
+      "Lightning": 3,
+      "Viento": 4,
+      "Wind": 4
+    },
+    "abilities_display": [
+      "Relámpago Lv.3",
+      "Viento Lv.4"
+    ],
+    "icon": "assets/aniimo/1018502.webp"
+  },
+  {
+    "id": 9,
+    "dex": "#009",
+    "name": "Cornet (Forma de sierra)",
+    "base_name": "Cornet",
+    "element": "Viento",
+    "role": "DPS",
+    "habitat": "Captura a Cornet en la naturaleza en estas zonas: Estrecho de Plata , Desembarco de Echoback , Bosque de Estrellas Fugaces y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Chirpi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 2,
+      "Grass": 2,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.2",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1018503.webp"
+  },
+  {
+    "id": 10,
+    "dex": "#010",
+    "name": "Tubster",
+    "base_name": "Tubster",
+    "element": "Viento",
+    "role": "Breaker",
+    "habitat": "Captura a Tubster en la naturaleza en estas zonas: Desembarco de Echoback , Sierras Bermejas y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Chirpi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1018700.webp"
+  },
+  {
+    "id": 10,
+    "dex": "#010",
+    "name": "Tubster (Forma de playa)",
+    "base_name": "Tubster",
+    "element": "Viento",
+    "role": "Breaker",
+    "habitat": "Captura a Tubster en la naturaleza en estas zonas: Desembarco de Echoback , Sierras Bermejas y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Chirpi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Viento": 3,
+      "Wind": 3,
+      "Agua": 2,
+      "Water": 2
+    },
+    "abilities_display": [
+      "Viento Lv.3",
+      "Agua Lv.2"
+    ],
+    "icon": "assets/aniimo/1018701.webp"
+  },
+  {
+    "id": 10,
+    "dex": "#010",
+    "name": "Tubster (Forma de sierra)",
+    "base_name": "Tubster",
+    "element": "Viento",
+    "role": "Breaker",
+    "habitat": "Captura a Tubster en la naturaleza en estas zonas: Desembarco de Echoback , Sierras Bermejas y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Chirpi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 2,
+      "Grass": 2,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.2",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1018703.webp"
+  },
+  {
+    "id": 11,
+    "dex": "#011",
+    "name": "Iris",
+    "base_name": "Iris",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Iris en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pasarela Berilina y Bosque Electrizante ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Ocio": 1,
+      "Leisure": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Ocio Lv.1"
+    ],
+    "icon": "assets/aniimo/1021100.webp"
+  },
+  {
+    "id": 11,
+    "dex": "#011",
+    "name": "Iris (Forma de sierra)",
+    "base_name": "Iris",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Iris en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pasarela Berilina y Bosque Electrizante ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Ocio": 1,
+      "Leisure": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Ocio Lv.1"
+    ],
+    "icon": "assets/aniimo/1021101.webp"
+  },
+  {
+    "id": 11,
+    "dex": "#011",
+    "name": "Iris (Forma de bosque)",
+    "base_name": "Iris",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Iris en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pasarela Berilina y Bosque Electrizante ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Ocio": 1,
+      "Leisure": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Ocio Lv.1"
+    ],
+    "icon": "assets/aniimo/1021102.webp"
+  },
+  {
+    "id": 11,
+    "dex": "#011",
+    "name": "Iris (Forma de pradera)",
+    "base_name": "Iris",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Iris en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pasarela Berilina y Bosque Electrizante ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Ocio": 1,
+      "Leisure": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Ocio Lv.1"
+    ],
+    "icon": "assets/aniimo/1021103.webp"
+  },
+  {
+    "id": 11,
+    "dex": "#011",
+    "name": "Iris (Forma de prismana)",
+    "base_name": "Iris",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Iris en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pasarela Berilina y Bosque Electrizante ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Ocio": 1,
+      "Leisure": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Ocio Lv.1"
+    ],
+    "icon": "assets/aniimo/1021104.webp"
+  },
+  {
+    "id": 11,
+    "dex": "#011",
+    "name": "Iris (Forma de meseta)",
+    "base_name": "Iris",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Iris en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pasarela Berilina y Bosque Electrizante ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Ocio": 1,
+      "Leisure": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Ocio Lv.1"
+    ],
+    "icon": "assets/aniimo/1021105.webp"
+  },
+  {
+    "id": 11,
+    "dex": "#011",
+    "name": "Iris (Forma de bosque montañoso)",
+    "base_name": "Iris",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Iris en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pasarela Berilina y Bosque Electrizante ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Ocio": 1,
+      "Leisure": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Ocio Lv.1"
+    ],
+    "icon": "assets/aniimo/1021106.webp"
+  },
+  {
+    "id": 12,
+    "dex": "#012",
+    "name": "Irisal",
+    "base_name": "Irisal",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Irisal en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Pradera del Deslizamiento y Bosque de Estrellas Fugaces . También puedes conseguirlo haciendo evolucionar a Iris ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Ocio": 3,
+      "Leisure": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Ocio Lv.3"
+    ],
+    "icon": "assets/aniimo/1021200.webp"
+  },
+  {
+    "id": 12,
+    "dex": "#012",
+    "name": "Irisal (Forma de sierra)",
+    "base_name": "Irisal",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Irisal en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Pradera del Deslizamiento y Bosque de Estrellas Fugaces . También puedes conseguirlo haciendo evolucionar a Iris ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Ocio": 3,
+      "Leisure": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Ocio Lv.3"
+    ],
+    "icon": "assets/aniimo/1021201.webp"
+  },
+  {
+    "id": 12,
+    "dex": "#012",
+    "name": "Irisal (Forma de bosque)",
+    "base_name": "Irisal",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Irisal en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Pradera del Deslizamiento y Bosque de Estrellas Fugaces . También puedes conseguirlo haciendo evolucionar a Iris ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Ocio": 3,
+      "Leisure": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Ocio Lv.3"
+    ],
+    "icon": "assets/aniimo/1021202.webp"
+  },
+  {
+    "id": 12,
+    "dex": "#012",
+    "name": "Irisal (Forma de pradera)",
+    "base_name": "Irisal",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Irisal en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Pradera del Deslizamiento y Bosque de Estrellas Fugaces . También puedes conseguirlo haciendo evolucionar a Iris ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Ocio": 3,
+      "Leisure": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Ocio Lv.3"
+    ],
+    "icon": "assets/aniimo/1021203.webp"
+  },
+  {
+    "id": 12,
+    "dex": "#012",
+    "name": "Irisal (Forma de prismana)",
+    "base_name": "Irisal",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Irisal en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Pradera del Deslizamiento y Bosque de Estrellas Fugaces . También puedes conseguirlo haciendo evolucionar a Iris ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Hierba": 4,
+      "Grass": 4,
+      "Ocio": 4,
+      "Leisure": 4
+    },
+    "abilities_display": [
+      "Hierba Lv.4",
+      "Ocio Lv.4"
+    ],
+    "icon": "assets/aniimo/1021204.webp"
+  },
+  {
+    "id": 12,
+    "dex": "#012",
+    "name": "Irisal (Forma de meseta)",
+    "base_name": "Irisal",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Irisal en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Pradera del Deslizamiento y Bosque de Estrellas Fugaces . También puedes conseguirlo haciendo evolucionar a Iris ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Ocio": 3,
+      "Leisure": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Ocio Lv.3"
+    ],
+    "icon": "assets/aniimo/1021205.webp"
+  },
+  {
+    "id": 12,
+    "dex": "#012",
+    "name": "Irisal (Forma de bosque montañoso)",
+    "base_name": "Irisal",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Irisal en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Pradera del Deslizamiento y Bosque de Estrellas Fugaces . También puedes conseguirlo haciendo evolucionar a Iris ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Ocio": 3,
+      "Leisure": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Ocio Lv.3"
+    ],
+    "icon": "assets/aniimo/1021206.webp"
+  },
+  {
+    "id": 13,
+    "dex": "#013",
+    "name": "Skippy",
+    "base_name": "Skippy",
+    "element": "Agua",
+    "role": "Sanador",
+    "habitat": "Captura a Skippy en la naturaleza en estas zonas: Pradera del Deslizamiento , Bosque de Estrellas Fugaces , Bosques de Neblina y Campos Nubosos ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Agua": 1,
+      "Water": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Agua Lv.1"
+    ],
+    "icon": "assets/aniimo/1004100.webp"
+  },
+  {
+    "id": 13,
+    "dex": "#013",
+    "name": "Skippy (Mar de Flores)",
+    "base_name": "Skippy",
+    "element": "Agua",
+    "role": "Sanador",
+    "habitat": "Captura a Skippy en la naturaleza en estas zonas: Pradera del Deslizamiento , Bosque de Estrellas Fugaces , Bosques de Neblina y Campos Nubosos ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Agua": 1,
+      "Water": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Agua Lv.1"
+    ],
+    "icon": "assets/aniimo/1004101.webp"
+  },
+  {
+    "id": 13,
+    "dex": "#013",
+    "name": "Skippy (Forma de nieve)",
+    "base_name": "Skippy",
+    "element": "Agua",
+    "role": "Sanador",
+    "habitat": "Captura a Skippy en la naturaleza en estas zonas: Pradera del Deslizamiento , Bosque de Estrellas Fugaces , Bosques de Neblina y Campos Nubosos ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 1,
+      "Ice": 1,
+      "Agua": 1,
+      "Water": 1,
+      "Remolque": 1,
+      "Hauling": 1
+    },
+    "abilities_display": [
+      "Hielo Lv.1",
+      "Agua Lv.1",
+      "Remolque Lv.1"
+    ],
+    "icon": "assets/aniimo/1004102.webp"
+  },
+  {
+    "id": 14,
+    "dex": "#014",
+    "name": "Pranky",
+    "base_name": "Pranky",
+    "element": "Agua",
+    "role": "Sanador",
+    "habitat": "Captura a Pranky en la naturaleza en estas zonas: Pradera del Deslizamiento , Bosque de Estrellas Fugaces , Bosques de Neblina y Campos Nubosos . También puedes conseguirlo haciendo evolucionar a Skippy ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 2,
+      "Hauling": 2,
+      "Agua": 2,
+      "Water": 2
+    },
+    "abilities_display": [
+      "Remolque Lv.2",
+      "Agua Lv.2"
+    ],
+    "icon": "assets/aniimo/1004200.webp"
+  },
+  {
+    "id": 14,
+    "dex": "#014",
+    "name": "Pranky (Mar de Flores)",
+    "base_name": "Pranky",
+    "element": "Agua",
+    "role": "Sanador",
+    "habitat": "Captura a Pranky en la naturaleza en estas zonas: Pradera del Deslizamiento , Bosque de Estrellas Fugaces , Bosques de Neblina y Campos Nubosos . También puedes conseguirlo haciendo evolucionar a Skippy ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 2,
+      "Hauling": 2,
+      "Agua": 2,
+      "Water": 2
+    },
+    "abilities_display": [
+      "Remolque Lv.2",
+      "Agua Lv.2"
+    ],
+    "icon": "assets/aniimo/1004201.webp"
+  },
+  {
+    "id": 14,
+    "dex": "#014",
+    "name": "Pranky (Forma de nieve)",
+    "base_name": "Pranky",
+    "element": "Agua",
+    "role": "Sanador",
+    "habitat": "Captura a Pranky en la naturaleza en estas zonas: Pradera del Deslizamiento , Bosque de Estrellas Fugaces , Bosques de Neblina y Campos Nubosos . También puedes conseguirlo haciendo evolucionar a Skippy ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 1,
+      "Ice": 1,
+      "Agua": 2,
+      "Water": 2,
+      "Remolque": 2,
+      "Hauling": 2
+    },
+    "abilities_display": [
+      "Hielo Lv.1",
+      "Agua Lv.2",
+      "Remolque Lv.2"
+    ],
+    "icon": "assets/aniimo/1004202.webp"
+  },
+  {
+    "id": 15,
+    "dex": "#015",
+    "name": "Glacy",
+    "base_name": "Glacy",
+    "element": "Agua",
+    "role": "Sanador",
+    "habitat": "Captura a Glacy en la naturaleza en estas zonas: Pradera del Deslizamiento y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Pranky ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 2,
+      "Ice": 2,
+      "Agua": 3,
+      "Water": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Hielo Lv.2",
+      "Agua Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1004300.webp"
+  },
+  {
+    "id": 15,
+    "dex": "#015",
+    "name": "Glacy (Mar de Flores)",
+    "base_name": "Glacy",
+    "element": "Agua",
+    "role": "Sanador",
+    "habitat": "Captura a Glacy en la naturaleza en estas zonas: Pradera del Deslizamiento y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Pranky ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 2,
+      "Ice": 2,
+      "Agua": 3,
+      "Water": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Hielo Lv.2",
+      "Agua Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1004301.webp"
+  },
+  {
+    "id": 15,
+    "dex": "#015",
+    "name": "Glacy (Forma de nieve)",
+    "base_name": "Glacy",
+    "element": "Agua",
+    "role": "Sanador",
+    "habitat": "Captura a Glacy en la naturaleza en estas zonas: Pradera del Deslizamiento y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Pranky ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 2,
+      "Ice": 2,
+      "Agua": 3,
+      "Water": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Hielo Lv.2",
+      "Agua Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1004302.webp"
+  },
+  {
+    "id": 15,
+    "dex": "#015",
+    "name": "Glacy (Forma de prismana)",
+    "base_name": "Glacy",
+    "element": "Sagrado",
+    "role": "Sanador",
+    "habitat": "Captura a Glacy en la naturaleza en estas zonas: Pradera del Deslizamiento y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Pranky ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Agua": 4,
+      "Water": 4,
+      "Luz": 3,
+      "Light": 3,
+      "Remolque": 4,
+      "Hauling": 4
+    },
+    "abilities_display": [
+      "Agua Lv.4",
+      "Luz Lv.3",
+      "Remolque Lv.4"
+    ],
+    "icon": "assets/aniimo/1004303.webp"
+  },
+  {
+    "id": 16,
+    "dex": "#016",
+    "name": "Leafy",
+    "base_name": "Leafy",
+    "element": "Hierba",
+    "role": "Batería / REGEN",
+    "habitat": "En la naturaleza, Leafy solo aparece como alfa, en Bosques de Neblina : derrótalo y luego captúralo. También puedes conseguirlo haciendo evolucionar a Pranky ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Agua": 2,
+      "Water": 2,
+      "Hierba": 3,
+      "Grass": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Agua Lv.2",
+      "Hierba Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1004500.webp"
+  },
+  {
+    "id": 17,
+    "dex": "#017",
+    "name": "Nimbi",
+    "base_name": "Nimbi",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Nimbi en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pradera del Deslizamiento y Campos Nubosos ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 1,
+      "Leisure": 1,
+      "Viento": 1,
+      "Wind": 1
+    },
+    "abilities_display": [
+      "Ocio Lv.1",
+      "Viento Lv.1"
+    ],
+    "icon": "assets/aniimo/1026100.webp"
+  },
+  {
+    "id": 17,
+    "dex": "#017",
+    "name": "Nimbi (Forma de lluvia)",
+    "base_name": "Nimbi",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Nimbi en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pradera del Deslizamiento y Campos Nubosos ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 1,
+      "Lightning": 1,
+      "Ocio": 1,
+      "Leisure": 1,
+      "Viento": 1,
+      "Wind": 1
+    },
+    "abilities_display": [
+      "Relámpago Lv.1",
+      "Ocio Lv.1",
+      "Viento Lv.1"
+    ],
+    "icon": "assets/aniimo/1026101.webp"
+  },
+  {
+    "id": 17,
+    "dex": "#017",
+    "name": "Nimbi (Forma de niebla)",
+    "base_name": "Nimbi",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Nimbi en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pradera del Deslizamiento y Campos Nubosos ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 1,
+      "Leisure": 1,
+      "Viento": 1,
+      "Wind": 1
+    },
+    "abilities_display": [
+      "Ocio Lv.1",
+      "Viento Lv.1"
+    ],
+    "icon": "assets/aniimo/1026102.webp"
+  },
+  {
+    "id": 17,
+    "dex": "#017",
+    "name": "Nimbi (Forma de meseta)",
+    "base_name": "Nimbi",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Nimbi en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pradera del Deslizamiento y Campos Nubosos ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 1,
+      "Ice": 1,
+      "Ocio": 1,
+      "Leisure": 1,
+      "Viento": 1,
+      "Wind": 1
+    },
+    "abilities_display": [
+      "Hielo Lv.1",
+      "Ocio Lv.1",
+      "Viento Lv.1"
+    ],
+    "icon": "assets/aniimo/1026105.webp"
+  },
+  {
+    "id": 18,
+    "dex": "#018",
+    "name": "Turbo",
+    "base_name": "Turbo",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Turbo en la naturaleza en estas zonas: Pradera del Deslizamiento y Campos Nubosos . También puedes conseguirlo haciendo evolucionar a Nimbi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 3,
+      "Leisure": 3,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Ocio Lv.3",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1026200.webp"
+  },
+  {
+    "id": 18,
+    "dex": "#018",
+    "name": "Turbo (Forma de lluvia)",
+    "base_name": "Turbo",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Turbo en la naturaleza en estas zonas: Pradera del Deslizamiento y Campos Nubosos . También puedes conseguirlo haciendo evolucionar a Nimbi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 2,
+      "Lightning": 2,
+      "Ocio": 3,
+      "Leisure": 3,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.2",
+      "Ocio Lv.3",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1026201.webp"
+  },
+  {
+    "id": 18,
+    "dex": "#018",
+    "name": "Turbo (Forma de niebla)",
+    "base_name": "Turbo",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Turbo en la naturaleza en estas zonas: Pradera del Deslizamiento y Campos Nubosos . También puedes conseguirlo haciendo evolucionar a Nimbi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 3,
+      "Leisure": 3,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Ocio Lv.3",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1026202.webp"
+  },
+  {
+    "id": 18,
+    "dex": "#018",
+    "name": "Turbo (Forma de prismana)",
+    "base_name": "Turbo",
+    "element": "Oscuridad",
+    "role": "Soporte",
+    "habitat": "Captura a Turbo en la naturaleza en estas zonas: Pradera del Deslizamiento y Campos Nubosos . También puedes conseguirlo haciendo evolucionar a Nimbi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Ocio": 4,
+      "Leisure": 4,
+      "Viento": 4,
+      "Wind": 4,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Ocio Lv.4",
+      "Viento Lv.4",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1026204.webp"
+  },
+  {
+    "id": 18,
+    "dex": "#018",
+    "name": "Turbo (Forma de meseta)",
+    "base_name": "Turbo",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Turbo en la naturaleza en estas zonas: Pradera del Deslizamiento y Campos Nubosos . También puedes conseguirlo haciendo evolucionar a Nimbi ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 2,
+      "Ice": 2,
+      "Ocio": 3,
+      "Leisure": 3,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Hielo Lv.2",
+      "Ocio Lv.3",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1026205.webp"
+  },
+  {
+    "id": 19,
+    "dex": "#019",
+    "name": "Dreaple",
+    "base_name": "Dreaple",
+    "element": "Oscuridad",
+    "role": "Soporte",
+    "habitat": "Dreaple no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Nimbi ., Ningún Dreaple alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 3,
+      "Leisure": 3,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Ocio Lv.3",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1026300.webp"
+  },
+  {
+    "id": 20,
+    "dex": "#020",
+    "name": "Hummin",
+    "base_name": "Hummin",
+    "element": "Hierba",
+    "role": "Breaker",
+    "habitat": "Captura a Hummin en la naturaleza en estas zonas: Estrecho de Plata , Pasarela Berilina , Bosque Electrizante y Meseta de ramafulgor ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1"
+    ],
+    "icon": "assets/aniimo/1020100.webp"
+  },
+  {
+    "id": 20,
+    "dex": "#020",
+    "name": "Hummin (Montaña)",
+    "base_name": "Hummin",
+    "element": "Hierba",
+    "role": "Breaker",
+    "habitat": "Captura a Hummin en la naturaleza en estas zonas: Estrecho de Plata , Pasarela Berilina , Bosque Electrizante y Meseta de ramafulgor ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1"
+    ],
+    "icon": "assets/aniimo/1020101.webp"
+  },
+  {
+    "id": 21,
+    "dex": "#021",
+    "name": "Hexxin",
+    "base_name": "Hexxin",
+    "element": "Oscuridad",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Hexxin en la naturaleza en estas zonas: Pasarela Berilina , Bosques de Neblina y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Hummin ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Artesanía": 2,
+      "Artisanship": 2,
+      "Hierba": 1,
+      "Grass": 1,
+      "Oscuro": 2,
+      "Dark": 2
+    },
+    "abilities_display": [
+      "Artesanía Lv.2",
+      "Hierba Lv.1",
+      "Oscuro Lv.2"
+    ],
+    "icon": "assets/aniimo/1020300.webp"
+  },
+  {
+    "id": 21,
+    "dex": "#021",
+    "name": "Hexxin (Montaña)",
+    "base_name": "Hexxin",
+    "element": "Oscuridad",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Hexxin en la naturaleza en estas zonas: Pasarela Berilina , Bosques de Neblina y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Hummin ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Artesanía": 2,
+      "Artisanship": 2,
+      "Hierba": 1,
+      "Grass": 1,
+      "Oscuro": 2,
+      "Dark": 2
+    },
+    "abilities_display": [
+      "Artesanía Lv.2",
+      "Hierba Lv.1",
+      "Oscuro Lv.2"
+    ],
+    "icon": "assets/aniimo/1020301.webp"
+  },
+  {
+    "id": 21,
+    "dex": "#021",
+    "name": "Hexxin (Forma de prismana)",
+    "base_name": "Hexxin",
+    "element": "Oscuridad",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Hexxin en la naturaleza en estas zonas: Pasarela Berilina , Bosques de Neblina y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Hummin ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Artesanía": 4,
+      "Artisanship": 4,
+      "Hierba": 3,
+      "Grass": 3,
+      "Oscuro": 4,
+      "Dark": 4
+    },
+    "abilities_display": [
+      "Artesanía Lv.4",
+      "Hierba Lv.3",
+      "Oscuro Lv.4"
+    ],
+    "icon": "assets/aniimo/1020302.webp"
+  },
+  {
+    "id": 22,
+    "dex": "#022",
+    "name": "Tuckin",
+    "base_name": "Tuckin",
+    "element": "Hierba",
+    "role": "Breaker",
+    "habitat": "Tuckin no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Hummin .",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1020700.webp"
+  },
+  {
+    "id": 22,
+    "dex": "#022",
+    "name": "Tuckin (Montaña)",
+    "base_name": "Tuckin",
+    "element": "Roca",
+    "role": "Breaker",
+    "habitat": "Tuckin no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Hummin .",
+    "is_prismana": false,
+    "abilities": {
+      "Tierra": 2,
+      "Earth": 2,
+      "Hierba": 3,
+      "Grass": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Tierra Lv.2",
+      "Hierba Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1020701.webp"
+  },
+  {
+    "id": 23,
+    "dex": "#023",
+    "name": "Budclaw",
+    "base_name": "Budclaw",
+    "element": "Roca",
+    "role": "Breaker",
+    "habitat": "Captura a Budclaw en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pasarela Berilina y Desembarco de Echoback ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Tierra": 1,
+      "Earth": 1,
+      "Hierba": 1,
+      "Grass": 1,
+      "Remolque": 1,
+      "Hauling": 1
+    },
+    "abilities_display": [
+      "Tierra Lv.1",
+      "Hierba Lv.1",
+      "Remolque Lv.1"
+    ],
+    "icon": "assets/aniimo/1016100.webp"
+  },
+  {
+    "id": 23,
+    "dex": "#023",
+    "name": "Budclaw (Forma de marisma)",
+    "base_name": "Budclaw",
+    "element": "Roca",
+    "role": "Breaker",
+    "habitat": "Captura a Budclaw en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pasarela Berilina y Desembarco de Echoback ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Tierra": 1,
+      "Earth": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Tierra Lv.1"
+    ],
+    "icon": "assets/aniimo/1016101.webp"
+  },
+  {
+    "id": 23,
+    "dex": "#023",
+    "name": "Budclaw (Forma de playa)",
+    "base_name": "Budclaw",
+    "element": "Roca",
+    "role": "Breaker",
+    "habitat": "Captura a Budclaw en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pasarela Berilina y Desembarco de Echoback ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Tierra": 1,
+      "Earth": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Tierra Lv.1"
+    ],
+    "icon": "assets/aniimo/1016102.webp"
+  },
+  {
+    "id": 23,
+    "dex": "#023",
+    "name": "Budclaw (Forma de bahía)",
+    "base_name": "Budclaw",
+    "element": "Roca",
+    "role": "Breaker",
+    "habitat": "Captura a Budclaw en la naturaleza en estas zonas: Estrecho de Plata , Cresta de Bestiacolmillo , Pasarela Berilina y Desembarco de Echoback ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Tierra": 1,
+      "Earth": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Tierra Lv.1"
+    ],
+    "icon": "assets/aniimo/1016103.webp"
+  },
+  {
+    "id": 24,
+    "dex": "#024",
+    "name": "Shrubclaw",
+    "base_name": "Shrubclaw",
+    "element": "Roca",
+    "role": "Breaker",
+    "habitat": "Captura a Shrubclaw en la naturaleza en estas zonas: Estrecho de Plata , Pasarela Berilina , Desembarco de Echoback y Costa de la Marea Floreciente . También puedes conseguirlo haciendo evolucionar a Budclaw ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Tierra": 3,
+      "Earth": 3,
+      "Hierba": 2,
+      "Grass": 2,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Tierra Lv.3",
+      "Hierba Lv.2",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1016200.webp"
+  },
+  {
+    "id": 24,
+    "dex": "#024",
+    "name": "Shrubclaw (Forma de marisma)",
+    "base_name": "Shrubclaw",
+    "element": "Roca",
+    "role": "Breaker",
+    "habitat": "Captura a Shrubclaw en la naturaleza en estas zonas: Estrecho de Plata , Pasarela Berilina , Desembarco de Echoback y Costa de la Marea Floreciente . También puedes conseguirlo haciendo evolucionar a Budclaw ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Tierra": 3,
+      "Earth": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Tierra Lv.3"
+    ],
+    "icon": "assets/aniimo/1016201.webp"
+  },
+  {
+    "id": 24,
+    "dex": "#024",
+    "name": "Shrubclaw (Forma de playa)",
+    "base_name": "Shrubclaw",
+    "element": "Roca",
+    "role": "Breaker",
+    "habitat": "Captura a Shrubclaw en la naturaleza en estas zonas: Estrecho de Plata , Pasarela Berilina , Desembarco de Echoback y Costa de la Marea Floreciente . También puedes conseguirlo haciendo evolucionar a Budclaw ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Tierra": 3,
+      "Earth": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Tierra Lv.3"
+    ],
+    "icon": "assets/aniimo/1016202.webp"
+  },
+  {
+    "id": 24,
+    "dex": "#024",
+    "name": "Shrubclaw (Forma de bahía)",
+    "base_name": "Shrubclaw",
+    "element": "Roca",
+    "role": "Breaker",
+    "habitat": "Captura a Shrubclaw en la naturaleza en estas zonas: Estrecho de Plata , Pasarela Berilina , Desembarco de Echoback y Costa de la Marea Floreciente . También puedes conseguirlo haciendo evolucionar a Budclaw ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Tierra": 3,
+      "Earth": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Tierra Lv.3"
+    ],
+    "icon": "assets/aniimo/1016203.webp"
+  },
+  {
+    "id": 25,
+    "dex": "#025",
+    "name": "Geoclaw",
+    "base_name": "Geoclaw",
+    "element": "Hielo",
+    "role": "Breaker",
+    "habitat": "Geoclaw no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Budclaw .",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 3,
+      "Ice": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Hielo Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1016300.webp"
+  },
+  {
+    "id": 26,
+    "dex": "#026",
+    "name": "Sparki",
+    "base_name": "Sparki",
+    "element": "Fuego",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Sparki en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pasarela Berilina , Bosque Electrizante y Pradera del Deslizamiento ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 2,
+      "Fire": 2
+    },
+    "abilities_display": [
+      "Fuego Lv.2"
+    ],
+    "icon": "assets/aniimo/1033100.webp"
+  },
+  {
+    "id": 26,
+    "dex": "#026",
+    "name": "Sparki (Forma de sierra)",
+    "base_name": "Sparki",
+    "element": "Fuego",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Sparki en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pasarela Berilina , Bosque Electrizante y Pradera del Deslizamiento ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 2,
+      "Fire": 2
+    },
+    "abilities_display": [
+      "Fuego Lv.2"
+    ],
+    "icon": "assets/aniimo/1033101.webp"
+  },
+  {
+    "id": 26,
+    "dex": "#026",
+    "name": "Sparki (Forma de bosque)",
+    "base_name": "Sparki",
+    "element": "Fuego",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Sparki en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pasarela Berilina , Bosque Electrizante y Pradera del Deslizamiento ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 2,
+      "Fire": 2
+    },
+    "abilities_display": [
+      "Fuego Lv.2"
+    ],
+    "icon": "assets/aniimo/1033102.webp"
+  },
+  {
+    "id": 26,
+    "dex": "#026",
+    "name": "Sparki (Mar de Flores)",
+    "base_name": "Sparki",
+    "element": "Fuego",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Sparki en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pasarela Berilina , Bosque Electrizante y Pradera del Deslizamiento ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 2,
+      "Fire": 2
+    },
+    "abilities_display": [
+      "Fuego Lv.2"
+    ],
+    "icon": "assets/aniimo/1033103.webp"
+  },
+  {
+    "id": 27,
+    "dex": "#027",
+    "name": "Flamerion",
+    "base_name": "Flamerion",
+    "element": "Fuego",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Flamerion en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pasarela Berilina , Pradera del Deslizamiento y Bosques de Neblina . También puedes conseguirlo haciendo evolucionar a Sparki ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 3,
+      "Fire": 3
+    },
+    "abilities_display": [
+      "Fuego Lv.3"
+    ],
+    "icon": "assets/aniimo/1033300.webp"
+  },
+  {
+    "id": 27,
+    "dex": "#027",
+    "name": "Flamerion (Forma de sierra)",
+    "base_name": "Flamerion",
+    "element": "Fuego",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Flamerion en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pasarela Berilina , Pradera del Deslizamiento y Bosques de Neblina . También puedes conseguirlo haciendo evolucionar a Sparki ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 3,
+      "Fire": 3
+    },
+    "abilities_display": [
+      "Fuego Lv.3"
+    ],
+    "icon": "assets/aniimo/1033301.webp"
+  },
+  {
+    "id": 27,
+    "dex": "#027",
+    "name": "Flamerion (Forma de bosque)",
+    "base_name": "Flamerion",
+    "element": "Fuego",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Flamerion en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pasarela Berilina , Pradera del Deslizamiento y Bosques de Neblina . También puedes conseguirlo haciendo evolucionar a Sparki ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 3,
+      "Fire": 3
+    },
+    "abilities_display": [
+      "Fuego Lv.3"
+    ],
+    "icon": "assets/aniimo/1033302.webp"
+  },
+  {
+    "id": 27,
+    "dex": "#027",
+    "name": "Flamerion (Mar de Flores)",
+    "base_name": "Flamerion",
+    "element": "Fuego",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Flamerion en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pasarela Berilina , Pradera del Deslizamiento y Bosques de Neblina . También puedes conseguirlo haciendo evolucionar a Sparki ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 3,
+      "Fire": 3
+    },
+    "abilities_display": [
+      "Fuego Lv.3"
+    ],
+    "icon": "assets/aniimo/1033303.webp"
+  },
+  {
+    "id": 28,
+    "dex": "#028",
+    "name": "Flutternym",
+    "base_name": "Flutternym",
+    "element": "Viento",
+    "role": "Sanador",
+    "habitat": "Captura a Flutternym en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Bosque Electrizante , Pradera del Deslizamiento y Bosque de Estrellas Fugaces ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 1,
+      "Leisure": 1,
+      "Viento": 1,
+      "Wind": 1
+    },
+    "abilities_display": [
+      "Ocio Lv.1",
+      "Viento Lv.1"
+    ],
+    "icon": "assets/aniimo/1023100.webp"
+  },
+  {
+    "id": 28,
+    "dex": "#028",
+    "name": "Flutternym (Mar de Flores)",
+    "base_name": "Flutternym",
+    "element": "Viento",
+    "role": "Sanador",
+    "habitat": "Captura a Flutternym en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Bosque Electrizante , Pradera del Deslizamiento y Bosque de Estrellas Fugaces ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 1,
+      "Leisure": 1,
+      "Hierba": 1,
+      "Grass": 1,
+      "Viento": 1,
+      "Wind": 1
+    },
+    "abilities_display": [
+      "Ocio Lv.1",
+      "Hierba Lv.1",
+      "Viento Lv.1"
+    ],
+    "icon": "assets/aniimo/1023101.webp"
+  },
+  {
+    "id": 28,
+    "dex": "#028",
+    "name": "Flutternym (Noche)",
+    "base_name": "Flutternym",
+    "element": "Oscuridad",
+    "role": "Sanador",
+    "habitat": "Captura a Flutternym en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Bosque Electrizante , Pradera del Deslizamiento y Bosque de Estrellas Fugaces ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 1,
+      "Leisure": 1,
+      "Viento": 1,
+      "Wind": 1,
+      "Oscuro": 1,
+      "Dark": 1
+    },
+    "abilities_display": [
+      "Ocio Lv.1",
+      "Viento Lv.1",
+      "Oscuro Lv.1"
+    ],
+    "icon": "assets/aniimo/1023102.webp"
+  },
+  {
+    "id": 28,
+    "dex": "#028",
+    "name": "Flutternym (Forma de bosque montañoso)",
+    "base_name": "Flutternym",
+    "element": "Viento",
+    "role": "Sanador",
+    "habitat": "Captura a Flutternym en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Bosque Electrizante , Pradera del Deslizamiento y Bosque de Estrellas Fugaces ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Tierra": 1,
+      "Earth": 1,
+      "Ocio": 1,
+      "Leisure": 1,
+      "Viento": 1,
+      "Wind": 1
+    },
+    "abilities_display": [
+      "Tierra Lv.1",
+      "Ocio Lv.1",
+      "Viento Lv.1"
+    ],
+    "icon": "assets/aniimo/1023103.webp"
+  },
+  {
+    "id": 29,
+    "dex": "#029",
+    "name": "Gracewing",
+    "base_name": "Gracewing",
+    "element": "Viento",
+    "role": "Sanador",
+    "habitat": "Captura a Gracewing en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Bosque Electrizante y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Flutternym ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 3,
+      "Leisure": 3,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Ocio Lv.3",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1023200.webp"
+  },
+  {
+    "id": 29,
+    "dex": "#029",
+    "name": "Gracewing (Mar de Flores)",
+    "base_name": "Gracewing",
+    "element": "Viento",
+    "role": "Sanador",
+    "habitat": "Captura a Gracewing en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Bosque Electrizante y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Flutternym ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 3,
+      "Leisure": 3,
+      "Hierba": 2,
+      "Grass": 2,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Ocio Lv.3",
+      "Hierba Lv.2",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1023201.webp"
+  },
+  {
+    "id": 29,
+    "dex": "#029",
+    "name": "Gracewing (Noche)",
+    "base_name": "Gracewing",
+    "element": "Oscuridad",
+    "role": "Sanador",
+    "habitat": "Captura a Gracewing en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Bosque Electrizante y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Flutternym ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 3,
+      "Leisure": 3,
+      "Viento": 3,
+      "Wind": 3,
+      "Oscuro": 2,
+      "Dark": 2
+    },
+    "abilities_display": [
+      "Ocio Lv.3",
+      "Viento Lv.3",
+      "Oscuro Lv.2"
+    ],
+    "icon": "assets/aniimo/1023202.webp"
+  },
+  {
+    "id": 29,
+    "dex": "#029",
+    "name": "Gracewing (Forma de bosque montañoso)",
+    "base_name": "Gracewing",
+    "element": "Viento",
+    "role": "Sanador",
+    "habitat": "Captura a Gracewing en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Bosque Electrizante y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Flutternym ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Tierra": 2,
+      "Earth": 2,
+      "Ocio": 3,
+      "Leisure": 3,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Tierra Lv.2",
+      "Ocio Lv.3",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1023203.webp"
+  },
+  {
+    "id": 30,
+    "dex": "#030",
+    "name": "Somniwing (Forma de prismana)",
+    "base_name": "Somniwing",
+    "element": "Viento",
+    "role": "Batería / REGEN",
+    "habitat": "Somniwing no se encuentra en la naturaleza., Ningún Somniwing alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": true,
+    "abilities": {
+      "Ocio": 4,
+      "Leisure": 4,
+      "Hierba": 4,
+      "Grass": 4,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Ocio Lv.4",
+      "Hierba Lv.4",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1023300.webp"
+  },
+  {
+    "id": 31,
+    "dex": "#031",
+    "name": "Eko",
+    "base_name": "Eko",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Eko en la naturaleza en esta zona: Bosque de Estrellas Fugaces ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Artesanía": 1,
+      "Artisanship": 1,
+      "Viento": 1,
+      "Wind": 1
+    },
+    "abilities_display": [
+      "Artesanía Lv.1",
+      "Viento Lv.1"
+    ],
+    "icon": "assets/aniimo/1044100.webp"
+  },
+  {
+    "id": 32,
+    "dex": "#032",
+    "name": "Eklue",
+    "base_name": "Eklue",
+    "element": "Viento",
+    "role": "Soporte",
+    "habitat": "Captura a Eklue en la naturaleza en esta zona: Bosque de Estrellas Fugaces . También puedes conseguirlo haciendo evolucionar a Eko ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Artesanía": 3,
+      "Artisanship": 3,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Artesanía Lv.3",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1044300.webp"
+  },
+  {
+    "id": 33,
+    "dex": "#033",
+    "name": "Budsquire",
+    "base_name": "Budsquire",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Budsquire en la naturaleza en estas zonas: Bosque de la Torre de los Rosales y Mar de Flores ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Artesanía": 1,
+      "Artisanship": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Artesanía Lv.1"
+    ],
+    "icon": "assets/aniimo/1032100.webp"
+  },
+  {
+    "id": 33,
+    "dex": "#033",
+    "name": "Budsquire (Forma de Torrebosque)",
+    "base_name": "Budsquire",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Budsquire en la naturaleza en estas zonas: Bosque de la Torre de los Rosales y Mar de Flores ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Artesanía": 1,
+      "Artisanship": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Artesanía Lv.1"
+    ],
+    "icon": "assets/aniimo/1032103.webp"
+  },
+  {
+    "id": 34,
+    "dex": "#034",
+    "name": "Thornblade",
+    "base_name": "Thornblade",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Thornblade en la naturaleza en estas zonas: Bosque de la Torre de los Rosales y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Budsquire ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1032300.webp"
+  },
+  {
+    "id": 34,
+    "dex": "#034",
+    "name": "Thornblade (Forma de tormenta)",
+    "base_name": "Thornblade",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Thornblade en la naturaleza en estas zonas: Bosque de la Torre de los Rosales y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Budsquire ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 2,
+      "Lightning": 2,
+      "Hierba": 3,
+      "Grass": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.2",
+      "Hierba Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1032301.webp"
+  },
+  {
+    "id": 34,
+    "dex": "#034",
+    "name": "Thornblade (Forma de prismana)",
+    "base_name": "Thornblade",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Thornblade en la naturaleza en estas zonas: Bosque de la Torre de los Rosales y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Budsquire ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Agua": 3,
+      "Water": 3,
+      "Hierba": 4,
+      "Grass": 4,
+      "Artesanía": 4,
+      "Artisanship": 4
+    },
+    "abilities_display": [
+      "Agua Lv.3",
+      "Hierba Lv.4",
+      "Artesanía Lv.4"
+    ],
+    "icon": "assets/aniimo/1032302.webp"
+  },
+  {
+    "id": 34,
+    "dex": "#034",
+    "name": "Thornblade (Forma de Torrebosque)",
+    "base_name": "Thornblade",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Captura a Thornblade en la naturaleza en estas zonas: Bosque de la Torre de los Rosales y Mar de Flores . También puedes conseguirlo haciendo evolucionar a Budsquire ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1032303.webp"
+  },
+  {
+    "id": 35,
+    "dex": "#035",
+    "name": "Melloblum",
+    "base_name": "Melloblum",
+    "element": "Hierba",
+    "role": "Soporte",
+    "habitat": "Captura a Melloblum en la naturaleza en esta zona: Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Budsquire ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1032400.webp"
+  },
+  {
+    "id": 35,
+    "dex": "#035",
+    "name": "Melloblum (Forma de prismana)",
+    "base_name": "Melloblum",
+    "element": "Sagrado",
+    "role": "Soporte",
+    "habitat": "Captura a Melloblum en la naturaleza en esta zona: Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Budsquire ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Luz": 3,
+      "Light": 3,
+      "Hierba": 4,
+      "Grass": 4,
+      "Artesanía": 4,
+      "Artisanship": 4
+    },
+    "abilities_display": [
+      "Luz Lv.3",
+      "Hierba Lv.4",
+      "Artesanía Lv.4"
+    ],
+    "icon": "assets/aniimo/1032402.webp"
+  },
+  {
+    "id": 36,
+    "dex": "#036",
+    "name": "Pomegg",
+    "base_name": "Pomegg",
+    "element": "Hierba",
+    "role": "Breaker",
+    "habitat": "Captura a Pomegg en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pradera del Deslizamiento , Bosque de Estrellas Fugaces y Bosque de la Torre de los Rosales ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Artesanía": 1,
+      "Artisanship": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Artesanía Lv.1"
+    ],
+    "icon": "assets/aniimo/1047100.webp"
+  },
+  {
+    "id": 36,
+    "dex": "#036",
+    "name": "Pomegg (Forma de nieve)",
+    "base_name": "Pomegg",
+    "element": "Hierba",
+    "role": "Breaker",
+    "habitat": "Captura a Pomegg en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pradera del Deslizamiento , Bosque de Estrellas Fugaces y Bosque de la Torre de los Rosales ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 1,
+      "Ice": 1,
+      "Hierba": 1,
+      "Grass": 1,
+      "Artesanía": 1,
+      "Artisanship": 1
+    },
+    "abilities_display": [
+      "Hielo Lv.1",
+      "Hierba Lv.1",
+      "Artesanía Lv.1"
+    ],
+    "icon": "assets/aniimo/1047101.webp"
+  },
+  {
+    "id": 36,
+    "dex": "#036",
+    "name": "Pomegg (Forma de sierra)",
+    "base_name": "Pomegg",
+    "element": "Hierba",
+    "role": "Breaker",
+    "habitat": "Captura a Pomegg en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pradera del Deslizamiento , Bosque de Estrellas Fugaces y Bosque de la Torre de los Rosales ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Artesanía": 1,
+      "Artisanship": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Artesanía Lv.1"
+    ],
+    "icon": "assets/aniimo/1047102.webp"
+  },
+  {
+    "id": 36,
+    "dex": "#036",
+    "name": "Pomegg (Mar de Flores)",
+    "base_name": "Pomegg",
+    "element": "Hierba",
+    "role": "Breaker",
+    "habitat": "Captura a Pomegg en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pradera del Deslizamiento , Bosque de Estrellas Fugaces y Bosque de la Torre de los Rosales ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 1,
+      "Grass": 1,
+      "Artesanía": 1,
+      "Artisanship": 1
+    },
+    "abilities_display": [
+      "Hierba Lv.1",
+      "Artesanía Lv.1"
+    ],
+    "icon": "assets/aniimo/1047103.webp"
+  },
+  {
+    "id": 37,
+    "dex": "#037",
+    "name": "Pomawk",
+    "base_name": "Pomawk",
+    "element": "Hierba",
+    "role": "Breaker",
+    "habitat": "Captura a Pomawk en la naturaleza en esta zona: Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Pomegg ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1047500.webp"
+  },
+  {
+    "id": 37,
+    "dex": "#037",
+    "name": "Pomawk (Forma de nieve)",
+    "base_name": "Pomawk",
+    "element": "Hierba",
+    "role": "Breaker",
+    "habitat": "Captura a Pomawk en la naturaleza en esta zona: Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Pomegg ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 2,
+      "Ice": 2,
+      "Hierba": 3,
+      "Grass": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Hielo Lv.2",
+      "Hierba Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1047501.webp"
+  },
+  {
+    "id": 37,
+    "dex": "#037",
+    "name": "Pomawk (Forma de sierra)",
+    "base_name": "Pomawk",
+    "element": "Hierba",
+    "role": "Breaker",
+    "habitat": "Captura a Pomawk en la naturaleza en esta zona: Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Pomegg ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1047502.webp"
+  },
+  {
+    "id": 37,
+    "dex": "#037",
+    "name": "Pomawk (Mar de Flores)",
+    "base_name": "Pomawk",
+    "element": "Hierba",
+    "role": "Breaker",
+    "habitat": "Captura a Pomawk en la naturaleza en esta zona: Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Pomegg ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hierba": 3,
+      "Grass": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Hierba Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1047503.webp"
+  },
+  {
+    "id": 38,
+    "dex": "#038",
+    "name": "Dewy",
+    "base_name": "Dewy",
+    "element": "Oscuridad",
+    "role": "Soporte",
+    "habitat": "Captura a Dewy en la naturaleza en estas zonas: Bosque de la Torre de los Rosales y Mar de Flores ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Perfumería": 1,
+      "Perfumery": 1,
+      "Oscuro": 1,
+      "Dark": 1,
+      "Ocio": 1,
+      "Leisure": 1
+    },
+    "abilities_display": [
+      "Perfumería Lv.1",
+      "Oscuro Lv.1",
+      "Ocio Lv.1"
+    ],
+    "icon": "assets/aniimo/1035100.webp"
+  },
+  {
+    "id": 39,
+    "dex": "#039",
+    "name": "Fragrancier",
+    "base_name": "Fragrancier",
+    "element": "Oscuridad",
+    "role": "Soporte",
+    "habitat": "Captura a Fragrancier en la naturaleza en esta zona: Mar de Flores . También puedes conseguirlo haciendo evolucionar a Dewy ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Perfumería": 3,
+      "Perfumery": 3,
+      "Oscuro": 3,
+      "Dark": 3,
+      "Ocio": 3,
+      "Leisure": 3
+    },
+    "abilities_display": [
+      "Perfumería Lv.3",
+      "Oscuro Lv.3",
+      "Ocio Lv.3"
+    ],
+    "icon": "assets/aniimo/1035200.webp"
+  },
+  {
+    "id": 40,
+    "dex": "#040",
+    "name": "Wisptis",
+    "base_name": "Wisptis",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Wisptis en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Bosques de Neblina y Puente Terrestre de Céfiro ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Artesanía": 1,
+      "Artisanship": 1,
+      "Oscuro": 1,
+      "Dark": 1
+    },
+    "abilities_display": [
+      "Artesanía Lv.1",
+      "Oscuro Lv.1"
+    ],
+    "icon": "assets/aniimo/1003100.webp"
+  },
+  {
+    "id": 40,
+    "dex": "#040",
+    "name": "Wisptis (Forma de bosque)",
+    "base_name": "Wisptis",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Wisptis en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Bosques de Neblina y Puente Terrestre de Céfiro ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Artesanía": 1,
+      "Artisanship": 1,
+      "Hierba": 1,
+      "Grass": 1,
+      "Oscuro": 1,
+      "Dark": 1
+    },
+    "abilities_display": [
+      "Artesanía Lv.1",
+      "Hierba Lv.1",
+      "Oscuro Lv.1"
+    ],
+    "icon": "assets/aniimo/1003101.webp"
+  },
+  {
+    "id": 40,
+    "dex": "#040",
+    "name": "Wisptis (Forma de sierra)",
+    "base_name": "Wisptis",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Wisptis en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Bosques de Neblina y Puente Terrestre de Céfiro ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Artesanía": 1,
+      "Artisanship": 1,
+      "Fuego": 1,
+      "Fire": 1,
+      "Oscuro": 1,
+      "Dark": 1
+    },
+    "abilities_display": [
+      "Artesanía Lv.1",
+      "Fuego Lv.1",
+      "Oscuro Lv.1"
+    ],
+    "icon": "assets/aniimo/1003103.webp"
+  },
+  {
+    "id": 41,
+    "dex": "#041",
+    "name": "Ignitis",
+    "base_name": "Ignitis",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Ignitis en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Bosques de Neblina y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Wisptis ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Artesanía": 3,
+      "Artisanship": 3,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Artesanía Lv.3",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1003200.webp"
+  },
+  {
+    "id": 41,
+    "dex": "#041",
+    "name": "Ignitis (Forma de bosque)",
+    "base_name": "Ignitis",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Ignitis en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Bosques de Neblina y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Wisptis ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Artesanía": 3,
+      "Artisanship": 3,
+      "Hierba": 2,
+      "Grass": 2,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Artesanía Lv.3",
+      "Hierba Lv.2",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1003201.webp"
+  },
+  {
+    "id": 41,
+    "dex": "#041",
+    "name": "Ignitis (Forma de prismana)",
+    "base_name": "Ignitis",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Ignitis en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Bosques de Neblina y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Wisptis ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Artesanía": 4,
+      "Artisanship": 4,
+      "Fuego": 3,
+      "Fire": 3,
+      "Oscuro": 4,
+      "Dark": 4
+    },
+    "abilities_display": [
+      "Artesanía Lv.4",
+      "Fuego Lv.3",
+      "Oscuro Lv.4"
+    ],
+    "icon": "assets/aniimo/1003202.webp"
+  },
+  {
+    "id": 41,
+    "dex": "#041",
+    "name": "Ignitis (Forma de sierra)",
+    "base_name": "Ignitis",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Captura a Ignitis en la naturaleza en estas zonas: Pasarela Berilina , Bosque Electrizante , Bosques de Neblina y Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Wisptis ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Artesanía": 3,
+      "Artisanship": 3,
+      "Fuego": 2,
+      "Fire": 2,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Artesanía Lv.3",
+      "Fuego Lv.2",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1003203.webp"
+  },
+  {
+    "id": 42,
+    "dex": "#042",
+    "name": "Bonesky",
+    "base_name": "Bonesky",
+    "element": "Hielo",
+    "role": "DPS",
+    "habitat": "Captura a Bonesky en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pradera del Deslizamiento , Bosques de Neblina y Bosque de la Torre de los Rosales ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 1,
+      "Ice": 1,
+      "Remolque": 1,
+      "Hauling": 1
+    },
+    "abilities_display": [
+      "Hielo Lv.1",
+      "Remolque Lv.1"
+    ],
+    "icon": "assets/aniimo/1013100.webp"
+  },
+  {
+    "id": 42,
+    "dex": "#042",
+    "name": "Bonesky (Noche)",
+    "base_name": "Bonesky",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Bonesky en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pradera del Deslizamiento , Bosques de Neblina y Bosque de la Torre de los Rosales ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 1,
+      "Ice": 1,
+      "Remolque": 1,
+      "Hauling": 1,
+      "Oscuro": 1,
+      "Dark": 1
+    },
+    "abilities_display": [
+      "Hielo Lv.1",
+      "Remolque Lv.1",
+      "Oscuro Lv.1"
+    ],
+    "icon": "assets/aniimo/1013102.webp"
+  },
+  {
+    "id": 43,
+    "dex": "#043",
+    "name": "Fenrier",
+    "base_name": "Fenrier",
+    "element": "Hielo",
+    "role": "DPS",
+    "habitat": "Captura a Fenrier en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pradera del Deslizamiento y Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Bonesky ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 2,
+      "Ice": 2,
+      "Remolque": 2,
+      "Hauling": 2
+    },
+    "abilities_display": [
+      "Hielo Lv.2",
+      "Remolque Lv.2"
+    ],
+    "icon": "assets/aniimo/1013200.webp"
+  },
+  {
+    "id": 43,
+    "dex": "#043",
+    "name": "Fenrier (Noche)",
+    "base_name": "Fenrier",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Fenrier en la naturaleza en estas zonas: Cresta de Bestiacolmillo , Pradera del Deslizamiento y Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Bonesky ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 2,
+      "Ice": 2,
+      "Remolque": 2,
+      "Hauling": 2,
+      "Oscuro": 1,
+      "Dark": 1
+    },
+    "abilities_display": [
+      "Hielo Lv.2",
+      "Remolque Lv.2",
+      "Oscuro Lv.1"
+    ],
+    "icon": "assets/aniimo/1013202.webp"
+  },
+  {
+    "id": 44,
+    "dex": "#044",
+    "name": "Glynsera",
+    "base_name": "Glynsera",
+    "element": "Hielo",
+    "role": "DPS",
+    "habitat": "Captura a Glynsera en la naturaleza en estas zonas: Cresta de Bestiacolmillo y Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Fenrier ., Cresta de Bestiacolmillo Bosque de la Torre de los Rosales",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 3,
+      "Ice": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Hielo Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1013300.webp"
+  },
+  {
+    "id": 44,
+    "dex": "#044",
+    "name": "Glynsera (Forma de prismana)",
+    "base_name": "Glynsera",
+    "element": "Sagrado",
+    "role": "DPS",
+    "habitat": "Captura a Glynsera en la naturaleza en estas zonas: Cresta de Bestiacolmillo y Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Fenrier ., Cresta de Bestiacolmillo Bosque de la Torre de los Rosales",
+    "is_prismana": true,
+    "abilities": {
+      "Hielo": 4,
+      "Ice": 4,
+      "Luz": 3,
+      "Light": 3,
+      "Remolque": 4,
+      "Hauling": 4
+    },
+    "abilities_display": [
+      "Hielo Lv.4",
+      "Luz Lv.3",
+      "Remolque Lv.4"
+    ],
+    "icon": "assets/aniimo/1013301.webp"
+  },
+  {
+    "id": 44,
+    "dex": "#044",
+    "name": "Glynsera (Noche)",
+    "base_name": "Glynsera",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Glynsera en la naturaleza en estas zonas: Cresta de Bestiacolmillo y Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Fenrier ., Cresta de Bestiacolmillo Bosque de la Torre de los Rosales",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 3,
+      "Ice": 3,
+      "Remolque": 3,
+      "Hauling": 3,
+      "Oscuro": 2,
+      "Dark": 2
+    },
+    "abilities_display": [
+      "Hielo Lv.3",
+      "Remolque Lv.3",
+      "Oscuro Lv.2"
+    ],
+    "icon": "assets/aniimo/1013302.webp"
+  },
+  {
+    "id": 45,
+    "dex": "#045",
+    "name": "Bolty",
+    "base_name": "Bolty",
+    "element": "Eléctrico",
+    "role": "Breaker",
+    "habitat": "Captura a Bolty en la naturaleza en estas zonas: Bosque Electrizante y Bosque de la Torre de los Rosales ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 1,
+      "Lightning": 1,
+      "Artesanía": 1,
+      "Artisanship": 1
+    },
+    "abilities_display": [
+      "Relámpago Lv.1",
+      "Artesanía Lv.1"
+    ],
+    "icon": "assets/aniimo/1022100.webp"
+  },
+  {
+    "id": 45,
+    "dex": "#045",
+    "name": "Bolty (Forma de bosque montañoso)",
+    "base_name": "Bolty",
+    "element": "Eléctrico",
+    "role": "Breaker",
+    "habitat": "Captura a Bolty en la naturaleza en estas zonas: Bosque Electrizante y Bosque de la Torre de los Rosales ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 1,
+      "Lightning": 1,
+      "Artesanía": 1,
+      "Artisanship": 1
+    },
+    "abilities_display": [
+      "Relámpago Lv.1",
+      "Artesanía Lv.1"
+    ],
+    "icon": "assets/aniimo/1022102.webp"
+  },
+  {
+    "id": 46,
+    "dex": "#046",
+    "name": "Blazen",
+    "base_name": "Blazen",
+    "element": "Eléctrico",
+    "role": "Breaker",
+    "habitat": "Captura a Blazen en la naturaleza en esta zona: Bosque Electrizante . También puedes conseguirlo haciendo evolucionar a Bolty ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 3,
+      "Lightning": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1022200.webp"
+  },
+  {
+    "id": 46,
+    "dex": "#046",
+    "name": "Blazen (Forma de prismana)",
+    "base_name": "Blazen",
+    "element": "Oscuridad",
+    "role": "Breaker",
+    "habitat": "Captura a Blazen en la naturaleza en esta zona: Bosque Electrizante . También puedes conseguirlo haciendo evolucionar a Bolty ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Relámpago": 4,
+      "Lightning": 4,
+      "Artesanía": 4,
+      "Artisanship": 4,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.4",
+      "Artesanía Lv.4",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1022201.webp"
+  },
+  {
+    "id": 46,
+    "dex": "#046",
+    "name": "Blazen (Forma de bosque montañoso)",
+    "base_name": "Blazen",
+    "element": "Eléctrico",
+    "role": "Breaker",
+    "habitat": "Captura a Blazen en la naturaleza en esta zona: Bosque Electrizante . También puedes conseguirlo haciendo evolucionar a Bolty ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 3,
+      "Lightning": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1022202.webp"
+  },
+  {
+    "id": 47,
+    "dex": "#047",
+    "name": "Squarrel",
+    "base_name": "Squarrel",
+    "element": "Fuego",
+    "role": "Breaker",
+    "habitat": "Captura a Squarrel en la naturaleza en esta zona: Bosque Electrizante ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 1,
+      "Fire": 1,
+      "Artesanía": 1,
+      "Artisanship": 1
+    },
+    "abilities_display": [
+      "Fuego Lv.1",
+      "Artesanía Lv.1"
+    ],
+    "icon": "assets/aniimo/1051100.webp"
+  },
+  {
+    "id": 48,
+    "dex": "#048",
+    "name": "Squashel",
+    "base_name": "Squashel",
+    "element": "Fuego",
+    "role": "Breaker",
+    "habitat": "Captura a Squashel en la naturaleza en esta zona: Bosque Electrizante . También puedes conseguirlo haciendo evolucionar a Squarrel ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 2,
+      "Fire": 2,
+      "Artesanía": 2,
+      "Artisanship": 2
+    },
+    "abilities_display": [
+      "Fuego Lv.2",
+      "Artesanía Lv.2"
+    ],
+    "icon": "assets/aniimo/1051200.webp"
+  },
+  {
+    "id": 49,
+    "dex": "#049",
+    "name": "Susuta",
+    "base_name": "Susuta",
+    "element": "Agua",
+    "role": "Breaker",
+    "habitat": "Captura a Susuta en la naturaleza en esta zona: Desembarco de Echoback ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 1,
+      "Leisure": 1,
+      "Agua": 1,
+      "Water": 1
+    },
+    "abilities_display": [
+      "Ocio Lv.1",
+      "Agua Lv.1"
+    ],
+    "icon": "assets/aniimo/1017100.webp"
+  },
+  {
+    "id": 49,
+    "dex": "#049",
+    "name": "Susuta (Noche)",
+    "base_name": "Susuta",
+    "element": "Agua",
+    "role": "Breaker",
+    "habitat": "Captura a Susuta en la naturaleza en esta zona: Desembarco de Echoback ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 1,
+      "Leisure": 1,
+      "Agua": 1,
+      "Water": 1
+    },
+    "abilities_display": [
+      "Ocio Lv.1",
+      "Agua Lv.1"
+    ],
+    "icon": "assets/aniimo/1017101.webp"
+  },
+  {
+    "id": 50,
+    "dex": "#050",
+    "name": "Popota",
+    "base_name": "Popota",
+    "element": "Agua",
+    "role": "Breaker",
+    "habitat": "Captura a Popota en la naturaleza en esta zona: Desembarco de Echoback . También puedes conseguirlo haciendo evolucionar a Susuta ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 2,
+      "Leisure": 2,
+      "Agua": 2,
+      "Water": 2
+    },
+    "abilities_display": [
+      "Ocio Lv.2",
+      "Agua Lv.2"
+    ],
+    "icon": "assets/aniimo/1017200.webp"
+  },
+  {
+    "id": 50,
+    "dex": "#050",
+    "name": "Popota (Noche)",
+    "base_name": "Popota",
+    "element": "Agua",
+    "role": "Breaker",
+    "habitat": "Captura a Popota en la naturaleza en esta zona: Desembarco de Echoback . También puedes conseguirlo haciendo evolucionar a Susuta ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 2,
+      "Leisure": 2,
+      "Agua": 2,
+      "Water": 2
+    },
+    "abilities_display": [
+      "Ocio Lv.2",
+      "Agua Lv.2"
+    ],
+    "icon": "assets/aniimo/1017201.webp"
+  },
+  {
+    "id": 51,
+    "dex": "#051",
+    "name": "Piopiota",
+    "base_name": "Piopiota",
+    "element": "Agua",
+    "role": "Soporte",
+    "habitat": "Piopiota no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Popota ., Ningún Piopiota alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 3,
+      "Leisure": 3,
+      "Agua": 3,
+      "Water": 3
+    },
+    "abilities_display": [
+      "Ocio Lv.3",
+      "Agua Lv.3"
+    ],
+    "icon": "assets/aniimo/1017300.webp"
+  },
+  {
+    "id": 51,
+    "dex": "#051",
+    "name": "Piopiota (Noche)",
+    "base_name": "Piopiota",
+    "element": "Oscuridad",
+    "role": "Soporte",
+    "habitat": "Piopiota no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Popota ., Ningún Piopiota alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {
+      "Agua": 3,
+      "Water": 3,
+      "Ocio": 3,
+      "Leisure": 3,
+      "Oscuro": 2,
+      "Dark": 2
+    },
+    "abilities_display": [
+      "Agua Lv.3",
+      "Ocio Lv.3",
+      "Oscuro Lv.2"
+    ],
+    "icon": "assets/aniimo/1017301.webp"
+  },
+  {
+    "id": 52,
+    "dex": "#052",
+    "name": "Panpanta",
+    "base_name": "Panpanta",
+    "element": "Agua",
+    "role": "Breaker",
+    "habitat": "Captura a Panpanta en la naturaleza en esta zona: Desembarco de Echoback . También puedes conseguirlo haciendo evolucionar a Popota ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 3,
+      "Leisure": 3,
+      "Agua": 3,
+      "Water": 3
+    },
+    "abilities_display": [
+      "Ocio Lv.3",
+      "Agua Lv.3"
+    ],
+    "icon": "assets/aniimo/1017400.webp"
+  },
+  {
+    "id": 52,
+    "dex": "#052",
+    "name": "Panpanta (Noche)",
+    "base_name": "Panpanta",
+    "element": "Agua",
+    "role": "Breaker",
+    "habitat": "Captura a Panpanta en la naturaleza en esta zona: Desembarco de Echoback . También puedes conseguirlo haciendo evolucionar a Popota ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 3,
+      "Leisure": 3,
+      "Agua": 3,
+      "Water": 3
+    },
+    "abilities_display": [
+      "Ocio Lv.3",
+      "Agua Lv.3"
+    ],
+    "icon": "assets/aniimo/1017401.webp"
+  },
+  {
+    "id": 52,
+    "dex": "#052",
+    "name": "Panpanta (Forma de prismana)",
+    "base_name": "Panpanta",
+    "element": "Agua",
+    "role": "Breaker",
+    "habitat": "Captura a Panpanta en la naturaleza en esta zona: Desembarco de Echoback . También puedes conseguirlo haciendo evolucionar a Popota ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Ocio": 4,
+      "Leisure": 4,
+      "Agua": 4,
+      "Water": 4
+    },
+    "abilities_display": [
+      "Ocio Lv.4",
+      "Agua Lv.4"
+    ],
+    "icon": "assets/aniimo/1017402.webp"
+  },
+  {
+    "id": 53,
+    "dex": "#053",
+    "name": "Shelly",
+    "base_name": "Shelly",
+    "element": "Agua",
+    "role": "DPS",
+    "habitat": "Captura a Shelly en la naturaleza en estas zonas: Crescent Bay y Desembarco de Echoback ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 1,
+      "Leisure": 1,
+      "Agua": 1,
+      "Water": 1
+    },
+    "abilities_display": [
+      "Ocio Lv.1",
+      "Agua Lv.1"
+    ],
+    "icon": "assets/aniimo/1019100.webp"
+  },
+  {
+    "id": 54,
+    "dex": "#054",
+    "name": "Sheldon",
+    "base_name": "Sheldon",
+    "element": "Agua",
+    "role": "DPS",
+    "habitat": "Captura a Sheldon en la naturaleza en esta zona: Desembarco de Echoback . También puedes conseguirlo haciendo evolucionar a Shelly ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 2,
+      "Leisure": 2,
+      "Agua": 2,
+      "Water": 2
+    },
+    "abilities_display": [
+      "Ocio Lv.2",
+      "Agua Lv.2"
+    ],
+    "icon": "assets/aniimo/1019200.webp"
+  },
+  {
+    "id": 55,
+    "dex": "#055",
+    "name": "Sherro",
+    "base_name": "Sherro",
+    "element": "Agua",
+    "role": "DPS",
+    "habitat": "Captura a Sherro en la naturaleza en esta zona: Desembarco de Echoback . También puedes conseguirlo haciendo evolucionar a Sheldon ., Desembarco de Echoback",
+    "is_prismana": false,
+    "abilities": {
+      "Ocio": 3,
+      "Leisure": 3,
+      "Agua": 3,
+      "Water": 3
+    },
+    "abilities_display": [
+      "Ocio Lv.3",
+      "Agua Lv.3"
+    ],
+    "icon": "assets/aniimo/1019400.webp"
+  },
+  {
+    "id": 55,
+    "dex": "#055",
+    "name": "Sherro (Forma de tormenta)",
+    "base_name": "Sherro",
+    "element": "Eléctrico",
+    "role": "DPS",
+    "habitat": "Captura a Sherro en la naturaleza en esta zona: Desembarco de Echoback . También puedes conseguirlo haciendo evolucionar a Sheldon ., Desembarco de Echoback",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 2,
+      "Lightning": 2,
+      "Agua": 3,
+      "Water": 3,
+      "Ocio": 3,
+      "Leisure": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.2",
+      "Agua Lv.3",
+      "Ocio Lv.3"
+    ],
+    "icon": "assets/aniimo/1019401.webp"
+  },
+  {
+    "id": 55,
+    "dex": "#055",
+    "name": "Sherro (Forma de prismana)",
+    "base_name": "Sherro",
+    "element": "Sagrado",
+    "role": "DPS",
+    "habitat": "Captura a Sherro en la naturaleza en esta zona: Desembarco de Echoback . También puedes conseguirlo haciendo evolucionar a Sheldon ., Desembarco de Echoback",
+    "is_prismana": true,
+    "abilities": {
+      "Agua": 4,
+      "Water": 4,
+      "Luz": 3,
+      "Light": 3,
+      "Ocio": 4,
+      "Leisure": 4
+    },
+    "abilities_display": [
+      "Agua Lv.4",
+      "Luz Lv.3",
+      "Ocio Lv.4"
+    ],
+    "icon": "assets/aniimo/1019402.webp"
+  },
+  {
+    "id": 56,
+    "dex": "#056",
+    "name": "Baleetle",
+    "base_name": "Baleetle",
+    "element": "Roca",
+    "role": "DPS",
+    "habitat": "Captura a Baleetle en la naturaleza en estas zonas: Pasarela Berilina y Sierras Bermejas ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Tierra": 1,
+      "Earth": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Tierra Lv.1"
+    ],
+    "icon": "assets/aniimo/1045100.webp"
+  },
+  {
+    "id": 56,
+    "dex": "#056",
+    "name": "Baleetle (Forma de nieve)",
+    "base_name": "Baleetle",
+    "element": "Roca",
+    "role": "DPS",
+    "habitat": "Captura a Baleetle en la naturaleza en estas zonas: Pasarela Berilina y Sierras Bermejas ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 1,
+      "Ice": 1,
+      "Tierra": 1,
+      "Earth": 1,
+      "Remolque": 1,
+      "Hauling": 1
+    },
+    "abilities_display": [
+      "Hielo Lv.1",
+      "Tierra Lv.1",
+      "Remolque Lv.1"
+    ],
+    "icon": "assets/aniimo/1045101.webp"
+  },
+  {
+    "id": 57,
+    "dex": "#057",
+    "name": "Waleetle",
+    "base_name": "Waleetle",
+    "element": "Roca",
+    "role": "DPS",
+    "habitat": "Captura a Waleetle en la naturaleza en estas zonas: Pasarela Berilina y Sierras Bermejas . También puedes conseguirlo haciendo evolucionar a Baleetle ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Tierra": 3,
+      "Earth": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Tierra Lv.3"
+    ],
+    "icon": "assets/aniimo/1045300.webp"
+  },
+  {
+    "id": 57,
+    "dex": "#057",
+    "name": "Waleetle (Forma de nieve)",
+    "base_name": "Waleetle",
+    "element": "Roca",
+    "role": "DPS",
+    "habitat": "Captura a Waleetle en la naturaleza en estas zonas: Pasarela Berilina y Sierras Bermejas . También puedes conseguirlo haciendo evolucionar a Baleetle ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 2,
+      "Ice": 2,
+      "Tierra": 3,
+      "Earth": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Hielo Lv.2",
+      "Tierra Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1045301.webp"
+  },
+  {
+    "id": 57,
+    "dex": "#057",
+    "name": "Waleetle (Forma de prismana)",
+    "base_name": "Waleetle",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Waleetle en la naturaleza en estas zonas: Pasarela Berilina y Sierras Bermejas . También puedes conseguirlo haciendo evolucionar a Baleetle ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Tierra": 4,
+      "Earth": 4,
+      "Remolque": 4,
+      "Hauling": 4,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Tierra Lv.4",
+      "Remolque Lv.4",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1045302.webp"
+  },
+  {
+    "id": 58,
+    "dex": "#058",
+    "name": "Bouldus",
+    "base_name": "Bouldus",
+    "element": "Roca",
+    "role": "Soporte",
+    "habitat": "En la naturaleza, Bouldus solo aparece como alfa, en Pasarela Berilina : derrótalo y luego captúralo. También puedes conseguirlo haciendo evolucionar a Baleetle ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Tierra": 3,
+      "Earth": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Tierra Lv.3"
+    ],
+    "icon": "assets/aniimo/1045400.webp"
+  },
+  {
+    "id": 58,
+    "dex": "#058",
+    "name": "Bouldus (Forma de nieve)",
+    "base_name": "Bouldus",
+    "element": "Roca",
+    "role": "Soporte",
+    "habitat": "En la naturaleza, Bouldus solo aparece como alfa, en Pasarela Berilina : derrótalo y luego captúralo. También puedes conseguirlo haciendo evolucionar a Baleetle ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 2,
+      "Ice": 2,
+      "Tierra": 3,
+      "Earth": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Hielo Lv.2",
+      "Tierra Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1045401.webp"
+  },
+  {
+    "id": 59,
+    "dex": "#059",
+    "name": "Fentuft",
+    "base_name": "Fentuft",
+    "element": "Eléctrico",
+    "role": "DPS",
+    "habitat": "Captura a Fentuft en la naturaleza en estas zonas: Pradera del Deslizamiento y Mar de Flores ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 1,
+      "Lightning": 1,
+      "Remolque": 1,
+      "Hauling": 1
+    },
+    "abilities_display": [
+      "Relámpago Lv.1",
+      "Remolque Lv.1"
+    ],
+    "icon": "assets/aniimo/1029100.webp"
+  },
+  {
+    "id": 60,
+    "dex": "#060",
+    "name": "Fenmane",
+    "base_name": "Fenmane",
+    "element": "Eléctrico",
+    "role": "DPS",
+    "habitat": "Captura a Fenmane en la naturaleza en esta zona: Pradera del Deslizamiento . También puedes conseguirlo haciendo evolucionar a Fentuft ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 3,
+      "Lightning": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1029300.webp"
+  },
+  {
+    "id": 60,
+    "dex": "#060",
+    "name": "Fenmane (Forma de prismana)",
+    "base_name": "Fenmane",
+    "element": "Sagrado",
+    "role": "DPS",
+    "habitat": "Captura a Fenmane en la naturaleza en esta zona: Pradera del Deslizamiento . También puedes conseguirlo haciendo evolucionar a Fentuft ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Relámpago": 4,
+      "Lightning": 4,
+      "Artesanía": 4,
+      "Artisanship": 4,
+      "Luz": 3,
+      "Light": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.4",
+      "Artesanía Lv.4",
+      "Luz Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1029301.webp"
+  },
+  {
+    "id": 61,
+    "dex": "#061",
+    "name": "Helmut",
+    "base_name": "Helmut",
+    "element": "Oscuridad",
+    "role": "Breaker",
+    "habitat": "Captura a Helmut en la naturaleza en esta zona: Sierras Bermejas ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Oscuro": 1,
+      "Dark": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Oscuro Lv.1"
+    ],
+    "icon": "assets/aniimo/1002100.webp"
+  },
+  {
+    "id": 61,
+    "dex": "#061",
+    "name": "Helmut (Forma de nieve)",
+    "base_name": "Helmut",
+    "element": "Oscuridad",
+    "role": "Breaker",
+    "habitat": "Captura a Helmut en la naturaleza en esta zona: Sierras Bermejas ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 1,
+      "Ice": 1,
+      "Remolque": 1,
+      "Hauling": 1,
+      "Oscuro": 1,
+      "Dark": 1
+    },
+    "abilities_display": [
+      "Hielo Lv.1",
+      "Remolque Lv.1",
+      "Oscuro Lv.1"
+    ],
+    "icon": "assets/aniimo/1002101.webp"
+  },
+  {
+    "id": 61,
+    "dex": "#061",
+    "name": "Helmut (Forma de bosque montañoso)",
+    "base_name": "Helmut",
+    "element": "Oscuridad",
+    "role": "Breaker",
+    "habitat": "Captura a Helmut en la naturaleza en esta zona: Sierras Bermejas ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Oscuro": 1,
+      "Dark": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Oscuro Lv.1"
+    ],
+    "icon": "assets/aniimo/1002102.webp"
+  },
+  {
+    "id": 62,
+    "dex": "#062",
+    "name": "Pawney",
+    "base_name": "Pawney",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "En la naturaleza, Pawney solo aparece en su Forma prismana, en Sierras Bermejas , durante una Corriente prismana . También puedes conseguirlo haciendo evolucionar a Helmut ., Ningún Pawney alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1002600.webp"
+  },
+  {
+    "id": 62,
+    "dex": "#062",
+    "name": "Pawney (Forma de nieve)",
+    "base_name": "Pawney",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "En la naturaleza, Pawney solo aparece en su Forma prismana, en Sierras Bermejas , durante una Corriente prismana . También puedes conseguirlo haciendo evolucionar a Helmut ., Ningún Pawney alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 2,
+      "Ice": 2,
+      "Remolque": 3,
+      "Hauling": 3,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Hielo Lv.2",
+      "Remolque Lv.3",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1002601.webp"
+  },
+  {
+    "id": 62,
+    "dex": "#062",
+    "name": "Pawney (Forma de bosque montañoso)",
+    "base_name": "Pawney",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "En la naturaleza, Pawney solo aparece en su Forma prismana, en Sierras Bermejas , durante una Corriente prismana . También puedes conseguirlo haciendo evolucionar a Helmut ., Ningún Pawney alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1002602.webp"
+  },
+  {
+    "id": 62,
+    "dex": "#062",
+    "name": "Pawney (Forma de prismana)",
+    "base_name": "Pawney",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "En la naturaleza, Pawney solo aparece en su Forma prismana, en Sierras Bermejas , durante una Corriente prismana . También puedes conseguirlo haciendo evolucionar a Helmut ., Ningún Pawney alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": true,
+    "abilities": {
+      "Remolque": 4,
+      "Hauling": 4,
+      "Oscuro": 4,
+      "Dark": 4
+    },
+    "abilities_display": [
+      "Remolque Lv.4",
+      "Oscuro Lv.4"
+    ],
+    "icon": "assets/aniimo/1002603.webp"
+  },
+  {
+    "id": 63,
+    "dex": "#063",
+    "name": "Rookey",
+    "base_name": "Rookey",
+    "element": "Oscuridad",
+    "role": "Breaker",
+    "habitat": "Captura a Rookey en la naturaleza en esta zona: Sierras Bermejas . También puedes conseguirlo haciendo evolucionar a Helmut ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1002700.webp"
+  },
+  {
+    "id": 63,
+    "dex": "#063",
+    "name": "Rookey (Forma de nieve)",
+    "base_name": "Rookey",
+    "element": "Oscuridad",
+    "role": "Breaker",
+    "habitat": "Captura a Rookey en la naturaleza en esta zona: Sierras Bermejas . También puedes conseguirlo haciendo evolucionar a Helmut ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Hielo": 2,
+      "Ice": 2,
+      "Remolque": 3,
+      "Hauling": 3,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Hielo Lv.2",
+      "Remolque Lv.3",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1002701.webp"
+  },
+  {
+    "id": 63,
+    "dex": "#063",
+    "name": "Rookey (Forma de bosque montañoso)",
+    "base_name": "Rookey",
+    "element": "Oscuridad",
+    "role": "Breaker",
+    "habitat": "Captura a Rookey en la naturaleza en esta zona: Sierras Bermejas . También puedes conseguirlo haciendo evolucionar a Helmut ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1002702.webp"
+  },
+  {
+    "id": 64,
+    "dex": "#064",
+    "name": "Jawling",
+    "base_name": "Jawling",
+    "element": "Viento",
+    "role": "Breaker",
+    "habitat": "Captura a Jawling en la naturaleza en esta zona: Sierras Bermejas ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Viento": 1,
+      "Wind": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Viento Lv.1"
+    ],
+    "icon": "assets/aniimo/1002400.webp"
+  },
+  {
+    "id": 64,
+    "dex": "#064",
+    "name": "Jawling (Montaña)",
+    "base_name": "Jawling",
+    "element": "Viento",
+    "role": "Breaker",
+    "habitat": "Captura a Jawling en la naturaleza en esta zona: Sierras Bermejas ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Viento": 1,
+      "Wind": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Viento Lv.1"
+    ],
+    "icon": "assets/aniimo/1002401.webp"
+  },
+  {
+    "id": 65,
+    "dex": "#065",
+    "name": "Helmwhelp",
+    "base_name": "Helmwhelp",
+    "element": "Viento",
+    "role": "Breaker",
+    "habitat": "Captura a Helmwhelp en la naturaleza en esta zona: Sierras Bermejas . También puedes conseguirlo haciendo evolucionar a Jawling ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 2,
+      "Hauling": 2,
+      "Viento": 2,
+      "Wind": 2
+    },
+    "abilities_display": [
+      "Remolque Lv.2",
+      "Viento Lv.2"
+    ],
+    "icon": "assets/aniimo/1002200.webp"
+  },
+  {
+    "id": 65,
+    "dex": "#065",
+    "name": "Helmwhelp (Montaña)",
+    "base_name": "Helmwhelp",
+    "element": "Viento",
+    "role": "Breaker",
+    "habitat": "Captura a Helmwhelp en la naturaleza en esta zona: Sierras Bermejas . También puedes conseguirlo haciendo evolucionar a Jawling ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 2,
+      "Hauling": 2,
+      "Viento": 2,
+      "Wind": 2
+    },
+    "abilities_display": [
+      "Remolque Lv.2",
+      "Viento Lv.2"
+    ],
+    "icon": "assets/aniimo/1002201.webp"
+  },
+  {
+    "id": 66,
+    "dex": "#066",
+    "name": "Helgon",
+    "base_name": "Helgon",
+    "element": "Viento",
+    "role": "Breaker",
+    "habitat": "Captura a Helgon en la naturaleza en esta zona: Sierras Bermejas . También puedes conseguirlo haciendo evolucionar a Helmwhelp ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1002300.webp"
+  },
+  {
+    "id": 66,
+    "dex": "#066",
+    "name": "Helgon (Montaña)",
+    "base_name": "Helgon",
+    "element": "Viento",
+    "role": "Breaker",
+    "habitat": "Captura a Helgon en la naturaleza en esta zona: Sierras Bermejas . También puedes conseguirlo haciendo evolucionar a Helmwhelp ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1002301.webp"
+  },
+  {
+    "id": 67,
+    "dex": "#067",
+    "name": "Infergon",
+    "base_name": "Infergon",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Infergon no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Helmwhelp ., Ningún Infergon alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 3,
+      "Fire": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Fuego Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1002500.webp"
+  },
+  {
+    "id": 67,
+    "dex": "#067",
+    "name": "Infergon (Forma de prismana)",
+    "base_name": "Infergon",
+    "element": "Fuego",
+    "role": "DPS",
+    "habitat": "Infergon no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Helmwhelp ., Ningún Infergon alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": true,
+    "abilities": {
+      "Remolque": 4,
+      "Hauling": 4,
+      "Fuego": 4,
+      "Fire": 4,
+      "Viento": 3,
+      "Wind": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.4",
+      "Fuego Lv.4",
+      "Viento Lv.3"
+    ],
+    "icon": "assets/aniimo/1002503.webp"
+  },
+  {
+    "id": 68,
+    "dex": "#068",
+    "name": "Cubbo",
+    "base_name": "Cubbo",
+    "element": "Roca",
+    "role": "DPS",
+    "habitat": "Captura a Cubbo en la naturaleza en esta zona: Bosque de la Torre de los Rosales ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Tierra": 1,
+      "Earth": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Tierra Lv.1"
+    ],
+    "icon": "assets/aniimo/1050100.webp"
+  },
+  {
+    "id": 69,
+    "dex": "#069",
+    "name": "Grizbo",
+    "base_name": "Grizbo",
+    "element": "Roca",
+    "role": "DPS",
+    "habitat": "Captura a Grizbo en la naturaleza en esta zona: Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Cubbo ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Tierra": 3,
+      "Earth": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Tierra Lv.3"
+    ],
+    "icon": "assets/aniimo/1050300.webp"
+  },
+  {
+    "id": 69,
+    "dex": "#069",
+    "name": "Grizbo (Forma de prismana)",
+    "base_name": "Grizbo",
+    "element": "Oscuridad",
+    "role": "DPS",
+    "habitat": "Captura a Grizbo en la naturaleza en esta zona: Bosque de la Torre de los Rosales . También puedes conseguirlo haciendo evolucionar a Cubbo ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Tierra": 4,
+      "Earth": 4,
+      "Remolque": 4,
+      "Hauling": 4,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Tierra Lv.4",
+      "Remolque Lv.4",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1050301.webp"
+  },
+  {
+    "id": 70,
+    "dex": "#070",
+    "name": "Pebbling",
+    "base_name": "Pebbling",
+    "element": "Roca",
+    "role": "Breaker",
+    "habitat": "Captura a Pebbling en la naturaleza en estas zonas: Campos Nubosos y Puente Terrestre de Céfiro ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Tierra": 1,
+      "Earth": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Tierra Lv.1"
+    ],
+    "icon": "assets/aniimo/1028100.webp"
+  },
+  {
+    "id": 71,
+    "dex": "#071",
+    "name": "Lavazar",
+    "base_name": "Lavazar",
+    "element": "Fuego",
+    "role": "Breaker",
+    "habitat": "Captura a Lavazar en la naturaleza en esta zona: Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Pebbling ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Tierra": 1,
+      "Earth": 1,
+      "Fuego": 2,
+      "Fire": 2,
+      "Remolque": 2,
+      "Hauling": 2
+    },
+    "abilities_display": [
+      "Tierra Lv.1",
+      "Fuego Lv.2",
+      "Remolque Lv.2"
+    ],
+    "icon": "assets/aniimo/1028200.webp"
+  },
+  {
+    "id": 72,
+    "dex": "#072",
+    "name": "Magmarex",
+    "base_name": "Magmarex",
+    "element": "Fuego",
+    "role": "Breaker",
+    "habitat": "Captura a Magmarex en la naturaleza en esta zona: Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Lavazar ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Tierra": 2,
+      "Earth": 2,
+      "Fuego": 3,
+      "Fire": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Tierra Lv.2",
+      "Fuego Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1028300.webp"
+  },
+  {
+    "id": 72,
+    "dex": "#072",
+    "name": "Magmarex (Forma de prismana)",
+    "base_name": "Magmarex",
+    "element": "Fuego",
+    "role": "Breaker",
+    "habitat": "Captura a Magmarex en la naturaleza en esta zona: Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Lavazar ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Remolque": 4,
+      "Hauling": 4,
+      "Fuego": 4,
+      "Fire": 4,
+      "Oscuro": 3,
+      "Dark": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.4",
+      "Fuego Lv.4",
+      "Oscuro Lv.3"
+    ],
+    "icon": "assets/aniimo/1028301.webp"
+  },
+  {
+    "id": 73,
+    "dex": "#073",
+    "name": "Geodeback",
+    "base_name": "Geodeback",
+    "element": "Roca",
+    "role": "Breaker",
+    "habitat": "Captura a Geodeback en la naturaleza en esta zona: Campos Nubosos . También puedes conseguirlo haciendo evolucionar a Pebbling ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 2,
+      "Hauling": 2,
+      "Tierra": 2,
+      "Earth": 2
+    },
+    "abilities_display": [
+      "Remolque Lv.2",
+      "Tierra Lv.2"
+    ],
+    "icon": "assets/aniimo/1028400.webp"
+  },
+  {
+    "id": 74,
+    "dex": "#074",
+    "name": "Minespine",
+    "base_name": "Minespine",
+    "element": "Roca",
+    "role": "Breaker",
+    "habitat": "Minespine no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Geodeback .",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Tierra": 3,
+      "Earth": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Tierra Lv.3"
+    ],
+    "icon": "assets/aniimo/1028500.webp"
+  },
+  {
+    "id": 75,
+    "dex": "#075",
+    "name": "Cozite",
+    "base_name": "Cozite",
+    "element": "Roca",
+    "role": "Soporte",
+    "habitat": "Captura a Cozite en la naturaleza en esta zona: Puente Terrestre de Céfiro ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 1,
+      "Hauling": 1,
+      "Tierra": 1,
+      "Earth": 1
+    },
+    "abilities_display": [
+      "Remolque Lv.1",
+      "Tierra Lv.1"
+    ],
+    "icon": "assets/aniimo/1043100.webp"
+  },
+  {
+    "id": 76,
+    "dex": "#076",
+    "name": "Bailite",
+    "base_name": "Bailite",
+    "element": "Roca",
+    "role": "Soporte",
+    "habitat": "Captura a Bailite en la naturaleza en esta zona: Puente Terrestre de Céfiro . También puedes conseguirlo haciendo evolucionar a Cozite ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Remolque": 3,
+      "Hauling": 3,
+      "Tierra": 3,
+      "Earth": 3
+    },
+    "abilities_display": [
+      "Remolque Lv.3",
+      "Tierra Lv.3"
+    ],
+    "icon": "assets/aniimo/1043300.webp"
+  },
+  {
+    "id": 77,
+    "dex": "#077",
+    "name": "Bulbly",
+    "base_name": "Bulbly",
+    "element": "Eléctrico",
+    "role": "Soporte",
+    "habitat": "Captura a Bulbly en la naturaleza en esta zona: Costa de la Marea Floreciente ., Ver sus apariciones en el mapa (Planicies Ventosas)",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 1,
+      "Lightning": 1,
+      "Artesanía": 1,
+      "Artisanship": 1
+    },
+    "abilities_display": [
+      "Relámpago Lv.1",
+      "Artesanía Lv.1"
+    ],
+    "icon": "assets/aniimo/1014100.webp"
+  },
+  {
+    "id": 78,
+    "dex": "#078",
+    "name": "Veilfloat",
+    "base_name": "Veilfloat",
+    "element": "Eléctrico",
+    "role": "Soporte",
+    "habitat": "Captura a Veilfloat en la naturaleza en esta zona: Costa de la Marea Floreciente . También puedes conseguirlo haciendo evolucionar a Bulbly ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 2,
+      "Lightning": 2,
+      "Artesanía": 2,
+      "Artisanship": 2
+    },
+    "abilities_display": [
+      "Relámpago Lv.2",
+      "Artesanía Lv.2"
+    ],
+    "icon": "assets/aniimo/1014200.webp"
+  },
+  {
+    "id": 79,
+    "dex": "#079",
+    "name": "Luminelle",
+    "base_name": "Luminelle",
+    "element": "Eléctrico",
+    "role": "Soporte",
+    "habitat": "Captura a Luminelle en la naturaleza en esta zona: Costa de la Marea Floreciente . También puedes conseguirlo haciendo evolucionar a Veilfloat ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 3,
+      "Lightning": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1014300.webp"
+  },
+  {
+    "id": 79,
+    "dex": "#079",
+    "name": "Luminelle (Forma de lluvia)",
+    "base_name": "Luminelle",
+    "element": "Eléctrico",
+    "role": "Soporte",
+    "habitat": "Captura a Luminelle en la naturaleza en esta zona: Costa de la Marea Floreciente . También puedes conseguirlo haciendo evolucionar a Veilfloat ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 3,
+      "Lightning": 3,
+      "Agua": 2,
+      "Water": 2,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.3",
+      "Agua Lv.2",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1014301.webp"
+  },
+  {
+    "id": 79,
+    "dex": "#079",
+    "name": "Luminelle (Forma de prismana)",
+    "base_name": "Luminelle",
+    "element": "Sagrado",
+    "role": "Soporte",
+    "habitat": "Captura a Luminelle en la naturaleza en esta zona: Costa de la Marea Floreciente . También puedes conseguirlo haciendo evolucionar a Veilfloat ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": true,
+    "abilities": {
+      "Relámpago": 4,
+      "Lightning": 4,
+      "Luz": 3,
+      "Light": 3,
+      "Artesanía": 4,
+      "Artisanship": 4
+    },
+    "abilities_display": [
+      "Relámpago Lv.4",
+      "Luz Lv.3",
+      "Artesanía Lv.4"
+    ],
+    "icon": "assets/aniimo/1014302.webp"
+  },
+  {
+    "id": 80,
+    "dex": "#080",
+    "name": "Fahloo",
+    "base_name": "Fahloo",
+    "element": "Agua",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Fahloo en la naturaleza en esta zona: Costa de la Marea Floreciente ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Agua": 1,
+      "Water": 1
+    },
+    "abilities_display": [
+      "Agua Lv.1"
+    ],
+    "icon": "assets/aniimo/1048100.webp"
+  },
+  {
+    "id": 81,
+    "dex": "#081",
+    "name": "Erlath",
+    "base_name": "Erlath",
+    "element": "Agua",
+    "role": "Batería / REGEN",
+    "habitat": "Captura a Erlath en la naturaleza en esta zona: Costa de la Marea Floreciente . También puedes conseguirlo haciendo evolucionar a Fahloo ., Área aproximada: abre el mapa para ver los puntos exactos",
+    "is_prismana": false,
+    "abilities": {
+      "Agua": 3,
+      "Water": 3
+    },
+    "abilities_display": [
+      "Agua Lv.3"
+    ],
+    "icon": "assets/aniimo/1048300.webp"
+  },
+  {
+    "id": 82,
+    "dex": "#082",
+    "name": "Besauce",
+    "base_name": "Besauce",
+    "element": "Eléctrico",
+    "role": "Batería / REGEN",
+    "habitat": "Besauce no se encuentra en la naturaleza., Ningún Besauce alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 3,
+      "Lightning": 3,
+      "Artesanía": 1,
+      "Artisanship": 1
+    },
+    "abilities_display": [
+      "Relámpago Lv.3",
+      "Artesanía Lv.1"
+    ],
+    "icon": "assets/aniimo/1012200.webp"
+  },
+  {
+    "id": 10001,
+    "dex": "#10001",
+    "name": "Irisalis (Forma de prismana)",
+    "base_name": "Irisalis",
+    "element": "Hierba",
+    "role": "DPS",
+    "habitat": "Irisalis no se encuentra en la naturaleza., Ningún Irisalis alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": true,
+    "abilities": {
+      "Hierba": 4,
+      "Grass": 4,
+      "Ocio": 4,
+      "Leisure": 4
+    },
+    "abilities_display": [
+      "Hierba Lv.4",
+      "Ocio Lv.4"
+    ],
+    "icon": "assets/aniimo/1021300.webp"
+  },
+  {
+    "id": 10002,
+    "dex": "#10002",
+    "name": "Dazmand",
+    "base_name": "Dazmand",
+    "element": "Eléctrico",
+    "role": "Soporte",
+    "habitat": "Dazmand no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Pomegg ., Ningún Dazmand alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 3,
+      "Lightning": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1047400.webp"
+  },
+  {
+    "id": 10003,
+    "dex": "#10003",
+    "name": "Fulmintis",
+    "base_name": "Fulmintis",
+    "element": "Eléctrico",
+    "role": "DPS",
+    "habitat": "Fulmintis no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Wisptis ., Ningún Fulmintis alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {
+      "Relámpago": 3,
+      "Lightning": 3,
+      "Artesanía": 3,
+      "Artisanship": 3
+    },
+    "abilities_display": [
+      "Relámpago Lv.3",
+      "Artesanía Lv.3"
+    ],
+    "icon": "assets/aniimo/1003300.webp"
+  },
+  {
+    "id": 10003,
+    "dex": "#10003",
+    "name": "Fulmintis (Forma de prismana)",
+    "base_name": "Fulmintis",
+    "element": "Sagrado",
+    "role": "DPS",
+    "habitat": "Fulmintis no se encuentra en la naturaleza. Consíguelo haciendo evolucionar a Wisptis ., Ningún Fulmintis alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": true,
+    "abilities": {
+      "Relámpago": 4,
+      "Lightning": 4,
+      "Luz": 3,
+      "Light": 3,
+      "Artesanía": 4,
+      "Artisanship": 4
+    },
+    "abilities_display": [
+      "Relámpago Lv.4",
+      "Luz Lv.3",
+      "Artesanía Lv.4"
+    ],
+    "icon": "assets/aniimo/1003305.webp"
+  },
+  {
+    "id": 11001,
+    "dex": "#11001",
+    "name": "Pequeño Espíritu de Fuego",
+    "base_name": "Pequeño Espíritu de Fuego",
+    "element": "Fuego",
+    "role": "Soporte",
+    "habitat": "Hábitat natural en las regiones de Idyll (Terrestre).",
+    "is_prismana": false,
+    "abilities": {
+      "Fuego": 3,
+      "Fire": 3
+    },
+    "abilities_display": [
+      "Fuego Lv.3"
+    ],
+    "icon": "assets/aniimo/6999300.webp"
+  },
+  {
+    "id": 11001,
+    "dex": "#11001",
+    "name": "Pequeño Espíritu de Fuego (Forma de prismana)",
+    "base_name": "Pequeño Espíritu de Fuego",
+    "element": "Fuego",
+    "role": "Soporte",
+    "habitat": "Hábitat natural en las regiones de Idyll (Terrestre).",
+    "is_prismana": true,
+    "abilities": {
+      "Fuego": 4,
+      "Fire": 4
+    },
+    "abilities_display": [
+      "Fuego Lv.4"
+    ],
+    "icon": "assets/aniimo/6999301.webp"
+  },
+  {
+    "id": 99996,
+    "dex": "#99996",
+    "name": "Lunara",
+    "base_name": "Lunara",
+    "element": "Sagrado",
+    "role": "DPS",
+    "habitat": "Lunara no se encuentra en la naturaleza., Ningún Lunara alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {
+      "Luz": 3,
+      "Light": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Luz Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1037100.webp"
+  },
+  {
+    "id": 99998,
+    "dex": "#99998",
+    "name": "Helion",
+    "base_name": "Helion",
+    "element": "Sagrado",
+    "role": "DPS",
+    "habitat": "Helion no se encuentra en la naturaleza., Ningún Helion alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {
+      "Luz": 3,
+      "Light": 3,
+      "Remolque": 3,
+      "Hauling": 3
+    },
+    "abilities_display": [
+      "Luz Lv.3",
+      "Remolque Lv.3"
+    ],
+    "icon": "assets/aniimo/1036100.webp"
+  },
+  {
+    "id": 84,
+    "dex": "#084",
+    "name": "Reefish",
+    "base_name": "Reefish",
+    "element": "Roca (Tierra)",
+    "role": "Equilibrado",
+    "habitat": "Captura a Reefish en la naturaleza en esta zona: Crescent Bay ., Crescent Bay",
+    "is_prismana": false,
+    "abilities": {},
+    "abilities_display": [],
+    "icon": "assets/aniimo/1001100.webp"
+  },
+  {
+    "id": 85,
+    "dex": "#085",
+    "name": "Coraliz",
+    "base_name": "Coraliz",
+    "element": "Roca (Tierra)",
+    "role": "Equilibrado",
+    "habitat": "Captura a Coraliz en la naturaleza.",
+    "is_prismana": false,
+    "abilities": {},
+    "abilities_display": [],
+    "icon": "assets/aniimo/1001100.webp"
+  },
+  {
+    "id": 86,
+    "dex": "#086",
+    "name": "Cheekie",
+    "base_name": "Cheekie",
+    "element": "Hielo",
+    "role": "Equilibrado",
+    "habitat": "Captura a Cheekie en la naturaleza.",
+    "is_prismana": false,
+    "abilities": {},
+    "abilities_display": [],
+    "icon": "assets/aniimo/1001100.webp"
+  },
+  {
+    "id": 87,
+    "dex": "#087",
+    "name": "Wavwal",
+    "base_name": "Wavwal",
+    "element": "Hielo",
+    "role": "Equilibrado",
+    "habitat": "Captura a Wavwal en la naturaleza.",
+    "is_prismana": false,
+    "abilities": {},
+    "abilities_display": [],
+    "icon": "assets/aniimo/1001100.webp"
+  },
+  {
+    "id": 92,
+    "dex": "#092",
+    "name": "Malangel",
+    "base_name": "Malangel",
+    "element": "Hielo",
+    "role": "Equilibrado",
+    "habitat": "Captura a Malangel en la naturaleza en esta zona: Crescent Bay ., Crescent Bay",
+    "is_prismana": false,
+    "abilities": {},
+    "abilities_display": [],
+    "icon": "assets/aniimo/1001100.webp"
+  },
+  {
+    "id": 93,
+    "dex": "#093",
+    "name": "Malevsera",
+    "base_name": "Malevsera",
+    "element": "Hielo",
+    "role": "Equilibrado",
+    "habitat": "Captura a Malevsera en la naturaleza en esta zona: Crescent Bay ., Crescent Bay",
+    "is_prismana": false,
+    "abilities": {},
+    "abilities_display": [],
+    "icon": "assets/aniimo/1001100.webp"
+  },
+  {
+    "id": 11001,
+    "dex": "#11001",
+    "name": "Espíritu de crianza compartida",
+    "base_name": "Espíritu de crianza compartida",
+    "element": "Fuego",
+    "role": "Equilibrado",
+    "habitat": "Espíritu de crianza compartida no se encuentra en la naturaleza., Ningún Espíritu de crianza compartida alfa en la naturaleza: los alfa nacen de huevos.",
+    "is_prismana": false,
+    "abilities": {},
+    "abilities_display": [],
+    "icon": "assets/aniimo/1001100.webp"
+  }
+]

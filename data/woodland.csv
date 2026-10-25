@@ -1,0 +1,18 @@
+name, cost, sell_currency, sell_value, production_time, yield, byproduct_yield, energy, facility_level, module_requirement, environment
+willow_wood, 1, coins, 3, 640, 5, 1, , 1, ,
+bamboo, 8, coins, 13, 2400, 10, 8, , 2, ,
+lemon, 8, coins, 16, 2400, 8, 8, , 2, ,
+cherry_blossom, 21, coins, 44, 2400, 7, 21, , 3, , Warm
+apple, 21, coins, 39, 2400, 8, 21, , 3, , Cool
+maple_syrup, 21, coins, 35, 2400, 9, 21, , 3, , Freeze
+quick_bamboo, 8, coins, 13, 2400, 23, 21, , 3, ecological_module:2,
+palm_bark, 47, coins, 120, 2400, 6, 47, , 4, , Scorching
+chestnut, 47, coins, 100, 2400, 7, 47, , 4, , Warm
+walnut, 47, coins, 120, 2400, 6, 47, , 4, , Adequate
+quick_lemon, 8, coins, 16, 2400, 42, 47, , 4, ecological_module:4,
+natural_rubber, 75, coins, 370, 2400, 3, 75, , 5, , Scorching
+coconut, 75, coins, 220, 2400, 5, 75, , 5, , Scorching
+quick_maple_syrup, 21, coins, 35, 2400, 30, 75, , 5, ecological_module:6, Freeze
+cocoa, 122, coins, 310, 2400, 6, 122, , 6, , Scorching
+orange_flower, 122, coins, 230, 2400, 8, 122, , 6, , Adequate
+quick_coconut, 75, coins, 220, 2400, 8, 122, , 6, ecological_module:8, Scorching

@@ -1,0 +1,545 @@
+{
+  "2": {
+    "rv": 2,
+    "coins_max": 1090,
+    "facilities_count": 9,
+    "tasks": 4,
+    "workstations": 7,
+    "min_aniimo": 4,
+    "max_aniimo": 6,
+    "daily_seeds_count": 140,
+    "seed_types": 2,
+    "daily_attention_min": 1.5,
+    "afk_rating": "AFK Pasivo",
+    "zones": {
+      "Zona de Producción": [
+        "4 × Campo de cultivos Nv.2 (Trigo, Patata)",
+        "3 × Arboleda Nv.1 (Sauce)"
+      ],
+      "Zona de Construcción": [
+        "1 × Molino de carrusel Nv.1 (Harina)",
+        "1 × Banco de carpintería Nv.1 (Bloques de madera)"
+      ]
+    },
+    "daily_seed_shopping": [
+      {
+        "seed": "Trigo",
+        "count": 90,
+        "unit_cost": 5,
+        "total": 450
+      },
+      {
+        "seed": "Patata",
+        "count": 50,
+        "unit_cost": 8,
+        "total": 400
+      }
+    ],
+    "daily_seed_cost": 850,
+    "daily_gross_coins": 26160,
+    "daily_net_coins": 25310
+  },
+  "3": {
+    "rv": 3,
+    "coins_max": 3166,
+    "facilities_count": 14,
+    "tasks": 6,
+    "workstations": 10,
+    "min_aniimo": 7,
+    "max_aniimo": 10,
+    "daily_seeds_count": 280,
+    "seed_types": 3,
+    "daily_attention_min": 2.2,
+    "afk_rating": "AFK Pasivo",
+    "zones": {
+      "Zona de Producción": [
+        "6 × Campo de cultivos Nv.2",
+        "4 × Arboleda Nv.1"
+      ],
+      "Zona de Exploración de la Mina": [
+        "2 × Mina Nv.1 (Roca, Arena mineral)"
+      ],
+      "Zona de Construcción": [
+        "1 × Molino de carrusel Nv.1",
+        "1 × Cocina de garra Nv.1"
+      ]
+    },
+    "daily_seed_shopping": [
+      {
+        "seed": "Trigo",
+        "count": 160,
+        "unit_cost": 5,
+        "total": 800
+      },
+      {
+        "seed": "Patata",
+        "count": 120,
+        "unit_cost": 8,
+        "total": 960
+      }
+    ],
+    "daily_seed_cost": 1760,
+    "daily_gross_coins": 75984,
+    "daily_net_coins": 74224
+  },
+  "4": {
+    "rv": 4,
+    "coins_max": 5690,
+    "facilities_count": 18,
+    "tasks": 7,
+    "workstations": 13,
+    "min_aniimo": 9,
+    "max_aniimo": 13,
+    "daily_seeds_count": 420,
+    "seed_types": 3,
+    "daily_attention_min": 3.0,
+    "afk_rating": "Equilibrado",
+    "zones": {
+      "Zona de Producción": [
+        "8 × Campo de cultivos Nv.3",
+        "5 × Arboleda Nv.2"
+      ],
+      "Zona de Exploración de la Mina": [
+        "2 × Mina Nv.1",
+        "1 × Pozo Nv.1"
+      ],
+      "Zona de Construcción": [
+        "1 × Molino de carrusel Nv.2",
+        "1 × Telar de rueda Nv.1"
+      ]
+    },
+    "daily_seed_shopping": [
+      {
+        "seed": "Algodón",
+        "count": 180,
+        "unit_cost": 15,
+        "total": 2700
+      },
+      {
+        "seed": "Arroz",
+        "count": 240,
+        "unit_cost": 18,
+        "total": 4320
+      }
+    ],
+    "daily_seed_cost": 7020,
+    "daily_gross_coins": 136560,
+    "daily_net_coins": 129540
+  },
+  "5": {
+    "rv": 5,
+    "coins_max": 11800,
+    "facilities_count": 23,
+    "tasks": 8,
+    "workstations": 16,
+    "min_aniimo": 11,
+    "max_aniimo": 16,
+    "daily_seeds_count": 580,
+    "seed_types": 4,
+    "daily_attention_min": 3.8,
+    "afk_rating": "Equilibrado",
+    "zones": {
+      "Zona de Producción": [
+        "10 × Campo de cultivos Nv.3",
+        "6 × Arboleda Nv.2"
+      ],
+      "Zona de Exploración de la Mina": [
+        "3 × Mina Nv.2",
+        "1 × Pozo Nv.1",
+        "1 × Castillo de arena Nv.1"
+      ],
+      "Zona de Construcción": [
+        "1 × Molino de carrusel Nv.2",
+        "1 × Olla a fuego lento Nv.1"
+      ]
+    },
+    "daily_seed_shopping": [
+      {
+        "seed": "Algodón",
+        "count": 240,
+        "unit_cost": 15,
+        "total": 3600
+      },
+      {
+        "seed": "Soja",
+        "count": 340,
+        "unit_cost": 12,
+        "total": 4080
+      }
+    ],
+    "daily_seed_cost": 7680,
+    "daily_gross_coins": 283200,
+    "daily_net_coins": 275520
+  },
+  "6": {
+    "rv": 6,
+    "coins_max": 14600,
+    "facilities_count": 28,
+    "tasks": 9,
+    "workstations": 19,
+    "min_aniimo": 13,
+    "max_aniimo": 18,
+    "daily_seeds_count": 720,
+    "seed_types": 4,
+    "daily_attention_min": 4.1,
+    "afk_rating": "Equilibrado",
+    "zones": {
+      "Zona de Producción": [
+        "12 × Campo de cultivos Nv.4",
+        "7 × Arboleda Nv.2"
+      ],
+      "Zona de Exploración de la Mina": [
+        "3 × Mina Nv.2",
+        "1 × Pozo Nv.1",
+        "1 × Casa de rocío Nv.1"
+      ],
+      "Zona de Construcción": [
+        "1 × Molino Nv.2",
+        "1 × Telar Nv.1",
+        "1 × Olla Nv.1",
+        "1 × Secadora musical Nv.1"
+      ]
+    },
+    "daily_seed_shopping": [
+      {
+        "seed": "Algodón",
+        "count": 320,
+        "unit_cost": 15,
+        "total": 4800
+      },
+      {
+        "seed": "Fresa",
+        "count": 400,
+        "unit_cost": 35,
+        "total": 14000
+      }
+    ],
+    "daily_seed_cost": 18800,
+    "daily_gross_coins": 350400,
+    "daily_net_coins": 331600
+  },
+  "7": {
+    "rv": 7,
+    "coins_max": 25600,
+    "facilities_count": 35,
+    "tasks": 10,
+    "workstations": 22,
+    "min_aniimo": 15,
+    "max_aniimo": 21,
+    "daily_seeds_count": 920,
+    "seed_types": 5,
+    "daily_attention_min": 5.0,
+    "afk_rating": "Equilibrado",
+    "zones": {
+      "Zona de Producción": [
+        "14 × Campo de cultivos Nv.4",
+        "8 × Arboleda Nv.3"
+      ],
+      "Zona de Exploración de la Mina": [
+        "4 × Mina Nv.3",
+        "1 × Pozo Nv.1",
+        "1 × Castillo de arena Nv.1"
+      ],
+      "Zona de Construcción": [
+        "2 × Molino de carrusel Nv.2",
+        "1 × Telar Nv.2",
+        "1 × Mesa de trabajo Nv.1",
+        "1 × Frasco de encurtidos Nv.1"
+      ]
+    },
+    "daily_seed_shopping": [
+      {
+        "seed": "Algodón",
+        "count": 420,
+        "unit_cost": 15,
+        "total": 6300
+      },
+      {
+        "seed": "Limón",
+        "count": 500,
+        "unit_cost": 15,
+        "total": 7500
+      }
+    ],
+    "daily_seed_cost": 13800,
+    "daily_gross_coins": 614400,
+    "daily_net_coins": 600600
+  },
+  "8": {
+    "rv": 8,
+    "coins_max": 39000,
+    "facilities_count": 42,
+    "tasks": 11,
+    "workstations": 25,
+    "min_aniimo": 17,
+    "max_aniimo": 23,
+    "daily_seeds_count": 1100,
+    "seed_types": 5,
+    "daily_attention_min": 5.8,
+    "afk_rating": "Equilibrado",
+    "zones": {
+      "Zona de Producción": [
+        "16 × Campo de cultivos Nv.5",
+        "9 × Arboleda Nv.3"
+      ],
+      "Zona de Exploración de la Mina": [
+        "4 × Mina Nv.3",
+        "2 × Pozo Nv.2",
+        "1 × Castillo de arena Nv.2"
+      ],
+      "Zona de Construcción": [
+        "2 × Molino Nv.3",
+        "2 × Telar Nv.2",
+        "1 × Olla Nv.2",
+        "1 × Mesa de trabajo Nv.2"
+      ]
+    },
+    "daily_seed_shopping": [
+      {
+        "seed": "Algodón",
+        "count": 500,
+        "unit_cost": 15,
+        "total": 7500
+      },
+      {
+        "seed": "Lavanda",
+        "count": 600,
+        "unit_cost": 45,
+        "total": 27000
+      }
+    ],
+    "daily_seed_cost": 34500,
+    "daily_gross_coins": 936000,
+    "daily_net_coins": 901500
+  },
+  "9": {
+    "rv": 9,
+    "coins_max": 47500,
+    "facilities_count": 48,
+    "tasks": 11,
+    "workstations": 28,
+    "min_aniimo": 18,
+    "max_aniimo": 26,
+    "daily_seeds_count": 1280,
+    "seed_types": 6,
+    "daily_attention_min": 6.2,
+    "afk_rating": "Equilibrado",
+    "zones": {
+      "Zona de Producción": [
+        "18 × Campo de cultivos Nv.5",
+        "10 × Arboleda Nv.3"
+      ],
+      "Zona de Exploración de la Mina": [
+        "5 × Mina Nv.3",
+        "2 × Pozo Nv.2",
+        "1 × Casa de rocío Nv.1"
+      ],
+      "Zona de Construcción": [
+        "2 × Molino Nv.3",
+        "2 × Telar Nv.2",
+        "2 × Olla Nv.2",
+        "1 × Barril saltarín Nv.1"
+      ]
+    },
+    "daily_seed_shopping": [
+      {
+        "seed": "Algodón",
+        "count": 580,
+        "unit_cost": 15,
+        "total": 8700
+      },
+      {
+        "seed": "Uvas",
+        "count": 700,
+        "unit_cost": 120,
+        "total": 84000
+      }
+    ],
+    "daily_seed_cost": 92700,
+    "daily_gross_coins": 1140000,
+    "daily_net_coins": 1047300
+  },
+  "10": {
+    "rv": 10,
+    "coins_max": 54300,
+    "facilities_count": 55,
+    "tasks": 12,
+    "workstations": 30,
+    "min_aniimo": 20,
+    "max_aniimo": 28,
+    "daily_seeds_count": 1450,
+    "seed_types": 6,
+    "daily_attention_min": 6.8,
+    "afk_rating": "Activo",
+    "zones": {
+      "Zona de Producción": [
+        "20 × Campo de cultivos Nv.5",
+        "11 × Arboleda Nv.4"
+      ],
+      "Zona de Exploración de la Mina": [
+        "5 × Mina Nv.3",
+        "2 × Pozo Nv.2",
+        "1 × Cama nimbus Nv.1"
+      ],
+      "Zona de Construcción": [
+        "3 × Molino Nv.3",
+        "2 × Telar Nv.2",
+        "2 × Olla Nv.2",
+        "1 × Cocina abrasadora Nv.1"
+      ]
+    },
+    "daily_seed_shopping": [
+      {
+        "seed": "Algodón",
+        "count": 650,
+        "unit_cost": 15,
+        "total": 9750
+      },
+      {
+        "seed": "Uvas",
+        "count": 800,
+        "unit_cost": 120,
+        "total": 96000
+      }
+    ],
+    "daily_seed_cost": 105750,
+    "daily_gross_coins": 1303200,
+    "daily_net_coins": 1197450
+  },
+  "11": {
+    "rv": 11,
+    "coins_max": 77600,
+    "facilities_count": 63,
+    "tasks": 12,
+    "workstations": 32,
+    "min_aniimo": 22,
+    "max_aniimo": 30,
+    "daily_seeds_count": 1650,
+    "seed_types": 7,
+    "daily_attention_min": 7.5,
+    "afk_rating": "Activo",
+    "zones": {
+      "Zona de Producción": [
+        "22 × Campo de cultivos Nv.6",
+        "12 × Arboleda Nv.4"
+      ],
+      "Zona de Exploración de la Mina": [
+        "6 × Mina Nv.4",
+        "2 × Pozo Nv.3",
+        "1 × Castillo de arena Nv.2"
+      ],
+      "Zona de Construcción": [
+        "3 × Molino Nv.3",
+        "2 × Telar Nv.3",
+        "2 × Olla Nv.3",
+        "2 × Barril saltarín Nv.2",
+        "1 × Cocina abrasadora Nv.1"
+      ]
+    },
+    "daily_seed_shopping": [
+      {
+        "seed": "Cacao",
+        "count": 550,
+        "unit_cost": 280,
+        "total": 154000
+      },
+      {
+        "seed": "Algodón",
+        "count": 500,
+        "unit_cost": 15,
+        "total": 7500
+      },
+      {
+        "seed": "Uvas",
+        "count": 600,
+        "unit_cost": 120,
+        "total": 72000
+      }
+    ],
+    "daily_seed_cost": 233500,
+    "daily_gross_coins": 1862400,
+    "daily_net_coins": 1628900
+  },
+  "12": {
+    "rv": 12,
+    "coins_max": 112000,
+    "facilities_count": 71,
+    "tasks": 12,
+    "workstations": 35,
+    "min_aniimo": 23,
+    "max_aniimo": 32,
+    "daily_seeds_count": 1854,
+    "seed_types": 7,
+    "daily_attention_min": 8.2,
+    "afk_rating": "Activo",
+    "zones": {
+      "Zona de Producción": [
+        "24 × Campo de cultivos Nv.6 (×9 Uvas, ×7 Algodón, ×6 Agave)",
+        "13 × Arboleda Nv.5 (×6 Cacao, ×5 Coco, Flor de azahar)"
+      ],
+      "Zona de Exploración de la Mina": [
+        "6 × Mina Nv.4 (Cobre, Cuarzo, Roca)",
+        "2 × Pozo Nv.3 (Agua profunda)",
+        "1 × Castillo de arena Nv.2 (Perlas)",
+        "1 × Cama nimbus Nv.1"
+      ],
+      "Zona de Construcción": [
+        "3 × Molino de carrusel Nv.3 (Cacao en polvo, Harina)",
+        "2 × Telar de rueda Nv.3 (Hilo de algodón)",
+        "2 × Olla a fuego lento Nv.3 (Jarabe de agave, Mermeladas)",
+        "2 × Barril saltarín Nv.2 (Jugo de uva)",
+        "1 × Frasco de encurtidos Nv.2",
+        "1 × Cocina abrasadora Nv.1 (Tanghulu)",
+        "1 × Mesa de trabajo Nv.2",
+        "1 × Secadora musical Nv.2"
+      ]
+    },
+    "daily_seed_shopping": [
+      {
+        "seed": "Cacao",
+        "count": 640,
+        "unit_cost": 280,
+        "total": 179200
+      },
+      {
+        "seed": "Uvas",
+        "count": 520,
+        "unit_cost": 120,
+        "total": 62400
+      },
+      {
+        "seed": "Algodón",
+        "count": 380,
+        "unit_cost": 15,
+        "total": 5700
+      },
+      {
+        "seed": "Agave",
+        "count": 160,
+        "unit_cost": 220,
+        "total": 35200
+      },
+      {
+        "seed": "Arándano rojo",
+        "count": 94,
+        "unit_cost": 210,
+        "total": 19740
+      },
+      {
+        "seed": "Flor de azahar",
+        "count": 40,
+        "unit_cost": 260,
+        "total": 10400
+      },
+      {
+        "seed": "Fresa rápida",
+        "count": 20,
+        "unit_cost": 50,
+        "total": 1000
+      }
+    ],
+    "daily_seed_cost": 313640,
+    "daily_gross_coins": 2688000,
+    "daily_net_coins": 2374360
+  }
+}
