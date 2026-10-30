@@ -1,0 +1,8 @@
+name, facility, raw_materials, required_amount, seed_cost, sell_value, points, production_time, workload, yield, facility_level
+magic_pumpkin, Farmland, , , 4, 61, 1, 1800, , 8, 1
+memory_lanternfruit, Farmland, , , 4, 61, 1, 1800, , 8, 1
+lantern_pumpkin_soup, Simmering Pot, magic_pumpkin;fresh_water, 8;8, , 2150, 8, , 203, 1, 1
+magic_pumpkin_cake, Blazing Stove, magic_pumpkin;rock_candy, 8;1, , 2370, 8, , 203, 1, 1
+honeyed_memory_lanternfruit, Claw Game Cooker, memory_lanternfruit;wild_honey, 8;4, , 2290, 8, , 162, 1, 1
+memory_lantern, Crafting Table, memory_lanternfruit;rough_lumber, 8;2, , 2450, 8, , 243, 1, 1
+magic_pumpkin_lantern, Chimney Kiln, magic_pumpkin;mineral_sand, 8;10, , 3200, 8, , 405, 1, 4

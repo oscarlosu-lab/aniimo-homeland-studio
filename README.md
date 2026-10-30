@@ -4,9 +4,12 @@
 [![Licencia MIT](https://img.shields.io/badge/Licencia-MIT-22c55e.svg?style=for-the-badge)](LICENSE)
 [![Versión 1.0 Studio](https://img.shields.io/badge/Versi%C3%B3n-1.0%20Studio-a855f7.svg?style=for-the-badge)]()
 [![Español 100%](https://img.shields.io/badge/Idioma-Espa%C3%B1ol%20%7C%20Biling%C3%BCe-f97316.svg?style=for-the-badge)]()
-[![Datamine Oficial](https://img.shields.io/badge/Datamine-Aniimo%20v1.0-3b82f6.svg?style=for-the-badge)]()
+[![Datamine Oficial](https://img.shields.io/badge/Datamine-Aniimo%20v1.0%20(3857679)-3b82f6.svg?style=for-the-badge)]()
 [![PWA Offline](https://img.shields.io/badge/PWA-100%25%20Offline-00f0ff.svg?style=for-the-badge)]()
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20Project-FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/oscarlosu)
 
+> 🎃 **Actualización 31 oct. 2026 (Parche 3857679):** Soporte oficial para el evento de temporada **"Noche Maravillosa" (*Magical Wonder Night*)**. Incorpora nuevos cultivos (*Calabaza mágica*, *Fruta de linterna del recuerdo*), moneda del evento (*Cristales de azúcar maravillosos*), 5 recetas de artesanía/cocina temáticas y contratos de pedidos de Astra de temporada.
+>
 > **Suite Integral de Gestión, Optimización Matemática de Producción y Fabricación Rápida para Aniimo Homeland.**  
 > *Herramienta web autónoma, responsive para móviles y PC, sin descargas, sin publicidad y ejecutada 100% en tu navegador mediante Rust y WebAssembly.*
 
@@ -35,7 +38,7 @@ Diseñada tanto para jugadores casuales como para maximizadores de recursos, la 
 - **Multiplicadores de Pedido:** Soporta pedidos Normales (x1.0), Urgentes (x2.0) y Súper Pedidos (x5.0).
 
 ### 2. ⚡ Fabricador Exprés (Recetas Rápidas en Paralelo)
-- Nueva interfaz dedicada con catálogo interactivo de **154 recetas oficiales**.
+- Nueva interfaz dedicada con catálogo interactivo de **159 recetas oficiales** (154 base + 5 del evento de temporada).
 - **Motor DAG sin Excedentes:** 100% enfocado en craftear la receta solicitada (0 ventas intermedias).
 - **Paralelización Máxima:** Descompone el árbol de dependencias completo, programando simultáneamente cultivos base y procesados en múltiples talleres.
 - **Asignación de Operarios Sugeridos:** Calcula la mejor criatura para cada fase de la cadena.
@@ -110,6 +113,14 @@ Para probar o desarrollar en tu propia máquina:
 - **100% Cliente:** Todos los cálculos se ejecutan localmente en tu CPU mediante WebAssembly.
 - **Sin Telemetría:** No se recopilan datos privados, estadísticas ni historiales.
 - **Persistencia Local Segura:** Tus ajustes de campamento se guardan exclusivamente en el `localStorage` de tu navegador, con opción de reinicio instantáneo en 1 clic.
+
+---
+
+## ☕ Apoyo y Financiación del Proyecto
+
+Si **Aniimo Homeland Studio** te resulta útil para gestionar tu base y tus recetas, puedes apoyar el desarrollo y mantenimiento del proyecto:
+
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20Project-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/oscarlosu)
 
 ---
 
