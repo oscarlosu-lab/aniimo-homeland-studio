@@ -214,19 +214,26 @@
                 <!-- Contratos y Pedidos Diarios (Tierra Natal) -->
                 <div class="contracts-section" id="contracts-config-container"></div>
 
-                <div class="season" id="season-section" hidden>
-                    <label class="priority-switch season-switch">
-                        <input type="checkbox" role="switch" id="season-on">
-                        <span class="switch-track" aria-hidden="true"></span>
-                        <span class="season-title">Festival de la Luna de la Cosecha</span>
-                    </label>
+                <div class="season" id="season-section">
+                    <div class="season-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                        <label class="priority-switch season-switch">
+                            <input type="checkbox" role="switch" id="season-on">
+                            <span class="switch-track" aria-hidden="true"></span>
+                            <span class="season-title" id="season-title-text">🎃 Noche Mágica y Maravillosa</span>
+                        </label>
+                        <!-- Selector de Evento de Temporada Activa -->
+                        <div class="season-tabs" id="season-tabs-selector" style="display: flex; gap: 6px;">
+                            <button type="button" class="season-tab-pill active" data-season="wonder_night" title="Temporada Actual: Noche Maravillosa (Halloween / Dios Calabaza)">🎃 Noche Maravillosa</button>
+                            <button type="button" class="season-tab-pill" data-season="harvest_moon" title="Temporada Recurrente: Festival de la Cosecha (Trigo rayo de luna)">🌾 Festival Cosecha</button>
+                        </div>
+                    </div>
                     <div id="season-config" hidden>
-                        <p class="hint">Un evento de temporada con su propia moneda, el Trigo del Rayo Lunar, con el que se compran las semillas de temporada. Gestionar el trigo necesario depende de ti; los planes indican cuánto consumen sus semillas. Los artículos del evento también otorgan Puntos del Festival de la Luna, que puedes clasificar en Prioridades.</p>
+                        <p class="hint" id="season-desc-hint">Evento temático de Noche Maravillosa (Halloween / Dios Calabaza). Su moneda especial, los Cristales de azúcar maravillosos, compra semillas de calabaza mágica y frutalinterna del recuerdo.</p>
                         <div class="input-field">
-                            <label for="season-currency-per-day">Trigo del Rayo Lunar para gastar en semillas al día</label>
+                            <label for="season-currency-per-day" id="season-currency-label">Cristales de azúcar maravillosos para gastar en semillas al día</label>
                             <input type="number" id="season-currency-per-day" min="0" placeholder="Sin límite">
                         </div>
-                        <p class="assume-title">Notas de recetas</p>
+                        <p class="assume-title" id="season-notes-title">Notas de recetas de temporada</p>
                         <div class="special-grid" id="season-notes"></div>
                     </div>
                 </div>

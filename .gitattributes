@@ -1,7 +1,10 @@
-# Ensure Rust source files and data files always use LF line endings
+# Ensure source files, web assets, and data files always use LF line endings
 *.rs text eol=lf
 *.csv text eol=lf
 *.json text eol=lf
+*.js text eol=lf
+*.html text eol=lf
+*.css text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
 *.sh text eol=lf

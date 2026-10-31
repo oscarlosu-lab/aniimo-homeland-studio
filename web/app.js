@@ -6,7 +6,7 @@ import './math-translation.js';
 import {
     FACILITIES, FACILITY_CATEGORIES, FACILITY_CATEGORY_BY_NAME, FACILITY_FOOTPRINTS, HOMELAND_PLOTS, HOMELAND_PLOT_SIZE,
     MAX_HOME_LEVEL, ANIIMO_MAX, simpleSetup,
-    LEVEL_UP_COSTS, LEVEL_UP_CHAINS, SPECIAL_RECIPES, SEASON, ANIIPOD_TIERS, PERSONALITY_PAIRS, personalityLetter, opposedPersonality,
+    LEVEL_UP_COSTS, LEVEL_UP_CHAINS, SPECIAL_RECIPES, SEASON, SEASONS, getCurrentSeason, getActiveSeasonKey, setActiveSeasonKey, ANIIPOD_TIERS, PERSONALITY_PAIRS, personalityLetter, opposedPersonality,
     defaultStorageUnits
 } from './facility-config.js?v=rv14-rv20-facility-counts';
 import { allocateTurnFacilities, redistributeTurnFacilityRows } from './turn-jobs.js';
@@ -2017,30 +2017,75 @@ function seasonCurrencyPerDay() {
 }
 
 function seasonAvailable() {
-    return !isSimpleMode() || selectedHomeLevel() >= SEASON.minHomeLevel;
+    return true; // Disponible siempre para planificar libremente cualquier temporada
 }
 
 function seasonActive() {
-    return seasonAvailable() && document.getElementById('season-on').checked;
+    return document.getElementById('season-on') && document.getElementById('season-on').checked;
 }
 
 function renderSeason() {
-    document.getElementById('season-section').hidden = !seasonAvailable();
-    document.getElementById('season-config').hidden = !seasonActive();
-    document.getElementById('season-notes').innerHTML = SEASON.recipeNotes.map(r => `
-        <label class="special-option">
-            <input type="checkbox" data-special="${r.name}"${unlockedSpecial.has(r.name) ? ' checked' : ''}>
-            <span>${prettyItem(r.name)}</span>
-        </label>`).join('');
+    const seasonSec = document.getElementById('season-section');
+    if (seasonSec) seasonSec.hidden = false;
+    const seasonCfg = document.getElementById('season-config');
+    if (seasonCfg) seasonCfg.hidden = !seasonActive();
+
+    const curSeason = typeof getCurrentSeason === 'function' ? getCurrentSeason() : SEASON;
+    const titleEl = document.getElementById('season-title-text');
+    if (titleEl) {
+        titleEl.textContent = `${curSeason.emoji} ${translate(curSeason.name)}`;
+    }
+    const curLabel = document.getElementById('season-currency-label');
+    if (curLabel) {
+        curLabel.textContent = `${translate(curSeason.currency)} ${translate('para gastar en semillas al día')}`;
+    }
+    const descHint = document.getElementById('season-desc-hint');
+    if (descHint) {
+        if (curSeason.id === 'wonder_night') {
+            descHint.textContent = translate('Evento temático de Noche Maravillosa (Halloween / Dios Calabaza). Su moneda especial, los Cristales de azúcar maravillosos, compra semillas de calabaza mágica y frutalinterna del recuerdo.');
+        } else {
+            descHint.textContent = translate('Evento temático de Festival de la Luna de la Cosecha (Trigo rayo de luna). Su moneda especial compra semillas de rábano de rocío lunar y pimiento de luna creciente.');
+        }
+    }
+    document.querySelectorAll('.season-tab-pill').forEach(btn => {
+        const activeKey = typeof getActiveSeasonKey === 'function' ? getActiveSeasonKey() : 'wonder_night';
+        btn.classList.toggle('active', btn.dataset.season === activeKey);
+    });
+
+    const notesGrid = document.getElementById('season-notes');
+    if (notesGrid) {
+        notesGrid.innerHTML = (curSeason.recipeNotes || []).map(r => `
+            <label class="special-option">
+                <input type="checkbox" data-special="${r.name}"${unlockedSpecial.has(r.name) ? ' checked' : ''}>
+                <span>${prettyItem(r.name)}</span>
+            </label>`).join('');
+    }
 }
 
 function attachSeasonHandlers() {
-    document.getElementById('season-on').addEventListener('change', renderStrategy);
-    document.getElementById('season-notes').addEventListener('change', (e) => {
-        const name = e.target.dataset.special;
-        if (!name) return;
-        if (e.target.checked) unlockedSpecial.add(name); else unlockedSpecial.delete(name);
-        saveInputsToStorage();
+    const seasonSwitch = document.getElementById('season-on');
+    if (seasonSwitch) seasonSwitch.addEventListener('change', renderStrategy);
+
+    const notesGrid = document.getElementById('season-notes');
+    if (notesGrid) {
+        notesGrid.addEventListener('change', (e) => {
+            const name = e.target.dataset.special;
+            if (!name) return;
+            if (e.target.checked) unlockedSpecial.add(name); else unlockedSpecial.delete(name);
+            saveInputsToStorage();
+        });
+    }
+
+    document.querySelectorAll('.season-tab-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const chosen = btn.dataset.season;
+            if (chosen && typeof setActiveSeasonKey === 'function') {
+                setActiveSeasonKey(chosen);
+                renderSeason();
+                renderStrategy();
+                runFindPlan();
+            }
+        });
     });
 }
 

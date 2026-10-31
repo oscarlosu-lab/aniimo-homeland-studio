@@ -298,8 +298,14 @@ export function renderContractsConfigUI(container, onContractsChanged, onOptimiz
             }
         }
 
-        // Filtrar pedidos del cliente seleccionado (admite pedidos de temporada cruzados)
+        // Filtrar pedidos del cliente seleccionado (soporte exacto para season_wonder, season_harvest y season global)
         let clientOrders = HOME_ORDERS_LIB.filter(o => {
+            if (selectedClientId === 'season_wonder') {
+                return o.seasonKey === 'wonder_night' || (o.clientIds && (o.clientIds.includes('season_wonder') || o.clientIds.includes('9')));
+            }
+            if (selectedClientId === 'season_harvest') {
+                return o.seasonKey === 'harvest_moon' || (o.clientIds && o.clientIds.includes('season_harvest'));
+            }
             if (selectedClientId === 'season') {
                 return o.isSeason === true;
             }
@@ -378,7 +384,7 @@ export function renderContractsConfigUI(container, onContractsChanged, onOptimiz
                                 const seasonPrefix = o.isSeason ? '🌸 [Temporada] ' : '';
                                 const seasonPointsText = o.isSeason && o.stamps ? ` · 🌸 +${o.stamps} Pts Cosecha` : '';
                                 return `<option value="${o.id}">
-                                    ${seasonPrefix}[${qMeta.name} ${starsStr}] ${o.amount}x ${o.name} (🪙 ${o.coins.toLocaleString()} monedas${seasonPointsText})
+                                    ${o.isSeason ? (o.seasonKey === 'wonder_night' ? '🎃 [Noche Maravillosa] ' : '🌾 [Festival Cosecha] ') : ''}[${qMeta.name} ${starsStr}] ${o.amount}x ${o.name} (🪙 ${o.coins.toLocaleString()} monedas${o.stamps ? (o.seasonKey === 'wonder_night' ? ` · 🎃 +${o.stamps} Pts` : ` · 🌾 +${o.stamps} Pts`) : ''}${o.seasonCurrency ? ` · 🍬 +${o.seasonCurrency} Azúcar` : ''})
                                 </option>`;
                             }).join('')
                         }
@@ -418,7 +424,7 @@ export function renderContractsConfigUI(container, onContractsChanged, onOptimiz
                                 <div class="active-order-card ${isSeason ? 'season' : ''} ${isUrgent ? 'urgent' : ''}">
                                     <div class="order-card-header">
                                         <span class="order-client-tag">${cMeta.emoji} ${cMeta.name}</span>
-                                        ${isSeason ? `<span class="order-season-badge">🌸 Pedido de temporada</span>` : ''}
+                                        ${isSeason ? `<span class="order-season-badge">${o.seasonKey === 'wonder_night' ? '🎃 Noche Maravillosa' : '🌾 Festival Cosecha'}</span>` : ''}
                                         <span class="order-tier-tag" style="background:${qMeta.bg}; color:${qMeta.color}; border:1px solid ${qMeta.border}">
                                             ${qMeta.name} ${'★'.repeat(o.stars || 2)}
                                         </span>
@@ -431,7 +437,7 @@ export function renderContractsConfigUI(container, onContractsChanged, onOptimiz
                                         <div class="order-req-line">
                                             <strong>${o.amount}x ${o.name}</strong>
                                             <span class="order-reward-pill">🪙 +${totalCoins.toLocaleString()}</span>
-                                            ${o.stamps > 0 ? `<span class="order-stamps-pill ${isSeason ? 'season-pts' : ''}">🌸 +${o.stamps} ${isSeason ? 'Pts Cosecha' : 'Sellos'}</span>` : ''}
+                                            ${o.stamps > 0 ? `<span class="order-stamps-pill ${isSeason ? 'season-pts' : ''}">${o.seasonKey === 'wonder_night' ? '🎃 +' + o.stamps + ' Pts' : '🌾 +' + o.stamps + ' Pts'}</span>` : ''}${o.seasonCurrency > 0 ? `<span class="order-stamps-pill season-cur">🍬 +${o.seasonCurrency} Azúcar</span>` : ''}
                                         </div>
                                         <div class="order-stock-line">
                                             <label>Tengo en almacén:</label>
@@ -507,7 +513,7 @@ export function renderContractsConfigUI(container, onContractsChanged, onOptimiz
                             const seasonPrefix = o.isSeason ? '🌸 [Temporada] ' : '';
                             const seasonPointsText = o.isSeason && o.stamps ? ` · 🌸 +${o.stamps} Pts Cosecha` : '';
                             return `<option value="${o.id}">
-                                ${seasonPrefix}[${qMeta.name} ${starsStr}] ${o.amount}x ${o.name} (🪙 ${o.coins.toLocaleString()} monedas${seasonPointsText})
+                                ${o.isSeason ? (o.seasonKey === 'wonder_night' ? '🎃 [Noche Maravillosa] ' : '🌾 [Festival Cosecha] ') : ''}[${qMeta.name} ${starsStr}] ${o.amount}x ${o.name} (🪙 ${o.coins.toLocaleString()} monedas${o.stamps ? (o.seasonKey === 'wonder_night' ? ` · 🎃 +${o.stamps} Pts` : ` · 🌾 +${o.stamps} Pts`) : ''}${o.seasonCurrency ? ` · 🍬 +${o.seasonCurrency} Azúcar` : ''})
                             </option>`;
                         }).join('');
                 }
@@ -674,7 +680,7 @@ export function renderContractsResultCard(resultContainer, plan, activeOrders = 
                     <div class="contract-eval-card ${o.contractAllDone ? 'done' : ''} ${isSeason ? 'season' : ''}">
                         <div class="c-eval-header">
                             <span class="order-client-tag">${cMeta.emoji} ${cMeta.name}</span>
-                            ${isSeason ? `<span class="order-season-badge">🌸 Pedido de temporada</span>` : ''}
+                            ${isSeason ? `<span class="order-season-badge">${o.seasonKey === 'wonder_night' ? '🎃 Noche Maravillosa' : '🌾 Festival Cosecha'}</span>` : ''}
                             <span class="order-tier-tag" style="background:${qMeta.bg}; color:${qMeta.color}; border:1px solid ${qMeta.border}">
                                 ${qMeta.name} ${'★'.repeat(o.stars || 2)}
                             </span>
