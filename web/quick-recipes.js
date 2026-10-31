@@ -843,6 +843,10 @@ function renderOptimalResults(plan) {
             const lvlA = a.abilities[ability] ?? a.abilities[translate(ability)] ?? 0;
             const lvlB = b.abilities[ability] ?? b.abilities[translate(ability)] ?? 0;
             if (lvlB !== lvlA) return lvlB - lvlA;
+            // Priorizar formas básicas estándar sin variantes
+            const baseA = (!a.is_prismana && !a.name.includes('(')) ? 1 : 0;
+            const baseB = (!b.is_prismana && !b.name.includes('(')) ? 1 : 0;
+            if (baseB !== baseA) return baseB - baseA;
             return (a.is_prismana ? 1 : 0) - (b.is_prismana ? 1 : 0);
         });
         return matches[0];

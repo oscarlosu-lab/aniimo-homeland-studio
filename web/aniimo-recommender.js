@@ -219,6 +219,59 @@ function renderPersonalityBlock(profile) {
 
 const DISPLAY_ABILITIES = ['Fuego', 'Hierba', 'Agua', 'Tierra', 'Relámpago', 'Hielo', 'Viento', 'Oscuro', 'Luz', 'Remolque', 'Artesanía', 'Ocio', 'Perfumería'];
 
+export function isBaseForm(creature) {
+    if (!creature) return false;
+    if (creature.is_prismana) return false;
+    if (creature.name.includes('(')) return false;
+    return true;
+}
+
+export function findBaseFormAlternative(primaryCreature, canonicalAbility, rawAbility, requiredLevel, pool) {
+    if (!primaryCreature || !pool) return null;
+    const bn = primaryCreature.base_name || primaryCreature.name;
+    
+    // 1. Probar misma especie base pura si tiene la habilidad activa
+    const sameLineBase = pool.find(c => 
+        isBaseForm(c) && 
+        (c.base_name === bn || c.name === bn) &&
+        (c.abilities[canonicalAbility] || c.abilities[rawAbility] || 0) > 0 &&
+        c.name !== primaryCreature.name
+    );
+    if (sameLineBase) return sameLineBase;
+
+    // 2. Buscar en el pool de formas básicas puras accesibles
+    let candidates = pool.filter(c => 
+        isBaseForm(c) && 
+        (c.abilities[canonicalAbility] || c.abilities[rawAbility] || 0) > 0 &&
+        c.name !== primaryCreature.name &&
+        c.id !== primaryCreature.id
+    );
+
+    if (!candidates.length) return null;
+
+    // Priorizar que sean salvajes
+    const wildCands = candidates.filter(isWildCreature);
+    if (wildCands.length) candidates = wildCands;
+
+    // Ordenar:
+    // a) Cumplir nivel requerido primero
+    // b) Nivel más alto de la habilidad
+    // c) Menor ID (etapas iniciales/fáciles de encontrar en rutas de inicio)
+    candidates.sort((a, b) => {
+        const lvlA = a.abilities[canonicalAbility] || a.abilities[rawAbility] || 0;
+        const lvlB = b.abilities[canonicalAbility] || b.abilities[rawAbility] || 0;
+        const meetA = lvlA >= requiredLevel ? 1 : 0;
+        const meetB = lvlB >= requiredLevel ? 1 : 0;
+        if (meetB !== meetA) return meetB - meetA;
+        if (lvlB !== lvlA) return lvlB - lvlA;
+        const idA = typeof a.id === 'number' ? a.id : 9999;
+        const idB = typeof b.id === 'number' ? b.id : 9999;
+        return idA - idB;
+    });
+
+    return candidates[0] || null;
+}
+
 export function isWildCreature(creature) {
     if (!creature || !creature.habitat) return false;
     const hab = creature.habitat.toLowerCase();
@@ -278,6 +331,7 @@ export function findAlternativeCreature(primaryCreature, canonicalAbility, rawAb
 export async function recommendAniimos(keptGroups, maxSlots = 26, options = {}) {
     const allowPrismana = options.allowPrismana ?? true;
     const onlyWild = options.onlyWild ?? false;
+    const onlyBaseForms = options.onlyBaseForms ?? false;
     const manualSwaps = options.swaps || {};
 
     const db = await loadCreaturesDatabase();
@@ -288,6 +342,9 @@ export async function recommendAniimos(keptGroups, maxSlots = 26, options = {}) 
     let availablePool = db.filter(c => allowPrismana ? true : !c.is_prismana);
     if (onlyWild) {
         availablePool = availablePool.filter(isWildCreature);
+    }
+    if (onlyBaseForms) {
+        availablePool = availablePool.filter(isBaseForm);
     }
 
     const rawRecommendations = [];
@@ -358,10 +415,13 @@ export async function recommendAniimos(keptGroups, maxSlots = 26, options = {}) 
             
             // Buscar una alternativa (preferiblemente salvaje y fácil de capturar)
             const alternative = findAlternativeCreature(chosenCreature, canonicalAbility, rawAbility, requiredLevel, db, true);
+            // Buscar la forma básica accesible si no se tiene la forma avanzada/variante
+            const baseForm = findBaseFormAlternative(chosenCreature, canonicalAbility, rawAbility, requiredLevel, db);
 
             rawRecommendations.push({
                 creature: chosenCreature,
                 alternative: alternative,
+                baseForm: baseForm,
                 isWild: isWildCreature(chosenCreature),
                 count: count,
                 ability: canonicalAbility,
@@ -398,9 +458,11 @@ export async function recommendAniimos(keptGroups, maxSlots = 26, options = {}) 
             }
             const hLvl = h.abilities['Remolque'] || h.abilities['Hauling'] || 1;
             const altHauler = findAlternativeCreature(h, 'Remolque', 'Hauling', 1, db, true);
+            const baseHauler = findBaseFormAlternative(h, 'Remolque', 'Hauling', 1, db);
             rawRecommendations.push({
                 creature: h,
                 alternative: altHauler,
+                baseForm: baseHauler,
                 isWild: isWildCreature(h),
                 count: 1,
                 ability: 'Remolque',
@@ -423,12 +485,16 @@ export async function recommendAniimos(keptGroups, maxSlots = 26, options = {}) 
             groupedMap.set(key, {
                 creature: r.creature,
                 alternative: r.alternative,
+                baseForm: r.baseForm,
                 isWild: r.isWild,
                 totalCount: 0,
                 roles: [],
                 primaryAbility: r.ability,
                 providedLevel: r.providedLevel
             });
+        }
+        if (!groupedMap.get(key).baseForm && r.baseForm) {
+            groupedMap.get(key).baseForm = r.baseForm;
         }
         const item = groupedMap.get(key);
         item.totalCount += r.count;
@@ -456,7 +522,8 @@ export async function recommendAniimos(keptGroups, maxSlots = 26, options = {}) 
         maxSlots: effectiveMax,
         freeSlots,
         allowPrismana,
-        onlyWild
+        onlyWild,
+        onlyBaseForms
     };
 }
 
@@ -465,7 +532,7 @@ export async function recommendAniimos(keptGroups, maxSlots = 26, options = {}) 
  */
 export function renderRecommenderUI(recommendationData, containerEl, onUpdateOptions) {
     if (!containerEl) return;
-    const { recommendations, totalAssigned, maxSlots, freeSlots, allowPrismana = true, onlyWild = false } = recommendationData;
+    const { recommendations, totalAssigned, maxSlots, freeSlots, allowPrismana = true, onlyWild = false, onlyBaseForms = false } = recommendationData;
 
     if (!recommendations || recommendations.length === 0) {
         containerEl.innerHTML = `
@@ -516,6 +583,43 @@ export function renderRecommenderUI(recommendationData, containerEl, onUpdateOpt
 
             return `<div class="recommender-subtask">• ${countStr}<span>${role.where}</span> <small class="hint">(${role.ability} Lv.${role.level})</small>${badge}</div>`;
         }).join('');
+
+        
+        // Bloque de Forma Básica Accesible (si la recomendada es una variante, evolución o si no se tiene)
+        let baseFormHtml = '';
+        if (rec.baseForm && rec.baseForm.id !== c.id) {
+            const bf = rec.baseForm;
+            const bfIconSrc = bf.icon || `assets/aniimo/${bf.id}.webp`;
+            const bfFallbackSrc = `https://raw.githubusercontent.com/oscarlosu-lab/homeland-studio/main/web/assets/aniimo/${bf.id}.webp`;
+            const bfLvl = bf.abilities[rec.primaryAbility] || bf.abilities[ABILITY_ES_NAME[rec.primaryAbility]] || 1;
+            const targetReq = rec.roles[0]?.requiredLevel || 1;
+            const gap = targetReq - bfLvl;
+            const gapBadge = gap > 0 
+                ? `<span class="base-lvl-badge need-training" title="Puedes usar esta forma básica inicial, pero requerirá entrenar +${gap} niveles en el campamento para la labor máxima">⚠️ Nv.${bfLvl} (Entrenar +${gap})</span>`
+                : `<span class="base-lvl-badge pass" title="Cubre el nivel requerido inmediatamente">✔ Nv.${bfLvl} Listo</span>`;
+
+            baseFormHtml = `
+                <div class="recommender-base-form-box">
+                    <div class="recommender-base-form-header">
+                        <span class="recommender-base-form-title">🌱 <strong>Forma básica accesible si no tienes a ${c.name}:</strong></span>
+                        <button type="button" class="recommender-swap-btn btn-base-swap" data-from="${c.id}" data-to="${bf.id}" title="Reemplazar ${c.name} por la forma básica ${bf.name}">Usar forma básica (${bf.name})</button>
+                    </div>
+                    <div class="recommender-base-form-content">
+                        <img class="recommender-alt-avatar" src="${bfIconSrc}" onerror="this.onerror=null;this.src='${bfFallbackSrc}';" alt="${bf.name}" loading="lazy" />
+                        <div class="recommender-alt-text">
+                            <div class="recommender-alt-name-row">
+                                <span class="recommender-alt-dex">${bf.dex}</span>
+                                <strong class="recommender-alt-name">${bf.name}</strong>
+                                <span class="recommender-alt-wild-tag" style="background:rgba(34,197,94,0.15); color:#4ade80; border:1px solid rgba(34,197,94,0.3)">🌱 Forma Básica</span>
+                                <span class="recommender-skill-pill active-target small">${rec.primaryAbility} Lv.${bfLvl}</span>
+                                ${gapBadge}
+                            </div>
+                            <div class="recommender-alt-habitat">📍 ${bf.habitat || 'Fácil de encontrar en rutas abiertas'}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
 
         const habitatText = c.habitat ? `📍 <strong>Hábitat:</strong> ${c.habitat}` : '';
 
@@ -576,6 +680,7 @@ export function renderRecommenderUI(recommendationData, containerEl, onUpdateOpt
                     ${habitatText ? `<div class="recommender-habitat-line">${habitatText}</div>` : ''}
                     ${renderPersonalityBlock(rec.personalityProfile)}
                     ${altHtml}
+                    ${baseFormHtml}
                 </div>
             </div>
         `;
@@ -623,7 +728,11 @@ export function renderRecommenderUI(recommendationData, containerEl, onUpdateOpt
                     </label>
                     <label class="recommender-toggle-label">
                         <input type="checkbox" id="recommender-only-wild-toggle" ${onlyWild ? 'checked' : ''}>
-                        <span>🌿 Priorizar Aniimos salvajes (fáciles de capturar)</span>
+                        <span>🌿 Priorizar Aniimos salvajes</span>
+                    </label>
+                    <label class="recommender-toggle-label" title="Filtra y sugiere exclusivamente formas básicas sin variantes raras de clima o eventos">
+                        <input type="checkbox" id="recommender-base-forms-toggle" ${onlyBaseForms ? 'checked' : ''}>
+                        <span>🌱 Solo Formas Básicas (Fáciles de capturar)</span>
                     </label>
                     <div class="recommender-mbti-toolbar-pill" title="El algoritmo calcula el perfil MBTI ideal y las personalidades que otorgan +20% de velocidad a cada criatura en su instalación">
                         <span>🧬 Personalidad MBTI (+20% vel) Activa</span>
@@ -671,6 +780,13 @@ export function renderRecommenderUI(recommendationData, containerEl, onUpdateOpt
     if (wildToggle && onUpdateOptions) {
         wildToggle.addEventListener('change', (e) => {
             onUpdateOptions({ type: 'toggle-wild', value: e.target.checked });
+        });
+    }
+
+    const baseFormsToggle = containerEl.querySelector('#recommender-base-forms-toggle');
+    if (baseFormsToggle && onUpdateOptions) {
+        baseFormsToggle.addEventListener('change', (e) => {
+            onUpdateOptions({ type: 'toggle-base-forms', value: e.target.checked });
         });
     }
 

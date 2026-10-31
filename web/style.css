@@ -5557,3 +5557,64 @@ tr:hover .skip-row,
     color: #ffaa33;
     box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
 }
+
+/* Bloque de Forma Básica Accesible */
+.recommender-base-form-box {
+    margin-top: 0.65rem;
+    padding: 0.6rem 0.85rem;
+    background: rgba(34, 197, 94, 0.07);
+    border: 1px dashed rgba(34, 197, 94, 0.35);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.recommender-base-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.recommender-base-form-title {
+    font-size: 0.78rem;
+    color: #4ade80;
+    font-weight: 600;
+}
+
+.recommender-base-form-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.btn-base-swap {
+    background: #16a34a !important;
+    color: #fff !important;
+    border: 1px solid #22c55e !important;
+}
+
+.btn-base-swap:hover {
+    background: #15803d !important;
+}
+
+.base-lvl-badge {
+    font-size: 0.72rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.base-lvl-badge.pass {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.base-lvl-badge.need-training {
+    background: rgba(234, 179, 8, 0.15);
+    color: #facc15;
+    border: 1px solid rgba(234, 179, 8, 0.3);
+}

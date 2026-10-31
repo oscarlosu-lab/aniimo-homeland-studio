@@ -24,6 +24,7 @@ import { setBilingual, isBilingual } from './i18n.js';
 
 let recommenderAllowPrismana = true;
 let recommenderOnlyWild = false;
+let recommenderOnlyBaseForms = false;
 let recommenderSwaps = {};
 
 let wasmReady = false;
@@ -3484,6 +3485,7 @@ function renderAniimoSummary(plan) {
         recommendAniimos(kept, homelandHolds, {
             allowPrismana: recommenderAllowPrismana,
             onlyWild: recommenderOnlyWild,
+            onlyBaseForms: recommenderOnlyBaseForms,
             swaps: recommenderSwaps
         }).then(recData => {
             if (recData && recData.recommendations && recData.recommendations.length > 0) {
@@ -3493,6 +3495,8 @@ function renderAniimoSummary(plan) {
                         recommenderAllowPrismana = action.value;
                     } else if (action.type === 'toggle-wild') {
                         recommenderOnlyWild = action.value;
+                    } else if (action.type === 'toggle-base-forms') {
+                        recommenderOnlyBaseForms = action.value;
                     } else if (action.type === 'swap') {
                         recommenderSwaps[action.from] = action.to;
                     }
