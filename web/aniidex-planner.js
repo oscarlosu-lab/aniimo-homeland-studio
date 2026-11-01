@@ -102,81 +102,87 @@ export class AniidexPlanner {
         const seeds = plan.seed_requirements || {};
 
         // 1. Cálculos de Ventas Brutas Diarias
-        let grossSalesDaily = 0;
+        let grossSalesDaily = plan.summary?.grossRevenuePerDay || 0;
+        let seedsCostDaily = plan.summary?.seedInvestmentPerDay || 0;
         const salesItems = [];
 
-        for (const s of streams) {
-            const unitsDaily = Math.round(s.units_per_second * 86400);
-            let unitPrice = this.getSellPrice(s.item_name) || Math.round((s.rate_per_second * 86400) / (unitsDaily || 1));
-            const totalItemSales = Math.round(s.rate_per_second * 86400);
-            grossSalesDaily += totalItemSales;
+        if (plan.crafts && plan.crafts.length > 0) {
+            for (const craft of plan.crafts) {
+                salesItems.push({
+                    name: craft.name,
+                    icon: craft.icon.startsWith('/') ? craft.icon : `assets/items/${craft.icon}.webp`,
+                    unitsDaily: Math.round(craft.craftsPerDay),
+                    unitPrice: craft.unitPrice,
+                    totalItemSales: craft.dailyRevenue,
+                    facility: craft.facilityId
+                });
+            }
+        } else {
+            for (const s of streams) {
+                const unitsDaily = Math.round(s.units_per_second * 86400);
+                let unitPrice = this.getSellPrice(s.item_name) || Math.round((s.rate_per_second * 86400) / (unitsDaily || 1));
+                const totalItemSales = Math.round(s.rate_per_second * 86400);
+                grossSalesDaily += totalItemSales;
 
-            const meta = this.getItemMeta(s.item_name);
-            salesItems.push({
-                name: meta.name,
-                icon: meta.icon,
-                unitsDaily,
-                unitPrice,
-                totalItemSales,
-                facility: s.facility
-            });
+                const meta = this.getItemMeta(s.item_name);
+                salesItems.push({
+                    name: meta.name,
+                    icon: meta.icon,
+                    unitsDaily,
+                    unitPrice,
+                    totalItemSales,
+                    facility: s.facility
+                });
+            }
         }
 
         // Ordenar ventas por mayor ingreso
         salesItems.sort((a, b) => b.totalItemSales - a.totalItemSales);
 
-        // 2. Costes de Semillas Diarias
-        let seedsCostDaily = 0;
-        const seedRows = [];
-        if (this.plannerData?.items) {
-            for (const [seedId, seedItem] of Object.entries(this.plannerData.items)) {
-                if (!seedItem.seed) continue;
-                // Ver si hay siembra requerida
-                for (const [cropName, count] of Object.entries(seeds)) {
-                    if (cropName.toLowerCase().includes(seedItem.name.toLowerCase().replace(' seed', '')) ||
-                        seedItem.name.toLowerCase().includes(cropName.toLowerCase())) {
-                        const dailyCount = Math.round(count * 86400);
-                        if (dailyCount > 0) {
-                            const cost = dailyCount * seedItem.seed;
-                            seedsCostDaily += cost;
-                            seedRows.push({
-                                name: seedItem.name,
-                                count: dailyCount,
-                                unitCost: seedItem.seed,
-                                totalCost: cost
-                            });
+        // 2. Costes de Semillas Diarias (si no vino calculado)
+        if (seedsCostDaily === 0) {
+            if (this.plannerData?.items) {
+                for (const [seedId, seedItem] of Object.entries(this.plannerData.items)) {
+                    if (!seedItem.seed) continue;
+                    for (const [cropName, count] of Object.entries(seeds)) {
+                        if (cropName.toLowerCase().includes(seedItem.name.toLowerCase().replace(' seed', '')) ||
+                            seedItem.name.toLowerCase().includes(cropName.toLowerCase())) {
+                            const dailyCount = Math.round(count * 86400);
+                            if (dailyCount > 0) {
+                                const cost = dailyCount * seedItem.seed;
+                                seedsCostDaily += cost;
+                            }
                         }
                     }
                 }
             }
         }
 
-        // Si el solver dio un desglose de coste de semillas, calibrar:
         if (seedsCostDaily === 0 && grossSalesDaily > 0) {
-            // Estimación de coste de semillas estándar de Aniidex (~2.8% de ventas brutas)
             seedsCostDaily = Math.round(grossSalesDaily * 0.028);
         }
 
         // 3. Coste de Comida de los Aniimo
-        // 10 puntos de comida/min por cada criatura trabajando las 24h
         const workerCount = (plan.crew || []).length || 16;
-        const foodCostDaily = Math.round(workerCount * 756); // ~12.096 monedas en Nv. 10
+        const foodCostDaily = Math.round(workerCount * 756);
 
         // 4. Beneficio Neto Diario
-        const netDaily = grossSalesDaily - seedsCostDaily - foodCostDaily;
+        const netDaily = plan.summary?.coinsPerDay || (grossSalesDaily - seedsCostDaily - foodCostDaily);
 
         // 5. Cadenas de Suministro Intermedio ("Lo que producen las parcelas por el camino")
-        const intermediateCrops = [
-            { name: 'Fresa', purpose: 'Para Fresas deshidratadas y Tanghulu', qty: Math.round(grossSalesDaily > 1000000 ? 4594 : grossSalesDaily * 0.0035), icon: 'assets/items/ui_item_4001005.webp' },
-            { name: 'Manzana', purpose: 'Para Vinagre de sidra', qty: Math.round(grossSalesDaily > 1000000 ? 2374 : grossSalesDaily * 0.0018), icon: 'assets/items/ui_item_4001033.webp' },
-            { name: 'Algodón', purpose: 'Para Hilo de algodón', qty: Math.round(grossSalesDaily > 1000000 ? 2345 : grossSalesDaily * 0.0018), icon: 'assets/items/ui_item_4001004.webp' },
-            { name: 'Concha de mar', purpose: 'Para Ornamento de caracola y el resto se vende', qty: Math.round(grossSalesDaily > 1000000 ? 2016 : grossSalesDaily * 0.0015), icon: 'assets/items/ui_item_4001038.webp' },
-            { name: 'Limón', purpose: 'Para Incienso avanzado de limón', qty: Math.round(grossSalesDaily > 1000000 ? 1531 : grossSalesDaily * 0.0012), icon: 'assets/items/ui_item_4001014.webp' },
-            { name: 'Agua fresca sin tratar', purpose: 'Para Caramelo de piedra', qty: Math.round(grossSalesDaily > 1000000 ? 1075 : grossSalesDaily * 0.0008), icon: 'assets/items/ui_item_4001009.webp' },
-            { name: 'Caña de azúcar', purpose: 'Para Caramelo de piedra y el resto se vende', qty: Math.round(grossSalesDaily > 1000000 ? 861 : grossSalesDaily * 0.0006), icon: 'assets/items/ui_item_4001001.webp' },
-            { name: 'Hilo de algodón', purpose: 'Para Ornamento de caracola', qty: Math.round(grossSalesDaily > 1000000 ? 335 : grossSalesDaily * 0.0003), icon: 'assets/items/ui_item_4001018.webp' },
-            { name: 'Caramelo de piedra', purpose: 'Para Tanghulu', qty: Math.round(grossSalesDaily > 1000000 ? 134 : grossSalesDaily * 0.0001), icon: 'assets/items/ui_item_4001017.webp' }
-        ];
+        const intermediateCrops = (plan.crops && plan.crops.length > 0)
+            ? plan.crops.map(c => ({
+                name: c.name,
+                purpose: `Ciclo: ${c.cycleMinutes} min · Cosecha óptima diaria`,
+                qty: Math.round(c.harvestsPerDay),
+                icon: c.icon.startsWith('/') ? c.icon : `assets/items/${c.icon}.webp`
+            }))
+            : [
+                { name: 'Fresa', purpose: 'Para Fresas deshidratadas y Tanghulu', qty: Math.round(grossSalesDaily > 1000000 ? 4594 : grossSalesDaily * 0.0035), icon: 'assets/items/ui_item_4001005.webp' },
+                { name: 'Manzana', purpose: 'Para Vinagre de sidra', qty: Math.round(grossSalesDaily > 1000000 ? 2374 : grossSalesDaily * 0.0018), icon: 'assets/items/ui_item_4001033.webp' },
+                { name: 'Algodón', purpose: 'Para Hilo de algodón', qty: Math.round(grossSalesDaily > 1000000 ? 2345 : grossSalesDaily * 0.0018), icon: 'assets/items/ui_item_4001004.webp' },
+                { name: 'Concha de mar', purpose: 'Para Ornamento de caracola y el resto se vende', qty: Math.round(grossSalesDaily > 1000000 ? 2016 : grossSalesDaily * 0.0015), icon: 'assets/items/ui_item_4001038.webp' }
+            ];
 
         // Construir el HTML visual
         const html = `
