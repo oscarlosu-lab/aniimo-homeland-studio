@@ -1298,35 +1298,90 @@ body {
 .camp-map-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 0.5rem;
-    min-width: 600px;
+    gap: 0.65rem;
+    min-width: 680px;
 }
 
 .camp-plot {
     background: rgba(30, 41, 59, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: var(--radius-sm);
-    padding: 0.75rem 0.5rem;
+    border-radius: var(--radius-md);
+    padding: 0.65rem 0.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.3rem;
-    font-size: 0.72rem;
-    color: var(--text-secondary);
-    min-height: 80px;
+    justify-content: space-between;
+    min-height: 95px;
+    transition: var(--transition);
+}
+
+.camp-plot:hover {
+    transform: translateY(-2px);
+    border-color: rgba(34, 197, 94, 0.5);
+    box-shadow: 0 4px 14px rgba(34, 197, 94, 0.2);
 }
 
 .camp-plot.is-active {
-    background: rgba(34, 197, 94, 0.12);
-    border-color: rgba(34, 197, 94, 0.3);
-    color: #4ade80;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.12), rgba(15, 23, 42, 0.85));
+    border-color: rgba(34, 197, 94, 0.35);
 }
 
-.plot-crop-icon {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
+.plot-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.68rem;
+}
+
+.plot-num {
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.plot-tier {
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+    font-weight: 800;
+    padding: 0.1rem 0.35rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.62rem;
+}
+
+.plot-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 0.25rem 0;
+}
+
+.plot-emoji {
+    font-size: 1.4rem;
+}
+
+.plot-crop-name {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90px;
+}
+
+.plot-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 0.25rem;
+}
+
+.plot-yield {
+    color: var(--accent-green);
+    font-weight: 700;
 }
 
 /* ==========================================================================

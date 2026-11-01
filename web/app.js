@@ -33,16 +33,16 @@ const VERIFIED_PROFILES = {
             "1090000": 1, "1100000": 1, "1110000": 1, "1120000": 1, "1130000": 1
         },
         aniimo: [
-            { form: 10211, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" },
-            { form: 10451, facility: "1020000", letter: "T", name: "Molino Tenaz", trait: "+20% Vel. Molienda" },
-            { form: 10351, facility: "1030000", letter: "J", name: "Artesano Sensato", trait: "+20% Vel. Artesanía" },
-            { form: 10042, facility: "1040000", letter: "N", name: "Cocinero Ágil", trait: "+20% Vel. Cocina" },
-            { form: 10471, facility: "1050000", letter: "E", name: "Secador Enérgico", trait: "+20% Vel. Secado" },
-            { form: 10381, facility: "1060000", letter: "S", name: "Chef Práctico", trait: "+20% Vel. Guisos" },
-            { form: 10181, facility: "1070000", letter: "J", name: "Perfumiere Sensato", trait: "+20% Vel. Alquimia" },
-            { form: 10022, facility: "1080000", letter: "P", name: "Tabernero Juguetón", trait: "+20% Vel. Bebidas" },
-            { form: 10651, facility: "1090000", letter: "T", name: "Fundidor Tenaz", trait: "+20% Vel. Asado" },
-            { form: 10571, facility: "1100000", letter: "S", name: "Encurtidor Práctico", trait: "+20% Vel. Encurtido" }
+            { form: 1021100, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" },
+            { form: 1045100, facility: "1020000", letter: "T", name: "Molino Tenaz", trait: "+20% Vel. Molienda" },
+            { form: 1035100, facility: "1030000", letter: "J", name: "Artesano Sensato", trait: "+20% Vel. Artesanía" },
+            { form: 1004200, facility: "1040000", letter: "N", name: "Cocinero Ágil", trait: "+20% Vel. Cocina" },
+            { form: 1047100, facility: "1050000", letter: "E", name: "Secador Enérgico", trait: "+20% Vel. Secado" },
+            { form: 1002100, facility: "1060000", letter: "S", name: "Chef Práctico", trait: "+20% Vel. Guisos" },
+            { form: 1018100, facility: "1070000", letter: "J", name: "Perfumiere Sensato", trait: "+20% Vel. Alquimia" },
+            { form: 1002200, facility: "1080000", letter: "P", name: "Tabernero Juguetón", trait: "+20% Vel. Bebidas" },
+            { form: 1001200, facility: "1090000", letter: "T", name: "Fundidor Tenaz", trait: "+20% Vel. Asado" },
+            { form: 1002400, facility: "1100000", letter: "S", name: "Encurtidor Práctico", trait: "+20% Vel. Encurtido" }
         ],
         currentProfitEstimate: 850000
     },
@@ -53,8 +53,8 @@ const VERIFIED_PROFILES = {
         plots: 30,
         facilities: { "1010000": 30, "1020000": 1, "1030000": 1, "1040000": 1, "1050000": 1, "1060000": 1 },
         aniimo: [
-            { form: 10211, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" },
-            { form: 10451, facility: "1020000", letter: "T", name: "Molino Tenaz", trait: "+20% Vel. Molienda" }
+            { form: 1021100, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" },
+            { form: 1045100, facility: "1020000", letter: "T", name: "Molino Tenaz", trait: "+20% Vel. Molienda" }
         ],
         currentProfitEstimate: 920000
     },
@@ -65,7 +65,7 @@ const VERIFIED_PROFILES = {
         plots: 30,
         facilities: { "1010000": 30, "1020000": 1, "1030000": 1, "1040000": 1, "1050000": 1, "1060000": 1 },
         aniimo: [
-            { form: 10211, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" }
+            { form: 1021100, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" }
         ],
         currentProfitEstimate: 810000
     },
@@ -76,7 +76,7 @@ const VERIFIED_PROFILES = {
         plots: 30,
         facilities: { "1010000": 30, "1020000": 1, "1030000": 1, "1040000": 1, "1050000": 1, "1060000": 1 },
         aniimo: [
-            { form: 10211, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" }
+            { form: 1021100, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" }
         ],
         currentProfitEstimate: 980000
     }
@@ -526,18 +526,20 @@ function renderFacilitiesGrid(plan) {
         const workerName = w.worker ? w.worker.name : "Trabajador Experto";
         const workerMbti = w.worker ? w.worker.letter : "T";
         const workerTrait = w.worker ? w.worker.trait : "+20% Vel. Oficial";
+        const formId = w.worker ? w.worker.form : 1021100;
+        const cleanForm = String(formId).length === 5 ? `${formId}00` : String(formId);
 
         card.innerHTML = `
             <div class="workshop-head">
                 <div class="workshop-title-wrap">
-                    <img src="assets/items/${w.icon}" alt="${w.name}" class="workshop-icon" onerror="this.src='assets/aniimo/default.webp'">
+                    <img src="assets/items/${w.icon}" alt="${w.name}" class="workshop-icon" onerror="this.src='assets/items/default_item.svg'">
                     <h3>${w.name}</h3>
                 </div>
                 <span class="workshop-level-pill">Tier ${w.level}</span>
             </div>
             <div class="workshop-body">
                 <div class="recipe-info">
-                    <img src="assets/items/${w.icon}" alt="${w.recipe}" class="recipe-img" onerror="this.src='assets/aniimo/default.webp'">
+                    <img src="assets/items/${w.icon}" alt="${w.recipe}" class="recipe-img" onerror="this.src='assets/items/default_item.svg'">
                     <div class="recipe-details">
                         <strong>${w.recipe}</strong>
                         <small>${w.rate}</small>
@@ -545,7 +547,7 @@ function renderFacilitiesGrid(plan) {
                 </div>
                 <div class="hp-hex-worker">
                     <div class="hex-avatar">
-                        <img src="assets/aniimo/${w.worker ? w.worker.form : 10211}.webp" alt="${workerName}" onerror="this.src='assets/aniimo/default.webp'">
+                        <img src="assets/aniimo/${cleanForm}.webp" alt="${workerName}" onerror="this.src='assets/aniimo/default.svg'">
                         <span class="worker-mbti-badge">${workerMbti}</span>
                     </div>
                     <div class="worker-name-block">
@@ -613,19 +615,29 @@ function renderCampMap() {
     if (!grid) return;
     grid.innerHTML = '';
     const crops = [
-        { name: "Fresa", icon: "ui_item_4001005.webp" },
-        { name: "Algodón", icon: "ui_item_4001004.webp" },
-        { name: "Manzano", icon: "ui_item_4001033.webp" },
-        { name: "Limonero", icon: "ui_item_4001005.webp" }
+        { name: "Fresa Silvestre", emoji: "🍓", time: "30m", yield: "+153/día" },
+        { name: "Algodón Suave", emoji: "🌾", time: "25m", yield: "+178/día" },
+        { name: "Manzano Dulce", emoji: "🍎", time: "45m", yield: "+112/día" },
+        { name: "Trigo Dorado", emoji: "🌾", time: "20m", yield: "+210/día" }
     ];
 
     for (let i = 1; i <= 30; i++) {
         const plot = document.createElement('div');
         plot.className = 'camp-plot is-active';
-        const crop = crops[i % crops.length];
+        const crop = crops[(i - 1) % crops.length];
         plot.innerHTML = `
-            <img src="assets/items/${crop.icon}" alt="${crop.name}" class="plot-crop-icon" onerror="this.src='assets/aniimo/default.webp'">
-            <span>Parcela ${i}</span>
+            <div class="plot-head">
+                <span class="plot-num">Parcela ${i}</span>
+                <span class="plot-tier">Tier 6</span>
+            </div>
+            <div class="plot-body">
+                <span class="plot-emoji">${crop.emoji}</span>
+                <strong class="plot-crop-name">${crop.name}</strong>
+            </div>
+            <div class="plot-foot">
+                <span class="plot-time">⏱️ ${crop.time}</span>
+                <span class="plot-yield">${crop.yield}</span>
+            </div>
         `;
         grid.appendChild(plot);
     }
