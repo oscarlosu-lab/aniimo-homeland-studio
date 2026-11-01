@@ -4,12 +4,13 @@
  * cadenas de suministro intermedias e importación de hogar por UID / partida local.
  */
 
+import { homelandImporter } from './homeland-importer.js';
+
 export class AniidexPlanner {
     constructor() {
         this.plannerData = null;
         this.iconsMap = {};
         this.isLoaded = false;
-        this.localUid = '209000449083'; // Detectado en instalación local
     }
 
     async init() {
@@ -80,135 +81,11 @@ export class AniidexPlanner {
         return null;
     }
 
-    // Inyectar el panel de Importación de Hogar en la parte superior de "Tu Hogar"
+    // Inyectar el panel de Importación Híbrido (Local PC + Cloud UID + JSON)
     renderImporterUI(container) {
-        if (!container) return;
-        const existing = document.getElementById('aniidex-importer-panel');
-        if (existing) return;
-
-        const importerHtml = `
-            <div class="aniidex-importer-box" id="aniidex-importer-panel">
-                <div class="importer-tabs">
-                    <button type="button" class="importer-tab-btn active" data-tab="local">📂 Partida Local (PC)</button>
-                    <button type="button" class="importer-tab-btn" data-tab="uid">🌐 Por UID / Nombre</button>
-                    <button type="button" class="importer-tab-btn" data-tab="code">📋 Código de Diseño</button>
-                </div>
-
-                <!-- Pestaña 1: Partida Local (PC) -->
-                <div class="importer-tab-content active" id="tab-content-local">
-                    <div class="importer-row">
-                        <div class="importer-info">
-                            <span class="importer-chip">Instalación Local Detectada</span>
-                            <p class="importer-desc">Se ha detectado tu partida de Aniimo en el sistema local. Pulsa el botón para cargar instantáneamente tu nivel de Casa Rodante (RV), parcelas desbloqueadas y cuadrilla sin teclear nada.</p>
-                            <div class="detected-uid-tag">UID Local: <strong>${this.localUid}</strong></div>
-                        </div>
-                        <button type="button" class="btn-import-action" id="btn-import-local-auto">
-                            ⚡ Sincronizar Mi Hogar Local
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Pestaña 2: Por UID / Nombre -->
-                <div class="importer-tab-content" id="tab-content-uid">
-                    <div class="importer-row">
-                        <div class="importer-input-group">
-                            <label for="input-homeland-uid"><strong>UID o Nombre de Jugador:</strong></label>
-                            <input type="text" id="input-homeland-uid" placeholder="Ej. 209000449083 o TuNick" value="${this.localUid}">
-                        </div>
-                        <button type="button" class="btn-import-action" id="btn-import-uid-submit">
-                            🔍 Importar Hogar
-                        </button>
-                    </div>
-                    <p class="importer-hint">Importa automáticamente la Casa Rodante, instalaciones y criaturas públicas asociadas a esa cuenta.</p>
-                </div>
-
-                <!-- Pestaña 3: Por Código de Diseño -->
-                <div class="importer-tab-content" id="tab-content-code">
-                    <div class="importer-row">
-                        <div class="importer-input-group full-width">
-                            <label for="input-layout-code"><strong>Pegar Código de Diseño de Tierra Natal:</strong></label>
-                            <input type="text" id="input-layout-code" placeholder="Pega aquí el código compartido del juego...">
-                        </div>
-                        <button type="button" class="btn-import-action" id="btn-import-code-submit">
-                            📥 Aplicar Diseño
-                        </button>
-                    </div>
-                </div>
-                <div id="importer-feedback" class="importer-feedback" style="display:none;"></div>
-            </div>
-        `;
-
-        container.insertAdjacentHTML('afterbegin', importerHtml);
-        this.setupImporterEvents();
-    }
-
-    setupImporterEvents() {
-        const tabs = document.querySelectorAll('.importer-tab-btn');
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.importer-tab-content').forEach(c => c.classList.remove('active'));
-                tab.classList.add('active');
-                const targetId = `tab-content-${tab.dataset.tab}`;
-                const targetEl = document.getElementById(targetId);
-                if (targetEl) targetEl.classList.add('active');
-            });
-        });
-
-        // Handler Auto Local
-        const btnLocal = document.getElementById('btn-import-local-auto');
-        if (btnLocal) {
-            btnLocal.addEventListener('click', () => {
-                this.applyImportPreset(10, `¡Sincronizado con éxito! Hogar cargado para UID: ${this.localUid} (Casa Rodante Nv. 10 y todas las instalaciones óptimas).`);
-            });
+        if (homelandImporter && homelandImporter.renderUI) {
+            homelandImporter.renderUI(container);
         }
-
-        // Handler UID
-        const btnUid = document.getElementById('btn-import-uid-submit');
-        if (btnUid) {
-            btnUid.addEventListener('click', () => {
-                const uidVal = document.getElementById('input-homeland-uid')?.value?.trim();
-                if (!uidVal) return;
-                this.applyImportPreset(10, `Hogar importado para el jugador ${uidVal}. Se han rellenado las instalaciones y recetas de nivel 10.`);
-            });
-        }
-
-        // Handler Código
-        const btnCode = document.getElementById('btn-import-code-submit');
-        if (btnCode) {
-            btnCode.addEventListener('click', () => {
-                const codeVal = document.getElementById('input-layout-code')?.value?.trim();
-                if (!codeVal) return;
-                this.applyImportPreset(10, `Diseño de base aplicado correctamente.`);
-            });
-        }
-    }
-
-    applyImportPreset(rvLevel = 10, successMsg = '') {
-        const levelSelect = document.getElementById('home-level');
-        if (levelSelect) {
-            levelSelect.value = String(rvLevel);
-            levelSelect.dispatchEvent(new Event('change', { bubbles: true }));
-        }
-        const fillSelect = document.getElementById('fill-level');
-        if (fillSelect) {
-            fillSelect.value = String(rvLevel);
-        }
-        const fillBtn = document.getElementById('fill-btn');
-        if (fillBtn) {
-            fillBtn.click();
-        }
-
-        const feedback = document.getElementById('importer-feedback');
-        if (feedback) {
-            feedback.innerHTML = `✅ ${successMsg}`;
-            feedback.style.display = 'block';
-            setTimeout(() => { feedback.style.display = 'none'; }, 6000);
-        }
-
-        // Auto-lanzar optimización si el botón existe
-        const optBtn = document.getElementById('optimize-btn');
-        if (optBtn) optBtn.click();
     }
 
     // Generar el Panel Financiero y Cadena de Suministro idéntico a Aniidex
@@ -309,7 +186,7 @@ export class AniidexPlanner {
                     <div class="fin-card-header">
                         <span class="fin-badge">📊 Modelo Contable Aniidex</span>
                         <h2>De Dónde Salen tus Monedas</h2>
-                        <p class="fin-subtitle">Casa rodante de Nv. ${document.getElementById('home-level')?.value || 10} · Precios oficiales de la Tienda Cooperativa</p>
+                        <p class="fin-subtitle">Casa rodante de Nv. ${document.getElementById('home-level')?.value || '-'} · Precios oficiales de la Tienda Cooperativa</p>
                     </div>
 
                     <div class="fin-ledger-grid">
