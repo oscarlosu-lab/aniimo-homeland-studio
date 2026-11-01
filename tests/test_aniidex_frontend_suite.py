@@ -21,10 +21,10 @@ class TestAniidexSuite(unittest.TestCase):
         html = (self.web_dir / "index.html").read_text(encoding="utf-8")
         self.assertIn("hp-yh-doors", html, "Must contain Aniidex dual doors")
         self.assertIn("hp-frame", html, "Must contain active home frame")
-        self.assertIn("hp-kpis", html, "Must contain 4 KPI cards")
-        self.assertIn("hp-sum", html, "Must contain financial balance summary")
-        self.assertIn("sec-suggestions", html, "Must contain suggestions panel")
-        self.assertIn("hp-workshops-grid", html, "Must contain facilities grid")
+        self.assertIn("hp-overview", html, "Must contain Aniidex overview bar")
+        self.assertIn("hp-cards", html, "Must contain cards container")
+        self.assertIn("hp-strip", html, "Must contain daily production strip")
+        self.assertIn("hp-sheet", html, "Must contain modal sheets")
 
     def test_planner_facts_dataset(self):
         facts_path = self.web_dir / "data" / "planner_facts.json"

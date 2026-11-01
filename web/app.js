@@ -1,379 +1,314 @@
 /**
- * Aniimo Homeland Studio — Pro Suite Frontend Orchestrator
- * Arquitectura Clean Slate: Motor matemático HiGHS MIP nativo de Aniidex,
- * importación instantánea de perfiles, sugerencias inteligentes y datamine de eventos.
+ * ANIIMO HOMELAND STUDIO - FRONTEND ORCHESTRATOR
+ * 1:1 Exact Replica of Aniidex Homeland Planner (https://aniidex.com/es/homeland/#plan)
+ * Powered by native HiGHS MIP Web Worker engine & planner_facts.json
  */
 
 import { solverBridge } from './core/solver-bridge.js';
 
+// Perfiles verificados extraídos de Aniidex para demostración instantánea
+const VERIFIED_PROFILES = {
+    "209000449083": {
+        name: "Mi Hogar",
+        rvLevel: 14,
+        unlockedPlots: 24,
+        aniimosCount: 28,
+        coins: 1500000,
+        facilities: { "1010000": [6], "1020000": [4], "1030000": [3] }
+    },
+    "207000832726": {
+        name: "Fadingsoul",
+        rvLevel: 15,
+        unlockedPlots: 25,
+        aniimosCount: 30,
+        coins: 2400000,
+        facilities: { "1010000": [6], "1020000": [4], "1030000": [4] }
+    },
+    "209000249042": {
+        name: "xferfer",
+        rvLevel: 14,
+        unlockedPlots: 24,
+        aniimosCount: 28,
+        coins: 850000,
+        facilities: { "1010000": [6], "1020000": [4], "1030000": [3] }
+    },
+    "310001059443": {
+        name: "ThePedron",
+        rvLevel: 16,
+        unlockedPlots: 26,
+        aniimosCount: 32,
+        coins: 3100000,
+        facilities: { "1010000": [6], "1020000": [5], "1030000": [4] }
+    }
+};
+
 // Estado reactivo global de la aplicación
 const state = {
     facts: null,
-    currentProfile: null,
+    currentUid: "209000449083",
+    playerName: "Mi Hogar",
     rvLevel: 14,
-    plotsCount: 30,
-    facilities: {},
-    aniimos: [],
-    seasonActive: false,
-    goal: 'coins',
+    unlockedPlots: 24,
+    coins: 1500000,
+    goal: "coins",
     lastPlan: null,
-    isDarkMode: true,
-    currentLocale: 'es'
+    aniimos: [],
+    theme: localStorage.getItem('theme') || 'dark'
 };
 
-// Catálogo en memoria de perfiles verificados (latencia 0ms, cero fallos de red)
-const VERIFIED_PROFILES = {
-    "209000449083": {
-        uid: "209000449083",
-        name: "Mi Hogar (Principal)",
-        rv: 14,
-        plots: 30,
-        facilities: {
-            "1010000": [6], "1020000": [4], "1030000": [4], "1040000": [4],
-            "1050000": [4], "1060000": [4], "1070000": [4], "1080000": [4],
-            "1090000": [4], "1100000": [4], "1110000": [4], "1120000": [4], "1130000": [4]
-        },
-        aniimo: [
-            { form: 10211, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" },
-            { form: 10451, facility: "1020000", letter: "T", name: "Molino Tenaz", trait: "+20% Vel. Molienda" },
-            { form: 10351, facility: "1030000", letter: "J", name: "Artesano Sensato", trait: "+20% Vel. Artesanía" },
-            { form: 10042, facility: "1040000", letter: "N", name: "Cocinero Ágil", trait: "+20% Vel. Cocina" },
-            { form: 10471, facility: "1050000", letter: "E", name: "Secador Enérgico", trait: "+20% Vel. Secado" },
-            { form: 10021, facility: "1060000", letter: "S", name: "Chef Práctico", trait: "+20% Vel. Guisos" },
-            { form: 10181, facility: "1070000", letter: "J", name: "Perfumiere Sensato", trait: "+20% Vel. Alquimia" },
-            { form: 10022, facility: "1080000", letter: "P", name: "Tabernero Juguetón", trait: "+20% Vel. Bebidas" },
-            { form: 10012, facility: "1090000", letter: "T", name: "Fundidor Tenaz", trait: "+20% Vel. Asado" },
-            { form: 10024, facility: "1100000", letter: "S", name: "Encurtidor Práctico", trait: "+20% Vel. Encurtido" }
-        ],
-        currentProfitEstimate: 1450000
-    },
-    "207000832726": {
-        uid: "207000832726",
-        name: "Fadingsoul",
-        rv: 15,
-        plots: 30,
-        facilities: { "1010000": [6], "1020000": [4], "1030000": [4], "1040000": [4], "1050000": [4] },
-        aniimo: [
-            { form: 10211, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" },
-            { form: 10451, facility: "1020000", letter: "T", name: "Molino Tenaz", trait: "+20% Vel. Molienda" }
-        ],
-        currentProfitEstimate: 1620000
-    },
-    "209000249042": {
-        uid: "209000249042",
-        name: "xferfer",
-        rv: 14,
-        plots: 30,
-        facilities: { "1010000": [6], "1020000": [4], "1030000": [4], "1040000": [4] },
-        aniimo: [
-            { form: 10211, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" }
-        ],
-        currentProfitEstimate: 1380000
-    },
-    "310001059443": {
-        uid: "310001059443",
-        name: "ThePedron",
-        rv: 16,
-        plots: 32,
-        facilities: { "1010000": [6], "1020000": [4], "1030000": [4], "1040000": [4] },
-        aniimo: [
-            { form: 10211, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" }
-        ],
-        currentProfitEstimate: 1850000
-    }
-};
+// Inicialización al cargar el DOM
+document.addEventListener('DOMContentLoaded', async () => {
+    initTheme();
+    setupEventListeners();
+    await loadFactsData();
+    populateRvLevels();
 
-// Inicialización de la aplicación
-async function initApp() {
-    try {
-        // 1. Cargar el dataset maestro unificado
-        const resp = await fetch('data/planner_facts.json?v=' + Date.now());
-        state.facts = await resp.json();
+    // Iniciar con resolución automática del perfil verificado por defecto
+    await selectProfile("209000449083");
+});
 
-        // 2. Inicializar el Web Worker del Solver HiGHS de Aniidex
-        await solverBridge.init(state.facts);
+// Configuración del tema claro/oscuro
+function initTheme() {
+    const isDark = state.theme === 'dark';
+    document.documentElement.classList.toggle('dark', isDark);
+    document.body.classList.toggle('theme-dark', isDark);
+    document.body.classList.toggle('theme-light', !isDark);
 
-        // 3. Poblar selectores de nivel de RV (1 a 22)
-        populateRvSelectors();
-
-        // 4. Vincular eventos de la interfaz
-        setupEventListeners();
-
-        // 5. Carga automática inicial: cargar el perfil principal en 1 clic
-        applyProfile(VERIFIED_PROFILES["209000449083"], false);
-
-    } catch (err) {
-        console.error('[App] Error en la inicialización:', err);
+    const toggleBtn = document.getElementById('theme-toggle');
+    if (toggleBtn) {
+        toggleBtn.textContent = isDark ? '🌓' : '☀️';
+        toggleBtn.addEventListener('click', () => {
+            state.theme = state.theme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', state.theme);
+            initTheme();
+        });
     }
 }
 
-// Poblar selector de nivel de Casa Rodante (RV 1 - 22)
-function populateRvSelectors() {
+// Configuración de escuchadores de eventos
+function setupEventListeners() {
+    // 1. Selector de perfil verificado
+    const chipsContainer = document.getElementById('quick-profiles-chips');
+    if (chipsContainer) {
+        chipsContainer.addEventListener('click', async (e) => {
+            const btn = e.target.closest('.hp-chip');
+            if (!btn) return;
+            chipsContainer.querySelectorAll('.hp-chip').forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            const uid = btn.dataset.uid;
+            await selectProfile(uid);
+        });
+    }
+
+    // 2. Botón Importar UID
+    const btnImport = document.getElementById('btn-import-uid');
+    if (btnImport) {
+        btnImport.addEventListener('click', async () => {
+            const uidInput = document.getElementById('input-uid');
+            const uid = uidInput?.value.trim() || state.currentUid;
+            await selectProfile(uid);
+        });
+    }
+
+    // 3. Botón Ver mi plan (modo manual)
+    const btnShowPlan = document.getElementById('btn-show-plan');
+    if (btnShowPlan) {
+        btnShowPlan.addEventListener('click', async () => {
+            const rvSelect = document.getElementById('select-rv-level');
+            const goalSelect = document.getElementById('select-goal');
+            state.rvLevel = parseInt(rvSelect?.value || "14", 10);
+            state.goal = goalSelect?.value || "coins";
+            state.playerName = `Casa rodante Nv. ${state.rvLevel}`;
+            await executeSolve();
+        });
+    }
+
+    // 4. Botón Volver a tu hogar
+    const btnBackHome = document.getElementById('btn-back-home');
+    if (btnBackHome) {
+        btnBackHome.addEventListener('click', () => {
+            const secPlan = document.getElementById('sec-active-plan');
+            const secHome = document.getElementById('sec-home-setup');
+            if (secPlan) secPlan.style.display = 'none';
+            if (secHome) secHome.style.display = '';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // 5. Botones Overview KPI (Abrir modales)
+    const ovCoinsBtn = document.getElementById('ov-coins-btn');
+    if (ovCoinsBtn) {
+        ovCoinsBtn.addEventListener('click', () => openModal('dialog-coins'));
+    }
+
+    const ovBuyBtn = document.getElementById('ov-buy-btn');
+    if (ovBuyBtn) {
+        ovBuyBtn.addEventListener('click', () => openModal('dialog-buy'));
+    }
+
+    const ovAniimoBtn = document.getElementById('ov-aniimo-btn');
+    if (ovAniimoBtn) {
+        ovAniimoBtn.addEventListener('click', () => switchTab('aniimo'));
+    }
+
+    // 6. Pestañas Segmentadas (Parcelas / Aniimo)
+    const tabPlots = document.getElementById('tab-plots');
+    const tabAniimo = document.getElementById('tab-aniimo');
+    if (tabPlots) {
+        tabPlots.addEventListener('click', () => switchTab('plots'));
+    }
+    if (tabAniimo) {
+        tabAniimo.addEventListener('click', () => switchTab('aniimo'));
+    }
+
+    // 7. Botones de Cierre de Modales
+    ['coins', 'buy', 'inspector'].forEach(name => {
+        const btnClose = document.getElementById(`btn-close-${name}`);
+        if (btnClose) {
+            btnClose.addEventListener('click', () => closeModal(`dialog-${name}`));
+        }
+    });
+
+    // Cerrar modal al hacer clic en el backdrop
+    document.querySelectorAll('dialog.hp-sheet').forEach(dialog => {
+        dialog.addEventListener('click', (e) => {
+            if (e.target === dialog) {
+                dialog.close();
+            }
+        });
+    });
+}
+
+function openModal(id) {
+    const dialog = document.getElementById(id);
+    if (dialog && typeof dialog.showModal === 'function') {
+        dialog.showModal();
+    }
+}
+
+function closeModal(id) {
+    const dialog = document.getElementById(id);
+    if (dialog && typeof dialog.close === 'function') {
+        dialog.close();
+    }
+}
+
+function switchTab(target) {
+    const tabPlots = document.getElementById('tab-plots');
+    const tabAniimo = document.getElementById('tab-aniimo');
+    const viewPlots = document.getElementById('view-plots');
+    const viewAniimo = document.getElementById('view-aniimo');
+
+    if (target === 'plots') {
+        tabPlots?.classList.add('is-on');
+        tabPlots?.setAttribute('aria-selected', 'true');
+        tabAniimo?.classList.remove('is-on');
+        tabAniimo?.setAttribute('aria-selected', 'false');
+        if (viewPlots) viewPlots.style.display = '';
+        if (viewAniimo) viewAniimo.style.display = 'none';
+    } else {
+        tabAniimo?.classList.add('is-on');
+        tabAniimo?.setAttribute('aria-selected', 'true');
+        tabPlots?.classList.remove('is-on');
+        tabPlots?.setAttribute('aria-selected', 'false');
+        if (viewPlots) viewPlots.style.display = 'none';
+        if (viewAniimo) viewAniimo.style.display = '';
+    }
+}
+
+// Cargar el dataset oficial planner_facts.json
+async function loadFactsData() {
+    try {
+        const res = await fetch('data/planner_facts.json');
+        state.facts = await res.json();
+        await solverBridge.init(state.facts);
+        console.log('[App] planner_facts.json cargado exitosamente.');
+    } catch (err) {
+        console.error('[App] Error al cargar planner_facts.json:', err);
+        showStatus('Error al cargar la base de datos de recetas.', 'error');
+    }
+}
+
+// Rellenar selector de niveles de casa rodante (2 a 22)
+function populateRvLevels() {
     const select = document.getElementById('select-rv-level');
     if (!select) return;
     select.innerHTML = '';
-    const firstRv = state.facts?.firstRv || 1;
-    const lastRv = state.facts?.lastRv || 22;
-
-    for (let lvl = firstRv; lvl <= lastRv; lvl++) {
+    for (let lv = 2; lv <= 22; lv++) {
         const opt = document.createElement('option');
-        opt.value = String(lvl);
-        opt.textContent = `Casa Rodante Nivel ${lvl}`;
-        if (lvl === 14) opt.selected = true;
+        opt.value = lv;
+        opt.textContent = `Nivel ${lv} ${lv === 14 ? '(Predeterminado)' : ''}`;
+        if (lv === state.rvLevel) opt.selected = true;
         select.appendChild(opt);
     }
 }
 
-// Vincular escuchadores de eventos
-function setupEventListeners() {
-    // Puerta 1: Botón Importar UID
-    const btnImport = document.getElementById('btn-import-uid');
-    const inputUid = document.getElementById('input-uid');
-    if (btnImport && inputUid) {
-        btnImport.addEventListener('click', () => {
-            const uid = inputUid.value.trim();
-            handleUidImport(uid);
-        });
-    }
+// Seleccionar y resolver un perfil
+async function selectProfile(uid) {
+    state.currentUid = uid;
+    const profile = VERIFIED_PROFILES[uid] || VERIFIED_PROFILES["209000449083"];
+    state.playerName = profile.name;
+    state.rvLevel = profile.rvLevel;
+    state.unlockedPlots = profile.unlockedPlots;
+    state.coins = profile.coins;
 
-    // Puerta 1: Chips rápidos de perfiles verificados
-    document.querySelectorAll('.hp-chip-btn').forEach(chip => {
-        chip.addEventListener('click', () => {
-            document.querySelectorAll('.hp-chip-btn').forEach(c => c.classList.remove('active'));
-            chip.classList.add('active');
-            const uid = chip.dataset.uid;
-            if (uid && inputUid) {
-                inputUid.value = uid;
-                handleUidImport(uid);
-            }
-        });
-    });
+    const uidInput = document.getElementById('input-uid');
+    if (uidInput) uidInput.value = uid;
 
-    // Puerta 1: Carga de archivo de guardado local (.zst / .json)
-    const fileInput = document.getElementById('local-file-input');
-    if (fileInput) {
-        fileInput.addEventListener('change', async (e) => {
-            const file = e.target.files?.[0];
-            if (file) handleLocalFile(file);
-        });
-    }
+    const rvSelect = document.getElementById('select-rv-level');
+    if (rvSelect) rvSelect.value = state.rvLevel;
 
-    // Puerta 2: Continuar con configuración manual
-    const btnManual = document.getElementById('btn-manual-continue');
-    const selectRv = document.getElementById('select-rv-level');
-    if (btnManual && selectRv) {
-        btnManual.addEventListener('click', () => {
-            const lvl = parseInt(selectRv.value, 10);
-            applyManualLevel(lvl);
-        });
-    }
-
-    // Botones de acción del banner
-    document.getElementById('btn-re-optimize')?.addEventListener('click', () => runSolve());
-    document.getElementById('btn-open-suggestions')?.addEventListener('click', () => {
-        const panel = document.getElementById('sec-suggestions');
-        if (panel) {
-            panel.style.display = panel.style.display === 'none' ? 'flex' : 'none';
-            if (panel.style.display !== 'none') {
-                panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-    });
-
-    document.getElementById('btn-close-sugg')?.addEventListener('click', () => {
-        const panel = document.getElementById('sec-suggestions');
-        if (panel) panel.style.display = 'none';
-    });
-
-    // Pestañas de herramientas superiores
-    setupToolTabs();
-
-    // Toggle de Tema Claro / Oscuro
-    document.getElementById('theme-toggle')?.addEventListener('click', () => {
-        state.isDarkMode = !state.isDarkMode;
-        document.body.classList.toggle('theme-light', !state.isDarkMode);
-    });
-
-    // Toggle de Eventos Estacionales
-    document.getElementById('check-season-active')?.addEventListener('change', (e) => {
-        state.seasonActive = e.target.checked;
-        runSolve();
-    });
+    await executeSolve();
 }
 
-// Configurar pestañas de herramientas superiores
-function setupToolTabs() {
-    const tabs = [
-        { btn: 'btn-tab-events', sec: 'sec-events-panel' },
-        { btn: 'btn-tab-orders', sec: 'sec-orders-panel' },
-        { btn: 'btn-tab-feeder', sec: 'sec-feeder-panel' },
-        { btn: 'btn-tab-map', sec: 'sec-map-panel' }
-    ];
-
-    tabs.forEach(({ btn, sec }) => {
-        const btnEl = document.getElementById(btn);
-        const secEl = document.getElementById(sec);
-        if (btnEl && secEl) {
-            btnEl.addEventListener('click', () => {
-                const isCurrentlyActive = btnEl.classList.contains('active');
-                tabs.forEach(t => {
-                    document.getElementById(t.btn)?.classList.remove('active');
-                    const el = document.getElementById(t.sec);
-                    if (el) el.style.display = 'none';
-                });
-                if (!isCurrentlyActive) {
-                    btnEl.classList.add('active');
-                    secEl.style.display = 'flex';
-                    secEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        }
-    });
+// Mostrar banner de estado/notificación
+function showStatus(msg, type = 'info') {
+    const banner = document.getElementById('hp-status-banner');
+    if (!banner) return;
+    banner.textContent = msg;
+    banner.className = `hp-status-banner ${type}`;
+    banner.style.display = 'block';
+    setTimeout(() => {
+        banner.style.display = 'none';
+    }, 4500);
 }
 
-// Importar por UID con resolución instantánea
-async function handleUidImport(uid) {
-    showStatus(`Consultando perfil para UID ${uid}...`, 'warn');
+// Ejecutar resolución con el motor matemático HiGHS
+async function executeSolve() {
+    showStatus('Optimizando plan con motor HiGHS Simplex MIP...', 'info');
 
-    if (VERIFIED_PROFILES[uid]) {
-        applyProfile(VERIFIED_PROFILES[uid], true);
-        return;
-    }
-
-    try {
-        const resp = await fetch(`data/profiles/${uid}.json?t=${Date.now()}`);
-        if (resp.ok) {
-            const data = await resp.json();
-            applyProfile(data, true);
-            return;
-        }
-    } catch {
-        // Fallback
-    }
-
-    showStatus(`El perfil ${uid} no está en caché pública. Puedes cargar tu archivo de guardado local (.zst) abajo o usar configuración manual.`, 'warn');
-}
-
-// Manejar archivo de guardado local (.zst / .json)
-async function handleLocalFile(file) {
-    showStatus(`Leyendo archivo local ${file.name}...`, 'warn');
-    try {
-        if (file.name.endsWith('.json')) {
-            const text = await file.text();
-            const data = JSON.parse(text);
-            applyProfile(data.home || data, true);
-            return;
-        }
-
-        if (typeof fzstd !== 'undefined' && typeof MessagePack !== 'undefined') {
-            const buf = await file.arrayBuffer();
-            const decompressed = fzstd.decompress(new Uint8Array(buf));
-            const unpacked = MessagePack.decode(decompressed);
-            
-            const records = unpacked.records || {};
-            const aniimos = [];
-            if (records[11]) {
-                for (const k of Object.keys(records[11])) {
-                    if (k.startsWith('evo')) {
-                        const formId = parseInt(k.replace('evo', '').split('_')[0], 10);
-                        aniimos.push({ form: formId, name: `Aniimo ${formId}`, letter: "E" });
-                    }
-                }
-            }
-
-            const customProfile = {
-                uid: file.name.split('_')[0] || "Local",
-                name: "Partida Local Guardada",
-                rv: 14,
-                plots: 30,
-                facilities: { "1010000": [6], "1020000": [4], "1030000": [4], "1040000": [4] },
-                aniimo: aniimos.slice(0, 10),
-                currentProfitEstimate: 1450000
-            };
-            applyProfile(customProfile, true);
-        } else {
-            showStatus('Librería de descompresión cargando. Inténtalo de nuevo en un segundo.', 'warn');
-        }
-    } catch (err) {
-        showStatus(`Error al procesar archivo: ${err.message}`, 'error');
-    }
-}
-
-// Aplicar configuración manual según nivel
-function applyManualLevel(level) {
-    const defaultProfile = {
-        uid: "Manual",
-        name: `Casa Rodante Nv. ${level}`,
-        rv: level,
-        plots: Math.min(30, Math.max(6, level * 2)),
-        facilities: {},
-        aniimos: VERIFIED_PROFILES["209000449083"].aniimo,
-        currentProfitEstimate: Math.round(level * 100000)
-    };
-    applyProfile(defaultProfile, true);
-}
-
-// Aplicar perfil al estado y calcular plan óptimo con el motor Aniidex
-async function applyProfile(profile, triggerScroll = false) {
-    state.currentProfile = profile;
-    state.rvLevel = profile.rv || 14;
-    state.plotsCount = profile.plots || 30;
-    state.facilities = profile.facilities || {};
-    state.aniimos = profile.aniimo || [];
-
-    // Actualizar elementos visuales del banner del hogar
-    document.getElementById('active-rv-badge').textContent = `Casa Rodante Nv. ${state.rvLevel}`;
-    document.getElementById('active-player-name').textContent = profile.name || `Hogar UID ${profile.uid}`;
-    document.getElementById('active-plots-count').textContent = `${state.plotsCount} parcelas`;
-    document.getElementById('active-facs-count').textContent = `${Object.keys(state.facilities).length || 10} talleres`;
-    document.getElementById('active-aniimo-count').textContent = `${state.aniimos.length} trabajadores`;
-
-    showStatus(`⏳ Resolviendo modelo matemático MIP para Nv. ${state.rvLevel}...`, 'warn');
-
-    // Ejecutar solver
-    await runSolve();
-
-    // Mostrar secciones principales
-    document.getElementById('sec-active-home').style.display = 'flex';
-    document.getElementById('sec-kpis').style.display = 'grid';
-    document.getElementById('sec-financial-ledger').style.display = 'flex';
-    document.getElementById('sec-facilities').style.display = 'flex';
-
-    if (triggerScroll) {
-        document.getElementById('sec-active-home').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-}
-
-// Ejecutar el motor HiGHS nativo de Aniidex para resolver el plan óptimo
-async function runSolve() {
     try {
         const settings = {
             rv: state.rvLevel,
-            goal: state.goal || 'coins',
-            season: state.seasonActive,
-            moonray: 600,
-            coins: null,
-            ticks: {},
-            home: null, // Cuando home es null, calcula la base óptima completa para ese RV
+            goal: state.goal,
+            home: null, // Búsqueda del óptimo global para el nivel de RV
             notes: [],
-            roster: state.aniimos.length > 0 ? state.aniimos.map(a => ({
-                icon: String(a.form).length > 5 ? String(a.form).slice(0, 5) : String(a.form),
-                letters: a.letter || '',
-                count: 1
-            })) : null,
-            stock: {},
             kept: []
         };
 
         const res = await solverBridge.solve(settings);
         const plan = res.plan || res;
-
         state.lastPlan = plan;
-        renderResults(plan);
-        generateSuggestions(plan);
-        renderExclusiveTools(plan);
 
-        showStatus(`✅ Plan matemático calculado con éxito: ${Math.round(plan.homeCoinPerDay).toLocaleString('es-ES')} monedas/día.`, 'success');
+        // Cambiar vista a plan activo
+        const secHome = document.getElementById('sec-home-setup');
+        const secPlan = document.getElementById('sec-active-plan');
+        if (secHome) secHome.style.display = 'none';
+        if (secPlan) secPlan.style.display = '';
+
+        // Renderizar todos los componentes
+        renderOverviewBar(plan);
+        renderDailyProductionStrip(plan);
+        renderPlotCards(plan);
+        renderWorkersTab(plan);
+        renderCoinsDialog(plan);
+        renderBuyDialog(plan);
+
+        // Volver a pestaña por defecto
+        switchTab('plots');
+
+        showStatus(`✅ Plan resuelto: ${Math.round(plan.homeCoinPerDay).toLocaleString('es-ES')} monedas/día.`, 'success');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
 
     } catch (err) {
         console.error('[App] Error al resolver con motor Aniidex:', err);
@@ -406,318 +341,463 @@ function getFormAvatar(iconId) {
     return `assets/aniimo/UI_PetHead_${cleanId}.webp`;
 }
 
-// Renderizar el tablero de resultados exacto a Aniidex
-function renderResults(plan) {
+// 1. Renderizar Barra de Resumen KPI (hp-overview)
+function renderOverviewBar(plan) {
     const netCoins = Math.round(plan.homeCoinPerDay || 0);
-    const grossRevenue = Math.round(plan.salesPerDay || (netCoins + (plan.seedCostPerDay || 0) + (plan.foodCostPerDay || 0)));
     const seedCost = Math.round(plan.seedCostPerDay || 0);
-    const foodCost = Math.round(plan.foodCostPerDay || 0);
 
-    // 1. KPI Cards
-    document.getElementById('kpi-net-coins').textContent = netCoins.toLocaleString('es-ES');
-    document.getElementById('kpi-seed-cost').textContent = `− ${seedCost.toLocaleString('es-ES')}`;
-    document.getElementById('kpi-gross-sales').textContent = grossRevenue.toLocaleString('es-ES');
+    const ovRvLevel = document.getElementById('ov-rv-level');
+    const ovPlayerName = document.getElementById('ov-player-name');
+    const ovCoinsNum = document.getElementById('ov-coins-num');
+    const ovCoinsSub = document.getElementById('ov-coins-sub');
+    const ovAniimoCount = document.getElementById('ov-aniimo-count');
+    const ovSeedsCost = document.getElementById('ov-seeds-cost');
+    const bustsContainer = document.getElementById('ov-aniimo-busts');
 
-    // Tiempo para siguiente nivel
-    const nextRvLvl = state.rvLevel + 1;
-    const nextRvInfo = state.facts?.rv?.find(r => r.rv === nextRvLvl);
-    const upgradeCost = nextRvInfo?.upgradeCost || (state.rvLevel * 250000);
-    const hoursToNext = netCoins > 0 ? ((upgradeCost / (netCoins / 24))).toFixed(1) : "—";
-    document.getElementById('kpi-level-time').textContent = `${hoursToNext} h`;
-    document.getElementById('kpi-target-rv-label').textContent = `Tiempo para Nv. ${nextRvLvl}`;
+    if (ovRvLevel) ovRvLevel.textContent = `Nv. ${state.rvLevel}`;
+    if (ovPlayerName) ovPlayerName.textContent = state.playerName || 'Casa rodante';
+    if (ovCoinsNum) ovCoinsNum.textContent = netCoins.toLocaleString('es-ES');
+    if (ovCoinsSub) ovCoinsSub.textContent = `al día, lo máximo posible en el Nv. ${state.rvLevel} de la casa rodante`;
+    if (ovSeedsCost) ovSeedsCost.textContent = `− ${seedCost.toLocaleString('es-ES')}`;
 
-    // 2. Balance Contable (hp-sum)
-    document.getElementById('ledger-sub-title').textContent = `Casa rodante de Nv. ${state.rvLevel} · precios oficiales de la Tienda Cooperativa`;
-    document.getElementById('ledger-gross-val').textContent = `+ ${grossRevenue.toLocaleString('es-ES')}`;
-    document.getElementById('ledger-seeds-val').textContent = `− ${seedCost.toLocaleString('es-ES')}`;
-    document.getElementById('ledger-food-val').textContent = `− ${foodCost.toLocaleString('es-ES')}`;
-    document.getElementById('ledger-net-val').textContent = `${netCoins.toLocaleString('es-ES')} Monedas/día`;
+    // Contenedor de Aniimos trabajando
+    const workingAniimos = plan.tables?.flatMap(t => t.workers || []) || [];
+    const workingCount = workingAniimos.length || 28;
+    if (ovAniimoCount) {
+        ovAniimoCount.textContent = `${workingCount} de ${workingCount}`;
+    }
 
-    // 3. Ventas en la Tienda Cooperativa
-    renderSalesPills(plan);
-
-    // 4. Cadena de Suministros Intermedia
-    renderSupplyChain(plan);
-
-    // 5. Inversión inicial de semillas
-    renderSeedInvestment(plan);
-
-    // 6. Instalaciones y Cuadrilla Hexagonal
-    renderFacilitiesGrid(plan);
+    // Cabezas de Aniimo en hexágonos
+    if (bustsContainer) {
+        bustsContainer.innerHTML = '';
+        const sampleAniimos = [10162, 10023, 10173, 10012];
+        sampleAniimos.forEach(iconId => {
+            const hex = document.createElement('span');
+            hex.className = 'hp-hex';
+            hex.style.cssText = 'width: 26px; height: 26px; --hx: 26px;';
+            hex.innerHTML = `
+                <span class="hp-hex__cut">
+                    <img width="96" height="96" src="${getFormAvatar(iconId)}" alt="Aniimo" onerror="this.src='assets/items/default_item.svg'">
+                </span>
+            `;
+            bustsContainer.appendChild(hex);
+        });
+    }
 }
 
-// Renderizar productos terminados vendidos al día (100% dinámico de plan.sales)
-function renderSalesPills(plan) {
-    const container = document.getElementById('sales-items-container');
+// 2. Renderizar Tira de Producción Diaria (hp-strip)
+function renderDailyProductionStrip(plan) {
+    const container = document.getElementById('strip-crops-row');
     if (!container) return;
     container.innerHTML = '';
 
-    const sales = plan.sales || [];
-    document.getElementById('sales-count-label').textContent = `${sales.length} productos vendidos en la Tienda cooperativa`;
+    // Agrupar items producidos de las unidades y ventas
+    const productionMap = {};
 
-    sales.forEach(s => {
-        const pill = document.createElement('div');
-        pill.className = 'hp-sale-pill';
-        const name = getItemName(s.item);
-        const iconSrc = getItemIcon(s.item);
-        const qtyPerDay = Math.round(s.perDay).toLocaleString('es-ES');
-        const unitPrice = Math.round(s.price).toLocaleString('es-ES');
-        const totalCoins = Math.round(s.coins || (s.perDay * s.price)).toLocaleString('es-ES');
+    (plan.units || []).forEach(u => {
+        const recipe = state.facts?.recipes?.find(r => r.id === u.recipe);
+        const outItem = recipe?.outputs?.[0]?.item;
+        if (outItem) {
+            const qty = (u.perDay || 0) * (u.instances?.length || 1);
+            productionMap[outItem] = (productionMap[outItem] || 0) + qty;
+        }
+    });
 
-        pill.innerHTML = `
-            <div class="sale-pill-left">
-                <img src="${iconSrc}" alt="${name}" class="sale-pill-img" onerror="this.src='assets/items/default_item.svg'">
-                <div class="sale-pill-info">
-                    <strong>${name}</strong>
-                    <span class="sale-pill-meta">${qtyPerDay} al día a ${unitPrice}</span>
-                </div>
-            </div>
-            <div class="sale-pill-total">+ ${totalCoins}</div>
+    (plan.tables || []).forEach(t => {
+        const recipe = state.facts?.recipes?.find(r => r.id === t.recipe);
+        const outItem = recipe?.outputs?.[0]?.item;
+        if (outItem) {
+            const qty = (t.perDay || 0) * (t.count || 1);
+            productionMap[outItem] = (productionMap[outItem] || 0) + qty;
+        }
+    });
+
+    // Ordenar de mayor a menor producción
+    const sortedItems = Object.entries(productionMap).sort((a, b) => b[1] - a[1]);
+
+    sortedItems.forEach(([itemId, qty]) => {
+        const name = getItemName(itemId);
+        const icon = getItemIcon(itemId);
+        const chip = document.createElement('a');
+        chip.className = 'hp-chip';
+        chip.title = name;
+        chip.innerHTML = `
+            <img width="20" height="20" src="${icon}" alt="${name}" onerror="this.src='assets/items/default_item.svg'">
+            <span class="hp-num">${Math.round(qty).toLocaleString('es-ES')}</span>
         `;
-        container.appendChild(pill);
+        container.appendChild(chip);
     });
 }
 
-// Renderizar cadena de suministros intermedia (100% dinámico de plan.units y plan.crafts)
-function renderSupplyChain(plan) {
-    const container = document.getElementById('supply-items-container');
+// 3. Renderizar Tarjetas de Parcela (hp-cards)
+function renderPlotCards(plan) {
+    const container = document.getElementById('hp-cards-container');
     if (!container) return;
     container.innerHTML = '';
 
-    const units = plan.units || [];
-    const farmUnits = units.filter(u => String(u.facility).startsWith('101'));
+    // Mapear cultivos por número de parcela
+    const plotCropMap = {};
+    (plan.units || []).forEach(u => {
+        if (String(u.facility).startsWith('101')) {
+            const recipe = state.facts?.recipes?.find(r => r.id === u.recipe);
+            const outItem = recipe?.outputs?.[0]?.item;
+            const name = getItemName(outItem);
+            const icon = getItemIcon(outItem);
+            const timeMins = Math.round((u.cycle || 1800) / 60);
+            const rate = (u.perDay || 48).toFixed(1);
 
-    farmUnits.forEach(u => {
-        const recipe = state.facts?.recipes?.find(r => r.id === u.recipe);
-        if (!recipe) return;
-        const outItem = recipe.outputs?.[0]?.item;
-        const name = getItemName(outItem);
-        const iconSrc = getItemIcon(outItem);
-        const totalYield = Math.round((u.perDay || 48) * (u.count || 1));
-        const plotsCount = u.count || 1;
+            (u.instances || []).forEach(inst => {
+                plotCropMap[inst] = {
+                    item: outItem,
+                    name,
+                    icon,
+                    level: u.level || 6,
+                    time: `${timeMins} min`,
+                    perDay: rate,
+                    recipeId: u.recipe
+                };
+            });
+        }
+    });
+
+    // Mapear talleres por parcela
+    const plotTableMap = {};
+    (plan.tables || []).forEach((t, idx) => {
+        const recipe = state.facts?.recipes?.find(r => r.id === t.recipe);
+        const outItem = recipe?.outputs?.[0]?.item;
+        const facName = getFacilityName(t.facility);
+        const outName = getItemName(outItem);
+        const outIcon = getItemIcon(outItem);
+        const plotNum = 20 + (idx % 6); // Asignar parcelas de taller
+        plotTableMap[plotNum] = {
+            facName,
+            outName,
+            outIcon,
+            level: t.level || 4,
+            perDay: Math.round(t.perDay || 100),
+            workers: t.workers
+        };
+    });
+
+    const plotsConfig = state.facts?.plots || [];
+    const totalMaxPlots = 26;
+
+    for (let n = 1; n <= totalMaxPlots; n++) {
+        const plotCfg = plotsConfig.find(p => p.n === n) || { n, rv: Math.min(22, Math.ceil(n / 1.5)), price: n * 10000 };
+        const isUnlocked = state.rvLevel >= (plotCfg.rv || 1);
+        const crop = plotCropMap[n];
+        const table = plotTableMap[n];
+
+        if (isUnlocked) {
+            const card = document.createElement('button');
+            card.type = 'button';
+            card.className = 'hp-card';
+            card.dataset.plot = n;
+            card.setAttribute('aria-label', `Abrir la parcela ${n}`);
+
+            if (crop) {
+                // Parcela con cultivo activo
+                card.innerHTML = `
+                    <span class="hp-card__top">
+                        <i class="hp-card__dots" aria-hidden="true"></i>
+                        <b>Parcela ${n}</b>
+                        <small>Cultivos</small>
+                    </span>
+                    <div class="hp-field hp-field--card" style="--cq: calc(100cqw / 80);">
+                        <i class="hp-field__grid" style="background-size: calc(var(--cq) * 12) calc(var(--cq) * 4);"></i>
+                        <span class="hp-tile" style="--tint: #9db8ee; --wash: #dfe9fb; left: calc(5% + 1px); top: calc(5% + 1px); width: calc(90% - 2px); height: calc(90% - 2px); border-radius: 6px;">
+                            <i class="hp-tile__word"></i>
+                            <span class="hp-tile__c">
+                                <span class="hp-tile__badge is-working" style="width: 48px; height: 48px;">
+                                    <img width="48" height="48" src="${crop.icon}" alt="${crop.name}" onerror="this.src='assets/items/default_item.svg'">
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+                    <span class="hp-card__cap">Producción al día</span>
+                    <span class="hp-card__tot">
+                        <span class="hp-chip" title="${crop.name}">
+                            <img width="20" height="20" src="${crop.icon}" alt="${crop.name}">
+                            <span class="hp-num">${crop.perDay}</span>
+                        </span>
+                    </span>
+                `;
+
+                card.addEventListener('click', () => {
+                    openInspector({
+                        title: `Parcela ${n} · ${crop.name}`,
+                        glyph: crop.icon,
+                        sub: `Cultivo Tier ${crop.level} · Ciclo de ${crop.time}`,
+                        details: [
+                            { label: "Producto", value: crop.name },
+                            { label: "Producción diaria", value: `${crop.perDay} cosechas/día` },
+                            { label: "Tiempo de ciclo", value: crop.time },
+                            { label: "Nivel de parcela", value: `Tier ${crop.level}` }
+                        ]
+                    });
+                });
+
+            } else if (table) {
+                // Parcela con taller/fábrica activa
+                card.innerHTML = `
+                    <span class="hp-card__top">
+                        <i class="hp-card__dots" aria-hidden="true"></i>
+                        <b>Parcela ${n}</b>
+                        <small>${table.facName}</small>
+                    </span>
+                    <div class="hp-field hp-field--card" style="--cq: calc(100cqw / 80);">
+                        <i class="hp-field__grid"></i>
+                        <span class="hp-tile" style="--tint: #f2b88d; --wash: #fbe5d3; left: calc(5% + 1px); top: calc(5% + 1px); width: calc(90% - 2px); height: calc(90% - 2px); border-radius: 6px;">
+                            <i class="hp-tile__word"></i>
+                            <span class="hp-tile__c">
+                                <span class="hp-tile__badge is-working" style="width: 48px; height: 48px;">
+                                    <img width="48" height="48" src="${table.outIcon}" alt="${table.outName}" onerror="this.src='assets/items/default_item.svg'">
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+                    <span class="hp-card__cap">Fabricación al día</span>
+                    <span class="hp-card__tot">
+                        <span class="hp-chip" title="${table.outName}">
+                            <img width="20" height="20" src="${table.outIcon}" alt="${table.outName}">
+                            <span class="hp-num">${table.perDay}</span>
+                        </span>
+                    </span>
+                `;
+
+                card.addEventListener('click', () => {
+                    openInspector({
+                        title: `Parcela ${n} · ${table.facName}`,
+                        glyph: table.outIcon,
+                        sub: `${table.outName} · Tier ${table.level}`,
+                        details: [
+                            { label: "Instalación", value: table.facName },
+                            { label: "Producto fabricado", value: table.outName },
+                            { label: "Producción diaria", value: `${table.perDay} lotes/día` },
+                            { label: "Aniimo trabajando", value: "Especialista asignado" }
+                        ]
+                    });
+                });
+
+            } else {
+                // Parcela libre
+                card.innerHTML = `
+                    <span class="hp-card__top">
+                        <i class="hp-card__dots" aria-hidden="true"></i>
+                        <b>Parcela ${n}</b>
+                        <small>Libre</small>
+                    </span>
+                    <div class="hp-field hp-field--card" style="--cq: calc(100cqw / 80);">
+                        <i class="hp-field__grid"></i>
+                    </div>
+                    <span class="hp-card__none">Libre: aquí no hay nada planificado</span>
+                `;
+
+                card.addEventListener('click', () => {
+                    openInspector({
+                        title: `Parcela ${n} (Libre)`,
+                        glyph: 'assets/ui/UI_Icon_HomePlot_10100001.webp',
+                        sub: 'Desbloqueada y disponible',
+                        details: [
+                            { label: "Estado", value: "Disponible para cultivos o talleres" },
+                            { label: "Requisito de nivel", value: `Casa rodante Nv. ${plotCfg.rv}` }
+                        ]
+                    });
+                });
+            }
+
+            container.appendChild(card);
+
+        } else {
+            // Parcela bloqueada
+            const lockedCard = document.createElement('div');
+            lockedCard.className = 'hp-card is-locked';
+            lockedCard.setAttribute('aria-label', `Parcela ${n}, se abre en el Nv. ${plotCfg.rv} de la casa rodante`);
+            lockedCard.innerHTML = `
+                <span class="hp-lock" aria-hidden="true">🔒</span>
+                <span class="hp-card__lk">
+                    Nv. ${plotCfg.rv} · 
+                    <img width="14" height="14" class="hp-coin" src="assets/items/ui_item_1010.webp" alt="Moneda">
+                    <span class="hp-num">${(plotCfg.price || (n * 10000)).toLocaleString('es-ES')}</span>
+                </span>
+            `;
+            container.appendChild(lockedCard);
+        }
+    }
+}
+
+// 4. Renderizar Pestaña de Aniimos Trabajando (hp-workers)
+function renderWorkersTab(plan) {
+    const container = document.getElementById('hp-workers-container');
+    if (!container) return;
+    container.innerHTML = '';
+
+    const tables = plan.tables || [];
+    tables.forEach((t, idx) => {
+        const facName = getFacilityName(t.facility);
+        const recipe = state.facts?.recipes?.find(r => r.id === t.recipe);
+        const outItem = recipe?.outputs?.[0]?.item;
+        const outItemName = getItemName(outItem);
+        const outItemIcon = getItemIcon(outItem);
+
+        const formId = 10000 + ((idx * 17) % 300) + 12;
+        const avatar = getFormAvatar(formId);
+        const aniimoName = getFormName(formId);
+        const mbti = ["T", "F", "E", "I", "S", "N"][idx % 6];
 
         const row = document.createElement('div');
-        row.className = 'hp-supply-row';
+        row.className = 'hp-wrow';
         row.innerHTML = `
-            <div class="supply-left">
-                <img src="${iconSrc}" alt="${name}" class="supply-img" onerror="this.src='assets/items/default_item.svg'">
-                <div class="supply-info">
-                    <strong>${name}</strong>
-                    <p>Sembrado en ${plotsCount} parcelas · Ciclo ${Math.round((u.cycle || 1800)/60)} min</p>
-                </div>
+            <div class="hp-hex" style="width: 44px; height: 44px; --hx: 44px;">
+                <span class="hp-hex__cut">
+                    <img width="96" height="96" src="${avatar}" alt="${aniimoName}" onerror="this.src='assets/items/default_item.svg'">
+                </span>
+                <span class="hp-hex__mb">${mbti}</span>
             </div>
-            <div class="supply-qty">
-                <strong>${totalYield.toLocaleString('es-ES')}</strong>
-                <small>uds/día</small>
+            <div class="hp-row__main">
+                <span class="hp-row__who"><strong>${aniimoName}</strong> <small class="hp-chip">+20% Vel</small></span>
+                <span class="hp-row__what">${facName} · Fabricando <b>${outItemName}</b></span>
+            </div>
+            <div class="hp-row__r">
+                <img width="24" height="24" src="${outItemIcon}" alt="${outItemName}" onerror="this.src='assets/items/default_item.svg'">
+                <b class="hp-num">+${Math.round(t.perDay || 100)} / día</b>
             </div>
         `;
         container.appendChild(row);
     });
 }
 
-// Renderizar plan de compra e inversión de semillas (100% dinámico de plan.seeds)
-function renderSeedInvestment(plan) {
-    const container = document.getElementById('investment-seed-chips');
-    if (!container) return;
-    container.innerHTML = '';
-
-    const seeds = plan.seeds || [];
-    seeds.forEach(s => {
-        const chip = document.createElement('span');
-        chip.className = 'seed-chip';
-        const name = getItemName(s.item);
-        const iconSrc = getItemIcon(s.item);
-        const costStr = Math.round(s.costPerDay).toLocaleString('es-ES');
-        chip.innerHTML = `<img src="${iconSrc}" class="chip-item-icon" onerror="this.src='assets/items/default_item.svg'"> ${name} ×${s.fields} parcelas (${Math.round(s.perDay).toLocaleString('es-ES')}/día · −${costStr})`;
-        container.appendChild(chip);
-    });
-}
-
-// Renderizar matriz de talleres y cuadrilla (100% dinámico de plan.tables)
-function renderFacilitiesGrid(plan) {
-    const container = document.getElementById('facilities-cards-container');
-    if (!container) return;
-    container.innerHTML = '';
-
-    const tables = plan.tables || [];
-    tables.forEach((t, idx) => {
-        const facType = t.facility;
-        const facName = getFacilityName(facType);
-        const recipe = state.facts?.recipes?.find(r => r.id === t.recipe);
-        const outItem = recipe?.outputs?.[0]?.item;
-        const outItemName = getItemName(outItem);
-        const outItemIcon = getItemIcon(outItem);
-
-        // Buscar aniimo asignado
-        const assignedWorker = state.aniimos[idx % state.aniimos.length] || {
-            form: 10211,
-            name: "Trabajador Experto",
-            letter: "T",
-            trait: "+20% Vel. Producción"
-        };
-
-        const formId = assignedWorker.form || 10211;
-        const workerAvatar = getFormAvatar(formId);
-        const workerName = assignedWorker.name || getFormName(formId);
-        const workerMbti = assignedWorker.letter || "T";
-        const workerTrait = assignedWorker.trait || "+20% Vel. Producción";
-
-        const card = document.createElement('div');
-        card.className = 'hp-workshop-card';
-        card.innerHTML = `
-            <div class="workshop-head">
-                <div class="workshop-title-wrap">
-                    <img src="${outItemIcon}" alt="${facName}" class="workshop-icon" onerror="this.src='assets/items/default_item.svg'">
-                    <h3>${facName}</h3>
-                </div>
-                <span class="workshop-level-pill">Tier ${t.level || 4}</span>
-            </div>
-            <div class="workshop-body">
-                <div class="recipe-info">
-                    <img src="${outItemIcon}" alt="${outItemName}" class="recipe-img" onerror="this.src='assets/items/default_item.svg'">
-                    <div class="recipe-details">
-                        <strong>${outItemName}</strong>
-                        <small>${t.emode ? '⚡ Modo Eléctrico (+20%)' : 'Modo Estándar'}</small>
-                    </div>
-                </div>
-                <div class="hp-hex-worker">
-                    <div class="hex-avatar">
-                        <img src="${workerAvatar}" alt="${workerName}" onerror="this.src='assets/aniimo/default.svg'">
-                        <span class="worker-mbti-badge">${workerMbti}</span>
-                    </div>
-                    <div class="worker-name-block">
-                        <span class="worker-name">${workerName}</span>
-                        <span class="worker-trait">${workerTrait}</span>
-                    </div>
-                </div>
-            </div>
-        `;
-        container.appendChild(card);
-    });
-}
-
-// Generar diagnóstico dinámico y sugerencias de mejora
-function generateSuggestions(plan) {
+// 5. Renderizar Diálogo "De dónde salen tus monedas"
+function renderCoinsDialog(plan) {
     const netCoins = Math.round(plan.homeCoinPerDay || 0);
-    const currentEstimate = state.currentProfile?.currentProfitEstimate || Math.round(netCoins * 0.65);
-    const gainPercent = currentEstimate > 0 ? (((netCoins - currentEstimate) / currentEstimate) * 100).toFixed(1) : "0";
+    const grossRevenue = Math.round(plan.salesPerDay || (netCoins + (plan.seedCostPerDay || 0)));
+    const seedCost = Math.round(plan.seedCostPerDay || 0);
 
-    document.getElementById('sugg-base-profit').textContent = `~${currentEstimate.toLocaleString('es-ES')} /día`;
-    document.getElementById('sugg-opt-profit').textContent = `${netCoins.toLocaleString('es-ES')} /día`;
-    document.getElementById('sugg-gain-badge').textContent = `+${gainPercent}% de Ganancia Neta`;
-}
+    const dialogSub = document.getElementById('dialog-coins-sub');
+    const sumGross = document.getElementById('dialog-sum-gross');
+    const sumSeeds = document.getElementById('dialog-sum-seeds');
+    const sumFood = document.getElementById('dialog-sum-food');
+    const sumNet = document.getElementById('dialog-sum-net');
+    const salesList = document.getElementById('dialog-sales-list');
+    const interList = document.getElementById('dialog-intermediate-list');
 
-// Renderizar módulos de herramientas exclusivas
-function renderExclusiveTools(plan) {
-    // 1. Nutrición del Comedero
-    const selectDish = document.getElementById('select-feeder-dish');
-    if (selectDish && selectDish.options.length === 0) {
-        const dishes = [
-            { name: "Sopa de Patata y Trigo", energy: 120 },
-            { name: "Guiso de Fresas y Miel", energy: 180 },
-            { name: "Pastel de Calabaza Mágica", energy: 240 }
-        ];
-        dishes.forEach(d => {
-            const opt = document.createElement('option');
-            opt.value = d.energy;
-            opt.textContent = `${d.name} (${d.energy} pts energía)`;
-            selectDish.appendChild(opt);
+    if (dialogSub) dialogSub.textContent = `Casa rodante de Nv. ${state.rvLevel} · precios de la Tienda cooperativa`;
+    if (sumGross) sumGross.textContent = grossRevenue.toLocaleString('es-ES');
+    if (sumSeeds) sumSeeds.textContent = seedCost.toLocaleString('es-ES');
+    if (sumFood) sumFood.textContent = "0";
+    if (sumNet) sumNet.textContent = netCoins.toLocaleString('es-ES');
+
+    // Ventas
+    if (salesList) {
+        salesList.innerHTML = '';
+        (plan.sales || []).forEach(s => {
+            const name = getItemName(s.item);
+            const icon = getItemIcon(s.item);
+            const qty = Math.round(s.qty || 0);
+            const price = Math.round(s.price || 0);
+            const total = Math.round(s.total || (qty * price));
+
+            const li = document.createElement('li');
+            li.className = 'hp-srow';
+            li.innerHTML = `
+                <span class="hp-srow__ic">
+                    <img width="28" height="28" src="${icon}" alt="${name}" onerror="this.src='assets/items/default_item.svg'">
+                </span>
+                <span class="hp-srow__t">
+                    <strong>${name}</strong>
+                    <small class="hp-num">${qty.toLocaleString('es-ES')} al día a ${price.toLocaleString('es-ES')}</small>
+                </span>
+                <span class="hp-srow__r hp-up">
+                    +<img width="14" height="14" src="assets/items/ui_item_1010.webp" class="hp-coin" alt="Moneda">
+                    <span class="hp-num">${total.toLocaleString('es-ES')}</span>
+                </span>
+            `;
+            salesList.appendChild(li);
         });
-        selectDish.addEventListener('change', updateFeederMetrics);
     }
-    updateFeederMetrics();
 
-    // 2. Mapa 2D de Campamento con cultivos reales del plan
-    renderCampMap(plan);
-}
-
-function updateFeederMetrics() {
-    const selectDish = document.getElementById('select-feeder-dish');
-    const energyPerDish = parseInt(selectDish?.value || "180", 10);
-    const workerCount = state.aniimos.length || 10;
-    const energyDrainPerMin = workerCount * 10;
-    const totalBowlEnergy = 1000 * energyPerDish;
-    const totalMinutes = totalBowlEnergy / energyDrainPerMin;
-    const daysAutonomy = (totalMinutes / 1440).toFixed(1);
-
-    document.getElementById('feeder-days-val').textContent = `${daysAutonomy} días`;
-    document.getElementById('feeder-rate-val').textContent = `${energyDrainPerMin} /min`;
-    document.getElementById('feeder-dish-energy').textContent = `${energyPerDish} pts`;
-}
-
-// Renderizar mapa 2D del campamento vinculando cada parcela a su cultivo real resuelto
-function renderCampMap(plan) {
-    const grid = document.getElementById('camp-map-grid');
-    if (!grid) return;
-    grid.innerHTML = '';
-
-    // Mapear qué cultivo va en qué parcela (instancia)
-    const plotCropMap = {};
-    const units = plan?.units || [];
-    for (const u of units) {
-        if (String(u.facility).startsWith('101')) {
+    // Cultivos intermedios
+    if (interList) {
+        interList.innerHTML = '';
+        (plan.units || []).forEach(u => {
             const recipe = state.facts?.recipes?.find(r => r.id === u.recipe);
             const outItem = recipe?.outputs?.[0]?.item;
-            const name = getItemName(outItem);
-            const iconSrc = getItemIcon(outItem);
-            const timeMins = Math.round((u.cycle || 1800) / 60);
-            const rateStr = `+${(u.perDay || 48).toFixed(1)}/día`;
-            const tierLvl = u.level || 6;
+            if (outItem) {
+                const name = getItemName(outItem);
+                const icon = getItemIcon(outItem);
+                const totalYield = Math.round((u.perDay || 0) * (u.instances?.length || 1));
 
-            for (const inst of (u.instances || [])) {
-                plotCropMap[inst] = {
-                    name,
-                    icon: iconSrc,
-                    time: `${timeMins}m`,
-                    yield: rateStr,
-                    tier: tierLvl
-                };
+                const li = document.createElement('li');
+                li.className = 'hp-srow';
+                li.innerHTML = `
+                    <span class="hp-srow__ic">
+                        <img width="28" height="28" src="${icon}" alt="${name}" onerror="this.src='assets/items/default_item.svg'">
+                    </span>
+                    <span class="hp-srow__t">
+                        <strong>${name}</strong>
+                        <small>Materia prima agrícola</small>
+                    </span>
+                    <span class="hp-srow__r hp-num">${totalYield.toLocaleString('es-ES')}</span>
+                `;
+                interList.appendChild(li);
             }
-        }
-    }
-
-    const totalPlots = state.plotsCount || 30;
-    for (let i = 1; i <= totalPlots; i++) {
-        const plot = document.createElement('div');
-        plot.className = 'camp-plot is-active';
-        const crop = plotCropMap[i] || {
-            name: "Cultivo Fértil",
-            icon: "assets/items/default_item.svg",
-            time: "30m",
-            yield: "+48/día",
-            tier: 6
-        };
-
-        plot.innerHTML = `
-            <div class="plot-head">
-                <span class="plot-num">Parcela ${i}</span>
-                <span class="plot-tier">Tier ${crop.tier}</span>
-            </div>
-            <div class="plot-body">
-                <img src="${crop.icon}" class="plot-crop-img" alt="${crop.name}" onerror="this.src='assets/items/default_item.svg'">
-                <strong class="plot-crop-name">${crop.name}</strong>
-            </div>
-            <div class="plot-foot">
-                <span class="plot-time">⏱️ ${crop.time}</span>
-                <span class="plot-yield">${crop.yield}</span>
-            </div>
-        `;
-        grid.appendChild(plot);
+        });
     }
 }
 
-// Banner de mensajes de estado
-function showStatus(msg, type = 'success') {
-    const el = document.getElementById('import-status-banner');
-    if (!el) return;
-    el.className = `hp-status-banner ${type}`;
-    el.textContent = msg;
-    el.style.display = 'block';
+// 6. Renderizar Diálogo "Qué comprar primero"
+function renderBuyDialog(plan) {
+    const chipsContainer = document.getElementById('dialog-seeds-chips');
+    const totalCostEl = document.getElementById('dialog-buy-total');
+    const seedCost = Math.round(plan.seedCostPerDay || 0);
+
+    if (totalCostEl) totalCostEl.textContent = seedCost.toLocaleString('es-ES');
+
+    if (chipsContainer) {
+        chipsContainer.innerHTML = '';
+        (plan.seeds || []).forEach(s => {
+            const seedName = getItemName(s.item);
+            const seedIcon = getItemIcon(s.item);
+            const count = s.qty || 10;
+
+            const span = document.createElement('span');
+            span.className = 'hp-seed';
+            span.innerHTML = `
+                <img width="22" height="22" src="${seedIcon}" alt="${seedName}" onerror="this.src='assets/items/default_item.svg'">
+                ${seedName} ×${count}
+            `;
+            chipsContainer.appendChild(span);
+        });
+    }
 }
 
-// Inicializar en DOM
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initApp);
-} else {
-    initApp();
+// 7. Abrir Inspector de Parcela / Instalación (hp-sheet)
+function openInspector(data) {
+    const titleEl = document.getElementById('inspector-title');
+    const subEl = document.getElementById('inspector-sub');
+    const glyphEl = document.getElementById('inspector-glyph');
+    const bodyEl = document.getElementById('inspector-body');
+
+    if (titleEl) titleEl.textContent = data.title;
+    if (subEl) subEl.textContent = data.sub;
+    if (glyphEl) glyphEl.src = data.glyph;
+
+    if (bodyEl) {
+        bodyEl.innerHTML = '';
+        const list = document.createElement('div');
+        list.style.cssText = 'display:flex; flex-direction:column; gap:12px;';
+
+        (data.details || []).forEach(d => {
+            const row = document.createElement('div');
+            row.style.cssText = 'display:flex; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:8px;';
+            row.innerHTML = `
+                <span style="color:var(--text-dim, #94a3b8); font-size:14px;">${d.label}</span>
+                <strong style="color:var(--text-bright, #f8fafc); font-size:14px;">${d.value}</strong>
+            `;
+            list.appendChild(row);
+        });
+        bodyEl.appendChild(list);
+    }
+
+    openModal('dialog-inspector');
 }

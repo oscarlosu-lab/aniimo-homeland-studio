@@ -12,8 +12,19 @@ export class SolverBridge {
         this.isReady = false;
     }
 
-    async init(facts) {
-        this.facts = facts;
+    async init(facts = null) {
+        if (facts) {
+            this.facts = facts;
+        } else if (!this.facts) {
+            try {
+                const url = new URL('../data/planner_facts.json', import.meta.url).href;
+                const res = await fetch(url);
+                this.facts = await res.json();
+            } catch (e) {
+                console.error('[SolverBridge] Error cargando planner_facts.json:', e);
+            }
+        }
+
         if (!this.worker) {
             const workerUrl = new URL('./aniidex-solver-worker.js', import.meta.url).href;
             this.worker = new Worker(workerUrl, { type: 'module' });
@@ -43,8 +54,9 @@ export class SolverBridge {
         }
     }
 
-    async solve(settings) {
-        if (!this.worker) {
+    async solve(settings, facts = null) {
+        if (facts) this.facts = facts;
+        if (!this.facts || !this.worker) {
             await this.init(this.facts);
         }
 

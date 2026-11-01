@@ -1,449 +1,337 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniimo Homeland Studio — Optimizador de Tierra Natal (Aniidex Pro Suite)</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Optimizador de Tierra natal de Aniimo: mejor plan y diseño</title>
+    <meta name="description" content="Optimizador y planificador de Tierra natal de Aniimo: el mejor diseño y más Moneda del hogar al día según tu casa rodante, monedas, parcelas y Aniimo.">
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Optimizador de base y calculadora de Tierra Natal para Aniimo en español. Planifica tu Casa Rodante (RV), maximiza monedas del hogar con programación lineal HiGHS, calcula personalidades MBTI y asigna las mejores criaturas a cada instalación.">
-    <meta name="keywords" content="Aniimo, Aniimo Homeland Studio, Aniidex, Aniimo base calculator, optimizador tierra natal, Aniimo personalidades MBTI, calculadora base Aniimo">
-    <link rel="canonical" href="https://oscarlosu-lab.github.io/aniimo-homeland-studio/">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Design System & Styles -->
-    <link rel="stylesheet" href="style.css?v=20261101-pro-v2">
-    
-    <!-- Vendor Libraries (Decompression & Solver) -->
-    <script src="vendor/fzstd.min.js"></script>
-    <script src="vendor/msgpack.min.js"></script>
+    <!-- Aniidex Combined Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=20261101-aniidex-v3">
 </head>
 <body class="theme-dark">
-    <!-- Header Navigation -->
-    <header class="hp-nav">
-        <div class="hp-nav__brand">
-            <a href="index.html" class="hp-nav__logo">
-                <span class="logo-icon">🏕️</span>
-                <span class="logo-text">an<span class="logo-accent">ii</span>mo homeland studio</span>
-                <span class="logo-badge">Pro Suite</span>
-            </a>
-        </div>
-        <div class="hp-nav__actions">
-            <!-- Pestañas de herramientas exclusivas -->
-            <button type="button" class="hp-nav__link" id="btn-tab-events">🎃 Eventos</button>
-            <button type="button" class="hp-nav__link" id="btn-tab-orders">📋 Pedidos Astra</button>
-            <button type="button" class="hp-nav__link" id="btn-tab-feeder">🍲 Comedero AFK</button>
-            <button type="button" class="hp-nav__link" id="btn-tab-map">🗺️ Mapa 2D</button>
-            
-            <button type="button" class="hp-nav__btn" id="theme-toggle" title="Cambiar tema (Claro / Oscuro)">🌓 Tema</button>
-            <button type="button" class="hp-nav__btn" id="lang-toggle" title="Cambiar idioma (ES / EN)">🌐 ES</button>
-            <a href="https://ko-fi.com/oscarlosu" target="_blank" rel="noopener noreferrer" class="hp-nav__btn btn-kofi" title="Apoyar el proyecto en Ko-fi">☕ Donar</a>
-        </div>
-    </header>
-
-    <main class="hp-main">
-        <!-- Hero Section: Tu Hogar (Las 2 Puertas de Aniidex) -->
-        <section class="hp-yh" id="sec-tu-hogar">
-            <div class="hp-yh__header">
-                <h1>Optimizador de Tierra Natal de Aniimo</h1>
-                <p class="hp-yh__sub">Empieza aquí: importa tus datos de juego para calcular tu plan personalizado o indícalos a mano con matemáticas exactas.</p>
-            </div>
-
-            <div class="hp-yh-doors">
-                <!-- Puerta 1: Importar mi hogar -->
-                <section class="hp-yh-door hp-yh-door--import" aria-labelledby="door-import-title">
-                    <div class="hp-yh-door__head">
-                        <span class="hp-yh-ic">
-                            <img src="assets/ui/UI_Home_IconBuilding.webp" alt="Casa Rodante" width="32" height="32" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%2322c55e%22><path d=%22M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z%22/></svg>'">
-                        </span>
-                        <div>
-                            <h3 id="door-import-title">Importar mi hogar</h3>
-                            <small class="door-desc">Por UID, partida local de PC o archivo JSON</small>
-                        </div>
-                    </div>
-
-                    <form class="hp-yh-door__act" id="form-import-uid" onsubmit="event.preventDefault();">
-                        <label class="hp-field-wrap">
-                            <span class="field-label">Tu UID de jugador</span>
-                            <input type="text" id="input-uid" placeholder="p. ej., 209000449083 o Fadingsoul" value="209000449083" autocomplete="off">
-                        </label>
-                        <button type="button" class="hp-btn-go" id="btn-import-uid">Importar</button>
-                    </form>
-
-                    <!-- Chips de perfiles verificados -->
-                    <div class="hp-chips-registry">
-                        <span class="chips-title">Perfiles Verificados en 1 Clic:</span>
-                        <div class="chips-list">
-                            <button type="button" class="hp-chip-btn active" data-uid="209000449083">⭐ Mi Hogar (Nv. 14)</button>
-                            <button type="button" class="hp-chip-btn" data-uid="207000832726">🏰 Fadingsoul (Nv. 15)</button>
-                            <button type="button" class="hp-chip-btn" data-uid="209000249042">🌾 xferfer (Nv. 14)</button>
-                            <button type="button" class="hp-chip-btn" data-uid="310001059443">⚡ ThePedron (Nv. 16)</button>
-                        </div>
-                    </div>
-
-                    <!-- Lector local de partida (PC) -->
-                    <div class="hp-local-file-row">
-                        <label class="btn-file-picker">
-                            <input type="file" id="local-file-input" accept=".zst,.bin,.json" style="display:none;">
-                            📂 Cargar archivo de guardado local (.zst / .json)
-                        </label>
-                        <span class="file-hint">Detecta automáticamente tus parcelas, talleres y Aniimos capturados.</span>
-                    </div>
-
-                    <div id="import-status-banner" class="hp-status-banner" style="display:none;"></div>
-                </section>
-
-                <!-- Puerta 2: Introducirlo a mano -->
-                <section class="hp-yh-door hp-yh-door--manual" aria-labelledby="door-manual-title">
-                    <div class="hp-yh-door__head">
-                        <span class="hp-yh-ic">
-                            <img src="assets/ui/UI_Home_TopLogo_Hammer.webp" alt="Martillo" width="32" height="32" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23eab308%22><path d=%22M2 19.53l6.32-6.32 1.41 1.41L3.41 21H2v-1.47zM18.8 4.2c.4-.4.4-1.04 0-1.44l-1.56-1.56c-.4-.4-1.04-.4-1.44 0L14.28 2.7l3 3 1.52-1.5z%22/></svg>'">
-                        </span>
-                        <div>
-                            <h3 id="door-manual-title">Introducirlo a mano</h3>
-                            <small class="door-desc">Selecciona tu nivel de Casa Rodante (RV)</small>
-                        </div>
-                    </div>
-
-                    <div class="hp-yh-door__act is-manual">
-                        <label class="hp-field-wrap">
-                            <span class="field-label">Nivel de RV (Casa rodante)</span>
-                            <select id="select-rv-level" class="hp-select"></select>
-                        </label>
-                        <button type="button" class="hp-btn-go is-quiet" id="btn-manual-continue">Calcular Plan</button>
-                    </div>
-                    <p class="manual-hint">Asume que has construido y mejorado todas las instalaciones y parcelas permitidas por tu nivel de RV.</p>
-                </section>
-            </div>
-        </section>
-
-        <!-- Banner de Perfil y Resumen del Hogar (hp-frame) -->
-        <section class="hp-frame" id="sec-active-home" style="display:none;">
-            <div class="hp-frame__head">
-                <div class="hp-frame__title">
-                    <span class="badge-rv" id="active-rv-badge">Casa Rodante Nv. 14</span>
-                    <h2 id="active-player-name">Tu Hogar Optimizado</h2>
+    <!-- Top Navigation Bar -->
+    <nav class="anid-nav" aria-label="Navegación principal">
+        <div class="anid-nav-inner">
+            <div class="anid-nav-left">
+                <a href="#plan" class="site-logo-link">
+                    <span class="site-logo">an<span class="site-logo__ii">ii</span>dex</span>
+                    <span class="site-logo-sub">Tierra natal</span>
+                </a>
+                <div class="anid-nav-links">
+                    <a href="#plan" class="anid-nav-link active">Optimizador</a>
+                    <a href="#guide" class="anid-nav-link">Guía</a>
+                    <a href="https://ko-fi.com/oscarlosu" target="_blank" rel="noopener noreferrer" class="anid-nav-link kofi-link">☕ Donar (Ko-fi)</a>
                 </div>
-                <div class="hp-frame__actions">
-                    <button type="button" class="btn-action-pill btn-suggest" id="btn-open-suggestions">
-                        💡 Sugerencias de Mejora
-                        <span class="pill-sparkle">✨</span>
+            </div>
+            <div class="anid-nav-right">
+                <div class="anid-nav-controls">
+                    <button type="button" class="anid-icon-btn" id="theme-toggle" title="Cambiar tema">🌓</button>
+                    <span class="lang-pill">ES</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="hp-page" id="plan">
+        <div class="hp-container">
+            <!-- Header -->
+            <header class="hp-head">
+                <h1>Optimizador de Tierra natal de Aniimo</h1>
+                <p>La mayor cantidad de Moneda del hogar al día que puede producir tu hogar con el nivel de tu casa rodante, tus monedas, tus parcelas y tus instalaciones: qué plantar, qué fabrica cada máquina, qué Aniimo trabaja dónde y qué comprar primero.</p>
+            </header>
+
+            <!-- Status Banner -->
+            <div id="hp-status-banner" class="hp-status-banner" style="display:none;"></div>
+
+            <!-- Initial Setup: Tu hogar (Two Doors Entry) -->
+            <section class="hp-yh" id="sec-home-setup" aria-labelledby="hp-yh-title">
+                <h2 id="hp-yh-title" class="hp-yh__title">Tu hogar</h2>
+                <div class="hp-yh-doors">
+                    <!-- Door 1: Importar mi hogar -->
+                    <section class="hp-yh-door" aria-labelledby="hp-yh-door-import">
+                        <div class="hp-yh-door__head">
+                            <span class="hp-yh-ic">
+                                <img src="assets/ui/UI_Home_IconBuilding.webp" alt="Casa rodante" width="26" height="26">
+                            </span>
+                            <h3 id="hp-yh-door-import">Importar mi hogar</h3>
+                        </div>
+                        <form class="hp-yh-door__act" id="form-import-uid" onsubmit="return false;">
+                            <label class="hp-fdrop hp-fdrop--input hp-yh-uid">
+                                <small>Tu UID o nombre</small>
+                                <input id="input-uid" value="209000449083" type="text" autocomplete="off" placeholder="p. ej., 202000123456 o Trotamundos">
+                            </label>
+                            <button type="button" id="btn-import-uid" class="hp-yh-go">Importar</button>
+                        </form>
+                        <!-- Quick verified profiles chips -->
+                        <div class="hp-yh-chips" id="quick-profiles-chips">
+                            <button type="button" class="hp-chip active" data-uid="209000449083">Mi Hogar (209000449083)</button>
+                            <button type="button" class="hp-chip" data-uid="207000832726">Fadingsoul (Nv. 15)</button>
+                            <button type="button" class="hp-chip" data-uid="209000249042">xferfer (Nv. 14)</button>
+                            <button type="button" class="hp-chip" data-uid="310001059443">ThePedron (Nv. 16)</button>
+                        </div>
+                    </section>
+
+                    <!-- Door 2: Introducirlo a mano -->
+                    <section class="hp-yh-door" aria-labelledby="hp-yh-door-manual">
+                        <div class="hp-yh-door__head">
+                            <span class="hp-yh-ic">
+                                <img src="assets/ui/UI_Home_TopLogo_Hammer.webp" alt="Martillo" width="26" height="26">
+                            </span>
+                            <h3 id="hp-yh-door-manual">Introducirlo a mano</h3>
+                        </div>
+                        <div class="hp-yh-door__act">
+                            <label class="hp-fdrop hp-fdrop--input">
+                                <small>Nivel de la casa rodante</small>
+                                <select id="select-rv-level" class="hp-select"></select>
+                            </label>
+                            <label class="hp-fdrop hp-fdrop--input">
+                                <small>Objetivo</small>
+                                <select id="select-goal" class="hp-select">
+                                    <option value="coins" selected>Generar lo máximo posible</option>
+                                    <option value="level">Subir de nivel cuanto antes</option>
+                                </select>
+                            </label>
+                            <button type="button" id="btn-show-plan" class="hp-yh-go">Ver mi plan</button>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <!-- Active Plan Section (Matches Aniidex Solved State) -->
+            <section class="hp-plan-section" id="sec-active-plan" style="display:none;">
+                <!-- Plan Bar with Back Button -->
+                <div class="hp-planbar">
+                    <button type="button" class="hp-yh-back" id="btn-back-home">
+                        <span aria-hidden="true">‹</span>Tu hogar
                     </button>
-                    <button type="button" class="btn-action-pill" id="btn-re-optimize">🔄 Re-calcular</button>
                 </div>
-            </div>
 
-            <div class="hp-strip">
-                <div class="hp-strip__item">
-                    <span class="hp-strip__lab">Parcelas de Cultivo:</span>
-                    <strong class="hp-strip__val" id="active-plots-count">30 parcelas</strong>
-                </div>
-                <span class="hp-strip__sep"></span>
-                <div class="hp-strip__item">
-                    <span class="hp-strip__lab">Instalaciones:</span>
-                    <strong class="hp-strip__val" id="active-facs-count">13 talleres</strong>
-                </div>
-                <span class="hp-strip__sep"></span>
-                <div class="hp-strip__item">
-                    <span class="hp-strip__lab">Cuadrilla Aniimo:</span>
-                    <strong class="hp-strip__val" id="active-aniimo-count">10 trabajadores</strong>
-                </div>
-                <span class="hp-strip__sep"></span>
-                <div class="hp-strip__item">
-                    <span class="hp-strip__lab">Sinergias MBTI:</span>
-                    <strong class="hp-strip__val" id="active-mbti-bonus">+20% Activo</strong>
-                </div>
-            </div>
-        </section>
+                <!-- Plan View Container -->
+                <div class="hp-planview" aria-busy="false">
+                    <!-- Overview Bar (KPI buttons) -->
+                    <div class="hp-overview">
+                        <button type="button" class="hp-ov hp-ov--level" id="ov-level-btn" title="Nivel de casa rodante">
+                            <span class="hp-ov__ic hp-ov__ic--dark">
+                                <img width="22" height="22" src="assets/ui/UI_Home_IconBuilding.webp" alt="Casa rodante">
+                            </span>
+                            <span class="hp-ov__t">
+                                <b class="hp-num" id="ov-rv-level">Nv. 14</b>
+                                <small id="ov-player-name">Casa rodante</small>
+                            </span>
+                            <span class="hp-ov__go" aria-hidden="true">›</span>
+                        </button>
 
-        <!-- PANEL DE SUGERENCIAS DE MEJORA (Diferencia Real vs Óptimo) -->
-        <section class="hp-suggestions-card" id="sec-suggestions" style="display:none;">
-            <div class="suggestions-header">
-                <div class="sugg-title-wrap">
-                    <span class="sugg-badge">Análisis Inteligente de Base</span>
-                    <h3>Diagnóstico de tu Campamento & Oportunidades de Crecimiento</h3>
-                </div>
-                <button type="button" class="btn-close-sugg" id="btn-close-sugg" aria-label="Cerrar sugerencias">✕</button>
-            </div>
+                        <button type="button" class="hp-ov" id="ov-coins-btn" title="Abrir de dónde salen tus monedas">
+                            <span class="hp-ov__ic">
+                                <img width="24" height="24" src="assets/items/ui_item_1010.webp" class="hp-coin" alt="Moneda del hogar">
+                            </span>
+                            <span class="hp-ov__t">
+                                <b class="hp-num" id="ov-coins-num">2.206.758</b>
+                                <small id="ov-coins-sub">al día, lo máximo posible</small>
+                            </span>
+                            <span class="hp-ov__go" aria-hidden="true">›</span>
+                        </button>
 
-            <div class="suggestions-grid">
-                <!-- Tarjeta 1: Incremento de Ganancias -->
-                <div class="sugg-card sugg-profit">
-                    <div class="sugg-icon">📈</div>
-                    <div class="sugg-body">
-                        <h4>Impacto Financiero de la Optimización</h4>
-                        <p class="sugg-desc">Al reordenar tus talleres y cultivos según la programación lineal:</p>
-                        <div class="profit-comparison-row">
-                            <div class="profit-stat old">
-                                <span>Producción Base</span>
-                                <b id="sugg-base-profit">~850.000 /día</b>
+                        <button type="button" class="hp-ov" id="ov-aniimo-btn" title="Mostrar los Aniimo de este plan">
+                            <span class="hp-busts" id="ov-aniimo-busts">
+                                <!-- Hex portrait heads inserted dynamically -->
+                            </span>
+                            <span class="hp-ov__t">
+                                <b class="hp-num" id="ov-aniimo-count">28 de 28</b>
+                                <small>Aniimo trabajando<span class="hp-ov__chip">Mejores formas capturables</span></small>
+                            </span>
+                            <span class="hp-ov__go" aria-hidden="true">›</span>
+                        </button>
+
+                        <button type="button" class="hp-ov" id="ov-buy-btn" title="Abrir qué comprar primero">
+                            <span class="hp-ov__ic">
+                                <img width="22" height="22" src="assets/ui/UI_Home_TopLogo_Hammer.webp" alt="Martillo">
+                            </span>
+                            <span class="hp-ov__t">
+                                <b class="hp-num" id="ov-seeds-cost">− 22.914</b>
+                                <small>Semillas e inversión inicial</small>
+                            </span>
+                            <span class="hp-ov__go" aria-hidden="true">›</span>
+                        </button>
+                    </div>
+
+                    <!-- Main Facility Management Frame -->
+                    <section class="hp-frame" aria-labelledby="hp-frame-title">
+                        <div class="hp-frame__head">
+                            <div class="hp-frame__title">
+                                <h2 id="hp-frame-title">Gestión de instalaciones</h2>
                             </div>
-                            <span class="arrow-gain">➔</span>
-                            <div class="profit-stat new">
-                                <span>Producción Óptima</span>
-                                <b id="sugg-opt-profit">1.579.529 /día</b>
+                            <div class="hp-seg" role="tablist" aria-label="Mostrar">
+                                <button type="button" role="tab" class="is-on" id="tab-plots" aria-selected="true">Parcelas</button>
+                                <button type="button" role="tab" class="" id="tab-aniimo" aria-selected="false">Aniimo</button>
                             </div>
                         </div>
-                        <span class="gain-badge" id="sugg-gain-badge">+85.8% de Ganancia Neta</span>
-                    </div>
-                </div>
 
-                <!-- Tarjeta 2: Instalaciones Cuello de Botella -->
-                <div class="sugg-card sugg-upgrades">
-                    <div class="sugg-icon">🔨</div>
-                    <div class="sugg-body">
-                        <h4>Mejoras Prioritarias de Talleres</h4>
-                        <ul class="sugg-list" id="sugg-upgrades-list">
-                            <li><strong>Molino Floral:</strong> Subir a Tier 4 para desbloquear <em>Harina de Trigo Prémium</em>.</li>
-                            <li><strong>Cocina de Garra:</strong> Subir a Tier 4 para procesar <em>Pan Crujiente</em> con mayor margen.</li>
-                        </ul>
-                    </div>
-                </div>
+                        <!-- Tab 1: Parcelas View -->
+                        <div id="view-plots">
+                            <!-- Daily Production Strip -->
+                            <div class="hp-strip hp-strip--all">
+                                <span class="hp-strip__lab">Producción diaria de todas las parcelas</span>
+                                <div class="hp-strip__row" id="strip-crops-row">
+                                    <!-- Dynamic crop chips -->
+                                </div>
+                            </div>
 
-                <!-- Tarjeta 3: Optimización MBTI de Criaturas -->
-                <div class="sugg-card sugg-mbti">
-                    <div class="sugg-icon">🐾</div>
-                    <div class="sugg-body">
-                        <h4>Sinergias de Cuadrilla Aniimo (+20% vel)</h4>
-                        <ul class="sugg-list" id="sugg-mbti-list">
-                            <li>Asigna criaturas con personalidad <strong>T</strong> (Tenaz) en el Molino Floral para +20% de velocidad.</li>
-                            <li>Asigna criaturas con rasgo <strong>E</strong> (Enérgico) en el Campo de Cultivos para acelerar las cosechas.</li>
-                        </ul>
-                    </div>
-                </div>
+                            <!-- Plot Cards Grid -->
+                            <div class="hp-cards" role="group" aria-label="Parcelas" id="hp-cards-container">
+                                <!-- Dynamically generated hp-card elements -->
+                            </div>
+                        </div>
 
-                <!-- Tarjeta 4: Ajuste de Siembra en Parcelas -->
-                <div class="sugg-card sugg-crops">
-                    <div class="sugg-icon">🌱</div>
-                    <div class="sugg-body">
-                        <h4>Reajuste de Rotación de Cultivos</h4>
-                        <p class="sugg-desc" id="sugg-crops-desc">Dedica 12 parcelas a Fresas, 7 a Algodón y 7 a Manzanas para abastecer directamente la línea de artesanía y secado sin acumular excedentes.</p>
-                    </div>
+                        <!-- Tab 2: Aniimo View -->
+                        <div id="view-aniimo" style="display:none;">
+                            <div class="hp-workers" id="hp-workers-container">
+                                <!-- Dynamically generated working Aniimo rows -->
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- KPI Cards Principales (Exacto a Aniidex) -->
-        <section class="hp-kpis" id="sec-kpis" style="display:none;">
-            <!-- KPI 1: Monedas del Hogar / Día -->
-            <div class="hp-kpi-card hp-kpi-coins" id="kpi-card-ledger" title="Ver desglose detallado de De dónde salen tus monedas">
-                <span class="kpi-tag">Beneficio Neto</span>
-                <div class="kpi-val-row">
-                    <span class="coin-icon">🪙</span>
-                    <strong class="kpi-num" id="kpi-net-coins">-</strong>
-                </div>
-                <span class="kpi-sub">Monedas del hogar / día</span>
-                <span class="kpi-hint-link">Ver desglose contable ➔</span>
-            </div>
-
-            <!-- KPI 2: Semillas Invertidas / Día -->
-            <div class="hp-kpi-card hp-kpi-seeds" id="kpi-card-seeds" title="Ver plan de siembra e inversión">
-                <span class="kpi-tag">Gasto Diario</span>
-                <div class="kpi-val-row">
-                    <span class="coin-icon">🌱</span>
-                    <strong class="kpi-num negative" id="kpi-seed-cost">-</strong>
-                </div>
-                <span class="kpi-sub">Semillas invertidas / día</span>
-                <span class="kpi-hint-link">Plan de siembra ➔</span>
-            </div>
-
-            <!-- KPI 3: Rendimiento Bruto / Día -->
-            <div class="hp-kpi-card hp-kpi-gross">
-                <span class="kpi-tag">Ventas Brutas</span>
-                <div class="kpi-val-row">
-                    <span class="coin-icon">📦</span>
-                    <strong class="kpi-num" id="kpi-gross-sales">-</strong>
-                </div>
-                <span class="kpi-sub">Rendimiento bruto / día</span>
-            </div>
-
-            <!-- KPI 4: Tiempo para Subir de Nivel -->
-            <div class="hp-kpi-card hp-kpi-time">
-                <span class="kpi-tag">Meta de Casa Rodante</span>
-                <div class="kpi-val-row">
-                    <span class="coin-icon">⏱️</span>
-                    <strong class="kpi-num" id="kpi-level-time">-</strong>
-                </div>
-                <span class="kpi-sub" id="kpi-target-rv-label">Tiempo estimado para Nv. 15</span>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 1: DE DÓNDE SALEN TUS MONEDAS (BALANCE CONTABLE ANIIDEX) -->
-        <section class="hp-section hp-financial-section" id="sec-financial-ledger" style="display:none;">
-            <div class="hp-section__head">
-                <div>
-                    <h2>De dónde salen tus monedas</h2>
-                    <p class="hp-section__sub" id="ledger-sub-title">Precios oficiales de compraventa en la Tienda Cooperativa</p>
-                </div>
-            </div>
-
-            <!-- Balance Resumen (hp-sum) -->
-            <div class="hp-sum">
-                <div class="hp-sum__row positive">
-                    <div class="hp-sum__left">
-                        <span class="sum-icon">🏪</span>
-                        <span id="sales-count-label">Productos vendidos en la Tienda cooperativa</span>
-                    </div>
-                    <strong class="hp-sum__val positive" id="ledger-gross-val">+ 0</strong>
-                </div>
-
-                <div class="hp-sum__row negative">
-                    <div class="hp-sum__left">
-                        <span class="sum-icon">🌱</span>
-                        <span>Semillas compradas en la tienda</span>
-                    </div>
-                    <strong class="hp-sum__val negative" id="ledger-seeds-val">− 0</strong>
-                </div>
-
-                <div class="hp-sum__row negative">
-                    <div class="hp-sum__left">
-                        <span class="sum-icon">🍲</span>
-                        <span>Comida comprada para los Aniimo</span>
-                    </div>
-                    <strong class="hp-sum__val negative" id="ledger-food-val">− 0</strong>
-                </div>
-
-                <div class="hp-sum__total">
-                    <span class="total-title">Beneficio Neto Diario:</span>
-                    <strong class="total-val" id="ledger-net-val">0 Monedas/día</strong>
-                </div>
-            </div>
-
-            <!-- Ventas en la Tienda Cooperativa al Día -->
-            <div class="hp-subblock">
-                <h3 class="hp-subblock__title">Ventas en la Tienda cooperativa <small>al día</small></h3>
-                <div class="hp-sales-grid" id="sales-items-container"></div>
-            </div>
-
-            <!-- Lo que producen las parcelas por el camino al día -->
-            <div class="hp-subblock">
-                <h3 class="hp-subblock__title">Lo que producen las parcelas por el camino <small>al día</small></h3>
-                <p class="hp-subblock__hint">Cadena de suministros intermedia: qué siembras y a qué taller abastece.</p>
-                <div class="hp-supply-grid" id="supply-items-container"></div>
-            </div>
-
-            <!-- Qué comprar primero (Plan de inversión) -->
-            <div class="hp-subblock">
-                <h3 class="hp-subblock__title">Qué comprar primero</h3>
-                <div class="hp-buy-box">
-                    <div class="hp-buy-chips" id="investment-seed-chips"></div>
-                    <p class="hp-buy-note">
-                        Inversión inicial para la primera siembra: <strong>0 monedas</strong> (autofinanciado con tus primeras cosechas).
-                        Posteriormente, el gasto diario recurrente de semillas queda automáticamente deducido de tu beneficio neto.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 2: TUS INSTALACIONES & CUADRILLA ANIIMO -->
-        <section class="hp-section hp-facilities-section" id="sec-facilities" style="display:none;">
-            <div class="hp-section__head">
-                <div>
-                    <h2>Tus instalaciones y cuadrilla</h2>
-                    <p class="hp-section__sub">Asignación matemática óptima de parcelas, talleres y criaturas con afinidad MBTI.</p>
-                </div>
-            </div>
-
-            <div class="hp-workshops-grid" id="facilities-cards-container"></div>
-        </section>
-
-        <!-- SECCIÓN 3: PANELES DE HERRAMIENTAS EXCLUSIVAS -->
-        
-        <!-- Tab 3.1: Eventos de Temporada -->
-        <section class="hp-section hp-tool-section" id="sec-events-panel" style="display:none;">
-            <div class="hp-section__head">
-                <div>
-                    <h2>🎃 Eventos Estacionales Activos</h2>
-                    <p class="hp-section__sub">Datamine de recetas exclusivas de temporada con bonificación de +25% de eficiencia.</p>
-                </div>
-                <label class="toggle-switch">
-                    <input type="checkbox" id="check-season-active" checked>
-                    <span class="switch-slider"></span>
-                    <span class="switch-label">Temporada Activa</span>
-                </label>
-            </div>
-
-            <div class="events-content-box">
-                <div class="event-banner halloween">
-                    <div class="event-banner__info">
-                        <h3>Noche Mágica y Maravillosa (Halloween)</h3>
-                        <p>Planta Semillas de Calabaza Mágica y Frutalinterna del Recuerdo para elaborar Cristales de Azúcar y obtener la máxima rentabilidad de temporada.</p>
-                    </div>
-                    <span class="event-bonus-pill">+25% Bonus de Monedas</span>
-                </div>
-                <div class="event-recipes-grid" id="event-recipes-container"></div>
-            </div>
-        </section>
-
-        <!-- Tab 3.2: Pedidos Comerciales de Astra -->
-        <section class="hp-section hp-tool-section" id="sec-orders-panel" style="display:none;">
-            <div class="hp-section__head">
-                <div>
-                    <h2>📋 Pedidos Comerciales de los 8 Clientes de Astra</h2>
-                    <p class="hp-section__sub">327 contratos oficiales. Cumple los pedidos más urgentes y rentables antes de vender a granel.</p>
-                </div>
-            </div>
-            <div class="orders-container-box" id="commercial-orders-container"></div>
-        </section>
-
-        <!-- Tab 3.3: Nutrición & Autonomía AFK del Comedero -->
-        <section class="hp-section hp-tool-section" id="sec-feeder-panel" style="display:none;">
-            <div class="hp-section__head">
-                <div>
-                    <h2>🍲 Autonomía del Comedero y Nutrición AFK</h2>
-                    <p class="hp-section__sub">Capacidad del comedero: 1.000 raciones. Consumo base: 10 de energía/minuto por trabajador activo.</p>
-                </div>
-            </div>
-            <div class="feeder-calculator-box">
-                <div class="feeder-controls">
-                    <label class="hp-field-wrap">
-                        <span class="field-label">Plato a cocinar en la Olla</span>
-                        <select id="select-feeder-dish" class="hp-select"></select>
-                    </label>
-                </div>
-                <div class="feeder-metrics-grid">
-                    <div class="feeder-metric-card">
-                        <span>Autonomía AFK</span>
-                        <strong class="metric-big" id="feeder-days-val">-</strong>
-                        <small>Días sin recargar el comedero</small>
-                    </div>
-                    <div class="feeder-metric-card">
-                        <span>Consumo de la Cuadrilla</span>
-                        <strong class="metric-big" id="feeder-rate-val">-</strong>
-                        <small>Energía consumida / minuto</small>
-                    </div>
-                    <div class="feeder-metric-card">
-                        <span>Energía por Ración</span>
-                        <strong class="metric-big" id="feeder-dish-energy">-</strong>
-                        <small>Puntos de saciedad</small>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tab 3.4: Mapa 2D de Campamento -->
-        <section class="hp-section hp-tool-section" id="sec-map-panel" style="display:none;">
-            <div class="hp-section__head">
-                <div>
-                    <h2>🗺️ Distribución Espacial del Hogar (Mapa 2D)</h2>
-                    <p class="hp-section__sub">Visualización interactiva de parcelas de cultivo, talleres y almacenes según distancia de acarreo.</p>
-                </div>
-            </div>
-            <div class="camp-map-canvas-wrap">
-                <div class="camp-map-grid" id="camp-map-grid"></div>
-            </div>
-        </section>
+            <!-- Official Guide -->
+            <section class="hp-guide" id="guide">
+                <h2>Cómo usar el planificador de Tierra natal</h2>
+                <ol class="hp-guide__steps">
+                    <li>En <b>Importar mi hogar</b>, escribe tu UID o tu nombre en el juego y el planificador rellena el nivel de tu casa rodante, tus parcelas, tus instalaciones y tus Aniimo. ¿Sin UID? Elige <b>Introducirlo a mano</b> y rellénalos tú.</li>
+                    <li>Escribe cuánta <b>Moneda del hogar</b> tienes y elige un objetivo: <b>Máx. de Moneda del hogar</b> genera lo máximo posible al día y <b>Siguiente nivel</b> te lleva cuanto antes al próximo nivel de la casa rodante.</li>
+                    <li>Marca las notas de receta que tienes y luego pulsa <b>Ver mi plan</b>.</li>
+                    <li>Toca una parcela para abrirla y ver lo que produce, o un Aniimo para marcar la personalidad que tiene el tuyo.</li>
+                </ol>
+            </section>
+        </div>
     </main>
 
+    <!-- Dialog 1: De dónde salen tus monedas (hp-sheet) -->
+    <dialog class="hp-sheet" id="dialog-coins" aria-label="De dónde salen tus monedas">
+        <div class="hp-sheet__head">
+            <div>
+                <h2>De dónde salen tus monedas</h2>
+                <p id="dialog-coins-sub">Casa rodante · precios de la Tienda cooperativa</p>
+            </div>
+            <button type="button" class="hp-sheet__close" id="btn-close-coins" aria-label="Cerrar">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+            </button>
+        </div>
+        <div class="hp-sum">
+            <div>
+                <span id="sales-count-label">Productos vendidos en la Tienda cooperativa</span>
+                <b class="hp-num">
+                    <img width="15" height="15" alt="Moneda" class="hp-coin" src="assets/items/ui_item_1010.webp">
+                    <span id="dialog-sum-gross">0</span>
+                </b>
+            </div>
+            <div>
+                <span>Semillas</span>
+                <b class="hp-num">
+                    − <img width="15" height="15" alt="Moneda" class="hp-coin" src="assets/items/ui_item_1010.webp">
+                    <span id="dialog-sum-seeds">0</span>
+                </b>
+            </div>
+            <div>
+                <span>Comida comprada para los Aniimo</span>
+                <b class="hp-num">
+                    − <img width="15" height="15" alt="Moneda" class="hp-coin" src="assets/items/ui_item_1010.webp">
+                    <span id="dialog-sum-food">0</span>
+                </b>
+            </div>
+            <div class="hp-sum__total">
+                <span>Al día</span>
+                <b class="hp-num">
+                    <img width="16" height="16" alt="Moneda" class="hp-coin" src="assets/items/ui_item_1010.webp">
+                    <span id="dialog-sum-net">0</span>
+                </b>
+            </div>
+        </div>
+        <h3 class="hp-sheet__h">Ventas en la Tienda cooperativa <small>al día</small></h3>
+        <ul class="hp-srows" id="dialog-sales-list">
+            <!-- Dynamic sales rows -->
+        </ul>
+        <h3 class="hp-sheet__h">Lo que producen las parcelas por el camino <small>al día</small></h3>
+        <ul class="hp-srows" id="dialog-intermediate-list">
+            <!-- Dynamic intermediate crops rows -->
+        </ul>
+    </dialog>
+
+    <!-- Dialog 2: Qué comprar primero (hp-sheet) -->
+    <dialog class="hp-sheet" id="dialog-buy" aria-label="Qué comprar primero">
+        <div class="hp-sheet__head">
+            <div>
+                <h2>Qué comprar primero</h2>
+                <p id="dialog-buy-sub">Semillas e instalaciones prioritarias para el plan.</p>
+            </div>
+            <button type="button" class="hp-sheet__close" id="btn-close-buy" aria-label="Cerrar">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+            </button>
+        </div>
+        <div class="hp-buy__row hp-buy__seeds">
+            <span class="hp-disc">
+                <img width="20" height="20" alt="Cultivos" src="assets/ui/UI_Icon_HomePlot_10100001.webp">
+            </span>
+            <div class="hp-buy__t">
+                <b>Semillas para la primera siembra</b>
+                <span class="hp-seeds" id="dialog-seeds-chips">
+                    <!-- Dynamic seed chips -->
+                </span>
+                <small id="dialog-seeds-note">Gasto inicial descontado del beneficio neto diario.</small>
+            </div>
+            <b class="hp-buy__cost hp-num">
+                <img width="14" height="14" alt="Moneda" class="hp-coin" src="assets/items/ui_item_1010.webp">
+                <span id="dialog-buy-total">0</span>
+            </b>
+        </div>
+    </dialog>
+
+    <!-- Dialog 3: Inspector de Parcela / Instalación (hp-sheet) -->
+    <dialog class="hp-sheet" id="dialog-inspector" aria-label="Detalles de instalación">
+        <div class="hp-sheet__head">
+            <div style="display:flex; align-items:center; gap:12px;">
+                <img id="inspector-glyph" src="assets/items/default_item.svg" width="32" height="32" style="border-radius:6px;">
+                <div>
+                    <h2 id="inspector-title">Detalles de instalación</h2>
+                    <p id="inspector-sub">Información técnica y producción del plan.</p>
+                </div>
+            </div>
+            <button type="button" class="hp-sheet__close" id="btn-close-inspector" aria-label="Cerrar">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+            </button>
+        </div>
+        <div class="hp-panel__body" id="inspector-body" style="padding:16px 20px;">
+            <!-- Populated dynamically -->
+        </div>
+    </dialog>
+
     <!-- Footer -->
-    <footer class="hp-footer">
-        <div class="footer-wrap">
-            <p><strong>Aniimo Homeland Studio</strong> · Optimizador de Base y Tierra Natal para Aniimo.</p>
-            <p class="footer-disclaimer">Herramienta independiente de código abierto creada para la comunidad. Sin anuncios ni rastreadores.</p>
-            <p class="footer-copy">© 2026 Aniimo Homeland Studio · Compatible con Aniidex</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="brand-section">
+                    <span class="site-logo">an<span class="site-logo__ii">ii</span>dex</span>
+                    <p class="brand-desc">Optimizador y planificador de Tierra natal de Aniimo: motor matemático HiGHS Simplex MIP, cálculo exacto de monedas por día y distribución espacial.</p>
+                    <a href="https://ko-fi.com/oscarlosu" target="_blank" rel="noopener noreferrer" class="kofi-btn">
+                        <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi" width="20" height="20">
+                        Apoyar el proyecto en Ko-fi
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Aniidex Homeland Suite · Software Libre y de Código Abierto.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Core App Module -->
-    <script type="module" src="app.js?v=20261101-pro-v2"></script>
+    <!-- App JavaScript Orchestrator -->
+    <script type="module" src="app.js?v=20261101-aniidex-v3"></script>
 </body>
 </html>
