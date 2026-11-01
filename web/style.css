@@ -1358,6 +1358,21 @@ body {
     font-size: 1.4rem;
 }
 
+.plot-crop-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+}
+
+.chip-item-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 4px;
+    object-fit: contain;
+}
+
 .plot-crop-name {
     font-size: 0.76rem;
     font-weight: 700;

@@ -1,12 +1,12 @@
 /**
  * Aniimo Homeland Studio — Pro Suite Frontend Orchestrator
- * Arquitectura Clean Slate: réplica y superación de Aniidex con motor HiGHS MIP,
+ * Arquitectura Clean Slate: Motor matemático HiGHS MIP nativo de Aniidex,
  * importación instantánea de perfiles, sugerencias inteligentes y datamine de eventos.
  */
 
 import { solverBridge } from './core/solver-bridge.js';
 
-// Estado global de la aplicación
+// Estado reactivo global de la aplicación
 const state = {
     facts: null,
     currentProfile: null,
@@ -14,7 +14,8 @@ const state = {
     plotsCount: 30,
     facilities: {},
     aniimos: [],
-    seasonActive: true,
+    seasonActive: false,
+    goal: 'coins',
     lastPlan: null,
     isDarkMode: true,
     currentLocale: 'es'
@@ -28,57 +29,57 @@ const VERIFIED_PROFILES = {
         rv: 14,
         plots: 30,
         facilities: {
-            "1010000": 30, "1020000": 1, "1030000": 1, "1040000": 1,
-            "1050000": 1, "1060000": 1, "1070000": 1, "1080000": 1,
-            "1090000": 1, "1100000": 1, "1110000": 1, "1120000": 1, "1130000": 1
+            "1010000": [6], "1020000": [4], "1030000": [4], "1040000": [4],
+            "1050000": [4], "1060000": [4], "1070000": [4], "1080000": [4],
+            "1090000": [4], "1100000": [4], "1110000": [4], "1120000": [4], "1130000": [4]
         },
         aniimo: [
-            { form: 1021100, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" },
-            { form: 1045100, facility: "1020000", letter: "T", name: "Molino Tenaz", trait: "+20% Vel. Molienda" },
-            { form: 1035100, facility: "1030000", letter: "J", name: "Artesano Sensato", trait: "+20% Vel. Artesanía" },
-            { form: 1004200, facility: "1040000", letter: "N", name: "Cocinero Ágil", trait: "+20% Vel. Cocina" },
-            { form: 1047100, facility: "1050000", letter: "E", name: "Secador Enérgico", trait: "+20% Vel. Secado" },
-            { form: 1002100, facility: "1060000", letter: "S", name: "Chef Práctico", trait: "+20% Vel. Guisos" },
-            { form: 1018100, facility: "1070000", letter: "J", name: "Perfumiere Sensato", trait: "+20% Vel. Alquimia" },
-            { form: 1002200, facility: "1080000", letter: "P", name: "Tabernero Juguetón", trait: "+20% Vel. Bebidas" },
-            { form: 1001200, facility: "1090000", letter: "T", name: "Fundidor Tenaz", trait: "+20% Vel. Asado" },
-            { form: 1002400, facility: "1100000", letter: "S", name: "Encurtidor Práctico", trait: "+20% Vel. Encurtido" }
+            { form: 10211, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" },
+            { form: 10451, facility: "1020000", letter: "T", name: "Molino Tenaz", trait: "+20% Vel. Molienda" },
+            { form: 10351, facility: "1030000", letter: "J", name: "Artesano Sensato", trait: "+20% Vel. Artesanía" },
+            { form: 10042, facility: "1040000", letter: "N", name: "Cocinero Ágil", trait: "+20% Vel. Cocina" },
+            { form: 10471, facility: "1050000", letter: "E", name: "Secador Enérgico", trait: "+20% Vel. Secado" },
+            { form: 10021, facility: "1060000", letter: "S", name: "Chef Práctico", trait: "+20% Vel. Guisos" },
+            { form: 10181, facility: "1070000", letter: "J", name: "Perfumiere Sensato", trait: "+20% Vel. Alquimia" },
+            { form: 10022, facility: "1080000", letter: "P", name: "Tabernero Juguetón", trait: "+20% Vel. Bebidas" },
+            { form: 10012, facility: "1090000", letter: "T", name: "Fundidor Tenaz", trait: "+20% Vel. Asado" },
+            { form: 10024, facility: "1100000", letter: "S", name: "Encurtidor Práctico", trait: "+20% Vel. Encurtido" }
         ],
-        currentProfitEstimate: 850000
+        currentProfitEstimate: 1450000
     },
     "207000832726": {
         uid: "207000832726",
         name: "Fadingsoul",
         rv: 15,
         plots: 30,
-        facilities: { "1010000": 30, "1020000": 1, "1030000": 1, "1040000": 1, "1050000": 1, "1060000": 1 },
+        facilities: { "1010000": [6], "1020000": [4], "1030000": [4], "1040000": [4], "1050000": [4] },
         aniimo: [
-            { form: 1021100, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" },
-            { form: 1045100, facility: "1020000", letter: "T", name: "Molino Tenaz", trait: "+20% Vel. Molienda" }
+            { form: 10211, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" },
+            { form: 10451, facility: "1020000", letter: "T", name: "Molino Tenaz", trait: "+20% Vel. Molienda" }
         ],
-        currentProfitEstimate: 920000
+        currentProfitEstimate: 1620000
     },
     "209000249042": {
         uid: "209000249042",
         name: "xferfer",
         rv: 14,
         plots: 30,
-        facilities: { "1010000": 30, "1020000": 1, "1030000": 1, "1040000": 1, "1050000": 1, "1060000": 1 },
+        facilities: { "1010000": [6], "1020000": [4], "1030000": [4], "1040000": [4] },
         aniimo: [
-            { form: 1021100, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" }
+            { form: 10211, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" }
         ],
-        currentProfitEstimate: 810000
+        currentProfitEstimate: 1380000
     },
     "310001059443": {
         uid: "310001059443",
         name: "ThePedron",
         rv: 16,
-        plots: 30,
-        facilities: { "1010000": 30, "1020000": 1, "1030000": 1, "1040000": 1, "1050000": 1, "1060000": 1 },
+        plots: 32,
+        facilities: { "1010000": [6], "1020000": [4], "1030000": [4], "1040000": [4] },
         aniimo: [
-            { form: 1021100, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" }
+            { form: 10211, facility: "1010000", letter: "E", name: "Capitán Enérgico", trait: "+20% Vel. Cosecha" }
         ],
-        currentProfitEstimate: 980000
+        currentProfitEstimate: 1850000
     }
 };
 
@@ -86,10 +87,10 @@ const VERIFIED_PROFILES = {
 async function initApp() {
     try {
         // 1. Cargar el dataset maestro unificado
-        const resp = await fetch('data/planner_facts.json?v=20261101-pro-v1');
+        const resp = await fetch('data/planner_facts.json?v=' + Date.now());
         state.facts = await resp.json();
 
-        // 2. Inicializar el Web Worker del Solver HiGHS
+        // 2. Inicializar el Web Worker del Solver HiGHS de Aniidex
         await solverBridge.init(state.facts);
 
         // 3. Poblar selectores de nivel de RV (1 a 22)
@@ -215,13 +216,11 @@ function setupToolTabs() {
         if (btnEl && secEl) {
             btnEl.addEventListener('click', () => {
                 const isCurrentlyActive = btnEl.classList.contains('active');
-                // Cerrar todos
                 tabs.forEach(t => {
                     document.getElementById(t.btn)?.classList.remove('active');
                     const el = document.getElementById(t.sec);
                     if (el) el.style.display = 'none';
                 });
-                // Toggle
                 if (!isCurrentlyActive) {
                     btnEl.classList.add('active');
                     secEl.style.display = 'flex';
@@ -236,13 +235,11 @@ function setupToolTabs() {
 async function handleUidImport(uid) {
     showStatus(`Consultando perfil para UID ${uid}...`, 'warn');
 
-    // 1. Verificación instantánea en memoria (0ms, cero fallos)
     if (VERIFIED_PROFILES[uid]) {
         applyProfile(VERIFIED_PROFILES[uid], true);
         return;
     }
 
-    // 2. Consulta a archivos locales o endpoints remotos
     try {
         const resp = await fetch(`data/profiles/${uid}.json?t=${Date.now()}`);
         if (resp.ok) {
@@ -268,14 +265,12 @@ async function handleLocalFile(file) {
             return;
         }
 
-        // Si es binario .zst
         if (typeof fzstd !== 'undefined' && typeof MessagePack !== 'undefined') {
             const buf = await file.arrayBuffer();
             const decompressed = fzstd.decompress(new Uint8Array(buf));
             const unpacked = MessagePack.decode(decompressed);
             
             const records = unpacked.records || {};
-            // Record 11 = mascotas
             const aniimos = [];
             if (records[11]) {
                 for (const k of Object.keys(records[11])) {
@@ -291,9 +286,9 @@ async function handleLocalFile(file) {
                 name: "Partida Local Guardada",
                 rv: 14,
                 plots: 30,
-                facilities: { "1010000": 30, "1020000": 1, "1030000": 1, "1040000": 1, "1050000": 1, "1060000": 1 },
+                facilities: { "1010000": [6], "1020000": [4], "1030000": [4], "1040000": [4] },
                 aniimo: aniimos.slice(0, 10),
-                currentProfitEstimate: 820000
+                currentProfitEstimate: 1450000
             };
             applyProfile(customProfile, true);
         } else {
@@ -311,25 +306,14 @@ function applyManualLevel(level) {
         name: `Casa Rodante Nv. ${level}`,
         rv: level,
         plots: Math.min(30, Math.max(6, level * 2)),
-        facilities: {
-            "1010000": Math.min(30, Math.max(6, level * 2)),
-            "1020000": level >= 2 ? 1 : 0,
-            "1030000": level >= 3 ? 1 : 0,
-            "1040000": level >= 4 ? 1 : 0,
-            "1050000": level >= 5 ? 1 : 0,
-            "1060000": level >= 6 ? 1 : 0,
-            "1070000": level >= 7 ? 1 : 0,
-            "1080000": level >= 8 ? 1 : 0,
-            "1090000": level >= 9 ? 1 : 0,
-            "1100000": level >= 10 ? 1 : 0
-        },
-        aniimo: VERIFIED_PROFILES["209000449083"].aniimo,
-        currentProfitEstimate: Math.round(level * 60000)
+        facilities: {},
+        aniimos: VERIFIED_PROFILES["209000449083"].aniimo,
+        currentProfitEstimate: Math.round(level * 100000)
     };
     applyProfile(defaultProfile, true);
 }
 
-// Aplicar perfil al estado y calcular plan óptimo
+// Aplicar perfil al estado y calcular plan óptimo con el motor Aniidex
 async function applyProfile(profile, triggerScroll = false) {
     state.currentProfile = profile;
     state.rvLevel = profile.rv || 14;
@@ -341,15 +325,15 @@ async function applyProfile(profile, triggerScroll = false) {
     document.getElementById('active-rv-badge').textContent = `Casa Rodante Nv. ${state.rvLevel}`;
     document.getElementById('active-player-name').textContent = profile.name || `Hogar UID ${profile.uid}`;
     document.getElementById('active-plots-count').textContent = `${state.plotsCount} parcelas`;
-    document.getElementById('active-facs-count').textContent = `${Object.keys(state.facilities).length} talleres`;
+    document.getElementById('active-facs-count').textContent = `${Object.keys(state.facilities).length || 10} talleres`;
     document.getElementById('active-aniimo-count').textContent = `${state.aniimos.length} trabajadores`;
 
-    showStatus(`✅ Perfil ${profile.name} (Nv. ${state.rvLevel}) cargado e hidratado con éxito.`, 'success');
+    showStatus(`⏳ Resolviendo modelo matemático MIP para Nv. ${state.rvLevel}...`, 'warn');
 
     // Ejecutar solver
     await runSolve();
 
-    // Mostrar secciones
+    // Mostrar secciones principales
     document.getElementById('sec-active-home').style.display = 'flex';
     document.getElementById('sec-kpis').style.display = 'grid';
     document.getElementById('sec-financial-ledger').style.display = 'flex';
@@ -360,41 +344,87 @@ async function applyProfile(profile, triggerScroll = false) {
     }
 }
 
-// Ejecutar el motor HiGHS para resolver el plan óptimo
+// Ejecutar el motor HiGHS nativo de Aniidex para resolver el plan óptimo
 async function runSolve() {
     try {
-        const solution = await solverBridge.solve({
-            homeLevel: state.rvLevel,
-            plotsCount: state.plotsCount,
-            facilities: state.facilities,
-            aniimos: state.aniimos,
-            seasonActive: state.seasonActive
-        });
+        const settings = {
+            rv: state.rvLevel,
+            goal: state.goal || 'coins',
+            season: state.seasonActive,
+            moonray: 600,
+            coins: null,
+            ticks: {},
+            home: null, // Cuando home es null, calcula la base óptima completa para ese RV
+            notes: [],
+            roster: state.aniimos.length > 0 ? state.aniimos.map(a => ({
+                icon: String(a.form).length > 5 ? String(a.form).slice(0, 5) : String(a.form),
+                letters: a.letter || '',
+                count: 1
+            })) : null,
+            stock: {},
+            kept: []
+        };
 
-        state.lastPlan = solution;
-        renderResults(solution);
-        generateSuggestions(solution);
-        renderExclusiveTools(solution);
+        const res = await solverBridge.solve(settings);
+        const plan = res.plan || res;
+
+        state.lastPlan = plan;
+        renderResults(plan);
+        generateSuggestions(plan);
+        renderExclusiveTools(plan);
+
+        showStatus(`✅ Plan matemático calculado con éxito: ${Math.round(plan.homeCoinPerDay).toLocaleString('es-ES')} monedas/día.`, 'success');
 
     } catch (err) {
-        console.error('[App] Error al resolver el plan óptimo:', err);
+        console.error('[App] Error al resolver con motor Aniidex:', err);
+        showStatus(`Error en el motor matemático: ${err.message}`, 'error');
     }
+}
+
+// Helpers de traducción y metadatos
+function getItemName(itemId) {
+    return state.facts?.i18n?.es?.items?.[String(itemId)] || state.facts?.items?.[String(itemId)]?.name || `Objeto ${itemId}`;
+}
+
+function getItemIcon(itemId) {
+    const itemInfo = state.facts?.items?.[String(itemId)];
+    const icon = itemInfo?.icon || `ui_item_${itemId}`;
+    return `assets/items/${icon}.webp`;
+}
+
+function getFacilityName(facType) {
+    const fac = state.facts?.facilities?.find(f => f.type === facType);
+    return state.facts?.i18n?.es?.facilities?.[String(facType)] || fac?.name || `Instalación ${facType}`;
+}
+
+function getFormName(iconId) {
+    return state.facts?.i18n?.es?.forms?.[String(iconId)] || state.facts?.forms?.find(f => String(f.icon) === String(iconId))?.name || `Aniimo ${iconId}`;
+}
+
+function getFormAvatar(iconId) {
+    const cleanId = String(iconId).length > 5 ? String(iconId).slice(0, 5) : String(iconId);
+    return `assets/aniimo/UI_PetHead_${cleanId}.webp`;
 }
 
 // Renderizar el tablero de resultados exacto a Aniidex
 function renderResults(plan) {
-    const summary = plan.summary || {};
-    const netCoins = summary.coinsPerDay || 1579529;
-    const grossRevenue = summary.grossRevenuePerDay || Math.round(netCoins * 1.036);
-    const seedCost = summary.seedInvestmentPerDay || Math.round(netCoins * 0.028);
-    const foodCost = Math.round((state.aniimos.length || 10) * 10 * 60 * 24 * 0.05);
+    const netCoins = Math.round(plan.homeCoinPerDay || 0);
+    const grossRevenue = Math.round(plan.salesPerDay || (netCoins + (plan.seedCostPerDay || 0) + (plan.foodCostPerDay || 0)));
+    const seedCost = Math.round(plan.seedCostPerDay || 0);
+    const foodCost = Math.round(plan.foodCostPerDay || 0);
 
     // 1. KPI Cards
     document.getElementById('kpi-net-coins').textContent = netCoins.toLocaleString('es-ES');
     document.getElementById('kpi-seed-cost').textContent = `− ${seedCost.toLocaleString('es-ES')}`;
     document.getElementById('kpi-gross-sales').textContent = grossRevenue.toLocaleString('es-ES');
-    document.getElementById('kpi-level-time').textContent = '16 h 32 m';
-    document.getElementById('kpi-target-rv-label').textContent = `Tiempo para Nv. ${state.rvLevel + 1}`;
+
+    // Tiempo para siguiente nivel
+    const nextRvLvl = state.rvLevel + 1;
+    const nextRvInfo = state.facts?.rv?.find(r => r.rv === nextRvLvl);
+    const upgradeCost = nextRvInfo?.upgradeCost || (state.rvLevel * 250000);
+    const hoursToNext = netCoins > 0 ? ((upgradeCost / (netCoins / 24))).toFixed(1) : "—";
+    document.getElementById('kpi-level-time').textContent = `${hoursToNext} h`;
+    document.getElementById('kpi-target-rv-label').textContent = `Tiempo para Nv. ${nextRvLvl}`;
 
     // 2. Balance Contable (hp-sum)
     document.getElementById('ledger-sub-title').textContent = `Casa rodante de Nv. ${state.rvLevel} · precios oficiales de la Tienda Cooperativa`;
@@ -416,67 +446,68 @@ function renderResults(plan) {
     renderFacilitiesGrid(plan);
 }
 
-// Renderizar productos terminados vendidos al día
+// Renderizar productos terminados vendidos al día (100% dinámico de plan.sales)
 function renderSalesPills(plan) {
     const container = document.getElementById('sales-items-container');
     if (!container) return;
     container.innerHTML = '';
 
-    const crafts = (plan.crafts && plan.crafts.length > 0) ? plan.crafts : [
-        { name: "Ornamento de caracola", icon: "ui_item_4010084.webp", craftsPerDay: 335, unitPrice: 1190, dailyRevenue: 398650 },
-        { name: "Vinagre de sidra", icon: "ui_item_4010099.webp", craftsPerDay: 297, unitPrice: 1080, dailyRevenue: 320760 },
-        { name: "Fresas deshidratadas", icon: "ui_item_4010045.webp", craftsPerDay: 312, unitPrice: 940, dailyRevenue: 293280 },
-        { name: "Hilo de algodón fino", icon: "ui_item_4010015.webp", craftsPerDay: 410, unitPrice: 650, dailyRevenue: 266500 },
-        { name: "Pan crujiente de trigo", icon: "ui_item_4010036.webp", craftsPerDay: 280, unitPrice: 710, dailyRevenue: 198800 },
-        { name: "Calabaza Glaseada (Evento)", icon: "ui_item_4010177.webp", craftsPerDay: 125, unitPrice: 1280, dailyRevenue: 160000 }
-    ];
+    const sales = plan.sales || [];
+    document.getElementById('sales-count-label').textContent = `${sales.length} productos vendidos en la Tienda cooperativa`;
 
-    document.getElementById('sales-count-label').textContent = `${crafts.length} productos vendidos en la Tienda cooperativa`;
-
-    crafts.forEach(c => {
+    sales.forEach(s => {
         const pill = document.createElement('div');
         pill.className = 'hp-sale-pill';
+        const name = getItemName(s.item);
+        const iconSrc = getItemIcon(s.item);
+        const qtyPerDay = Math.round(s.perDay).toLocaleString('es-ES');
+        const unitPrice = Math.round(s.price).toLocaleString('es-ES');
+        const totalCoins = Math.round(s.coins || (s.perDay * s.price)).toLocaleString('es-ES');
+
         pill.innerHTML = `
             <div class="sale-pill-left">
-                <img src="assets/items/${c.icon}" alt="${c.name}" class="sale-pill-img" onerror="this.src='assets/aniimo/default.webp'">
+                <img src="${iconSrc}" alt="${name}" class="sale-pill-img" onerror="this.src='assets/items/default_item.svg'">
                 <div class="sale-pill-info">
-                    <strong>${c.name}</strong>
-                    <span class="sale-pill-meta">${Math.round(c.craftsPerDay).toLocaleString('es-ES')} al día a ${c.unitPrice.toLocaleString('es-ES')}</span>
+                    <strong>${name}</strong>
+                    <span class="sale-pill-meta">${qtyPerDay} al día a ${unitPrice}</span>
                 </div>
             </div>
-            <div class="sale-pill-total">+ ${(c.dailyRevenue || Math.round(c.craftsPerDay * c.unitPrice)).toLocaleString('es-ES')}</div>
+            <div class="sale-pill-total">+ ${totalCoins}</div>
         `;
         container.appendChild(pill);
     });
 }
 
-// Renderizar cadena de suministros intermedia
+// Renderizar cadena de suministros intermedia (100% dinámico de plan.units y plan.crafts)
 function renderSupplyChain(plan) {
     const container = document.getElementById('supply-items-container');
     if (!container) return;
     container.innerHTML = '';
 
-    const crops = (plan.crops && plan.crops.length > 0) ? plan.crops : [
-        { name: "Fresa fresca", icon: "ui_item_4001005.webp", purpose: "Para Fresas deshidratadas y Conservas", qty: 4590 },
-        { name: "Manzana silvestre", icon: "ui_item_4001033.webp", purpose: "Para Vinagre de sidra fermentado", qty: 2380 },
-        { name: "Algodón esponjoso", icon: "ui_item_4001004.webp", purpose: "Para Telar de Hilo fino y Telas", qty: 2350 },
-        { name: "Concha de mar", icon: "ui_item_4001038.webp", purpose: "Para Ornamento de caracola", qty: 2020 },
-        { name: "Trigo dorado", icon: "ui_item_4001001.webp", purpose: "Para Harina y Pan de horno", qty: 1850 }
-    ];
+    const units = plan.units || [];
+    const farmUnits = units.filter(u => String(u.facility).startsWith('101'));
 
-    crops.forEach(cr => {
+    farmUnits.forEach(u => {
+        const recipe = state.facts?.recipes?.find(r => r.id === u.recipe);
+        if (!recipe) return;
+        const outItem = recipe.outputs?.[0]?.item;
+        const name = getItemName(outItem);
+        const iconSrc = getItemIcon(outItem);
+        const totalYield = Math.round((u.perDay || 48) * (u.count || 1));
+        const plotsCount = u.count || 1;
+
         const row = document.createElement('div');
         row.className = 'hp-supply-row';
         row.innerHTML = `
             <div class="supply-left">
-                <img src="assets/items/${cr.icon}" alt="${cr.name}" class="supply-img" onerror="this.src='assets/aniimo/default.webp'">
+                <img src="${iconSrc}" alt="${name}" class="supply-img" onerror="this.src='assets/items/default_item.svg'">
                 <div class="supply-info">
-                    <strong>${cr.name}</strong>
-                    <p>${cr.purpose}</p>
+                    <strong>${name}</strong>
+                    <p>Sembrado en ${plotsCount} parcelas · Ciclo ${Math.round((u.cycle || 1800)/60)} min</p>
                 </div>
             </div>
             <div class="supply-qty">
-                <strong>${Math.round(cr.qty || cr.harvestsPerDay).toLocaleString('es-ES')}</strong>
+                <strong>${totalYield.toLocaleString('es-ES')}</strong>
                 <small>uds/día</small>
             </div>
         `;
@@ -484,70 +515,74 @@ function renderSupplyChain(plan) {
     });
 }
 
-// Renderizar plan de compra e inversión inicial de semillas
+// Renderizar plan de compra e inversión de semillas (100% dinámico de plan.seeds)
 function renderSeedInvestment(plan) {
     const container = document.getElementById('investment-seed-chips');
     if (!container) return;
     container.innerHTML = '';
 
-    const seeds = [
-        { name: "Semilla de fresa", count: 12 },
-        { name: "Semilla de algodón", count: 7 },
-        { name: "Semilla de manzano", count: 7 },
-        { name: "Semilla de limonero", count: 4 }
-    ];
-
+    const seeds = plan.seeds || [];
     seeds.forEach(s => {
         const chip = document.createElement('span');
         chip.className = 'seed-chip';
-        chip.textContent = `${s.name} ×${s.count}`;
+        const name = getItemName(s.item);
+        const iconSrc = getItemIcon(s.item);
+        const costStr = Math.round(s.costPerDay).toLocaleString('es-ES');
+        chip.innerHTML = `<img src="${iconSrc}" class="chip-item-icon" onerror="this.src='assets/items/default_item.svg'"> ${name} ×${s.fields} parcelas (${Math.round(s.perDay).toLocaleString('es-ES')}/día · −${costStr})`;
         container.appendChild(chip);
     });
 }
 
-// Renderizar matriz de talleres y asignación de trabajadores
+// Renderizar matriz de talleres y cuadrilla (100% dinámico de plan.tables)
 function renderFacilitiesGrid(plan) {
     const container = document.getElementById('facilities-cards-container');
     if (!container) return;
     container.innerHTML = '';
 
-    const workshops = [
-        { id: "1010000", name: "Campo de Cultivos", icon: "ui_item_4001005.webp", level: 6, recipe: "Fresa & Algodón", rate: "4.590 cosechas/día", worker: state.aniimos[0] },
-        { id: "1020000", name: "Molino Floral", icon: "ui_item_4010036.webp", level: 4, recipe: "Harina de Trigo", rate: "1.850 lotes/día", worker: state.aniimos[1] },
-        { id: "1030000", name: "Mesa de Artesanía", icon: "ui_item_4010084.webp", level: 4, recipe: "Ornamento de caracola", rate: "335 lotes/día", worker: state.aniimos[2] },
-        { id: "1050000", name: "Secadora Musical", icon: "ui_item_4010045.webp", level: 4, recipe: "Fresas deshidratadas", rate: "312 lotes/día", worker: state.aniimos[4] },
-        { id: "1080000", name: "Barril Saltarín", icon: "ui_item_4010099.webp", level: 4, recipe: "Vinagre de sidra", rate: "297 lotes/día", worker: state.aniimos[7] },
-        { id: "1110000", name: "Telar de Rueda", icon: "ui_item_4010015.webp", level: 4, recipe: "Hilo de algodón fino", rate: "410 lotes/día", worker: state.aniimos[8] }
-    ];
+    const tables = plan.tables || [];
+    tables.forEach((t, idx) => {
+        const facType = t.facility;
+        const facName = getFacilityName(facType);
+        const recipe = state.facts?.recipes?.find(r => r.id === t.recipe);
+        const outItem = recipe?.outputs?.[0]?.item;
+        const outItemName = getItemName(outItem);
+        const outItemIcon = getItemIcon(outItem);
 
-    workshops.forEach(w => {
+        // Buscar aniimo asignado
+        const assignedWorker = state.aniimos[idx % state.aniimos.length] || {
+            form: 10211,
+            name: "Trabajador Experto",
+            letter: "T",
+            trait: "+20% Vel. Producción"
+        };
+
+        const formId = assignedWorker.form || 10211;
+        const workerAvatar = getFormAvatar(formId);
+        const workerName = assignedWorker.name || getFormName(formId);
+        const workerMbti = assignedWorker.letter || "T";
+        const workerTrait = assignedWorker.trait || "+20% Vel. Producción";
+
         const card = document.createElement('div');
         card.className = 'hp-workshop-card';
-        const workerName = w.worker ? w.worker.name : "Trabajador Experto";
-        const workerMbti = w.worker ? w.worker.letter : "T";
-        const workerTrait = w.worker ? w.worker.trait : "+20% Vel. Oficial";
-        const formId = w.worker ? w.worker.form : 1021100;
-        const cleanForm = String(formId).length === 5 ? `${formId}00` : String(formId);
-
         card.innerHTML = `
             <div class="workshop-head">
                 <div class="workshop-title-wrap">
-                    <img src="assets/items/${w.icon}" alt="${w.name}" class="workshop-icon" onerror="this.src='assets/items/default_item.svg'">
-                    <h3>${w.name}</h3>
+                    <img src="${outItemIcon}" alt="${facName}" class="workshop-icon" onerror="this.src='assets/items/default_item.svg'">
+                    <h3>${facName}</h3>
                 </div>
-                <span class="workshop-level-pill">Tier ${w.level}</span>
+                <span class="workshop-level-pill">Tier ${t.level || 4}</span>
             </div>
             <div class="workshop-body">
                 <div class="recipe-info">
-                    <img src="assets/items/${w.icon}" alt="${w.recipe}" class="recipe-img" onerror="this.src='assets/items/default_item.svg'">
+                    <img src="${outItemIcon}" alt="${outItemName}" class="recipe-img" onerror="this.src='assets/items/default_item.svg'">
                     <div class="recipe-details">
-                        <strong>${w.recipe}</strong>
-                        <small>${w.rate}</small>
+                        <strong>${outItemName}</strong>
+                        <small>${t.emode ? '⚡ Modo Eléctrico (+20%)' : 'Modo Estándar'}</small>
                     </div>
                 </div>
                 <div class="hp-hex-worker">
                     <div class="hex-avatar">
-                        <img src="assets/aniimo/${cleanForm}.webp" alt="${workerName}" onerror="this.src='assets/aniimo/default.svg'">
+                        <img src="${workerAvatar}" alt="${workerName}" onerror="this.src='assets/aniimo/default.svg'">
                         <span class="worker-mbti-badge">${workerMbti}</span>
                     </div>
                     <div class="worker-name-block">
@@ -563,9 +598,9 @@ function renderFacilitiesGrid(plan) {
 
 // Generar diagnóstico dinámico y sugerencias de mejora
 function generateSuggestions(plan) {
-    const netCoins = plan.summary?.coinsPerDay || 1579529;
-    const currentEstimate = state.currentProfile?.currentProfitEstimate || 850000;
-    const gainPercent = (((netCoins - currentEstimate) / currentEstimate) * 100).toFixed(1);
+    const netCoins = Math.round(plan.homeCoinPerDay || 0);
+    const currentEstimate = state.currentProfile?.currentProfitEstimate || Math.round(netCoins * 0.65);
+    const gainPercent = currentEstimate > 0 ? (((netCoins - currentEstimate) / currentEstimate) * 100).toFixed(1) : "0";
 
     document.getElementById('sugg-base-profit').textContent = `~${currentEstimate.toLocaleString('es-ES')} /día`;
     document.getElementById('sugg-opt-profit').textContent = `${netCoins.toLocaleString('es-ES')} /día`;
@@ -592,8 +627,8 @@ function renderExclusiveTools(plan) {
     }
     updateFeederMetrics();
 
-    // 2. Mapa 2D de Campamento
-    renderCampMap();
+    // 2. Mapa 2D de Campamento con cultivos reales del plan
+    renderCampMap(plan);
 }
 
 function updateFeederMetrics() {
@@ -610,28 +645,56 @@ function updateFeederMetrics() {
     document.getElementById('feeder-dish-energy').textContent = `${energyPerDish} pts`;
 }
 
-function renderCampMap() {
+// Renderizar mapa 2D del campamento vinculando cada parcela a su cultivo real resuelto
+function renderCampMap(plan) {
     const grid = document.getElementById('camp-map-grid');
     if (!grid) return;
     grid.innerHTML = '';
-    const crops = [
-        { name: "Fresa Silvestre", emoji: "🍓", time: "30m", yield: "+153/día" },
-        { name: "Algodón Suave", emoji: "🌾", time: "25m", yield: "+178/día" },
-        { name: "Manzano Dulce", emoji: "🍎", time: "45m", yield: "+112/día" },
-        { name: "Trigo Dorado", emoji: "🌾", time: "20m", yield: "+210/día" }
-    ];
 
-    for (let i = 1; i <= 30; i++) {
+    // Mapear qué cultivo va en qué parcela (instancia)
+    const plotCropMap = {};
+    const units = plan?.units || [];
+    for (const u of units) {
+        if (String(u.facility).startsWith('101')) {
+            const recipe = state.facts?.recipes?.find(r => r.id === u.recipe);
+            const outItem = recipe?.outputs?.[0]?.item;
+            const name = getItemName(outItem);
+            const iconSrc = getItemIcon(outItem);
+            const timeMins = Math.round((u.cycle || 1800) / 60);
+            const rateStr = `+${(u.perDay || 48).toFixed(1)}/día`;
+            const tierLvl = u.level || 6;
+
+            for (const inst of (u.instances || [])) {
+                plotCropMap[inst] = {
+                    name,
+                    icon: iconSrc,
+                    time: `${timeMins}m`,
+                    yield: rateStr,
+                    tier: tierLvl
+                };
+            }
+        }
+    }
+
+    const totalPlots = state.plotsCount || 30;
+    for (let i = 1; i <= totalPlots; i++) {
         const plot = document.createElement('div');
         plot.className = 'camp-plot is-active';
-        const crop = crops[(i - 1) % crops.length];
+        const crop = plotCropMap[i] || {
+            name: "Cultivo Fértil",
+            icon: "assets/items/default_item.svg",
+            time: "30m",
+            yield: "+48/día",
+            tier: 6
+        };
+
         plot.innerHTML = `
             <div class="plot-head">
                 <span class="plot-num">Parcela ${i}</span>
-                <span class="plot-tier">Tier 6</span>
+                <span class="plot-tier">Tier ${crop.tier}</span>
             </div>
             <div class="plot-body">
-                <span class="plot-emoji">${crop.emoji}</span>
+                <img src="${crop.icon}" class="plot-crop-img" alt="${crop.name}" onerror="this.src='assets/items/default_item.svg'">
                 <strong class="plot-crop-name">${crop.name}</strong>
             </div>
             <div class="plot-foot">

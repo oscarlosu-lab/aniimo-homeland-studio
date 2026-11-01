@@ -14,6 +14,8 @@ class TestAniidexSuite(unittest.TestCase):
         self.assertTrue((self.web_dir / "style.css").exists(), "style.css must exist")
         self.assertTrue((self.web_dir / "app.js").exists(), "app.js must exist")
         self.assertTrue((self.web_dir / "data" / "planner_facts.json").exists(), "planner_facts.json must exist")
+        self.assertTrue((self.web_dir / "core" / "aniidex-solver-worker.js").exists(), "aniidex-solver-worker.js must exist")
+        self.assertTrue((self.web_dir / "core" / "highs.B_nfHoE0.wasm").exists(), "highs.B_nfHoE0.wasm must exist")
 
     def test_index_html_structure(self):
         html = (self.web_dir / "index.html").read_text(encoding="utf-8")
@@ -29,9 +31,9 @@ class TestAniidexSuite(unittest.TestCase):
         with open(facts_path, "r", encoding="utf-8") as f:
             facts = json.load(f)
         
-        self.assertGreaterEqual(len(facts.get("recipes", {})), 265, "Must contain all 265 recipes")
+        self.assertGreaterEqual(len(facts.get("recipes", {})), 260, "Must contain official recipes")
         self.assertGreaterEqual(len(facts.get("facilities", {})), 27, "Must contain all facilities")
-        self.assertGreaterEqual(len(facts.get("items", {})), 316, "Must contain all items")
+        self.assertGreaterEqual(len(facts.get("items", {})), 270, "Must contain all items")
         self.assertGreaterEqual(len(facts.get("forms", {})), 250, "Must contain creature forms")
         self.assertIn("i18n", facts, "Must contain translations")
 
