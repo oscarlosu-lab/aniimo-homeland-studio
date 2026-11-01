@@ -21,7 +21,7 @@ import {
     setContractsRecipeIndex
 } from './contracts-manager.js';
 import { setBilingual, isBilingual } from './i18n.js';
-import { aniidexPlanner } from './aniidex-planner.js';
+import { aniidexPlanner } from './aniidex-planner.js?v=20261101-aniidex-v5';
 
 let recommenderAllowPrismana = true;
 let recommenderOnlyWild = false;
