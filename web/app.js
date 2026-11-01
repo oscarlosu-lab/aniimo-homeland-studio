@@ -21,6 +21,7 @@ import {
     setContractsRecipeIndex
 } from './contracts-manager.js';
 import { setBilingual, isBilingual } from './i18n.js';
+import { aniidexPlanner } from './aniidex-planner.js';
 
 let recommenderAllowPrismana = true;
 let recommenderOnlyWild = false;
@@ -4130,6 +4131,9 @@ function displayPlan(plan) {
     renderFacilityPlan(plan);
     renderAniimoSummary(plan);
     updateExecutiveKPI(plan);
+    if (typeof aniidexPlanner !== 'undefined' && aniidexPlanner.renderExecutiveDashboard) {
+        aniidexPlanner.renderExecutiveDashboard(plan);
+    }
     const contractsResultCard = document.getElementById('contracts-results-card');
     if (contractsResultCard) {
         renderContractsResultCard(contractsResultCard, plan, getActiveContracts());

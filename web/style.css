@@ -6429,3 +6429,388 @@ tr:hover .skip-row,
     color: var(--text-muted);
     font-size: 0.9rem;
 }
+
+/* =========================================================================
+   ANIIDEX FINANCIAL & IMPORTER SUITE (HOMELAND STUDIO EXTENSION)
+   ========================================================================= */
+
+.aniidex-importer-box {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 14px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.importer-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 0.65rem;
+}
+
+.importer-tab-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-dim, #94a3b8);
+    padding: 0.45rem 0.95rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.importer-tab-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+.importer-tab-btn.active {
+    background: rgba(56, 189, 248, 0.15);
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+.importer-tab-content {
+    display: none;
+}
+
+.importer-tab-content.active {
+    display: block;
+}
+
+.importer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.importer-info {
+    flex: 1;
+    min-width: 260px;
+}
+
+.importer-chip {
+    display: inline-block;
+    background: rgba(74, 222, 128, 0.15);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+    text-transform: uppercase;
+}
+
+.importer-desc {
+    font-size: 0.88rem;
+    color: var(--text-dim, #cbd5e1);
+    margin: 0.25rem 0 0.5rem;
+    line-height: 1.4;
+}
+
+.detected-uid-tag {
+    font-size: 0.82rem;
+    color: #94a3b8;
+}
+
+.detected-uid-tag strong {
+    color: #38bdf8;
+    letter-spacing: 0.5px;
+}
+
+.btn-import-action {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    border: 1px solid rgba(56, 189, 248, 0.5);
+    color: #fff;
+    padding: 0.65rem 1.25rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.btn-import-action:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.1);
+}
+
+.importer-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+    min-width: 250px;
+}
+
+.importer-input-group.full-width {
+    width: 100%;
+}
+
+.importer-input-group label {
+    font-size: 0.82rem;
+    color: var(--text, #e2e8f0);
+}
+
+.importer-input-group input {
+    background: #0b1120;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 0.55rem 0.85rem;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.importer-hint {
+    font-size: 0.78rem;
+    color: #64748b;
+    margin-top: 0.45rem;
+}
+
+.importer-feedback {
+    margin-top: 0.75rem;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #4ade80;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* DASHBOARD EJECUTIVO ANIIDEX */
+.aniidex-dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.aniidex-financial-card,
+.aniidex-sales-card,
+.aniidex-supply-card,
+.aniidex-investment-card {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 1.35rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+}
+
+.fin-card-header h2,
+.fin-card-header h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.fin-badge {
+    display: inline-block;
+    background: rgba(168, 85, 247, 0.15);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 6px;
+    margin-bottom: 0.45rem;
+    text-transform: uppercase;
+}
+
+.fin-subtitle {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    margin: 0 0 1rem 0;
+}
+
+/* LEDGER / BALANCE */
+.fin-ledger-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.ledger-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 8px;
+    font-size: 0.92rem;
+}
+
+.ledger-label {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: #cbd5e1;
+}
+
+.ledger-item.positive .ledger-val {
+    color: #4ade80;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.ledger-item.negative .ledger-val {
+    color: #f87171;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.ledger-total-box {
+    margin-top: 0.5rem;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(15, 23, 42, 0.8));
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-label {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.total-amount {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #4ade80;
+    text-shadow: 0 2px 10px rgba(74, 222, 128, 0.3);
+}
+
+.coin-suffix {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+/* PRODUCTOS EN TIENDA */
+.sales-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.75rem;
+}
+
+.sales-item-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    gap: 0.75rem;
+}
+
+.item-pill-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2px;
+}
+
+.item-pill-info {
+    flex: 1;
+}
+
+.item-pill-title {
+    display: block;
+    font-size: 0.88rem;
+    color: #f1f5f9;
+}
+
+.item-pill-meta {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.item-pill-total {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #38bdf8;
+    white-space: nowrap;
+}
+
+/* SUMINISTRO PARCELAS */
+.supply-items-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.supply-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.65rem 0.9rem;
+    background: rgba(30, 41, 59, 0.35);
+    border-radius: 8px;
+}
+
+.supply-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.supply-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.supply-purpose {
+    font-size: 0.76rem;
+    color: #94a3b8;
+    margin: 0.15rem 0 0;
+}
+
+.supply-qty strong {
+    font-size: 0.95rem;
+    color: #facc15;
+}
+
+.unit-txt {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* QUÉ COMPRAR PRIMERO */
+.investment-seed-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+}
+
+.seed-chip {
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    color: #38bdf8;
+    padding: 0.35rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.investment-note {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    line-height: 1.45;
+}
