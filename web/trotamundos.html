@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚔️ Simulador Trotamundos — Aniimo Homeland Studio</title>
+    
+    <!-- Metadatos SEO -->
+    <meta name="description" content="Simulador de combate para Desafíos de Trotamundos (Pathfinder) en Aniimo. Elige a los 4 rivales y calcula la mejor formación de counters, debilidades elementales (x1.6 / x2.56) y orden de eliminación.">
+    <meta name="keywords" content="Aniimo trotamundos, Aniimo pathfinder, Aniimo simulador combate, counters Aniimo, Instructora Lita Aniimo, debilidades Aniimo">
+    <meta name="author" content="Aniimo Homeland Studio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://oscarlosu-lab.github.io/aniimo-homeland-studio/trotamundos.html">
+
+    <link rel="stylesheet" href="style.css?v=20261101-trotamundos-v1">
+    <script type="module" src="trotamundos.js?v=20261101-trotamundos-v1"></script>
+</head>
+<body class="trotamundos-body">
+    <!-- CABECERA PRINCIPAL -->
+    <header class="studio-header">
+        <div class="studio-brand-wrap">
+            <div class="studio-logo-glow">⚔️</div>
+            <div class="studio-brand-text">
+                <h1 class="studio-title">Aniimo Homeland Studio</h1>
+                <span class="studio-badge">Módulo Táctico Trotamundos</span>
+            </div>
+        </div>
+        <div class="header-buttons">
+            <a href="index.html" class="toggle-button" id="backToHome" title="Volver al optimizador de campamento y pedidos">🏠 Campamento & Pedidos</a>
+            <a href="recetas-rapidas.html" class="toggle-button glow-cyan" id="quickRecipesNav" title="Módulo de recetas rápidas en paralelo">⚡ Recetas Rápidas</a>
+            <a href="trotamundos.html" class="toggle-button active" style="background: rgba(16, 217, 143, 0.2); border-color: #10d98f; color: #10d98f;" title="Módulo táctico de combate">⚔️ Trotamundos</a>
+            <button class="toggle-button" id="bilingualToggle" title="Alternar nombres bilingües Español / Inglés">🌐 Bilingüe (ES/EN)</button>
+            <button class="toggle-button" id="themeToggle">Claro</button>
+            <a href="https://ko-fi.com/oscarlosu" target="_blank" rel="noopener noreferrer" class="toggle-button" style="background: rgba(255, 94, 91, 0.15); border-color: #ff5e5b; color: #ff5e5b; text-decoration: none;" title="Apoyar el proyecto en Ko-fi">☕ Donar</a>
+        </div>
+    </header>
+
+    <!-- HERO BANNER INFORMATIVO -->
+    <div class="studio-hero-banner">
+        <span class="hero-chip">🎯 Tácticas y Counters de Combate</span>
+        <p class="hero-desc">Elige a los 4 rivales a batir o selecciona un combate predefinido (ej. <strong>Instructora Lita</strong>). El recomendador calculará las ventajas elementales (hasta x2.56 por doble debilidad), el techo de ataque base (130 ATQ) y te armará la mejor formación de 4 titulares y suplentes con orden prioritario de eliminación.</p>
+    </div>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container trotamundos-layout">
+        <main class="trotamundos-main">
+
+            <!-- PANEL 1: SELECCIÓN DEL ESCUADRÓN RIVAL -->
+            <section class="card trotamundos-rivals-card">
+                <div class="card-head">
+                    <h2>🎯 Escuadrón Rival a Vencer (Selecciona hasta 4)</h2>
+                    <span class="recipe-counter-badge">Desafío Trotamundos</span>
+                </div>
+
+                <!-- Barra de Presets Rápidos -->
+                <div class="presets-bar">
+                    <span class="presets-label">⚡ Desafíos de Élite Populares:</span>
+                    <button type="button" class="preset-btn active" data-preset="lita">
+                        🎖️ Instructora Lita (Arena Astra - Lv. 65)
+                    </button>
+                    <button type="button" class="preset-btn" data-preset="hurricane">
+                        🦅 Trío Huracán (Viento & Rayo)
+                    </button>
+                    <button type="button" class="preset-btn" data-preset="magma">
+                        🌋 Dúo Volcánico (Fuego & Roca)
+                    </button>
+                    <button type="button" class="preset-btn" data-preset="shadow_frost">
+                        🌑 Sombras & Escarcha
+                    </button>
+                    <button type="button" class="preset-btn btn-clear-preset" data-preset="clear" title="Vaciar selección">
+                        🔄 Limpiar
+                    </button>
+                </div>
+
+                <!-- Las 4 Ranuras de Rivales -->
+                <div class="rival-slots-grid">
+                    <div class="rival-slot" id="rival-slot-0"></div>
+                    <div class="rival-slot" id="rival-slot-1"></div>
+                    <div class="rival-slot" id="rival-slot-2"></div>
+                    <div class="rival-slot" id="rival-slot-3"></div>
+                </div>
+
+                <!-- Botón de Acción Principal -->
+                <div class="action-btn-wrapper">
+                    <button type="button" class="btn-calculate-tactics" id="btn-calculate-counters">
+                        ⚔️ Calcular Formación Óptima y Estrategia de Combate
+                    </button>
+                </div>
+            </section>
+
+            <!-- PANEL 2: RESULTADOS TÁCTICOS Y FORMACIÓN RECOMENDADA -->
+            <section class="card trotamundos-results-card">
+                <div class="card-head">
+                    <h2>📊 Plan Táctico de Victoria</h2>
+                </div>
+                <div id="trotamundos-results" class="trotamundos-results-container">
+                    <div class="empty-results-hint">
+                        <span class="empty-results-icon">🎯</span>
+                        <p>Cargando simulación táctica...</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- MODAL DE SELECCIÓN DE CRIATURA -->
+    <div class="trotamundos-modal-overlay" id="creature-picker-modal">
+        <div class="trotamundos-modal-content">
+            <div class="modal-head">
+                <h3>🔍 Seleccionar Criatura Rival</h3>
+                <button type="button" class="btn-close-modal" id="close-creature-modal">✕</button>
+            </div>
+            
+            <div class="modal-controls">
+                <div class="search-input-wrapper">
+                    <span class="search-prefix">🔍</span>
+                    <input type="text" id="modal-search-input" class="quick-search-input" placeholder="Buscar por nombre o elemento (ej. Sherro, Glacy, Fuego, Roca...)">
+                </div>
+                <div class="modal-elem-pills">
+                    <button type="button" class="modal-elem-pill active" data-elem="all">Todos</button>
+                    <button type="button" class="modal-elem-pill" data-elem="Fuego">🔥 Fuego</button>
+                    <button type="button" class="modal-elem-pill" data-elem="Agua">💧 Agua</button>
+                    <button type="button" class="modal-elem-pill" data-elem="Hierba">🌿 Hierba</button>
+                    <button type="button" class="modal-elem-pill" data-elem="Eléctrico">⚡ Eléctrico</button>
+                    <button type="button" class="modal-elem-pill" data-elem="Hielo">❄️ Hielo</button>
+                    <button type="button" class="modal-elem-pill" data-elem="Roca">🪨 Roca</button>
+                    <button type="button" class="modal-elem-pill" data-elem="Viento">🌪️ Viento</button>
+                    <button type="button" class="modal-elem-pill" data-elem="Sagrado">☀️ Sagrado</button>
+                    <button type="button" class="modal-elem-pill" data-elem="Oscuridad">🌑 Oscuridad</button>
+                </div>
+            </div>
+
+            <div class="modal-creatures-grid" id="modal-creatures-grid"></div>
+        </div>
+    </div>
+</body>
+</html>
