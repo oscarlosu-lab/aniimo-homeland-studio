@@ -21,7 +21,7 @@ import {
     setContractsRecipeIndex
 } from './contracts-manager.js';
 import { setBilingual, isBilingual } from './i18n.js';
-import { aniidexPlanner } from './aniidex-planner.js?v=20261101-aniidex-v6';
+import { aniidexPlanner } from './aniidex-planner.js?v=20261101-aniidex-v7';
 
 let recommenderAllowPrismana = true;
 let recommenderOnlyWild = false;
@@ -583,6 +583,13 @@ async function initWasm() {
         loadRecipeIndex();
 
         console.log(`Homeland Studio v${version} loaded successfully`);
+
+        // Disparo reactivo inicial: genera el plan óptimo al cargar como en Aniidex
+        setTimeout(() => {
+            if (!lastPlan && typeof runFindPlan === 'function') {
+                runFindPlan();
+            }
+        }, 120);
     } catch (error) {
         console.error('Failed to initialize WASM:', error);
         showError('Failed to load the optimizer. Please refresh the page.');
