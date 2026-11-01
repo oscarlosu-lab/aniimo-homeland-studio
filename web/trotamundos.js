@@ -1,6 +1,7 @@
 /**
  * Aniimo Homeland Studio - Módulo Táctico Trotamundos (Pathfinder Counter Builder)
- * Algoritmo de optimización de escuadrón basado en el datamine oficial y matriz de debilidades elementales.
+ * Algoritmo de optimización de escuadrón basado en el datamine oficial, matriz bidireccional
+ * de ventajas/vulnerabilidades y selección sin pre-evoluciones ni solapamientos redundantes.
  */
 
 // Matriz elemental oficial de Aniimo
@@ -50,6 +51,17 @@ export function calculateMultiplier(attackerElem, defenderElements) {
     return Math.round(mult * 100) / 100;
 }
 
+// Cálculo del peor daño que el defensor puede infligir de vuelta al atacante
+export function getDefensiveDamageTaken(defenderElements, attackerElements) {
+    if (!defenderElements || !attackerElements) return 1.0;
+    let worstIncoming = 1.0;
+    for (const dElem of defenderElements) {
+        const m = calculateMultiplier(dElem, attackerElements);
+        if (m > worstIncoming) worstIncoming = m;
+    }
+    return Math.round(worstIncoming * 100) / 100;
+}
+
 // Obtener debilidades y fortalezas de una criatura
 export function getCreatureAffinities(elements) {
     const weaknesses = [];
@@ -95,7 +107,7 @@ const PRESETS = {
     shadow_frost: {
         name: 'Legión de Sombras & Escarcha',
         desc: 'Combinación oscura y de congelación. Vulnerable a ráfagas de Fuego y Luz.',
-        names: ['Stellarys (Forma prismana)', 'Fenrier (Forma de noche)', 'Malevsera', 'Glynsera']
+        names: ['Stellarys (Forma prismana)', 'Fenrier (Forma de noche)', 'Dreaple', 'Glynsera (Forma prismana)']
     }
 };
 
@@ -165,6 +177,8 @@ function setupEventListeners() {
     // Presets
     document.querySelectorAll('.preset-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
+            document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+            e.currentTarget.classList.add('active');
             const key = e.currentTarget.getAttribute('data-preset');
             if (key === 'clear') {
                 selectedRivals = [null, null, null, null];
@@ -175,6 +189,17 @@ function setupEventListeners() {
             }
         });
     });
+
+    // Filtros tácticos de cálculo
+    const styleSelect = document.getElementById('team-style-select');
+    if (styleSelect) {
+        styleSelect.addEventListener('change', () => calculateOptimalCounters());
+    }
+
+    const baseOnlyCheck = document.getElementById('check-only-base');
+    if (baseOnlyCheck) {
+        baseOnlyCheck.addEventListener('change', () => calculateOptimalCounters());
+    }
 
     // Botón de cálculo
     const calcBtn = document.getElementById('btn-calculate-counters');
@@ -364,8 +389,6 @@ function renderModalCreatures() {
     }).join('');
 }
 
-
-
 // Limpiar resultados
 function clearResults() {
     const container = document.getElementById('trotamundos-results');
@@ -380,7 +403,7 @@ function clearResults() {
 }
 
 // =========================================================================
-// MOTOR DE OPTIMIZACIÓN DE COUNTERS (Zero-Trust & Basado en Datamine)
+// MOTOR DE OPTIMIZACIÓN DE COUNTERS (Zero-Trust & Experto Bidireccional)
 // =========================================================================
 export function calculateOptimalCounters() {
     const validRivals = selectedRivals.filter(Boolean);
@@ -392,121 +415,180 @@ export function calculateOptimalCounters() {
         return;
     }
 
-    // 1. Analizar debilidades de todos los rivales
-    const rivalAnalyses = validRivals.map((rival, idx) => {
-        const aff = getCreatureAffinities(rival.elements || [rival.element]);
-        return {
-            index: idx + 1,
-            rival,
-            weaknesses: aff.weaknesses,
-            resistances: aff.resistances
-        };
-    });
+    // Opciones del usuario
+    const onlyBaseForms = document.getElementById('check-only-base')?.checked ?? true;
+    const teamStyle = document.getElementById('team-style-select')?.value || '4dps';
 
-    // 2. Puntuar todo el catálogo de criaturas según efectividad y stats
-    // Criterios de puntuación: Multiplicador (x2.56 = 100pts, x1.6 = 50pts), ATQ (hasta 130 pts), Quiebre, Pasiva
-    const candidates = allCreatures.map(creature => {
+    // 1. Filtrar el universo de criaturas:
+    // EXCLUIR PRE-EVOLUCIONES (solo criaturas completamente evolucionadas con total_stats >= 490)
+    let pool = allCreatures.filter(c => (c.total_stats || 0) >= 490);
+
+    // Filtrar solo formas básicas si el usuario lo activó (por defecto activo)
+    if (onlyBaseForms) {
+        pool = pool.filter(c => !c.is_prismana && !c.name.includes('('));
+    }
+
+    // Filtrar por estilo de equipo
+    if (teamStyle === '4dps') {
+        const dpsPool = pool.filter(c => c.role === 'DPS');
+        if (dpsPool.length >= 10) pool = dpsPool;
+    }
+
+    // 2. Evaluación Bidireccional de cada candidato contra los rivales
+    const scoredCandidates = pool.map(creature => {
         const stats = creature.stats || {};
         const atq = stats.ATQ || 0;
         const quiebre = stats.QUIEBRE || 0;
         const cElems = creature.elements || [creature.element];
+        const primaryElem = normalizeElement(cElems[0]);
+        const role = creature.role || 'DPS';
 
-        let totalAdvantageScore = 0;
-        let coverageCount = 0;
-        const matchupDetails = [];
-
-        validRivals.forEach(r => {
-            const rElems = r.elements || [r.element];
-            let bestMult = 1.0;
+        const rivalMatchups = validRivals.map(rival => {
+            const rElems = rival.elements || [rival.element];
+            let bestOff = 1.0;
             let bestAttackerElem = cElems[0];
 
             for (const cElem of cElems) {
                 const m = calculateMultiplier(cElem, rElems);
-                if (m > bestMult) {
-                    bestMult = m;
+                if (m > bestOff) {
+                    bestOff = m;
                     bestAttackerElem = cElem;
                 }
             }
+            const incoming = getDefensiveDamageTaken(rElems, cElems);
 
-            if (bestMult >= 1.5) {
-                coverageCount++;
-                totalAdvantageScore += (bestMult >= 2.5 ? 120 : 60);
-            } else if (bestMult <= 0.65) {
-                totalAdvantageScore -= 30; // Penalización por desventaja
+            let isSafe = false;
+            let effScore = 0;
+
+            if (bestOff >= 1.5) {
+                if (incoming <= 1.0) {
+                    // SAFE HARD COUNTER (Ventaja ofensiva + Seguridad defensiva)
+                    isSafe = true;
+                    effScore = (bestOff >= 2.5 ? 220 : 110);
+                } else {
+                    // RISKY TRADE (Inflige daño extra pero también recibe castigo)
+                    effScore = 20;
+                }
+            } else if (incoming >= 1.5) {
+                // PENALIZACIÓN SEVERA: El rival lo destruye y no tiene ventaja
+                effScore = -60;
             }
 
-            matchupDetails.push({
-                rivalName: r.name,
-                multiplier: bestMult,
-                attackerElem: bestAttackerElem
-            });
+            return {
+                rivalName: rival.name,
+                bestOff,
+                incoming,
+                bestElem: bestAttackerElem,
+                isSafe,
+                effScore
+            };
         });
 
-        // Bono por pasivas ultra-meta
-        let passiveBonus = 0;
+        // Bonificaciones por pasivas ultra-meta
+        let traitBonus = 0;
         const traitStr = (creature.traits || []).join(' ').toLowerCase();
-        if (traitStr.includes('electrorreserva')) passiveBonus += 25; // Fulmintis PE battery
-        if (traitStr.includes('gran hechicería')) passiveBonus += 20; // Stellarys execute
-        if (traitStr.includes('racimo floral')) passiveBonus += 20;   // Irisalis clones
-        if (traitStr.includes('furia desatada')) passiveBonus += 20;  // Grizbo break stun
-        if (traitStr.includes('llamas abrasadoras')) passiveBonus += 15; // Scorchhowl +25%
+        if (traitStr.includes('electrorreserva')) traitBonus += 45; // Fulmintis (batería infinita de PE)
+        if (traitStr.includes('gran hechicería')) traitBonus += 35; // Stellarys (ejecución <50%)
+        if (traitStr.includes('llamas abrasadoras')) traitBonus += 35; // Scorchhowl (+25% elemental)
+        if (traitStr.includes('poder del fuego')) traitBonus += 30; // Infergon (+30% fuego)
+        if (traitStr.includes('furia desatada')) traitBonus += 35;  // Grizbo (demolición break)
+        if (traitStr.includes('racimo floral')) traitBonus += 30;   // Irisalis (-50% PE clones)
 
-        const finalScore = totalAdvantageScore + (atq * 0.8) + (quiebre * 0.4) + passiveBonus;
+        // Ponderación de estadísticas (ATQ tiene el mayor peso ofensivo)
+        let totalScore = rivalMatchups.reduce((sum, m) => sum + m.effScore, 0) + (atq * 1.3) + (quiebre * 0.4) + traitBonus;
+
+        if (teamStyle === '4dps' && role === 'DPS') totalScore += 30;
 
         return {
             creature,
-            score: finalScore,
-            coverageCount,
-            matchupDetails,
+            stats,
             atq,
-            quiebre
+            quiebre,
+            role,
+            primaryElem,
+            rivalMatchups,
+            totalScore,
+            safeCount: rivalMatchups.filter(m => m.isSafe).length
         };
     });
 
-    // Ordenar candidatos por puntuación
-    candidates.sort((a, b) => b.score - a.score);
-
-    // 3. Selección greedy de los 4 titulares con máxima cobertura sin solapamientos redundantes
+    // 3. Selección del Escuadrón con Diversidad Elemental y Roles
     const selectedStarters = [];
-    const coveredRivalNames = new Set();
+    const usedSpecies = new Set();
+    const usedPrimaryElements = new Set();
+    const coveredRivals = new Set();
 
-    // Priorizar cubrir cada rival con su counter más devastador
-    for (const r of validRivals) {
-        if (selectedStarters.length >= 4) break;
-        // Buscar el mejor candidato que tenga x2.56 o x1.6 contra este rival y que aún no esté en el equipo
-        const bestForRival = candidates.find(c => {
-            if (selectedStarters.some(s => s.creature.base_name === c.creature.base_name)) return false;
-            const match = c.matchupDetails.find(m => m.rivalName === r.name);
-            return match && match.multiplier >= 1.5;
-        });
+    // Pase 1: Asignar a cada rival su MEJOR SAFE HARD COUNTER con elemento primario distinto
+    for (const rival of validRivals) {
+        if (coveredRivals.has(rival.name) && selectedStarters.length >= 3) continue;
 
-        if (bestForRival) {
-            selectedStarters.push(bestForRival);
-            coveredRivalNames.add(r.name);
+        let bestCand = scoredCandidates
+            .filter(cand => !usedSpecies.has(cand.creature.base_name))
+            .filter(cand => !usedPrimaryElements.has(cand.primaryElem))
+            .filter(cand => {
+                const rm = cand.rivalMatchups.find(m => m.rivalName === rival.name);
+                return rm && rm.isSafe;
+            })
+            .sort((a, b) => {
+                const aMatch = a.rivalMatchups.find(m => m.rivalName === rival.name);
+                const bMatch = b.rivalMatchups.find(m => m.rivalName === rival.name);
+                if (bMatch.bestOff !== aMatch.bestOff) return bMatch.bestOff - aMatch.bestOff;
+                return b.atq - a.atq;
+            })[0];
+
+        // Si no hay con elemento distinto, relajar restricción de elemento
+        if (!bestCand) {
+            bestCand = scoredCandidates
+                .filter(cand => !usedSpecies.has(cand.creature.base_name))
+                .filter(cand => {
+                    const rm = cand.rivalMatchups.find(m => m.rivalName === rival.name);
+                    return rm && rm.isSafe;
+                })
+                .sort((a, b) => b.atq - a.atq)[0];
+        }
+
+        if (bestCand && selectedStarters.length < 4) {
+            selectedStarters.push(bestCand);
+            usedSpecies.add(bestCand.creature.base_name);
+            usedPrimaryElements.add(bestCand.primaryElem);
+            bestCand.rivalMatchups.forEach(m => {
+                if (m.isSafe) coveredRivals.add(m.rivalName);
+            });
         }
     }
 
-    // Si aún quedan huecos para llegar a 4, rellenar con los mejores hiper-carries globales
-    for (const c of candidates) {
+    // Pase 2: Rellenar huecos restantes con hipercarries de puntuación máxima con diversidad elemental
+    scoredCandidates.sort((a, b) => b.totalScore - a.totalScore);
+    for (const cand of scoredCandidates) {
         if (selectedStarters.length >= 4) break;
-        if (!selectedStarters.some(s => s.creature.base_name === c.creature.base_name)) {
-            selectedStarters.push(c);
+        if (!usedSpecies.has(cand.creature.base_name) && !usedPrimaryElements.has(cand.primaryElem)) {
+            selectedStarters.push(cand);
+            usedSpecies.add(cand.creature.base_name);
+            usedPrimaryElements.add(cand.primaryElem);
         }
     }
 
-    // 4. Seleccionar 4 suplentes de reserva (distintos a los titulares)
+    // Pase 3: Si aún faltan huecos, tomar los mejores disponibles
+    for (const cand of scoredCandidates) {
+        if (selectedStarters.length >= 4) break;
+        if (!usedSpecies.has(cand.creature.base_name)) {
+            selectedStarters.push(cand);
+            usedSpecies.add(cand.creature.base_name);
+        }
+    }
+
+    // 4. Seleccionar 4 Reservas / Suplentes Tácticos (distintos de los titulares)
     const selectedReserves = [];
-    for (const c of candidates) {
+    for (const cand of scoredCandidates) {
         if (selectedReserves.length >= 4) break;
-        const alreadyInStarters = selectedStarters.some(s => s.creature.base_name === c.creature.base_name);
-        const alreadyInReserves = selectedReserves.some(s => s.creature.base_name === c.creature.base_name);
-        if (!alreadyInStarters && !alreadyInReserves) {
-            selectedReserves.push(c);
+        const inStarters = selectedStarters.some(s => s.creature.base_name === cand.creature.base_name);
+        const inReserves = selectedReserves.some(s => s.creature.base_name === cand.creature.base_name);
+        if (!inStarters && !inReserves) {
+            selectedReserves.push(cand);
         }
     }
 
-    // 5. Determinar orden de eliminación prioritario (Kill Order)
-    // Reglas: Healers/Support primero -> DPS burst -> Tanques
+    // 5. Determinar Orden de Eliminación Táctico (Kill Order)
     const killOrder = [...validRivals].sort((a, b) => {
         const roleScore = (r) => {
             const role = (r.role || '').toLowerCase();
@@ -517,7 +599,6 @@ export function calculateOptimalCounters() {
         return roleScore(b) - roleScore(a);
     });
 
-    // Renderizar resultados en pantalla
     renderResults(selectedStarters, selectedReserves, killOrder, validRivals);
 }
 
@@ -527,12 +608,12 @@ function renderResults(starters, reserves, killOrder, validRivals) {
     if (!container) return;
 
     container.innerHTML = `
-        <!-- SECCIÓN 1: FORMACIÓN TITULAR (LOS 4 COUNTERS) -->
+        <!-- SECCIÓN 1: FORMACIÓN TITULAR (LOS 4 COUNTERS SEGUROS) -->
         <div class="tactical-card-section starters-section">
             <div class="tactical-section-head">
                 <span class="tactical-badge badge-primary">🏆 Formación Titular Recomendada</span>
                 <h3>Escuadrón Asignado para la Victoria</h3>
-                <p class="section-desc">Seleccionados por cobertura de ventaja elemental, techo de ataque base (hasta 130 ATQ) y autosuficiencia de energía (PE).</p>
+                <p class="section-desc">Seleccionados por <strong>ventaja bidireccional segura</strong> (alto daño al rival sin recibir daño crítico), techo de ataque base del datamine (hasta 130 ATQ) y autosuficiencia de PE.</p>
             </div>
 
             <div class="starters-grid">
@@ -545,20 +626,20 @@ function renderResults(starters, reserves, killOrder, validRivals) {
                         return `<span class="elem-badge" style="background: ${chart.color || '#475569'};">${chart.emoji || ''} ${el}</span>`;
                     }).join('');
 
-                    // Misión asignada: ver a quién contrarresta
-                    const strongAgainst = s.matchupDetails.filter(m => m.multiplier >= 1.5);
-                    const missionHtml = strongAgainst.length > 0 ? `
+                    // Misión asignada: ver a quién contrarresta con seguridad
+                    const safeAgainst = s.rivalMatchups.filter(m => m.isSafe);
+                    const missionHtml = safeAgainst.length > 0 ? `
                         <div class="starter-mission">
-                            <span class="mission-label">🎯 Misión Asignada:</span>
+                            <span class="mission-label">🎯 Misión Asignada (Counter Seguro):</span>
                             <div class="mission-targets">
-                                ${strongAgainst.map(m => `
-                                    <span class="target-tag ${m.multiplier >= 2.5 ? 'double-adv' : ''}">
-                                        Vencer a <strong>${m.rivalName}</strong> (${m.multiplier}x daño)
+                                ${safeAgainst.map(m => `
+                                    <span class="target-tag ${m.bestOff >= 2.5 ? 'double-adv' : ''}">
+                                        Vencer a <strong>${m.rivalName.split(' (')[0]}</strong> (${m.bestOff}x daño / Recibe ${m.incoming}x)
                                     </span>
                                 `).join('')}
                             </div>
                         </div>
-                    ` : '<div class="starter-mission"><span class="mission-neutral">Hipercarry de daño neutro y ruptura</span></div>';
+                    ` : '<div class="starter-mission"><span class="mission-neutral">🛡️ Hipercarry de alto daño neutro y ruptura</span></div>';
 
                     return `
                         <div class="starter-card">
@@ -576,7 +657,7 @@ function renderResults(starters, reserves, killOrder, validRivals) {
                             </div>
 
                             <div class="starter-stats-row">
-                                <div class="stat-pill"><span class="stat-k">ATQ</span> <span class="stat-v ${stats.ATQ >= 125 ? 'top-stat' : ''}">${stats.ATQ || 0}</span></div>
+                                <div class="stat-pill"><span class="stat-k">ATQ</span> <span class="stat-v ${stats.ATQ >= 124 ? 'top-stat' : ''}">${stats.ATQ || 0}</span></div>
                                 <div class="stat-pill"><span class="stat-k">QUIEBRE</span> <span class="stat-v">${stats.QUIEBRE || 0}</span></div>
                                 <div class="stat-pill"><span class="stat-k">PS</span> <span class="stat-v">${stats.PS || 0}</span></div>
                                 <div class="stat-pill"><span class="stat-k">REGEN</span> <span class="stat-v">${stats.REGEN || 0}</span></div>
@@ -652,13 +733,12 @@ function renderResults(starters, reserves, killOrder, validRivals) {
                     <tbody>
                         ${validRivals.map(r => {
                             const rElems = r.elements || [r.element];
-                            // Encontrar el mejor counter entre los titulares
                             let bestMatch = null;
                             let bestMult = 1.0;
                             for (const s of starters) {
-                                const m = s.matchupDetails.find(md => md.rivalName === r.name);
-                                if (m && m.multiplier > bestMult) {
-                                    bestMult = m.multiplier;
+                                const m = s.rivalMatchups.find(md => md.rivalName === r.name);
+                                if (m && m.bestOff > bestMult) {
+                                    bestMult = m.bestOff;
                                     bestMatch = s;
                                 }
                             }

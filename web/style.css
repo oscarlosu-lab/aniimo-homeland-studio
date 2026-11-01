@@ -5896,6 +5896,45 @@ tr:hover .skip-row,
     font-style: italic;
 }
 
+.tactical-config-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 0.85rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.tactical-config-bar .config-field {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.tactical-config-bar .quick-select {
+    padding: 0.45rem 0.85rem;
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.tactical-config-bar .filter-toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #4ade80;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 .action-btn-wrapper {
     display: flex;
     justify-content: center;

@@ -80,6 +80,20 @@
                     <div class="rival-slot" id="rival-slot-3"></div>
                 </div>
 
+                <!-- Controles de Configuración Táctica -->
+                <div class="tactical-config-bar">
+                    <div class="config-field">
+                        <label for="team-style-select"><strong>Estilo de Formación:</strong></label>
+                        <select id="team-style-select" class="quick-select">
+                            <option value="4dps" selected>🔥 4 DPS Puros (Hiper-Ataque y Ventaja)</option>
+                            <option value="balanced">🛡️ Equipo Balanceado (2 DPS + 1 Breaker + 1 Soporte/CC)</option>
+                        </select>
+                    </div>
+                    <label class="filter-toggle-label" title="Recomendar preferentemente formas básicas accesibles en lugar de variantes raras">
+                        <input type="checkbox" id="check-only-base" checked> Priorizar Formas Básicas (Fáciles de Conseguir)
+                    </label>
+                </div>
+
                 <!-- Botón de Acción Principal -->
                 <div class="action-btn-wrapper">
                     <button type="button" class="btn-calculate-tactics" id="btn-calculate-counters">
