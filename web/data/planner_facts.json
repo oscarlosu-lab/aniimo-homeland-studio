@@ -45748,5 +45748,1417 @@
       "matchups": "Debilidades y resistencias ×1.6 Oscuridad ×1 Eléctrico Roca Viento Hielo ×0.625 Hierba Fuego Agua Sagrado",
       "source": "GameWith index and profile"
     }
-  ]
+  ],
+  "i18n": {
+    "es": {
+      "items": {
+        "1010": "Moneda del hogar",
+        "110001": "Aniicubo",
+        "110002": "Aniicubo pro",
+        "110007": "Aniicubo mega",
+        "150001": "Capullo de crecimiento",
+        "150002": "Flor de crecimiento",
+        "150003": "Fruta de crecimiento",
+        "4000000": "Semilla de trigo",
+        "4000001": "Semilla de caña de azúcar",
+        "4000002": "Semilla de patata",
+        "4000003": "Semilla de arroz",
+        "4000004": "Semilla de algodón",
+        "4000005": "Semilla de fresa",
+        "4000007": "Semilla de lavanda",
+        "4000008": "Semilla de sorgo",
+        "4000009": "Semilla de soja",
+        "4000010": "Semilla de uva",
+        "4000012": "Semilla de cacao",
+        "4000013": "Semilla de agave",
+        "4000014": "Semilla de rosa",
+        "4000015": "Semilla de arándano rojo",
+        "4000016": "Semilla de ginseng",
+        "4000017": "Semilla de bambú esmeralda",
+        "4000018": "Semilla de sauce",
+        "4000019": "Semilla de árbol de caucho",
+        "4000020": "Semilla de árbol de arce",
+        "4000021": "Semilla de palmera",
+        "4000023": "Semilla de manzano",
+        "4000024": "Semilla de cerezo",
+        "4000025": "Semilla de naranjo amargo",
+        "4000028": "Semilla de limonero",
+        "4000029": "Semilla de cocotero",
+        "4000030": "Semilla de nogal",
+        "4000031": "Semilla de castaño",
+        "4000043": "Semillas de rábano de rocío de luna",
+        "4000044": "Semillas de pimiento de luna creciente",
+        "4000045": "Semillas de batata",
+        "4000046": "Semilla de calabaza mágica",
+        "4000047": "Semillas de frutalinterna de la memoria",
+        "4001000": "Trigo",
+        "4001001": "Caña de azúcar",
+        "4001002": "Patata",
+        "4001003": "Arroz",
+        "4001004": "Algodón",
+        "4001005": "Fresa",
+        "4001007": "Lavanda",
+        "4001008": "Sorgo",
+        "4001009": "Soja",
+        "4001010": "Uvas",
+        "4001012": "Cacao",
+        "4001013": "Agave",
+        "4001014": "Rosa",
+        "4001015": "Arándano rojo",
+        "4001016": "Ginseng",
+        "4001017": "Bambú",
+        "4001018": "Madera de sauce",
+        "4001029": "Caucho natural",
+        "4001030": "Jarabe de arce",
+        "4001031": "Corteza de palmera",
+        "4001033": "Manzana",
+        "4001034": "Flor de cerezo",
+        "4001035": "Flor de azahar",
+        "4001038": "Lemon",
+        "4001039": "Coco",
+        "4001040": "Nuez",
+        "4001041": "Castaña",
+        "4001042": "Escamas",
+        "4001044": "Lana",
+        "4001045": "Pétalos",
+        "4001046": "Aromatista",
+        "4001047": "Estrella",
+        "4001049": "Perla",
+        "4001051": "Concha de mar",
+        "4001052": "Gema",
+        "4001053": "Piedra",
+        "4001054": "Mena de cobre",
+        "4001056": "Mena de cuarzo",
+        "4001057": "Arcilla",
+        "4001063": "Arroz molido",
+        "4001064": "Bloque de madera",
+        "4001065": "Arena mineral",
+        "4001066": "Rábano de rocío de luna",
+        "4001067": "Pimiento de luna creciente",
+        "4001068": "Capitán papa",
+        "4001069": "Sal marina",
+        "4001070": "Agua de pozo",
+        "4001071": "Agua fresca sin tratar",
+        "4001072": "Agua de manantial de roca profunda",
+        "4001073": "Manantial mineral natural",
+        "4001074": "Calabaza mágica",
+        "4001075": "Frutalinterna de la memoria",
+        "4001076": "Mineral de plata",
+        "4001077": "Manantial frío de nieve derretida",
+        "4001078": "Gorra con puntos dorados",
+        "4001079": "Cono dulce",
+        "4010000": "Té de trigo",
+        "4010001": "Té verde de arroz tostado",
+        "4010002": "Bebida de arroz dulce",
+        "4010003": "Jugo de uva",
+        "4010006": "Kvass de patata",
+        "4010008": "Agua de ginseng",
+        "4010009": "Vinagre de sidra",
+        "4010011": "Vinagre de arroz",
+        "4010012": "Salsa de soja",
+        "4010015": "Bebida de agave",
+        "4010017": "Incienso de lavanda",
+        "4010018": "Incienso de rosa",
+        "4010019": "Incienso de azahar",
+        "4010020": "Incienso de cerezo",
+        "4010022": "Incienso de limón",
+        "4010023": "Perfume mezclado",
+        "4010024": "Aceite de coco",
+        "4010025": "Jabón",
+        "4010027": "Varilla de incienso de bambú",
+        "4010028": "Ambientador de rosa",
+        "4010030": "Loción",
+        "4010032": "Harina de trigo",
+        "4010035": "Tofu",
+        "4010036": "Cacao en polvo",
+        "4010039": "Hilo de algodón",
+        "4010040": "Hilo de lana",
+        "4010041": "Cuerda de palma",
+        "4010042": "Tela de algodón",
+        "4010043": "Tela de lana",
+        "4010045": "Azúcar de malta",
+        "4010046": "Caramelo de piedra",
+        "4010047": "Trozos de azúcar de arce",
+        "4010049": "Tanghulu",
+        "4010051": "Estrella de dulce de arce",
+        "4010053": "Pan",
+        "4010054": "Bollo de crema de fresa",
+        "4010055": "Rollito de arroz al vapor",
+        "4010056": "Galleta de coco",
+        "4010058": "Cacao caliente",
+        "4010060": "Gelatina",
+        "4010061": "Tofu en salsa de soja",
+        "4010062": "Arroz frito con salsa de soja",
+        "4010064": "Sopa cremosa de patata",
+        "4010066": "Frutos secos",
+        "4010068": "Fresas deshidratadas",
+        "4010069": "Uvas deshidratadas",
+        "4010070": "Arándanos rojos deshidratados",
+        "4010071": "Rodajas de manzana deshidratada",
+        "4010072": "Rodajas de limón deshidratadas",
+        "4010073": "Patatas fritas",
+        "4010074": "Tofu seco",
+        "4010075": "Flores secas",
+        "4010076": "Coco rallado",
+        "4010077": "Chips de frutos secos caramelizados",
+        "4010078": "Alfarería",
+        "4010079": "Porcelana",
+        "4010080": "Artículo de bambú",
+        "4010081": "Talla de madera",
+        "4010082": "Collar de perlas",
+        "4010083": "Polvo de gemas",
+        "4010084": "Ornamento de caracola",
+        "4010085": "Campanilla de viento",
+        "4010087": "Tinte",
+        "4010088": "Muñeco",
+        "4010089": "Juguete tejido",
+        "4010090": "Farol de deseos estelares",
+        "4010091": "Atrapasueños",
+        "4010092": "Ramo de flores",
+        "4010093": "Flores en una botella",
+        "4010094": "Jugo de fresa",
+        "4010095": "Jugo de arándano",
+        "4010096": "Jugo de manzana",
+        "4010097": "Mermelada de uva",
+        "4010098": "Mermelada de fresa",
+        "4010099": "Mermelada de arándano rojo",
+        "4010100": "Mermelada de manzana con dulce de arce",
+        "4010101": "Caramelo de uva",
+        "4010102": "Caramelo de fresa",
+        "4010104": "Caramelo de manzana",
+        "4010112": "Castañas tostadas con azúcar",
+        "4010113": "Pan de flor",
+        "4010133": "Flor de cerezo seca",
+        "4010134": "Bola de arroz con flor de cerezo",
+        "4010135": "Flor de cerezo salada",
+        "4010136": "Bolsita de lavanda",
+        "4010137": "Polvo de ginseng",
+        "4010138": "Ginseng seco",
+        "4010139": "Aroma herbal de ginseng",
+        "4010140": "Gachas de ginseng",
+        "4010141": "Pastel de castaña y ginseng",
+        "4010142": "Crema de cacao",
+        "4010143": "Chocolate de arándano rojo",
+        "4010144": "Pudín de coco con chocolate y frutos rojos",
+        "4010145": "Polvo de lavanda",
+        "4010146": "Encurtido umbral",
+        "4010147": "Olla caliente sombría",
+        "4010148": "Bandeja de cosecha",
+        "4010149": "Pimiento de luna creciente asado",
+        "4010150": "Rodajas de rábano de rocío de luna",
+        "4010151": "Salsa dulce picante sombría",
+        "4010152": "Bebida de arroz",
+        "4010154": "Patatas asadas con dulce de arce",
+        "4010155": "Gachas de arroz simples",
+        "4010156": "Jarabe de agave",
+        "4010157": "Puré de castaña",
+        "4010158": "Compota de uva intensa",
+        "4010159": "Bebida de uva y limón",
+        "4010160": "Galletas de lavanda",
+        "4010161": "Jugo de caña de azúcar",
+        "4010162": "Tarta de manzana",
+        "4010163": "Harina refinada",
+        "4010164": "Leche de coco",
+        "4010165": "Concentrado de rosa",
+        "4010166": "Galletita de rosa",
+        "4010168": "Piedras desgastadas por el río",
+        "4010169": "Madera en bruto",
+        "4010170": "Tablones estándar",
+        "4010171": "Vigas laminadas",
+        "4010172": "Componente de madera densificada",
+        "4010174": "Mineral tamizado grueso",
+        "4010175": "Ladrillo de mineral sinterizado",
+        "4010176": "Mineral refinado",
+        "4010177": "Placa de mineral microcristalino",
+        "4010184": "Pastel de nuez",
+        "4010185": "Leche de nuez",
+        "4010186": "Cacao con coco",
+        "4010187": "Rocío de flor de azahar",
+        "4010188": "Fresas confitadas",
+        "4010189": "Flor de azahar confitada",
+        "4010190": "Patito de goma",
+        "4010191": "Soja tostada",
+        "4010192": "Limón salado",
+        "4010193": "Tela de algodón teñida",
+        "4010194": "Refresco de coco",
+        "4010198": "Polvo de perla",
+        "4010199": "Harina de sorgo",
+        "4010200": "Polvo de oro",
+        "4010201": "Polvo de plata brillante",
+        "4010202": "Flor de azahar deshidratada",
+        "4010203": "Fibra de agave",
+        "4010204": "Loción de leche de coco",
+        "4010205": "Bálsamo de flor de azahar",
+        "4010206": "Bolsita de polvo de oro",
+        "4010207": "Almidón de patata",
+        "4010208": "Potaje de sorgo",
+        "4010209": "Jarabe de flor de azahar",
+        "4010210": "Pastel de coco rayado",
+        "4010211": "Pastel suave de arándano rojo",
+        "4010212": "Bebida de arroz con flor de azahar",
+        "4010213": "Bebida de arroz con sorgo rojo",
+        "4010214": "Cono dulce de cacao",
+        "4010215": "Cono dulce con núcleo de azúcar",
+        "4010216": "Masa fermentada de sorgo",
+        "4010217": "Diamante estelar",
+        "4010218": "Crema facial de perla",
+        "4010219": "Piedra de manantial de plata líquida",
+        "4010220": "Polvo de brillantina",
+        "4010221": "Alfombra afelpada de sisal",
+        "4010222": "Alfombra perfumada de flor de azahar",
+        "4010223": "Calabaza asada con sal marina",
+        "4010224": "Frutalinterna confitada",
+        "4010225": "Copa de calabaza glaseada con miel",
+        "4010226": "Linterna mágica de calabaza",
+        "4010227": "Linterna de la memoria",
+        "4010228": "Conjunto de faroles de frutalinterna",
+        "4010229": "Pastel mágico de calabaza",
+        "4010230": "Néctar de fruto reluciente",
+        "4010231": "Sopa de calabaza con linterna dorada",
+        "4020011": "Bocaditos energéticos",
+        "4020033": "Fórmula rápida: trigo",
+        "4020035": "Fórmula rápida: bambú",
+        "4020043": "Fórmula rápida: limón",
+        "4020044": "Fórmula rápida: coco",
+        "4020052": "Campanilla de viento avanzada",
+        "4020054": "Receta rápida: patata",
+        "4020055": "Receta rápida: arroz",
+        "4020056": "Receta rápida: jarabe de arce",
+        "4020057": "Receta rápida: fresa",
+        "4020059": "Receta rápida: agua de pozo",
+        "4020060": "Receta rápida: sal marina",
+        "4020061": "Receta rápida: agua fresca",
+        "4020062": "Receta rápida: lana",
+        "4020063": "Receta rápida: agua de manantial de piedra profunda",
+        "4020064": "Receta rápida: agua mineral natural",
+        "4020065": "Fórmula de Alta Velocidad: Escamas",
+        "4020066": "Receta rápida: aromatista",
+        "4020067": "Pan prémium",
+        "4020068": "Sopa de patata prémium",
+        "4020069": "Vino de arroz dulce prémium",
+        "4020070": "Limón salado prémium",
+        "4020071": "Gelatina prémium",
+        "4020072": "Pudín de coco con chocolate y frutos rojos prémium",
+        "4020073": "Piedras desgastadas por el río prémium",
+        "4020074": "Ambientador de rosa prémium",
+        "4020075": "Incienso avanzado de limón",
+        "4020076": "Jabón prémium",
+        "4020077": "Polvo de gemas avanzado",
+        "4020078": "Perfume mezclado prémium",
+        "4020079": "Trigo prémium",
+        "4020080": "Patata prémium",
+        "4020081": "Fórmula rápida: agave",
+        "4020082": "Fórmula rápida: manantial frío de nieve derretida",
+        "4020083": "Piedra de manantial de plata líquida prémium",
+        "4020084": "Fórmula rápida: perla",
+        "4040011": "Módulo ecológico",
+        "4040012": "Módulo de cocina",
+        "4040013": "Detector de recursos",
+        "4040014": "Módulo de fabricación",
+        "4040033": "Trigo de rayo de luna",
+        "4040075": "Chispa de ensueño",
+        "4040114": "Nota de receta: pastelitos de rosa",
+        "4040115": "Nota de receta: kvass de patata",
+        "4040116": "Nota de receta: gachas de ginseng",
+        "4040117": "Nota de receta: caramelo de fresa",
+        "4040118": "Nota de receta: flores en botella",
+        "4040119": "Nota de receta: loción",
+        "4040125": "Dulces de sabor extraño",
+        "4040161": "Notas de fórmula · Bebida de arroz con flor de azahar"
+      },
+      "facilities": {
+        "1010000": "Campo de cultivos",
+        "1010001": "Arboleda",
+        "1010002": "Mina",
+        "1010003": "Cama nubosa",
+        "1010004": "Casa de rocío",
+        "1010005": "Hamaca de lluvia estelar",
+        "1010006": "Castillo de arena de Susurromarea",
+        "1010007": "Molinete floral",
+        "1010008": "Pozo",
+        "1020000": "Molino de carrusel",
+        "1020001": "Mesa de trabajo",
+        "1020002": "Secadora musical",
+        "1020003": "Cocina de garra",
+        "1020004": "Telar de rueda",
+        "1020005": "Mesa fonoláctica",
+        "1020006": "Barril saltarín",
+        "1020007": "Olla a fuego lento",
+        "1020008": "Cocina abrasadora",
+        "1020009": "Banco de carpintería",
+        "1020010": "Horno con chimenea",
+        "1020011": "Frasco para encurtidos",
+        "1040000": "Unidad de almacenamiento",
+        "1040001": "Poste eléctrico crepitante",
+        "1040002": "Generador de chispa",
+        "1040003": "Horno de calor",
+        "1040004": "Unidad de refrigeramiento",
+        "1040005": "Lámpara solar"
+      },
+      "forms": {
+        "1001100": {
+          "name": "Celestis",
+          "form": ""
+        },
+        "1001200": {
+          "name": "Stellarys",
+          "form": ""
+        },
+        "1001201": {
+          "name": "Stellarys",
+          "form": "Forma de lluvia"
+        },
+        "1001202": {
+          "name": "Stellarys",
+          "form": "Forma prismana"
+        },
+        "1002100": {
+          "name": "Helmut",
+          "form": ""
+        },
+        "1002101": {
+          "name": "Helmut",
+          "form": "Forma de nieve"
+        },
+        "1002102": {
+          "name": "Helmut",
+          "form": "Forme de la lisière boisée"
+        },
+        "1002200": {
+          "name": "Helmwhelp",
+          "form": ""
+        },
+        "1002201": {
+          "name": "Helmwhelp",
+          "form": "Forma de montaña"
+        },
+        "1002300": {
+          "name": "Helgon",
+          "form": ""
+        },
+        "1002301": {
+          "name": "Helgon",
+          "form": "Forma de montaña"
+        },
+        "1002400": {
+          "name": "Jawling",
+          "form": ""
+        },
+        "1002401": {
+          "name": "Jawling",
+          "form": "Forma de montaña"
+        },
+        "1002500": {
+          "name": "Infergon",
+          "form": ""
+        },
+        "1002503": {
+          "name": "Infergon",
+          "form": "Forma prismana"
+        },
+        "1002600": {
+          "name": "Pawney",
+          "form": ""
+        },
+        "1002601": {
+          "name": "Pawney",
+          "form": "Forma de nieve"
+        },
+        "1002602": {
+          "name": "Pawney",
+          "form": "Forme de la lisière boisée"
+        },
+        "1002603": {
+          "name": "Pawney",
+          "form": "Forma prismana"
+        },
+        "1002700": {
+          "name": "Rookey",
+          "form": ""
+        },
+        "1002701": {
+          "name": "Rookey",
+          "form": "Forma de nieve"
+        },
+        "1002702": {
+          "name": "Rookey",
+          "form": "Forme de la lisière boisée"
+        },
+        "1003100": {
+          "name": "Wisptis",
+          "form": ""
+        },
+        "1003101": {
+          "name": "Wisptis",
+          "form": "Forma de bosque"
+        },
+        "1003103": {
+          "name": "Wisptis",
+          "form": "Forma de sierra"
+        },
+        "1003200": {
+          "name": "Ignitis",
+          "form": ""
+        },
+        "1003201": {
+          "name": "Ignitis",
+          "form": "Forma de bosque"
+        },
+        "1003202": {
+          "name": "Ignitis",
+          "form": "Forma prismana"
+        },
+        "1003203": {
+          "name": "Ignitis",
+          "form": "Forma de sierra"
+        },
+        "1003300": {
+          "name": "Fulmintis",
+          "form": ""
+        },
+        "1003305": {
+          "name": "Fulmintis",
+          "form": "Forma prismana"
+        },
+        "1004100": {
+          "name": "Skippy",
+          "form": ""
+        },
+        "1004101": {
+          "name": "Skippy",
+          "form": "Forma de mar de flores"
+        },
+        "1004102": {
+          "name": "Skippy",
+          "form": "Forma de nieve"
+        },
+        "1004200": {
+          "name": "Pranky",
+          "form": ""
+        },
+        "1004201": {
+          "name": "Pranky",
+          "form": "Forma de mar de flores"
+        },
+        "1004202": {
+          "name": "Pranky",
+          "form": "Forma de nieve"
+        },
+        "1004300": {
+          "name": "Glacy",
+          "form": ""
+        },
+        "1004301": {
+          "name": "Glacy",
+          "form": "Forma de mar de flores"
+        },
+        "1004302": {
+          "name": "Glacy",
+          "form": "Forma de nieve"
+        },
+        "1004303": {
+          "name": "Glacy",
+          "form": "Forma prismana"
+        },
+        "1004500": {
+          "name": "Leafy",
+          "form": ""
+        },
+        "1005100": {
+          "name": "Emberpup",
+          "form": ""
+        },
+        "1005101": {
+          "name": "Emberpup",
+          "form": "Forma de sierra"
+        },
+        "1005104": {
+          "name": "Emberpup",
+          "form": "Forme de la lisière boisée"
+        },
+        "1005200": {
+          "name": "Flameruff",
+          "form": ""
+        },
+        "1005201": {
+          "name": "Flameruff",
+          "form": "Forma de sierra"
+        },
+        "1005204": {
+          "name": "Flameruff",
+          "form": "Forme de la lisière boisée"
+        },
+        "1005300": {
+          "name": "Scorchhowl",
+          "form": ""
+        },
+        "1005301": {
+          "name": "Scorchhowl",
+          "form": "Forma de sierra"
+        },
+        "1005302": {
+          "name": "Scorchhowl",
+          "form": "Forma de tormenta"
+        },
+        "1005303": {
+          "name": "Scorchhowl",
+          "form": "Forma prismana"
+        },
+        "1005304": {
+          "name": "Scorchhowl",
+          "form": "Forme de la lisière boisée"
+        },
+        "1005500": {
+          "name": "Inferlupa",
+          "form": ""
+        },
+        "1005503": {
+          "name": "Inferlupa",
+          "form": "Forma prismana"
+        },
+        "1012200": {
+          "name": "Besauce",
+          "form": ""
+        },
+        "1013100": {
+          "name": "Bonesky",
+          "form": ""
+        },
+        "1013102": {
+          "name": "Bonesky",
+          "form": "Forma de noche"
+        },
+        "1013200": {
+          "name": "Fenrier",
+          "form": ""
+        },
+        "1013202": {
+          "name": "Fenrier",
+          "form": "Forma de noche"
+        },
+        "1013300": {
+          "name": "Glynsera",
+          "form": ""
+        },
+        "1013301": {
+          "name": "Glynsera",
+          "form": "Forma prismana"
+        },
+        "1013302": {
+          "name": "Glynsera",
+          "form": "Forma de noche"
+        },
+        "1014100": {
+          "name": "Bulbly",
+          "form": ""
+        },
+        "1014200": {
+          "name": "Veilfloat",
+          "form": ""
+        },
+        "1014300": {
+          "name": "Luminelle",
+          "form": ""
+        },
+        "1014301": {
+          "name": "Luminelle",
+          "form": "Forma de lluvia"
+        },
+        "1014302": {
+          "name": "Luminelle",
+          "form": "Forma prismana"
+        },
+        "1016100": {
+          "name": "Budclaw",
+          "form": ""
+        },
+        "1016101": {
+          "name": "Budclaw",
+          "form": "Forma de marisma"
+        },
+        "1016102": {
+          "name": "Budclaw",
+          "form": "Forma de playa"
+        },
+        "1016103": {
+          "name": "Budclaw",
+          "form": "Forma de bahía"
+        },
+        "1016200": {
+          "name": "Shrubclaw",
+          "form": ""
+        },
+        "1016201": {
+          "name": "Shrubclaw",
+          "form": "Forma de marisma"
+        },
+        "1016202": {
+          "name": "Shrubclaw",
+          "form": "Forma de playa"
+        },
+        "1016203": {
+          "name": "Shrubclaw",
+          "form": "Forma de bahía"
+        },
+        "1016300": {
+          "name": "Geoclaw",
+          "form": ""
+        },
+        "1017100": {
+          "name": "Susuta",
+          "form": ""
+        },
+        "1017101": {
+          "name": "Susuta",
+          "form": "Forma de noche"
+        },
+        "1017200": {
+          "name": "Popota",
+          "form": ""
+        },
+        "1017201": {
+          "name": "Popota",
+          "form": "Forma de noche"
+        },
+        "1017300": {
+          "name": "Piopiota",
+          "form": ""
+        },
+        "1017301": {
+          "name": "Piopiota",
+          "form": "Forma de noche"
+        },
+        "1017400": {
+          "name": "Panpanta",
+          "form": ""
+        },
+        "1017401": {
+          "name": "Panpanta",
+          "form": "Forma de noche"
+        },
+        "1017402": {
+          "name": "Panpanta",
+          "form": "Forma prismana"
+        },
+        "1018100": {
+          "name": "Chirpi",
+          "form": ""
+        },
+        "1018101": {
+          "name": "Chirpi",
+          "form": "Forma de playa"
+        },
+        "1018103": {
+          "name": "Chirpi",
+          "form": "Forma de sierra"
+        },
+        "1018400": {
+          "name": "Tromber",
+          "form": ""
+        },
+        "1018401": {
+          "name": "Tromber",
+          "form": "Forma de playa"
+        },
+        "1018403": {
+          "name": "Tromber",
+          "form": "Forma de sierra"
+        },
+        "1018500": {
+          "name": "Cornet",
+          "form": ""
+        },
+        "1018501": {
+          "name": "Cornet",
+          "form": "Forma de playa"
+        },
+        "1018502": {
+          "name": "Cornet",
+          "form": "Forma prismana"
+        },
+        "1018503": {
+          "name": "Cornet",
+          "form": "Forma de sierra"
+        },
+        "1018700": {
+          "name": "Tubster",
+          "form": ""
+        },
+        "1018701": {
+          "name": "Tubster",
+          "form": "Forma de playa"
+        },
+        "1018703": {
+          "name": "Tubster",
+          "form": "Forma de sierra"
+        },
+        "1019100": {
+          "name": "Shelly",
+          "form": ""
+        },
+        "1019200": {
+          "name": "Sheldon",
+          "form": ""
+        },
+        "1019400": {
+          "name": "Sherro",
+          "form": ""
+        },
+        "1019401": {
+          "name": "Sherro",
+          "form": "Forma de tormenta"
+        },
+        "1019402": {
+          "name": "Sherro",
+          "form": "Forma prismana"
+        },
+        "1020100": {
+          "name": "Hummin",
+          "form": ""
+        },
+        "1020101": {
+          "name": "Hummin",
+          "form": "Forma de montaña"
+        },
+        "1020300": {
+          "name": "Hexxin",
+          "form": ""
+        },
+        "1020301": {
+          "name": "Hexxin",
+          "form": "Forma de montaña"
+        },
+        "1020302": {
+          "name": "Hexxin",
+          "form": "Forma prismana"
+        },
+        "1020700": {
+          "name": "Tuckin",
+          "form": ""
+        },
+        "1020701": {
+          "name": "Tuckin",
+          "form": "Forma de montaña"
+        },
+        "1021100": {
+          "name": "Iris",
+          "form": ""
+        },
+        "1021101": {
+          "name": "Iris",
+          "form": "Forma de sierra"
+        },
+        "1021102": {
+          "name": "Iris",
+          "form": "Forma de bosque"
+        },
+        "1021103": {
+          "name": "Iris",
+          "form": "Forma de pradera"
+        },
+        "1021104": {
+          "name": "Iris",
+          "form": "Forma prismana"
+        },
+        "1021105": {
+          "name": "Iris",
+          "form": "Forma de meseta"
+        },
+        "1021106": {
+          "name": "Iris",
+          "form": "Forme de la lisière boisée"
+        },
+        "1021200": {
+          "name": "Irisal",
+          "form": ""
+        },
+        "1021201": {
+          "name": "Irisal",
+          "form": "Forma de sierra"
+        },
+        "1021202": {
+          "name": "Irisal",
+          "form": "Forma de bosque"
+        },
+        "1021203": {
+          "name": "Irisal",
+          "form": "Forma de pradera"
+        },
+        "1021204": {
+          "name": "Irisal",
+          "form": "Forma prismana"
+        },
+        "1021205": {
+          "name": "Irisal",
+          "form": "Forma de meseta"
+        },
+        "1021206": {
+          "name": "Irisal",
+          "form": "Forme de la lisière boisée"
+        },
+        "1021300": {
+          "name": "Irisalis",
+          "form": ""
+        },
+        "1022100": {
+          "name": "Bolty",
+          "form": ""
+        },
+        "1022102": {
+          "name": "Bolty",
+          "form": "Forme de la lisière boisée"
+        },
+        "1022200": {
+          "name": "Blazen",
+          "form": ""
+        },
+        "1022201": {
+          "name": "Blazen",
+          "form": "Forma prismana"
+        },
+        "1022202": {
+          "name": "Blazen",
+          "form": "Forme de la lisière boisée"
+        },
+        "1022300": {
+          "name": "Hoptail",
+          "form": ""
+        },
+        "1023100": {
+          "name": "Flutternym",
+          "form": ""
+        },
+        "1023101": {
+          "name": "Flutternym",
+          "form": "Forma de mar de flores"
+        },
+        "1023102": {
+          "name": "Flutternym",
+          "form": "Forma de noche"
+        },
+        "1023103": {
+          "name": "Flutternym",
+          "form": "Forme de la lisière boisée"
+        },
+        "1023200": {
+          "name": "Gracewing",
+          "form": ""
+        },
+        "1023201": {
+          "name": "Gracewing",
+          "form": "Forma de mar de flores"
+        },
+        "1023202": {
+          "name": "Gracewing",
+          "form": "Forma de noche"
+        },
+        "1023203": {
+          "name": "Gracewing",
+          "form": "Forme de la lisière boisée"
+        },
+        "1023300": {
+          "name": "Somniwing",
+          "form": ""
+        },
+        "1026100": {
+          "name": "Nimbi",
+          "form": ""
+        },
+        "1026101": {
+          "name": "Nimbi",
+          "form": "Forma de lluvia"
+        },
+        "1026102": {
+          "name": "Nimbi",
+          "form": "Forma de niebla"
+        },
+        "1026105": {
+          "name": "Nimbi",
+          "form": "Forma de meseta"
+        },
+        "1026200": {
+          "name": "Turbo",
+          "form": ""
+        },
+        "1026201": {
+          "name": "Turbo",
+          "form": "Forma de lluvia"
+        },
+        "1026202": {
+          "name": "Turbo",
+          "form": "Forma de niebla"
+        },
+        "1026204": {
+          "name": "Turbo",
+          "form": "Forma prismana"
+        },
+        "1026205": {
+          "name": "Turbo",
+          "form": "Forma de meseta"
+        },
+        "1026300": {
+          "name": "Dreaple",
+          "form": ""
+        },
+        "1028100": {
+          "name": "Pebbling",
+          "form": ""
+        },
+        "1028200": {
+          "name": "Lavazar",
+          "form": ""
+        },
+        "1028300": {
+          "name": "Magmarex",
+          "form": ""
+        },
+        "1028301": {
+          "name": "Magmarex",
+          "form": "Forma prismana"
+        },
+        "1028400": {
+          "name": "Geodeback",
+          "form": ""
+        },
+        "1028500": {
+          "name": "Minespine",
+          "form": ""
+        },
+        "1029100": {
+          "name": "Fentuft",
+          "form": ""
+        },
+        "1029300": {
+          "name": "Fenmane",
+          "form": ""
+        },
+        "1029301": {
+          "name": "Fenmane",
+          "form": "Forma prismana"
+        },
+        "1032100": {
+          "name": "Budsquire",
+          "form": ""
+        },
+        "1032103": {
+          "name": "Budsquire",
+          "form": "Forma de Torrebosque"
+        },
+        "1032300": {
+          "name": "Thornblade",
+          "form": ""
+        },
+        "1032301": {
+          "name": "Thornblade",
+          "form": "Forma de tormenta"
+        },
+        "1032302": {
+          "name": "Thornblade",
+          "form": "Forma prismana"
+        },
+        "1032303": {
+          "name": "Thornblade",
+          "form": "Forma de Torrebosque"
+        },
+        "1032400": {
+          "name": "Melloblum",
+          "form": ""
+        },
+        "1032402": {
+          "name": "Melloblum",
+          "form": "Forma prismana"
+        },
+        "1033100": {
+          "name": "Sparki",
+          "form": ""
+        },
+        "1033101": {
+          "name": "Sparki",
+          "form": "Forma de sierra"
+        },
+        "1033102": {
+          "name": "Sparki",
+          "form": "Forma de bosque"
+        },
+        "1033103": {
+          "name": "Sparki",
+          "form": "Forma de mar de flores"
+        },
+        "1033300": {
+          "name": "Flamerion",
+          "form": ""
+        },
+        "1033301": {
+          "name": "Flamerion",
+          "form": "Forma de sierra"
+        },
+        "1033302": {
+          "name": "Flamerion",
+          "form": "Forma de bosque"
+        },
+        "1033303": {
+          "name": "Flamerion",
+          "form": "Forma de mar de flores"
+        },
+        "1035100": {
+          "name": "Dewy",
+          "form": ""
+        },
+        "1035200": {
+          "name": "Fragrancier",
+          "form": ""
+        },
+        "1036100": {
+          "name": "Helion",
+          "form": ""
+        },
+        "1036300": {
+          "name": "Soleon",
+          "form": ""
+        },
+        "1037100": {
+          "name": "Lunara",
+          "form": ""
+        },
+        "1037300": {
+          "name": "Fennelun",
+          "form": ""
+        },
+        "1038100": {
+          "name": "Reefish",
+          "form": ""
+        },
+        "1038103": {
+          "name": "Reefish",
+          "form": "Forma de lluvia"
+        },
+        "1038300": {
+          "name": "Coraliz",
+          "form": ""
+        },
+        "1038303": {
+          "name": "Coraliz",
+          "form": "Forma de lluvia"
+        },
+        "1039100": {
+          "name": "Saws",
+          "form": ""
+        },
+        "1039300": {
+          "name": "Whirlbite",
+          "form": ""
+        },
+        "1039301": {
+          "name": "Whirlbite",
+          "form": "Forma prismana"
+        },
+        "1040100": {
+          "name": "Prawnch",
+          "form": ""
+        },
+        "1040300": {
+          "name": "Jabster",
+          "form": ""
+        },
+        "1040302": {
+          "name": "Jabster",
+          "form": "Forma prismana"
+        },
+        "1040303": {
+          "name": "Jabster",
+          "form": "Forma de lluvia"
+        },
+        "1043100": {
+          "name": "Cozite",
+          "form": ""
+        },
+        "1043300": {
+          "name": "Bailite",
+          "form": ""
+        },
+        "1044100": {
+          "name": "Eko",
+          "form": ""
+        },
+        "1044300": {
+          "name": "Eklue",
+          "form": ""
+        },
+        "1044400": {
+          "name": "Ekrim",
+          "form": ""
+        },
+        "1044403": {
+          "name": "Ekrim",
+          "form": "Forma prismana"
+        },
+        "1045100": {
+          "name": "Baleetle",
+          "form": ""
+        },
+        "1045101": {
+          "name": "Baleetle",
+          "form": "Forma de nieve"
+        },
+        "1045300": {
+          "name": "Waleetle",
+          "form": ""
+        },
+        "1045301": {
+          "name": "Waleetle",
+          "form": "Forma de nieve"
+        },
+        "1045302": {
+          "name": "Waleetle",
+          "form": "Forma prismana"
+        },
+        "1045400": {
+          "name": "Bouldus",
+          "form": ""
+        },
+        "1045401": {
+          "name": "Bouldus",
+          "form": "Forma de nieve"
+        },
+        "1047100": {
+          "name": "Pomegg",
+          "form": ""
+        },
+        "1047101": {
+          "name": "Pomegg",
+          "form": "Forma de nieve"
+        },
+        "1047102": {
+          "name": "Pomegg",
+          "form": "Forma de sierra"
+        },
+        "1047103": {
+          "name": "Pomegg",
+          "form": "Forma de mar de flores"
+        },
+        "1047400": {
+          "name": "Dazmand",
+          "form": ""
+        },
+        "1047500": {
+          "name": "Pomawk",
+          "form": ""
+        },
+        "1047501": {
+          "name": "Pomawk",
+          "form": "Forma de nieve"
+        },
+        "1047502": {
+          "name": "Pomawk",
+          "form": "Forma de sierra"
+        },
+        "1047503": {
+          "name": "Pomawk",
+          "form": "Forma de mar de flores"
+        },
+        "1048100": {
+          "name": "Fahloo",
+          "form": ""
+        },
+        "1048300": {
+          "name": "Erlath",
+          "form": ""
+        },
+        "1050100": {
+          "name": "Cubbo",
+          "form": ""
+        },
+        "1050300": {
+          "name": "Grizbo",
+          "form": ""
+        },
+        "1050301": {
+          "name": "Grizbo",
+          "form": "Forma prismana"
+        },
+        "1051100": {
+          "name": "Squarrel",
+          "form": ""
+        },
+        "1051200": {
+          "name": "Squashel",
+          "form": ""
+        },
+        "1054100": {
+          "name": "Lilipole",
+          "form": ""
+        },
+        "1054300": {
+          "name": "Scrubbit",
+          "form": ""
+        },
+        "1054302": {
+          "name": "Scrubbit",
+          "form": "Forma de lluvia"
+        },
+        "1057100": {
+          "name": "Hypnowl",
+          "form": ""
+        },
+        "1057300": {
+          "name": "Mesmerowl",
+          "form": ""
+        },
+        "1057400": {
+          "name": "Hypnyto",
+          "form": ""
+        },
+        "1057403": {
+          "name": "Hypnyto",
+          "form": "Forma prismana"
+        },
+        "1058100": {
+          "name": "Bubbeep",
+          "form": ""
+        },
+        "1058300": {
+          "name": "Glameep",
+          "form": ""
+        },
+        "1058301": {
+          "name": "Glameep",
+          "form": "Forma prismana"
+        },
+        "1058302": {
+          "name": "Glameep",
+          "form": "Forma de tempestad"
+        },
+        "1059100": {
+          "name": "Sugarfish",
+          "form": ""
+        },
+        "1059300": {
+          "name": "Sugarslime",
+          "form": ""
+        },
+        "1059400": {
+          "name": "Sugartini",
+          "form": ""
+        },
+        "1059403": {
+          "name": "Sugartini",
+          "form": "Forma prismana"
+        },
+        "1060100": {
+          "name": "Salabask",
+          "form": ""
+        },
+        "1060300": {
+          "name": "Crocobask",
+          "form": ""
+        },
+        "1061100": {
+          "name": "Puffby",
+          "form": ""
+        },
+        "1061300": {
+          "name": "Buffby",
+          "form": ""
+        },
+        "1061400": {
+          "name": "Royalby",
+          "form": ""
+        },
+        "1061403": {
+          "name": "Royalby",
+          "form": "Forma prismana"
+        },
+        "1062100": {
+          "name": "Popapus",
+          "form": ""
+        },
+        "1062300": {
+          "name": "Gachapus",
+          "form": ""
+        },
+        "1062304": {
+          "name": "Gachapus",
+          "form": "Forma prismana"
+        },
+        "1063100": {
+          "name": "Coinwisp",
+          "form": ""
+        },
+        "1063300": {
+          "name": "Pouchwisp",
+          "form": ""
+        },
+        "1063303": {
+          "name": "Pouchwisp",
+          "form": "Forma prismana"
+        },
+        "1065100": {
+          "name": "Dewlop",
+          "form": ""
+        },
+        "1065300": {
+          "name": "Dewple",
+          "form": ""
+        },
+        "1069100": {
+          "name": "Jeglid",
+          "form": ""
+        },
+        "1069102": {
+          "name": "Jeglid",
+          "form": "Forma de tempestad"
+        },
+        "1069300": {
+          "name": "Jeburst",
+          "form": ""
+        },
+        "1069301": {
+          "name": "Jeburst",
+          "form": "Forma prismana"
+        },
+        "1069302": {
+          "name": "Jeburst",
+          "form": "Forma de tempestad"
+        },
+        "1071300": {
+          "name": "Jaguaraun",
+          "form": ""
+        },
+        "6999300": {
+          "name": "Espíritu de crianza compartida",
+          "form": ""
+        },
+        "6999301": {
+          "name": "Espíritu de crianza compartida",
+          "form": "Forma prismana"
+        }
+      },
+      "abilities": {
+        "1000": "Fuego",
+        "1001": "Hierba",
+        "1002": "Agua",
+        "1003": "Tierra",
+        "1004": "Electricidad",
+        "1005": "Hielo",
+        "1006": "Viento",
+        "1007": "Oscuridad",
+        "1008": "Luz",
+        "1100": "Transportar",
+        "1101": "Artesanía",
+        "1102": "Ocio",
+        "1103": "Perfumería"
+      },
+      "festival": "Festival de Luna de cosecha",
+      "personalities": {
+        "901": "Enérgico",
+        "902": "Instintivo",
+        "903": "Práctico",
+        "904": "Ágil",
+        "905": "Tenaz",
+        "906": "Leal",
+        "907": "Juicioso",
+        "908": "Espontáneo"
+      }
+    }
+  }
 }

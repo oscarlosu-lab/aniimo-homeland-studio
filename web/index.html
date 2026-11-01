@@ -3,678 +3,447 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniimo Homeland Studio — Suite Profesional de Gestión, Optimización y Pedidos</title>
+    <title>Aniimo Homeland Studio — Optimizador de Tierra Natal (Aniidex Pro Suite)</title>
     
-    <!-- Metadatos SEO Principales -->
-    <meta name="description" content="Optimizador de base y calculadora de Tierra Natal para Aniimo en español. Planifica tu Casa Rodante (RV), maximiza monedas del hogar con programación lineal HiGHS, calcula personalidades MBTI (+20% velocidad) y asigna las mejores criaturas a cada instalación.">
-    <meta name="keywords" content="Aniimo, Aniimo Homeland Studio, Homeland Studio, Aniimo base calculator, calculadora base Aniimo, optimizador tierra natal, Aniimo tier list, Aniimo personalidades, Aniimo mbti, Aniimo guia español, planificador hogar Aniimo, Aniimo recetas monedas, Aniimo casa rodante rv, Aniimo best base workers, Aniimo solver, Aniimo base layout">
-    <meta name="author" content="Aniimo Homeland Studio">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Optimizador de base y calculadora de Tierra Natal para Aniimo en español. Planifica tu Casa Rodante (RV), maximiza monedas del hogar con programación lineal HiGHS, calcula personalidades MBTI y asigna las mejores criaturas a cada instalación.">
+    <meta name="keywords" content="Aniimo, Aniimo Homeland Studio, Aniidex, Aniimo base calculator, optimizador tierra natal, Aniimo personalidades MBTI, calculadora base Aniimo">
     <link rel="canonical" href="https://oscarlosu-lab.github.io/aniimo-homeland-studio/">
     
-    <!-- Open Graph (Facebook, Discord, Telegram, LinkedIn) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://oscarlosu-lab.github.io/aniimo-homeland-studio/">
-    <meta property="og:title" content="Aniimo Homeland Studio — Optimizador de Base y Calculadora de Aniimo">
-    <meta property="og:description" content="Calcula la ruta más rápida para generar monedas del hogar, subir de nivel tu Casa Rodante (RV) y optimizar personalidades MBTI (+20% de velocidad) en Aniimo.">
-    <meta property="og:site_name" content="Aniimo Homeland Studio">
-    <meta property="og:locale" content="es_ES">
+    <!-- Design System & Styles -->
+    <link rel="stylesheet" href="style.css?v=20261101-pro-v1">
     
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Aniimaster — Optimizador de Base y Calculadora de Aniimo">
-    <meta name="twitter:description" content="Calcula la producción más rentable, optimiza personalidades MBTI (+20% vel.) y planifica tu base de Aniimo con matemáticas exactas.">
-
-    <!-- Schema.org Datos Estructurados JSON-LD (Google Rich Snippets) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Aniimo Homeland Studio",
-      "alternateName": "Homeland Studio Suite",
-      "url": "https://oscarlosu-lab.github.io/aniimo-homeland-studio/",
-      "applicationCategory": "GameApplication, UtilitiesApplication",
-      "operatingSystem": "Web Browser",
-      "inLanguage": "es",
-      "description": "Calculadora de producción y optimizador del hogar para Aniimo. Resuelve asignaciones óptimas con programación lineal HiGHS y personalidades MBTI.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "featureList": [
-        "Optimizador de producción con programación lineal entera mixta (HiGHS MIP)",
-        "Recomendador de Aniimos con personalidades MBTI (+20% velocidad)",
-        "Detección y reemplazo con alternativas salvajes fáciles de capturar",
-        "Soporte de múltiples unidades de almacenamiento y distancias mínimas",
-        "Monitor de nutrición y autonomía AFK",
-        "Traducción 100% al español oficial y modo bilingüe ES/EN"
-      ]
-    }
-    </script>
-
-    <link rel="stylesheet" href="style.css?v=20261101-aniidex-v7">
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Vendor Libraries (Decompression & Solver) -->
+    <script src="vendor/fzstd.min.js"></script>
+    <script src="vendor/msgpack.min.js"></script>
 </head>
-<body>
-    <header class="studio-header">
-        <div class="studio-brand-wrap">
-            <div class="studio-logo-glow">🏕️</div>
-            <div class="studio-brand-text">
-                <h1 class="studio-title">Aniimo Homeland Studio</h1>
-                <span class="studio-badge">Suite Profesional de Gestión & Optimización</span>
-            </div>
+<body class="theme-dark">
+    <!-- Header Navigation -->
+    <header class="hp-nav">
+        <div class="hp-nav__brand">
+            <a href="index.html" class="hp-nav__logo">
+                <span class="logo-icon">🏕️</span>
+                <span class="logo-text">an<span class="logo-accent">ii</span>mo homeland studio</span>
+                <span class="logo-badge">Pro Suite</span>
+            </a>
         </div>
-        <div class="header-buttons">
-            <a href="recetas-rapidas.html" class="toggle-button btn-quick-nav glow-cyan" id="quickRecipesLink" title="Calculadora de producción óptima para recetas individuales">⚡ Recetas Rápidas</a>
-            <a href="trotamundos.html" class="toggle-button glow-purple" id="trotamundosLink" title="Simulador táctico de combate y counters para Desafíos de Trotamundos" style="background: rgba(168, 85, 247, 0.15); border-color: #a855f7; color: #a855f7;">⚔️ Trotamundos</a>
-            <button class="toggle-button" id="bilingualToggle" title="Alternar nombres bilingües Español / Inglés">🌐 Bilingüe (ES/EN)</button>
-            <select id="language-switch" class="toggle-button studio-select" aria-label="Language"></select>
-            <button class="toggle-button btn-reset-all" id="reset-all-btn" title="Limpiar caché y restablecer todos los datos almacenados del usuario">🔄 Restablecer</button>
-            <button class="toggle-button" onclick="showHelp()" id="helpToggle">Ayuda</button>
-            <button class="toggle-button" onclick="toggleTheme()" id="themeToggle">Claro</button>
-            <a href="https://ko-fi.com/oscarlosu" target="_blank" rel="noopener noreferrer" class="toggle-button" style="background: rgba(255, 94, 91, 0.15); border-color: #ff5e5b; color: #ff5e5b; text-decoration: none;" title="Apoyar el proyecto en Ko-fi">☕ Donar</a>
+        <div class="hp-nav__actions">
+            <!-- Pestañas de herramientas exclusivas -->
+            <button type="button" class="hp-nav__link" id="btn-tab-events">🎃 Eventos</button>
+            <button type="button" class="hp-nav__link" id="btn-tab-orders">📋 Pedidos Astra</button>
+            <button type="button" class="hp-nav__link" id="btn-tab-feeder">🍲 Comedero AFK</button>
+            <button type="button" class="hp-nav__link" id="btn-tab-map">🗺️ Mapa 2D</button>
+            
+            <button type="button" class="hp-nav__btn" id="theme-toggle" title="Cambiar tema (Claro / Oscuro)">🌓 Tema</button>
+            <button type="button" class="hp-nav__btn" id="lang-toggle" title="Cambiar idioma (ES / EN)">🌐 ES</button>
+            <a href="https://ko-fi.com/oscarlosu" target="_blank" rel="noopener noreferrer" class="hp-nav__btn btn-kofi" title="Apoyar el proyecto en Ko-fi">☕ Donar</a>
         </div>
     </header>
 
-    <!-- Studio Quick Workspace Bar -->
-    <nav class="studio-workspace-nav" aria-label="Navegación del Studio">
-        <a href="#contracts-config-container" class="workspace-nav-pill active"><span class="pill-icon">📋</span> Pedidos & Contratos</a>
-        <a href="recetas-rapidas.html" class="workspace-nav-pill"><span class="pill-icon">⚡</span> Recetas Rápidas</a>
-        <a href="trotamundos.html" class="workspace-nav-pill"><span class="pill-icon">⚔️</span> Trotamundos</a>
-        <a href="#simple-config" class="workspace-nav-pill"><span class="pill-icon">🏡</span> Instalaciones & RV</a>
-        <a href="#optimize-btn" class="workspace-nav-pill"><span class="pill-icon">📊</span> Estrategia & Solver</a>
-        <a href="#aniimo-recommender-container" class="workspace-nav-pill"><span class="pill-icon">🐾</span> Recomendador Aniimos</a>
-        <a href="#nutrition-card" class="workspace-nav-pill"><span class="pill-icon">🍲</span> Comedero & AFK</a>
-        <a href="#layout-card" class="workspace-nav-pill"><span class="pill-icon">🗺️</span> Mapa 2D</a>
-    </nav>
+    <main class="hp-main">
+        <!-- Hero Section: Tu Hogar (Las 2 Puertas de Aniidex) -->
+        <section class="hp-yh" id="sec-tu-hogar">
+            <div class="hp-yh__header">
+                <h1>Optimizador de Tierra Natal de Aniimo</h1>
+                <p class="hp-yh__sub">Empieza aquí: importa tus datos de juego para calcular tu plan personalizado o indícalos a mano con matemáticas exactas.</p>
+            </div>
 
-    <div class="studio-hero-banner">
-        <span class="hero-chip">✨ Suite Independiente</span>
-        <p class="hero-desc">Planificación matemática de alta precisión para Aniimo Homeland. Gestiona pedidos urgentes, acelera recetas en talleres paralelos y maximiza la eficiencia de tu campamento.</p>
-    </div>
-
-    <div class="container">
-
-        <main>
-            <section class="card config-section">
-                <div class="card-head">
-                    <h2>Tu Hogar</h2>
-                    <div class="config-actions">
-                        <button type="button" id="share-config-btn" class="toggle-button small">Compartir configuración</button>
-                        <button type="button" id="clear-saved-btn" class="toggle-button small" title="Your inputs are saved in this browser automatically.">Borrar valores guardados</button>
-                    </div>
-                </div>
-                <div id="share-config-result" class="share-config-result" hidden>
-                    <label for="share-config-link">Enlace para compartir</label>
-                    <input type="text" id="share-config-link" readonly>
-                </div>
-                <p id="share-config-status" class="hint small" role="status" aria-live="polite"></p>
-
-                <div class="tabs" role="radiogroup" aria-label="Input mode">
-                    <label><input type="radio" name="config-mode" id="mode-simple" value="simple" checked> Simple</label>
-                    <label><input type="radio" name="config-mode" id="mode-advanced" value="advanced"> Avanzado</label>
-                </div>
-
-                <div id="simple-config">
-                    <div class="input-row">
-                        <div class="input-field">
-                            <label for="home-level">Nivel de RV (Casa rodante)</label>
-                            <select id="home-level"></select>
+            <div class="hp-yh-doors">
+                <!-- Puerta 1: Importar mi hogar -->
+                <section class="hp-yh-door hp-yh-door--import" aria-labelledby="door-import-title">
+                    <div class="hp-yh-door__head">
+                        <span class="hp-yh-ic">
+                            <img src="assets/ui/UI_Home_IconBuilding.webp" alt="Casa Rodante" width="32" height="32" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%2322c55e%22><path d=%22M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z%22/></svg>'">
+                        </span>
+                        <div>
+                            <h3 id="door-import-title">Importar mi hogar</h3>
+                            <small class="door-desc">Por UID, partida local de PC o archivo JSON</small>
                         </div>
                     </div>
-                    <p class="hint">Asume que has construido y mejorado todo lo que permite tu nivel de casa rodante.</p>
-                    <details class="explain simple-details">
-                        <summary id="simple-summary-title">Instalaciones y módulos</summary>
-                        <div id="simple-summary"></div>
-                    </details>
-                </div>
 
-                <div id="advanced-config">
-                    <h3>Instalaciones</h3>
-                    <p class="hint">Define la cantidad y nivel de cada instalación que posees.</p>
-                    <div class="fill-row">
-                        <label for="fill-level">Rellenar según nivel de RV</label>
-                        <select id="fill-level"></select>
-                        <button type="button" id="fill-btn" class="skip-add-btn">Rellenar</button>
-                        <span class="hint small">Reemplaza cada cantidad y nivel de abajo con lo que permite ese nivel de casa rodante.</span>
-                    </div>
-
-                    <!-- Facility cards are generated dynamically by app.js from the FACILITIES config,
-                         grouped into category sections (Materials / Environment / Materials
-                         Processing), so new facilities can be added without editing this file. -->
-                    <div class="facilities-container" id="facilities-grid"></div>
-
-                    <h3>Módulos de mejora de objetos</h3>
-                    <p class="hint">Indica el nivel de cada módulo de mejora desbloqueado (0 = no desbloqueado).</p>
-
-                    <div class="modules-grid">
-                        <div class="module-card">
-                            <h4>Módulo ecológico <span class="info-icon" data-tooltip="Lv.1: Trigo Rápido&#10;Lv.2: Bambú Rápido&#10;Lv.3: Patata Rápida&#10;Lv.4: Limón Rápido&#10;Lv.5: Arroz Rápido&#10;Lv.6: Sirope de Arce Rápido&#10;Lv.7: Fresa Rápida&#10;Lv.8: Coco Rápido">?</span></h4>
-                            <div class="input-field">
-                                <label for="ecological-module-level">Nivel</label>
-                                <input type="number" id="ecological-module-level" value="0" min="0" max="10">
-                            </div>
-                        </div>
-
-                        <div class="module-card">
-                            <h4>Módulo de cocina <span class="info-icon" data-tooltip="Lv.2: Pan Prémium&#10;Lv.3: Sopa de Patata Prémium&#10;Lv.4: Vino Dulce de Arroz Prémium&#10;Lv.5: Limón Salado Prémium&#10;Lv.6: Gelatina Prémium&#10;Lv.7: Pudin de Fresa, Chocolate y Coco Prémium">?</span></h4>
-                            <div class="input-field">
-                                <label for="kitchen-module-level">Nivel</label>
-                                <input type="number" id="kitchen-module-level" value="0" min="0" max="10">
-                            </div>
-                        </div>
-
-                        <div class="module-card">
-                            <h4>Detector de recursos <span class="info-icon" data-tooltip="Lv.1: Agua de Pozo Rápida&#10;Lv.2: Sal Marina Rápida&#10;Lv.3: Aromatista Rápida&#10;Lv.4: Agua Dulce Rápida&#10;Lv.5: Lana Rápida&#10;Lv.6: Agua de Manantial de Roca Profunda Rápida&#10;Lv.7: Agua Mineral Natural Rápida&#10;Lv.8: Escamas Rápidas">?</span></h4>
-                            <div class="input-field">
-                                <label for="resource-detector-level">Nivel</label>
-                                <input type="number" id="resource-detector-level" value="0" min="0" max="10">
-                            </div>
-                        </div>
-
-                        <div class="module-card">
-                            <h4>Módulo de artesanía <span class="info-icon" data-tooltip="Lv.1: Cantos Rodados Prémium&#10;Lv.2: Ambientador de Rosas Prémium&#10;Lv.3: Incienso de Limón Avanzado&#10;Lv.4: Campanilla de Viento Avanzada&#10;Lv.5: Jabón Prémium&#10;Lv.6: Polvo de Gemas Avanzado&#10;Lv.7: Perfume Mixto Prémium">?</span></h4>
-                            <div class="input-field">
-                                <label for="crafting-module-level">Nivel</label>
-                                <input type="number" id="crafting-module-level" value="0" min="0" max="10">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="strategy">
-                    <h3>Estrategia</h3>
-                    <div class="tabs" role="radiogroup" aria-label="Strategy">
-                        <label><input type="radio" name="strategy" id="strategy-level-up" value="level-up" checked> Subir de nivel</label>
-                        <label><input type="radio" name="strategy" id="strategy-priorities" value="priorities"> Prioridades</label>
-                    </div>
-
-                    <div id="priorities-config" style="display: none;">
-                        <p class="hint">Activa lo que deseas producir y arrastra para ordenarlo. El plan fabrica todo lo posible del primero, luego todo lo posible del siguiente con los recursos restantes, y así sucesivamente. Cualquier capacidad sobrante se destina a Monedas del Hogar.</p>
-                        <ol class="priority-list" id="priority-list"></ol>
-                    </div>
-
-                    <div id="level-up-config">
-                        <p class="hint">Obtiene todo lo que cuesta tu siguiente nivel de casa rodante lo antes posible, y luego genera todas las monedas del hogar que el espacio permita.</p>
-                        <div class="input-row" id="level-up-target-row">
-                            <div class="input-field">
-                                <label for="level-up-target">Subir a nivel de RV</label>
-                                <select id="level-up-target"></select>
-                            </div>
-                        </div>
-                        <div id="level-up-cost"></div>
-                        <details class="explain" id="level-up-stock">
-                            <summary>Lo que ya tienes</summary>
-                            <p class="hint small">Cuenta para los requisitos de subida de nivel. Los Bloques de madera, Arena mineral y materiales inferiores se procesan automáticamente.</p>
-                            <div class="stock-grid" id="level-up-stock-grid"></div>
-                        </details>
-                    </div>
-                </div>
-
-
-                <!-- Contratos y Pedidos Diarios (Tierra Natal) -->
-                <div class="contracts-section" id="contracts-config-container"></div>
-
-                <div class="season" id="season-section">
-                    <div class="season-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-                        <label class="priority-switch season-switch">
-                            <input type="checkbox" role="switch" id="season-on">
-                            <span class="switch-track" aria-hidden="true"></span>
-                            <span class="season-title" id="season-title-text">🎃 Noche Mágica y Maravillosa</span>
+                    <form class="hp-yh-door__act" id="form-import-uid" onsubmit="event.preventDefault();">
+                        <label class="hp-field-wrap">
+                            <span class="field-label">Tu UID de jugador</span>
+                            <input type="text" id="input-uid" placeholder="p. ej., 209000449083 o Fadingsoul" value="209000449083" autocomplete="off">
                         </label>
-                        <!-- Selector de Evento de Temporada Activa -->
-                        <div class="season-tabs" id="season-tabs-selector" style="display: flex; gap: 6px;">
-                            <button type="button" class="season-tab-pill active" data-season="wonder_night" title="Temporada Actual: Noche Maravillosa (Halloween / Dios Calabaza)">🎃 Noche Maravillosa</button>
-                            <button type="button" class="season-tab-pill" data-season="harvest_moon" title="Temporada Recurrente: Festival de la Cosecha (Trigo rayo de luna)">🌾 Festival Cosecha</button>
+                        <button type="button" class="hp-btn-go" id="btn-import-uid">Importar</button>
+                    </form>
+
+                    <!-- Chips de perfiles verificados -->
+                    <div class="hp-chips-registry">
+                        <span class="chips-title">Perfiles Verificados en 1 Clic:</span>
+                        <div class="chips-list">
+                            <button type="button" class="hp-chip-btn active" data-uid="209000449083">⭐ Mi Hogar (Nv. 14)</button>
+                            <button type="button" class="hp-chip-btn" data-uid="207000832726">🏰 Fadingsoul (Nv. 15)</button>
+                            <button type="button" class="hp-chip-btn" data-uid="209000249042">🌾 xferfer (Nv. 14)</button>
+                            <button type="button" class="hp-chip-btn" data-uid="310001059443">⚡ ThePedron (Nv. 16)</button>
                         </div>
                     </div>
-                    <div id="season-config" hidden>
-                        <p class="hint" id="season-desc-hint">Evento temático de Noche Maravillosa (Halloween / Dios Calabaza). Su moneda especial, los Cristales de azúcar maravillosos, compra semillas de calabaza mágica y frutalinterna del recuerdo.</p>
-                        <div class="input-field">
-                            <label for="season-currency-per-day" id="season-currency-label">Cristales de azúcar maravillosos para gastar en semillas al día</label>
-                            <input type="number" id="season-currency-per-day" min="0" placeholder="Sin límite">
+
+                    <!-- Lector local de partida (PC) -->
+                    <div class="hp-local-file-row">
+                        <label class="btn-file-picker">
+                            <input type="file" id="local-file-input" accept=".zst,.bin,.json" style="display:none;">
+                            📂 Cargar archivo de guardado local (.zst / .json)
+                        </label>
+                        <span class="file-hint">Detecta automáticamente tus parcelas, talleres y Aniimos capturados.</span>
+                    </div>
+
+                    <div id="import-status-banner" class="hp-status-banner" style="display:none;"></div>
+                </section>
+
+                <!-- Puerta 2: Introducirlo a mano -->
+                <section class="hp-yh-door hp-yh-door--manual" aria-labelledby="door-manual-title">
+                    <div class="hp-yh-door__head">
+                        <span class="hp-yh-ic">
+                            <img src="assets/ui/UI_Home_TopLogo_Hammer.webp" alt="Martillo" width="32" height="32" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23eab308%22><path d=%22M2 19.53l6.32-6.32 1.41 1.41L3.41 21H2v-1.47zM18.8 4.2c.4-.4.4-1.04 0-1.44l-1.56-1.56c-.4-.4-1.04-.4-1.44 0L14.28 2.7l3 3 1.52-1.5z%22/></svg>'">
+                        </span>
+                        <div>
+                            <h3 id="door-manual-title">Introducirlo a mano</h3>
+                            <small class="door-desc">Selecciona tu nivel de Casa Rodante (RV)</small>
                         </div>
-                        <p class="assume-title" id="season-notes-title">Notas de recetas de temporada</p>
-                        <div class="special-grid" id="season-notes"></div>
+                    </div>
+
+                    <div class="hp-yh-door__act is-manual">
+                        <label class="hp-field-wrap">
+                            <span class="field-label">Nivel de RV (Casa rodante)</span>
+                            <select id="select-rv-level" class="hp-select"></select>
+                        </label>
+                        <button type="button" class="hp-btn-go is-quiet" id="btn-manual-continue">Calcular Plan</button>
+                    </div>
+                    <p class="manual-hint">Asume que has construido y mejorado todas las instalaciones y parcelas permitidas por tu nivel de RV.</p>
+                </section>
+            </div>
+        </section>
+
+        <!-- Banner de Perfil y Resumen del Hogar (hp-frame) -->
+        <section class="hp-frame" id="sec-active-home" style="display:none;">
+            <div class="hp-frame__head">
+                <div class="hp-frame__title">
+                    <span class="badge-rv" id="active-rv-badge">Casa Rodante Nv. 14</span>
+                    <h2 id="active-player-name">Tu Hogar Optimizado</h2>
+                </div>
+                <div class="hp-frame__actions">
+                    <button type="button" class="btn-action-pill btn-suggest" id="btn-open-suggestions">
+                        💡 Sugerencias de Mejora
+                        <span class="pill-sparkle">✨</span>
+                    </button>
+                    <button type="button" class="btn-action-pill" id="btn-re-optimize">🔄 Re-calcular</button>
+                </div>
+            </div>
+
+            <div class="hp-strip">
+                <div class="hp-strip__item">
+                    <span class="hp-strip__lab">Parcelas de Cultivo:</span>
+                    <strong class="hp-strip__val" id="active-plots-count">30 parcelas</strong>
+                </div>
+                <span class="hp-strip__sep"></span>
+                <div class="hp-strip__item">
+                    <span class="hp-strip__lab">Instalaciones:</span>
+                    <strong class="hp-strip__val" id="active-facs-count">13 talleres</strong>
+                </div>
+                <span class="hp-strip__sep"></span>
+                <div class="hp-strip__item">
+                    <span class="hp-strip__lab">Cuadrilla Aniimo:</span>
+                    <strong class="hp-strip__val" id="active-aniimo-count">10 trabajadores</strong>
+                </div>
+                <span class="hp-strip__sep"></span>
+                <div class="hp-strip__item">
+                    <span class="hp-strip__lab">Sinergias MBTI:</span>
+                    <strong class="hp-strip__val" id="active-mbti-bonus">+20% Activo</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- PANEL DE SUGERENCIAS DE MEJORA (Diferencia Real vs Óptimo) -->
+        <section class="hp-suggestions-card" id="sec-suggestions" style="display:none;">
+            <div class="suggestions-header">
+                <div class="sugg-title-wrap">
+                    <span class="sugg-badge">Análisis Inteligente de Base</span>
+                    <h3>Diagnóstico de tu Campamento & Oportunidades de Crecimiento</h3>
+                </div>
+                <button type="button" class="btn-close-sugg" id="btn-close-sugg" aria-label="Cerrar sugerencias">✕</button>
+            </div>
+
+            <div class="suggestions-grid">
+                <!-- Tarjeta 1: Incremento de Ganancias -->
+                <div class="sugg-card sugg-profit">
+                    <div class="sugg-icon">📈</div>
+                    <div class="sugg-body">
+                        <h4>Impacto Financiero de la Optimización</h4>
+                        <p class="sugg-desc">Al reordenar tus talleres y cultivos según la programación lineal:</p>
+                        <div class="profit-comparison-row">
+                            <div class="profit-stat old">
+                                <span>Producción Base</span>
+                                <b id="sugg-base-profit">~850.000 /día</b>
+                            </div>
+                            <span class="arrow-gain">➔</span>
+                            <div class="profit-stat new">
+                                <span>Producción Óptima</span>
+                                <b id="sugg-opt-profit">1.579.529 /día</b>
+                            </div>
+                        </div>
+                        <span class="gain-badge" id="sugg-gain-badge">+85.8% de Ganancia Neta</span>
                     </div>
                 </div>
 
-                <details class="explain recipes-section" id="recipes-section">
-                    <summary>Recetas<span class="skip-count" id="recipe-count"></span></summary>
-                    <p class="assume-title">Recetas especiales</p>
-                    <p class="hint small">Requieren una moneda poco común para desbloquearse. Los planes solo utilizan las que marques.</p>
-                    <div class="special-grid" id="special-grid"></div>
-                    <p class="assume-title">Recetas a omitir</p>
-                    <p class="hint small">Los planes no las usarán, p. ej. recetas bloqueadas que aún no tienes. También puedes omitir una directamente desde un plan pulsando su ✕.</p>
-                    <div class="skip-add">
-                        <input type="text" id="skip-input" list="skip-options" placeholder="Buscar recetas" autocomplete="off" aria-label="Receta a omitir">
-                        <button type="button" id="skip-add-btn" class="skip-add-btn">Omitir</button>
-                    </div>
-                    <datalist id="skip-options"></datalist>
-                    <div class="skip-chips" id="skip-chips"></div>
-                </details>
-                <button id="optimize-btn" class="optimize-btn">
-                    <span class="btn-text">Encontrar el mejor plan</span>
-                    <span class="btn-loading" style="display: none;">Calculando plan...</span>
-                </button>
-                <div id="progress-bar-container" class="progress-bar-container" style="display: none;">
-                    <div id="progress-bar-fill" class="progress-bar-fill"></div>
-                </div>
-                <p id="progress-bar-caption" class="hint small" style="display: none;"></p>
-                <div class="card solve-progress" id="solve-progress" style="display: none;" aria-live="polite"></div>
-            </section>
-
-            <section class="results-section" id="results-section" style="display: none;">
-                <div id="error-message" class="card error-message" style="display: none;"></div>
-
-                <div id="results-content">
-                    <div class="executive-kpi-banner" id="executive-kpi-banner">
-                        <div class="kpi-card">
-                            <span class="kpi-label">🪙 Tasa Neta</span>
-                            <span class="kpi-val" id="kpi-coin-rate">-</span>
-                            <span class="kpi-sub">Monedas del Hogar</span>
-                        </div>
-                        <div class="kpi-card">
-                            <span class="kpi-label">🚐 Subida de RV</span>
-                            <span class="kpi-val" id="kpi-level-time">-</span>
-                            <span class="kpi-sub" id="kpi-target-rv">Tiempo estimado</span>
-                        </div>
-                        <div class="kpi-card">
-                            <span class="kpi-label">🐾 Plazas Aniimo</span>
-                            <span class="kpi-val" id="kpi-aniimo-slots">-</span>
-                            <span class="kpi-sub" id="kpi-aniimo-free">0 libres</span>
-                        </div>
-                        <div class="kpi-card">
-                            <span class="kpi-label">🍲 Comedero</span>
-                            <span class="kpi-val" id="kpi-bowl-days">-</span>
-                            <span class="kpi-sub" id="kpi-bowl-food">Autonomía AFK</span>
-                        </div>
-                    </div>
-
-                    <div class="card aniimo-card" id="aniimo-card">
-                        <div class="card-head">
-                            <button type="button" class="collapse-toggle" id="aniimo-toggle" aria-expanded="false" aria-controls="aniimo-body">
-                                <span class="chevron" aria-hidden="true"></span>
-                                <h2>Equipo Aniimo</h2>
-                            </button>
-                            <div class="tabs compact" role="radiogroup" aria-label="Aniimo setup">
-                                <label title="Los mejores Aniimo que tienes, con la personalidad de cada instalación"><input type="radio" name="aniimo-setup" id="aniimo-best" value="best" checked> El mejor</label>
-                                <label title="El nivel de habilidad más bajo que acepta cada receta: el mínimo necesario"><input type="radio" name="aniimo-setup" id="aniimo-minimum" value="minimum"> Mínimo</label>
-                                <label title="Planifica con los Aniimos que realmente tienes"><input type="radio" name="aniimo-setup" id="aniimo-custom" value="custom"> Mis Aniimo</label>
-                            </div>
-                        </div>
-                        <div class="aniimo-setup-panel" id="aniimo-setup-panel">
-                            <p class="hint small" id="aniimo-setup-hint"></p>
-                            <div class="ability-levels" id="ability-levels"></div>
-                            <div class="roster-editor" id="roster-editor" hidden></div>
-                        </div>
-                        <p class="aniimo-count" id="aniimo-count" hidden><span id="aniimo-count-have">0</span><span class="aniimo-count-of" id="aniimo-count-of"></span></p>
-                        <p class="collapsed-summary" id="aniimo-collapsed-summary"></p>
-                        <div class="ability-strip" id="aniimo-abilities" aria-label="Aniimo needed per ability"></div>
-                        <p class="hint small" id="aniimo-pending" style="display: none;">Calculando esta configuración...</p>
-                        <div id="aniimo-body" hidden>
-                            <details class="explain">
-                                <summary>Cómo se calcula el equipo</summary>
-                                <p><strong>El mejor</strong>: el mejor Aniimo que tienes para cada habilidad con la personalidad de cada instalación (+20% de velocidad). <strong>Mis Aniimo</strong>: los Aniimos que tienes registrados; cada uno trabaja según sus habilidades y horas disponibles. <strong>Mínimo</strong>: el nivel de habilidad más bajo que acepta cada receta, sin bonificación de personalidad.</p>
-                                <p>Un Aniimo puede asumir cualquier tarea que requiera su habilidad en su nivel o inferior mientras tenga horas libres. Cada criatura tiene personalidades compatibles con las instalaciones. Las instalaciones con residente (Castillo de Arena, Casa del Rocío, etc.) y los edificios de ambiente (Horno de calor, Unidad de enfriamiento, Lámpara solar) requieren un trabajador permanente cada uno.</p>
-                            </details>
-                            <div id="aniimo-summary"></div>
-                        </div>
-                    </div>
-
-                    <!-- Resultados y Auditoría de Contratos Diarios y de Evento -->
-                    <div class="card production-steps contracts-results-card" id="contracts-results-card" style="display: none;"></div>
-
-                    <div class="card production-steps" id="aniimo-recommender-card" style="display: none;">
-                        <div id="aniimo-recommender-container"></div>
-                    </div>
-
-                    <div class="card production-steps nutrition-card" id="nutrition-card" style="display: none;">
-                        <div class="card-head">
-                            <h2>🍲 Nutrición y Autonomía del Comedero (1.000 raciones)</h2>
-                            <span class="badge-pill" id="nutrition-rate-badge">10 energía/min por Aniimo</span>
-                        </div>
-                        <p class="hint">Calcula la autonomía AFK exacta del comedero según la cuadrilla activa asignada por el optimizador.</p>
-                        <div class="nutrition-grid">
-                            <div class="nutrition-select-col">
-                                <label for="select-food-dish"><b>Plato a cocinar:</b></label>
-                                <select id="select-food-dish" class="form-select"></select>
-                                <p class="hint small" id="food-ingredients-hint" style="margin-top:0.4rem"></p>
-                            </div>
-                            <div class="nutrition-stats-col">
-                                <div class="nutrition-stat-pill">
-                                    <span>Autonomía AFK</span>
-                                    <b id="nutrition-autonomy-days" style="color:var(--accent); font-size:1.3rem">-</b>
-                                </div>
-                                <div class="nutrition-stat-pill">
-                                    <span>Consumo Cuadrilla</span>
-                                    <b id="nutrition-crew-consumption" style="color:var(--accent-cyan)">-</b>
-                                </div>
-                                <div class="nutrition-stat-pill">
-                                    <span>Energía del Plato</span>
-                                    <b id="nutrition-dish-energy" style="color:var(--accent-gold)">-</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card rate-card">
-                        <!-- A level-up plan leads with the level-up, and its table's rate column
-                             takes over the unit select and the coin rate below. -->
-                        <div class="level-up-card" id="level-up-card" style="display: none;">
-                            <span class="summary-label" id="level-up-label">Level-Up</span>
-                            <div class="summary-value" id="level-up-time">-</div>
-                            <div id="level-up-lines"></div>
-                        </div>
-                        <div id="rate-block">
-                        <span class="summary-label" id="rate-label">Tu tasa de producción</span>
-                        <div class="rate-line" id="rate-line">
-                            <span class="summary-value" id="plan-rate">-</span>
-                            <select id="rate-unit" class="rate-unit-select" aria-label="Rate unit">
-                                <option value="second">por segundo</option>
-                                <option value="minute">por minuto</option>
-                                <option value="hour">por hora</option>
-                                <option value="day">por día</option>
-                            </select>
-                        </div>
-                        <div id="priority-rates"></div>
-                        </div>
-                        <p class="plan-proof" id="plan-explored-hint"></p>
-                        <p class="plan-unverified" id="plan-unverified" style="display: none;"></p>
-                        <p class="plan-skipped" id="plan-skipped" style="display: none;"></p>
-                    </div>
-
-                    <div class="card production-steps" id="improve-card" style="display: none;">
-                        <h2>Oportunidades</h2>
-                        <div id="improve-list"></div>
-                    </div>
-
-                    <div class="card production-steps" id="seed-card" style="display: none;">
-                        <h2>Semillas para plantar</h2>
-                        <p class="hint" id="seed-card-unit"></p>
-                        <div class="seed-table" id="seed-table"></div>
-                    </div>
-
-                    <div class="card production-steps" id="profit-card" style="display: none;">
-                        <h2>Beneficio por producto</h2>
-                        <p class="hint">Neto tras descontar el coste de semillas.</p>
-                        <div id="profit-breakdown"></div>
-                    </div>
-
-                    <div class="card production-steps">
-                        <h2>Qué debe hacer cada instalación</h2>
-                        <details class="explain">
-                            <summary>Cómo interpretar esto</summary>
-                            <p>Cada fila es un producto; una instalación dividida entre varios productos tiene una fila para cada uno. Los cultivos que necesitan ambiente térmico se agrupan según la cobertura del Horno de calor, Unidad de enfriamiento o Lámpara solar.</p>
-                            <p>En la columna Aniimo, cada círculo indica la habilidad requerida con su color oficial y nivel interior; un anillo exterior indica la bonificación de personalidad (+20%). Pasa el cursor por un círculo para ver los detalles.</p>
-                        </details>
-                        <!-- Populated by app.js's renderFacilityPlan(): one section per
-                             environment mode in use (Cool/Warm/Freeze/Scorching/Adequate) first,
-                             then one table per facility category (Materials / Environment /
-                             Materials Processing) for everything else. -->
-                        <div id="facility-plan-container" class="facilities-container"></div>
-                    </div>
-
-                    <div class="card production-steps" id="layout-card" style="display: none;">
-                        <h2>Diseño del Hogar</h2>
-                        <p class="hint" id="layout-summary"></p>
-                        <details class="explain">
-                            <summary>Cómo está organizado</summary>
-                            <p>Cada lote terminado se transporta a la Unidad de almacenamiento (UA), por lo que cada instalación se sitúa calculando sus viajes por hora multiplicados por su distancia en línea recta: las más activas quedan más cerca y las menos activas en los bordes. Los edificios ambientales se colocan optimizando la cobertura de sus parcelas correspondientes. Pasa el cursor o pulsa sobre una instalación para ver sus viajes y distancia.</p>
-                        </details>
-                        <div class="layout-controls">
-                            <span class="layout-toggles">
-                                <label class="layout-whole"><input type="checkbox" id="layout-whole"> Mostrar todo el hogar</label>
-                                <label class="layout-whole"><input type="checkbox" id="layout-sim-on" checked> Simular</label>
-                                <label class="layout-storage-label" title="Cantidad de Unidades de Almacenamiento en tu hogar">📦 Almacenes: <input type="number" id="layout-storage-count" min="1" max="10" value="1" class="storage-count-input"></label>
-                            </span>
-                            <span class="layout-sim" id="layout-sim" hidden><span id="layout-clock">0h 00m</span><button type="button" class="toggle-button small" id="layout-replay">Reproducir</button></span>
-                        </div>
-                        <div class="layout-diagram" id="layout-diagram"></div>
-                    </div>
-
-                    <div class="card production-steps" id="goal-section">
-                        <h2>Establecer un Objetivo</h2>
-                        <p class="hint">Se actualiza instantáneamente con el plan de arriba.</p>
-                        <div class="config-group">
-                            <div class="input-row">
-                                <div class="input-field">
-                                    <label for="goal-target">Objetivo</label>
-                                    <select id="goal-target"></select>
-                                </div>
-                                <div class="input-field">
-                                    <label for="target-amount" id="target-amount-label">Monedas del Hogar objetivo</label>
-                                    <input type="number" id="target-amount" value="1000" min="0">
-                                </div>
-                                <div class="input-field">
-                                    <label for="current-amount" id="current-amount-label">Monedas del Hogar actuales</label>
-                                    <input type="number" id="current-amount" value="0" min="0">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="result-summary">
-                            <div class="summary-grid">
-                                <div class="summary-item">
-                                    <span class="summary-label">Tiempo total</span>
-                                    <span class="summary-value" id="total-time">-</span>
-                                </div>
-                                <div class="summary-item">
-                                    <span class="summary-label" id="amount-produced-label">Monedas del Hogar producidas</span>
-                                    <span class="summary-value" id="amount-produced">-</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="level-up-coins" id="goal-also" style="display: none;"></p>
-
-                        <div class="production-steps" id="product-breakdown-section" style="display: none;">
-                            <h3>Desglose de productos</h3>
-                            <div class="table-wrapper">
-                                <table id="product-breakdown-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Artículo</th>
-                                            <th>Instalación</th>
-                                            <th>Cantidad</th>
-                                            <th id="product-breakdown-rate-header">Beneficio</th>
-                                            <th>Valor <span class="th-unit">Monedas del Hogar</span></th>
-                                            <th id="product-breakdown-points-header" hidden>Puntos del Festival de la Luna</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="product-breakdown-tbody"></tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="production-steps" id="seeds-needed-section" style="display: none;">
-                            <h3>Semillas necesarias</h3>
-                            <div class="table-wrapper">
-                                <table id="seeds-needed-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Cultivo</th>
-                                            <th>Instalación</th>
-                                            <th>Parcelas</th>
-                                            <th>Siembras/Parcela</th>
-                                            <th>Total semillas</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="seeds-needed-tbody"></tbody>
-                                </table>
-                            </div>
-                        </div>
+                <!-- Tarjeta 2: Instalaciones Cuello de Botella -->
+                <div class="sugg-card sugg-upgrades">
+                    <div class="sugg-icon">🔨</div>
+                    <div class="sugg-body">
+                        <h4>Mejoras Prioritarias de Talleres</h4>
+                        <ul class="sugg-list" id="sugg-upgrades-list">
+                            <li><strong>Molino Floral:</strong> Subir a Tier 4 para desbloquear <em>Harina de Trigo Prémium</em>.</li>
+                            <li><strong>Cocina de Garra:</strong> Subir a Tier 4 para procesar <em>Pan Crujiente</em> con mayor margen.</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
-        </main>
 
-        <footer>
-            <p>Aniimo Homeland Studio v<span id="version">-</span> | Suite Profesional Comunitaria</p>
-            <p class="footer-note">Herramienta no oficial creada por la comunidad. No está afiliada ni respaldada por los desarrolladores de Aniimo.</p>
-            <p class="footer-note">Tus datos se guardan exclusivamente en tu navegador y nunca se envían a servidores externos.</p>
-        </footer>
-    </div>
+                <!-- Tarjeta 3: Optimización MBTI de Criaturas -->
+                <div class="sugg-card sugg-mbti">
+                    <div class="sugg-icon">🐾</div>
+                    <div class="sugg-body">
+                        <h4>Sinergias de Cuadrilla Aniimo (+20% vel)</h4>
+                        <ul class="sugg-list" id="sugg-mbti-list">
+                            <li>Asigna criaturas con personalidad <strong>T</strong> (Tenaz) en el Molino Floral para +20% de velocidad.</li>
+                            <li>Asigna criaturas con rasgo <strong>E</strong> (Enérgico) en el Campo de Cultivos para acelerar las cosechas.</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <!-- Facilities Modal -->
-    <div id="facilitiesModal" class="modal" onclick="closeFacilitiesOnBackdrop(event)">
-        <div class="modal-content wide">
-            <div class="modal-header">
-                <h2>Recetas de instalaciones</h2>
-                <button class="close-button" onclick="closeFacilities()">&times;</button>
+                <!-- Tarjeta 4: Ajuste de Siembra en Parcelas -->
+                <div class="sugg-card sugg-crops">
+                    <div class="sugg-icon">🌱</div>
+                    <div class="sugg-body">
+                        <h4>Reajuste de Rotación de Cultivos</h4>
+                        <p class="sugg-desc" id="sugg-crops-desc">Dedica 12 parcelas a Fresas, 7 a Algodón y 7 a Manzanas para abastecer directamente la línea de artesanía y secado sin acumular excedentes.</p>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                <p class="hint">Todas las recetas presentes en los datos del juego, agrupadas por instalación. Esta es una tabla de referencia independiente de tus niveles o instalaciones construidas.</p>
-                <p class="hint small" id="facilities-loading-hint">Cargando datos de recetas...</p>
-                <div id="facilities-modal-container" class="facilities-container"></div>
+        </section>
+
+        <!-- KPI Cards Principales (Exacto a Aniidex) -->
+        <section class="hp-kpis" id="sec-kpis" style="display:none;">
+            <!-- KPI 1: Monedas del Hogar / Día -->
+            <div class="hp-kpi-card hp-kpi-coins" id="kpi-card-ledger" title="Ver desglose detallado de De dónde salen tus monedas">
+                <span class="kpi-tag">Beneficio Neto</span>
+                <div class="kpi-val-row">
+                    <span class="coin-icon">🪙</span>
+                    <strong class="kpi-num" id="kpi-net-coins">-</strong>
+                </div>
+                <span class="kpi-sub">Monedas del hogar / día</span>
+                <span class="kpi-hint-link">Ver desglose contable ➔</span>
             </div>
+
+            <!-- KPI 2: Semillas Invertidas / Día -->
+            <div class="hp-kpi-card hp-kpi-seeds" id="kpi-card-seeds" title="Ver plan de siembra e inversión">
+                <span class="kpi-tag">Gasto Diario</span>
+                <div class="kpi-val-row">
+                    <span class="coin-icon">🌱</span>
+                    <strong class="kpi-num negative" id="kpi-seed-cost">-</strong>
+                </div>
+                <span class="kpi-sub">Semillas invertidas / día</span>
+                <span class="kpi-hint-link">Plan de siembra ➔</span>
+            </div>
+
+            <!-- KPI 3: Rendimiento Bruto / Día -->
+            <div class="hp-kpi-card hp-kpi-gross">
+                <span class="kpi-tag">Ventas Brutas</span>
+                <div class="kpi-val-row">
+                    <span class="coin-icon">📦</span>
+                    <strong class="kpi-num" id="kpi-gross-sales">-</strong>
+                </div>
+                <span class="kpi-sub">Rendimiento bruto / día</span>
+            </div>
+
+            <!-- KPI 4: Tiempo para Subir de Nivel -->
+            <div class="hp-kpi-card hp-kpi-time">
+                <span class="kpi-tag">Meta de Casa Rodante</span>
+                <div class="kpi-val-row">
+                    <span class="coin-icon">⏱️</span>
+                    <strong class="kpi-num" id="kpi-level-time">-</strong>
+                </div>
+                <span class="kpi-sub" id="kpi-target-rv-label">Tiempo estimado para Nv. 15</span>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 1: DE DÓNDE SALEN TUS MONEDAS (BALANCE CONTABLE ANIIDEX) -->
+        <section class="hp-section hp-financial-section" id="sec-financial-ledger" style="display:none;">
+            <div class="hp-section__head">
+                <div>
+                    <h2>De dónde salen tus monedas</h2>
+                    <p class="hp-section__sub" id="ledger-sub-title">Precios oficiales de compraventa en la Tienda Cooperativa</p>
+                </div>
+            </div>
+
+            <!-- Balance Resumen (hp-sum) -->
+            <div class="hp-sum">
+                <div class="hp-sum__row positive">
+                    <div class="hp-sum__left">
+                        <span class="sum-icon">🏪</span>
+                        <span id="sales-count-label">Productos vendidos en la Tienda cooperativa</span>
+                    </div>
+                    <strong class="hp-sum__val positive" id="ledger-gross-val">+ 0</strong>
+                </div>
+
+                <div class="hp-sum__row negative">
+                    <div class="hp-sum__left">
+                        <span class="sum-icon">🌱</span>
+                        <span>Semillas compradas en la tienda</span>
+                    </div>
+                    <strong class="hp-sum__val negative" id="ledger-seeds-val">− 0</strong>
+                </div>
+
+                <div class="hp-sum__row negative">
+                    <div class="hp-sum__left">
+                        <span class="sum-icon">🍲</span>
+                        <span>Comida comprada para los Aniimo</span>
+                    </div>
+                    <strong class="hp-sum__val negative" id="ledger-food-val">− 0</strong>
+                </div>
+
+                <div class="hp-sum__total">
+                    <span class="total-title">Beneficio Neto Diario:</span>
+                    <strong class="total-val" id="ledger-net-val">0 Monedas/día</strong>
+                </div>
+            </div>
+
+            <!-- Ventas en la Tienda Cooperativa al Día -->
+            <div class="hp-subblock">
+                <h3 class="hp-subblock__title">Ventas en la Tienda cooperativa <small>al día</small></h3>
+                <div class="hp-sales-grid" id="sales-items-container"></div>
+            </div>
+
+            <!-- Lo que producen las parcelas por el camino al día -->
+            <div class="hp-subblock">
+                <h3 class="hp-subblock__title">Lo que producen las parcelas por el camino <small>al día</small></h3>
+                <p class="hp-subblock__hint">Cadena de suministros intermedia: qué siembras y a qué taller abastece.</p>
+                <div class="hp-supply-grid" id="supply-items-container"></div>
+            </div>
+
+            <!-- Qué comprar primero (Plan de inversión) -->
+            <div class="hp-subblock">
+                <h3 class="hp-subblock__title">Qué comprar primero</h3>
+                <div class="hp-buy-box">
+                    <div class="hp-buy-chips" id="investment-seed-chips"></div>
+                    <p class="hp-buy-note">
+                        Inversión inicial para la primera siembra: <strong>0 monedas</strong> (autofinanciado con tus primeras cosechas).
+                        Posteriormente, el gasto diario recurrente de semillas queda automáticamente deducido de tu beneficio neto.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: TUS INSTALACIONES & CUADRILLA ANIIMO -->
+        <section class="hp-section hp-facilities-section" id="sec-facilities" style="display:none;">
+            <div class="hp-section__head">
+                <div>
+                    <h2>Tus instalaciones y cuadrilla</h2>
+                    <p class="hp-section__sub">Asignación matemática óptima de parcelas, talleres y criaturas con afinidad MBTI.</p>
+                </div>
+            </div>
+
+            <div class="hp-workshops-grid" id="facilities-cards-container"></div>
+        </section>
+
+        <!-- SECCIÓN 3: PANELES DE HERRAMIENTAS EXCLUSIVAS -->
+        
+        <!-- Tab 3.1: Eventos de Temporada -->
+        <section class="hp-section hp-tool-section" id="sec-events-panel" style="display:none;">
+            <div class="hp-section__head">
+                <div>
+                    <h2>🎃 Eventos Estacionales Activos</h2>
+                    <p class="hp-section__sub">Datamine de recetas exclusivas de temporada con bonificación de +25% de eficiencia.</p>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="check-season-active" checked>
+                    <span class="switch-slider"></span>
+                    <span class="switch-label">Temporada Activa</span>
+                </label>
+            </div>
+
+            <div class="events-content-box">
+                <div class="event-banner halloween">
+                    <div class="event-banner__info">
+                        <h3>Noche Mágica y Maravillosa (Halloween)</h3>
+                        <p>Planta Semillas de Calabaza Mágica y Frutalinterna del Recuerdo para elaborar Cristales de Azúcar y obtener la máxima rentabilidad de temporada.</p>
+                    </div>
+                    <span class="event-bonus-pill">+25% Bonus de Monedas</span>
+                </div>
+                <div class="event-recipes-grid" id="event-recipes-container"></div>
+            </div>
+        </section>
+
+        <!-- Tab 3.2: Pedidos Comerciales de Astra -->
+        <section class="hp-section hp-tool-section" id="sec-orders-panel" style="display:none;">
+            <div class="hp-section__head">
+                <div>
+                    <h2>📋 Pedidos Comerciales de los 8 Clientes de Astra</h2>
+                    <p class="hp-section__sub">327 contratos oficiales. Cumple los pedidos más urgentes y rentables antes de vender a granel.</p>
+                </div>
+            </div>
+            <div class="orders-container-box" id="commercial-orders-container"></div>
+        </section>
+
+        <!-- Tab 3.3: Nutrición & Autonomía AFK del Comedero -->
+        <section class="hp-section hp-tool-section" id="sec-feeder-panel" style="display:none;">
+            <div class="hp-section__head">
+                <div>
+                    <h2>🍲 Autonomía del Comedero y Nutrición AFK</h2>
+                    <p class="hp-section__sub">Capacidad del comedero: 1.000 raciones. Consumo base: 10 de energía/minuto por trabajador activo.</p>
+                </div>
+            </div>
+            <div class="feeder-calculator-box">
+                <div class="feeder-controls">
+                    <label class="hp-field-wrap">
+                        <span class="field-label">Plato a cocinar en la Olla</span>
+                        <select id="select-feeder-dish" class="hp-select"></select>
+                    </label>
+                </div>
+                <div class="feeder-metrics-grid">
+                    <div class="feeder-metric-card">
+                        <span>Autonomía AFK</span>
+                        <strong class="metric-big" id="feeder-days-val">-</strong>
+                        <small>Días sin recargar el comedero</small>
+                    </div>
+                    <div class="feeder-metric-card">
+                        <span>Consumo de la Cuadrilla</span>
+                        <strong class="metric-big" id="feeder-rate-val">-</strong>
+                        <small>Energía consumida / minuto</small>
+                    </div>
+                    <div class="feeder-metric-card">
+                        <span>Energía por Ración</span>
+                        <strong class="metric-big" id="feeder-dish-energy">-</strong>
+                        <small>Puntos de saciedad</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 3.4: Mapa 2D de Campamento -->
+        <section class="hp-section hp-tool-section" id="sec-map-panel" style="display:none;">
+            <div class="hp-section__head">
+                <div>
+                    <h2>🗺️ Distribución Espacial del Hogar (Mapa 2D)</h2>
+                    <p class="hp-section__sub">Visualización interactiva de parcelas de cultivo, talleres y almacenes según distancia de acarreo.</p>
+                </div>
+            </div>
+            <div class="camp-map-canvas-wrap">
+                <div class="camp-map-grid" id="camp-map-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="hp-footer">
+        <div class="footer-wrap">
+            <p><strong>Aniimo Homeland Studio</strong> · Optimizador de Base y Tierra Natal para Aniimo.</p>
+            <p class="footer-disclaimer">Herramienta independiente de código abierto creada para la comunidad. Sin anuncios ni rastreadores.</p>
+            <p class="footer-copy">© 2026 Aniimo Homeland Studio · Compatible con Aniidex</p>
         </div>
-    </div>
+    </footer>
 
-    <!-- Math Modal -->
-    <div id="mathModal" class="modal" onclick="closeMathOnBackdrop(event)">
-        <div class="modal-content modal-wide">
-            <div class="modal-header">
-                <h2>Cómo funciona</h2>
-                <button class="close-button" onclick="closeMath()">&times;</button>
-            </div>
-            <div class="modal-body">
-                <h3>El modelo</h3>
-                <p>Cada plan es un programa lineal entero mixto que abarca cada receta e instalación a la vez, resuelto con <a href="https://highs.dev" target="_blank" rel="noopener">HiGHS</a>. A cada receta desbloqueada por tus niveles de instalaciones y módulos, \(r\), se le asigna una tasa \(b_r\) (lotes por segundo) y un número entero de unidades \(u_r\): parcelas para un cultivo, máquinas para un artículo procesado.</p>
-                <div class="math-block">\[ \max \ \sum_i p_i \, s_i \;-\; \sum_r c_r \, b_r \]</div>
-                <p>donde \(s_i\) es la cantidad del artículo \(i\) que se vende por segundo al precio \(p_i\), y \(c_r\) es el coste de semillas del cultivo. Durante el Festival de la Luna de la Cosecha, las semillas de cultivos de temporada cuestan Trigo del Rayo Lunar, que los planes consideran ilimitado. Sujeto a:</p>
-                <ul>
-                    <li><strong>Unidades enteras.</strong> \(b_r \, t_r \le u_r\), siendo \(u_r\) un número entero y \(t_r\) el tiempo por lote. Una unidad ejecuta una sola receta y se deja en funcionamiento continuo.</li>
-                    <li><strong>Equilibrio de artículos.</strong> Todo lo producido cubre lo que consumen otras recetas más lo que se vende. Una variante rápida produce el mismo artículo que la normal.</li>
-                    <li><strong>Lo que posees.</strong> Para cada instalación y nivel \(L\), las unidades en recetas que requieren nivel \(L\) o superior suman como máximo lo que posees en ese nivel. Una parcela de mayor nivel puede ejecutar recetas de niveles inferiores.</li>
-                    <li><strong>Ambientes de cultivo.</strong> Un cultivo que requiere Fresco, Cálido, Helado o Abrasador crece a máxima velocidad en una parcela cubierta por un Horno de calor o Unidad de enfriamiento en ese modo, y más despacio sin cobertura (ver abajo). Un cultivo Adecuado necesita una Lámpara solar y no crece en ningún otro sitio.</li>
-                </ul>
-                <p>HiGHS demuestra matemáticamente si el plan es el óptimo. En las raras ocasiones en que tarda más de 30 segundos, se detiene con la mejor solución encontrada hasta el momento e indica el margen máximo de mejora. Cada plan es además reverificado de forma independiente antes de mostrarse.</p>
-
-                <h3>Tiempo por lote</h3>
-                <p>Los cultivos y árboles tardan su tiempo de crecimiento menos el riego de los Aniimos: una parcela pide agua dos veces durante el crecimiento (a los dos tercios y a un tercio del tiempo restante), y cada riego descuenta un octavo del tiempo total. Un cultivo de 40 minutos queda en 30 m y uno de 4 minutos en 3 m. Si un cultivo carece de su ambiente óptimo crece más despacio pero descuenta los mismos minutos por riego.</p>
-                <p>Todo lo demás tiene una carga de trabajo, y su duración depende de la Eficiencia \(e\) del Aniimo (visible en la pantalla de la instalación) y una tasa base \(r\):</p>
-                <div class="math-block">\[ t = \frac{\text{carga de trabajo}}{r \times e \times 1.2^{\,\text{personalidad}}} \]</div>
-                <p>En un procesador, \(r\) es 1 punto de carga por segundo. En una instalación de recolección (Pozo, Mina, Castillo de Arena, Casa del Rocío, etc.) y en el Pulidor de Plataforma y Creador de Aniipods, la tasa es mayor en recetas de mayor nivel de habilidad: 1/s a nivel 1, 1.25/s a nivel 2 y 1.5/s a nivel 3. Un Fruto de Crecimiento (5.400 de carga) tarda una hora al 100%.</p>
-                <p>La Eficiencia \(e\) depende del nivel de habilidad del Aniimo en comparación con el requerido por la receta. Al nivel exacto es del 100%. En un procesador, un nivel por encima añade +200% (300% total), y cada nivel adicional añade +100% (400%, 500%). En instalaciones de recolección, cada nivel superior añade 0.5 puntos de carga por segundo. La personalidad de la instalación añade un multiplicador del +20% de velocidad cuando coincide. Los niveles de habilidad llegan hasta el nivel 4.</p>
-
-                <h3>Cobertura de ambiente</h3>
-                <p>Los ambientes son escalones de temperatura: Helado -2, Fresco -1, sin edificio 0, Cálido +1, Abrasador +2. Un cultivo crece al 100% en su temperatura, 80% a un escalón de distancia, 50% a dos escalones y 20% más allá. Una parcela descubierta es neutra (0), por lo que un cultivo Fresco o Cálido alcanza el 80% y uno Helado o Abrasador el 50%, razón por la cual algunos planes los cultivan sin edificio. Los cultivos Adecuados son independientes y requieren Lámpara solar.</p>
-                <p>Las temperaturas se suman cuando dos edificios alcanzan la misma parcela (limitado entre -2 y +2): Abrasador (+2) y Fresco (-1) suman Cálido (+1); Cálido (+1) y Fresco (-1) dan Temperatura ambiente (0). Los planes aprovechan esto colocando edificios para crear múltiples zonas térmicas simultáneas.</p>
-                <p>Una Unidad de enfriamiento ocupa 2×2 casillas y un Horno de calor o Lámpara solar 1 casilla; cada uno cubre un área de 9×9 casillas a su alrededor. Una parcela cuenta como cubierta si cualquier parte queda dentro del área.</p>
-
-                <h3>Subida de nivel</h3>
-                <p>Subir de nivel el Hogar cuesta Monedas del Hogar \(C_0\) más los materiales requeridos \(C_1\) y \(C_2\) (Bloques de madera y Arena mineral hasta Casa rodante 6; objetos del Banco de carpintería y Horno de chimenea desde Casa rodante 7). Si ya posees parte de ellos, se descuentan automáticamente. El plan maximiza la velocidad para alcanzar todos los requisitos en el menor tiempo posible.</p>
-
-                <h3>Prioridades</h3>
-                <p>El plan resuelve de forma secuencial cada prioridad marcada según tu orden de preferencia. Cada paso produce el máximo posible de esa prioridad manteniendo lo alcanzado en las anteriores; finalmente, las horas y recursos sobrantes se destinan a maximizar las Monedas del Hogar. La EXP de Aniimo, Aniipods y los Puntos del Festival cuentan como monedas independientes en el optimizador.</p>
-
-                <h3>Tiempo para alcanzar un objetivo</h3>
-                <p>Cada producto comienza a acumularse tras completar su cadena inicial de ingredientes (tiempo de preparación), manteniendo después una producción continua y constante calculada mediante búsqueda binaria temporal.</p>
-
-                <h3>El planificador de respaldo</h3>
-                <p>Si el planificador exacto (HiGHS) no pudiera ejecutarse en el navegador, interviene automáticamente un planificador secundario lineal continuo que redondea las unidades para ofrecer una solución muy cercana a la óptima.</p>
-            </div>
-        </div>
-    </div>
-    <script>
-        // Keep the math window before MathJax typesets it. This script runs while the page is still
-        // being parsed, and MathJax typesets only after that. See math-translation.js.
-        window.aniimaxMathSource = document.querySelector('#mathModal .modal-body').innerHTML;
-    </script>
-
-    <!-- Help Modal -->
-    <div id="helpModal" class="modal" onclick="closeHelpOnBackdrop(event)">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Cómo utilizarlo</h2>
-                <button class="close-button" onclick="closeHelp()">&times;</button>
-            </div>
-            <div class="modal-body">
-                <h3>1. Indica lo que has construido</h3>
-                <p><strong>Sencillo</strong>: selecciona tu nivel de Casa rodante y la calculadora asumirá que has construido y mejorado todo lo que ese nivel permite. <strong>Avanzado</strong>: define manualmente la cantidad y nivel de cada instalación y módulo de mejora. En Avanzado, "Rellenar desde nivel de Casa rodante" carga la configuración base como punto de partida.</p>
-                <p>En <strong>Recetas</strong>, las recetas especiales (Polvorón de rosa, Kvas de patata, etc.) requieren monedas raras para desbloquearse; actívalas solo si ya las has adquirido en el juego.</p>
-                <p>También en <strong>Recetas</strong> puedes desactivar artículos que aún no puedas fabricar. El icono ✕ junto a un producto en el plan lo omite y recalcula instantáneamente.</p>
-
-                <h3>2. Elige una estrategia</h3>
-                <p><strong>Subir de nivel</strong>: reúne todos los materiales y monedas para tu siguiente nivel de Casa rodante lo antes posible. En "Lo que ya tienes", introduce tus existencias actuales; los materiales de niveles inferiores también cuentan, ya que se procesan automáticamente. En Avanzado puedes elegir a qué nivel de Casa rodante aspiras.</p>
-                <p><strong>Prioridades</strong>: clasifica lo que deseas producir: Monedas del Hogar, EXP de Aniimo (objetos de crecimiento en el Pulidor de Plataforma), Aniipods (el nivel más alto que alcance tu Creador), Bloques de madera o Arena mineral. Activa los que desees y arrástralos en tu orden de prioridad preferido.</p>
-
-                <h3>3. Encuentra el mejor plan</h3>
-                <p>Pulsa "Encontrar el mejor plan" para calcular el tiempo para subir de nivel (o tu tasa óptima) y la asignación exacta de cada instalación. Todo lo que configures se guarda automáticamente en tu navegador local; "Borrar valores guardados" reinicia los datos a los valores por defecto.</p>
-
-                <h3>4. Fija un objetivo (Opcional)</h3>
-                <p>Indica qué artículo deseas conseguir, la cantidad objetivo y cuántos tienes actualmente. La tarjeta calculará exactamente cuánto tiempo tardarás y qué otros productos generarás en el proceso.</p>
-
-                <h3>Comprendiendo los resultados</h3>
-                <ul>
-                    <li><strong>Equipo Aniimo</strong>: qué Aniimos ubicar en tu Hogar para la configuración más rápida (El mejor) o el equipo mínimo imprescindible (Mínimo). <strong>Mis Aniimo</strong> planifica únicamente con los Aniimos que tienes registrados.</li>
-                    <li><strong>Subida de nivel</strong>: tiempo estimado para reunir todos los costes del nivel del Hogar y la velocidad de obtención de cada material. El cuello de botella aparece en negrita. Los excedentes reflejan materiales sobrantes generados durante el proceso.</li>
-                    <li><strong>Tus tasas de producción</strong>: con Prioridades, muestra la tasa conseguida para cada objetivo seleccionado en orden de preferencia, y las Monedas del Hogar obtenidas con la capacidad remanente.</li>
-                    <li><strong>Semillas para plantar</strong>: semillas que consumirán tus Campos de cultivo y Arboledas, junto con su coste total en monedas.</li>
-                    <li><strong>Beneficio por producto</strong>: con Subir de nivel, cuánto aporta cada producto por hora y el beneficio total obtenido.</li>
-                    <li><strong>Distribución de instalaciones</strong>: labor asignada a cada edificio en funcionamiento continuo. Las recetas marcadas como "no verificadas" indican datos aún en confirmación.</li>
-                    <li><strong>Oportunidades</strong>: mejoras sugeridas a tu alcance (desbloqueo de recetas, subidas de nivel de Aniimos o módulos) ordenadas por su impacto positivo en el plan.</li>
-                    <li><strong>Diseño del Hogar</strong>: plano de colocación recomendado para minimizar las distancias al almacén de las instalaciones más activas.</li>
-                    <li><strong>Fijar un objetivo</strong>: tiempo necesario para alcanzar una cantidad meta de cualquier artículo o moneda seleccionada.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        window.toggleTheme = function() {
-            const body = document.body;
-            const button = document.getElementById('themeToggle');
-            body.classList.toggle('light');
-            if (body.classList.contains('light')) {
-                button.textContent = 'dark';
-            } else {
-                button.textContent = 'light';
-            }
-        }
-        
-        window.showHelp = function() {
-            document.getElementById('helpModal').classList.add('show');
-        }
-        
-        window.closeHelp = function() {
-            document.getElementById('helpModal').classList.remove('show');
-        }
-        
-        window.closeHelpOnBackdrop = function(event) {
-            if (event.target.id === 'helpModal') {
-                closeHelp();
-            }
-        }
-        
-        window.showMath = function() {
-            document.getElementById('mathModal').classList.add('show');
-            // Trigger MathJax to render
-            if (window.MathJax) {
-                MathJax.typesetPromise();
-            }
-        }
-        
-        window.closeMath = function() {
-            document.getElementById('mathModal').classList.remove('show');
-        }
-        
-        window.closeMathOnBackdrop = function(event) {
-            if (event.target.id === 'mathModal') {
-                closeMath();
-            }
-        }
-        
-        // Close modal on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeHelp();
-                closeMath();
-                closeFacilities();
-            }
-        });
-    </script>
-    <script type="module" src="app.js?v=20261101-aniidex-v7"></script>
+    <!-- Core App Module -->
+    <script type="module" src="app.js?v=20261101-pro-v1"></script>
 </body>
 </html>
