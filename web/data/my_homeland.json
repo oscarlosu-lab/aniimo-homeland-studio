@@ -1,0 +1,168 @@
+{
+  "uid": "209000449083",
+  "name": "Jugador Aniimo",
+  "rv": 14,
+  "home_level": 14,
+  "plots": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "facilities": {
+    "1010000": {
+      "6": 30
+    },
+    "1020000": {
+      "4": 1
+    },
+    "1030000": {
+      "4": 1
+    },
+    "1040000": {
+      "4": 1
+    },
+    "1050000": {
+      "4": 1
+    },
+    "1060000": {
+      "4": 1
+    },
+    "1070000": {
+      "4": 1
+    },
+    "1080000": {
+      "4": 1
+    },
+    "1090000": {
+      "4": 1
+    },
+    "1100000": {
+      "4": 1
+    },
+    "1110000": {
+      "4": 1
+    },
+    "1120000": {
+      "4": 1
+    },
+    "1130000": {
+      "4": 1
+    }
+  },
+  "aniimo": [
+    {
+      "form": 10211,
+      "facility": 1010000,
+      "letter": "E",
+      "name": "Capitán Enérgico"
+    },
+    {
+      "form": 10451,
+      "facility": 1020000,
+      "letter": "T",
+      "name": "Molino Tenaz"
+    },
+    {
+      "form": 10351,
+      "facility": 1030000,
+      "letter": "J",
+      "name": "Artesano Sensato"
+    },
+    {
+      "form": 10042,
+      "facility": 1040000,
+      "letter": "N",
+      "name": "Cocinero Ágil"
+    },
+    {
+      "form": 10471,
+      "facility": 1050000,
+      "letter": "E",
+      "name": "Secador Enérgico"
+    },
+    {
+      "form": 10381,
+      "facility": 1060000,
+      "letter": "S",
+      "name": "Chef Práctico"
+    },
+    {
+      "form": 10181,
+      "facility": 1070000,
+      "letter": "J",
+      "name": "Perfumiere Sensato"
+    },
+    {
+      "form": 10022,
+      "facility": 1080000,
+      "letter": "P",
+      "name": "Tabernero Juguetón"
+    },
+    {
+      "form": 10651,
+      "facility": 1090000,
+      "letter": "T",
+      "name": "Fundidor Tenaz"
+    },
+    {
+      "form": 10571,
+      "facility": 1100000,
+      "letter": "S",
+      "name": "Encurtidor Práctico"
+    }
+  ],
+  "comfort": {
+    "total": 3850,
+    "furniture": 2200,
+    "pet": 1650
+  },
+  "storage": {
+    "4001000": 1250,
+    "4002000": 850,
+    "4003000": 620
+  },
+  "caught_pet_ids": [
+    1038100,
+    1047100,
+    1004200,
+    1018100,
+    1047103,
+    1002400,
+    1035100,
+    1045100,
+    1002200,
+    1021104,
+    1016100,
+    1065100,
+    1057100
+  ],
+  "pet_box_capacity": 36,
+  "imported_at": 1793543400
+}

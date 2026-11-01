@@ -22,3 +22,5 @@ target
 # WASM build output included for standalone web serving
 # web/pkg/
 backups/
+__pycache__/
+*.pyc
