@@ -27,5 +27,11 @@ class TestHomelandSyncAndProfile(unittest.TestCase):
         self.assertEqual(data.get("rv"), 14)
         self.assertIn("1010000", data.get("facilities", {}))
 
+    def test_profiles_directory_contains_cloud_registry(self):
+        profiles_dir = self.data_dir / "profiles"
+        self.assertTrue(profiles_dir.exists(), "El directorio profiles/ debe existir")
+        my_profile = profiles_dir / "209000449083.json"
+        self.assertTrue(my_profile.exists(), "El perfil 209000449083.json debe existir en profiles/")
+
 if __name__ == "__main__":
     unittest.main()

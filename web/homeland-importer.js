@@ -51,7 +51,14 @@ export class HomelandImporter {
                             🔍 Consultar Perfil en Servidor
                         </button>
                     </div>
-                    <p class="importer-hint">Consulta la pasarela de servidores públicos de Aniimo. Si el perfil no es público, la app carga tu snapshot local en 1 clic.</p>
+                    <div class="cloud-quick-chips">
+                        <span class="chips-label">Perfiles Verificados Cloud:</span>
+                        <button type="button" class="btn-chip" data-uid="209000449083">⭐ Mi Hogar (209000449083)</button>
+                        <button type="button" class="btn-chip" data-uid="207000832726">🏰 Fadingsoul (Nv. 15)</button>
+                        <button type="button" class="btn-chip" data-uid="209000249042">🌾 xferfer (Nv. 14)</button>
+                        <button type="button" class="btn-chip" data-uid="310001059443">⚡ ThePedron (Nv. 16)</button>
+                    </div>
+                    <p class="importer-hint">Consulta la red de perfiles públicos de Aniimo. Si el perfil aún no está sincronizado, puedes cargarlo directamente desde tu partida local en 1 clic.</p>
                 </div>
 
                 <!-- 3. MODO JSON / CÓDIGO DIRECTO -->
@@ -129,9 +136,10 @@ export class HomelandImporter {
 
         // 3. Conector Cloud
         const btnCloud = document.getElementById('btn-cloud-fetch');
+        const inputCloudUid = document.getElementById('input-cloud-uid');
         if (btnCloud) {
             btnCloud.addEventListener('click', async () => {
-                const uid = document.getElementById('input-cloud-uid')?.value?.trim();
+                const uid = inputCloudUid?.value?.trim();
                 if (!uid) {
                     this.showStatus('Por favor introduce un UID válido.', 'error');
                     return;
@@ -140,6 +148,17 @@ export class HomelandImporter {
                 await this.fetchCloudProfile(uid);
             });
         }
+
+        // 3.1 Chips rápidos de UIDs verificados
+        document.querySelectorAll('.cloud-quick-chips .btn-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                const targetUid = chip.dataset.uid;
+                if (targetUid && inputCloudUid) {
+                    inputCloudUid.value = targetUid;
+                    btnCloud?.click();
+                }
+            });
+        });
 
         // 4. Parser JSON Directo
         const btnJson = document.getElementById('btn-parse-json');
@@ -188,6 +207,7 @@ export class HomelandImporter {
             };
 
             const endpoints = [
+                getAbsoluteUrl(`data/profiles/${uid}.json?t=${Date.now()}`),
                 getAbsoluteUrl(`data/profile_${uid}.json?t=${Date.now()}`),
                 getAbsoluteUrl(`data/my_homeland.json?t=${Date.now()}`),
                 `/api/player/home-import`,

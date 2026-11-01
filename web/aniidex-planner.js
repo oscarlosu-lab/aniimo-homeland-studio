@@ -4,7 +4,7 @@
  * cadenas de suministro intermedias e importación de hogar por UID / partida local.
  */
 
-import { homelandImporter } from './homeland-importer.js?v=20261101-aniidex-v5';
+import { homelandImporter } from './homeland-importer.js?v=20261101-aniidex-v6';
 
 export class AniidexPlanner {
     constructor() {
