@@ -1,0 +1,10 @@
+name: Bug Report
+description: Report an issue in aniimo-homeland-studio
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+    validations:
+      required: true
