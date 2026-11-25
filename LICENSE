@@ -1,3 +1,52 @@
+========================================================================
+PART 1 — oscarlosu-lab Contributions, Translations & Modifications
+========================================================================
+
+Non-Commercial Source-Available License with Mandatory Attribution
+Copyright (c) 2026 oscarlosu-lab (https://github.com/oscarlosu-lab)
+All rights reserved.
+
+1. Permitted Uses (Personal & Non-Commercial Open Source Only)
+Subject to full compliance with this License, you are granted a non-exclusive,
+non-transferable, revocable, royalty-free license to view, copy, compile,
+modify, and use this software or any portion thereof SOLELY for:
+  (a) Personal, private, non-commercial use;
+  (b) Educational, academic, or security/interoperability research; or
+  (c) Non-commercial open-source software projects that are distributed free
+      of charge under an open-source license and do not generate direct or
+      indirect commercial revenue.
+
+2. Strict Prohibition on Commercial Use
+You may NOT use, reproduce, distribute, sublicense, embed, host as a service
+(SaaS/PaaS/cloud relay), or create derivative works from this software — in
+whole or in part — in any commercial software, proprietary product, paid tool,
+internal business/enterprise deployment, or revenue-generating service without
+a separate, explicit written commercial license signed by oscarlosu-lab.
+
+3. Mandatory Attribution (Full or Partial Use)
+If you use, copy, modify, or distribute this software, OR ANY PORTION OR
+MODULE OF THIS CODE, you MUST preserve all original copyright notices and
+provide clear, prominent attribution to the original author:
+  - In source files: retain this Copyright & Attribution notice.
+  - In documentation / README / UI "About" screens: credit
+    "oscarlosu-lab (https://github.com/oscarlosu-lab)".
+
+4. No Warranty & No Liability
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY ARISING FROM OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+
+---
+Note: This is a custom Non-Commercial Source-Available license (not an OSI-approved
+open-source license, as it restricts commercial use). For commercial licensing
+inquiries, contact oscarlosu-lab via GitHub.
+
+========================================================================
+PART 2 — Third-Party Upstream License Notice (MIT)
+========================================================================
+
 Copyright 2026-Present aebii
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
