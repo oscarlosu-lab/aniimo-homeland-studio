@@ -1,0 +1,10 @@
+name: Feature Request
+description: Suggest an improvement for aniimo-homeland-studio
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Feature
+    validations:
+      required: true
